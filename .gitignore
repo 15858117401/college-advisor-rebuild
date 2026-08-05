@@ -1,24 +1,8 @@
-# Local secrets (keep only the safe template in Git)
 .env
-.env.*
-!.env.example
-
-# The original project is reference material, not part of this rebuild
-college_advisor/
-
-# Python
-__pycache__/
-*.py[cod]
-*.egg-info/
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-.coverage
-htmlcov/
-
-# Local environments and tools
 .venv/
-venv/
+__pycache__/
+*.pyc
+*.egg-info/
 .idea/
-.vscode/
 .DS_Store
+college_advisor/
