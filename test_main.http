@@ -1,11 +1,10 @@
-# Test your FastAPI endpoints
+POST https://api.deepseek.com/chat/completions
+Authorization: Bearer {{$env.DEEPSEEK_API_KEY}}
+Content-Type: application/json
 
-GET http://127.0.0.1:8000/
-Accept: application/json
-
-###
-
-GET http://127.0.0.1:8000/hello/User
-Accept: application/json
-
-###
+{
+  "model": "deepseek-v4-flash",
+  "messages": [
+    {"role": "user", "content": "Hello"}
+  ]
+}
