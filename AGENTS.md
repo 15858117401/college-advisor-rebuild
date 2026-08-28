@@ -8,6 +8,7 @@
 - Keep `graph.py` focused on graph assembly: node registration, edges, compilation, and exports. Do not place node business logic or LLM calls in it.
 - Put each graph node implementation in its own module under the lowercase `nodes/` package.
 - Centralize LLM initialization in `llm_client.py`. Nodes that need an LLM must import and reuse the shared `llm_client` instead of creating their own model client.
+- `Resource/` stores course catalog, offering availability, and course/instructor GPA statistics used as reference data by the advising agent.
 
 
 ## Project Overview
