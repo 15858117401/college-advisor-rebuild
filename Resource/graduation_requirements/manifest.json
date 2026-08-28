@@ -1,0 +1,43 @@
+{
+  "documents": [
+    {
+      "document_key": "UIUC-LAS-BSLAS-2026-2027",
+      "document_type": "shared",
+      "institution_code": "UIUC",
+      "college_code": "LAS",
+      "degree_code": "BSLAS",
+      "program_code": null,
+      "program_name": null,
+      "catalog_year": "2026-2027",
+      "parent_document_key": null,
+      "source_url": "https://catalog.illinois.edu/general-information/degree-general-education-requirements/",
+      "file_name": "las_bslas_2026_2027.md"
+    },
+    {
+      "document_key": "UIUC-MATH-BSLAS-2026-2027",
+      "document_type": "program",
+      "institution_code": "UIUC",
+      "college_code": "LAS",
+      "degree_code": "BSLAS",
+      "program_code": "MATH-BSLAS",
+      "program_name": "Mathematics, BSLAS",
+      "catalog_year": "2026-2027",
+      "parent_document_key": "UIUC-LAS-BSLAS-2026-2027",
+      "source_url": "https://catalog.illinois.edu/undergraduate/las/mathematics-bslas/#degreerequirementstext",
+      "file_name": "mathematics_bslas_2026_2027.md"
+    },
+    {
+      "document_key": "UIUC-STAT-BSLAS-2026-2027",
+      "document_type": "program",
+      "institution_code": "UIUC",
+      "college_code": "LAS",
+      "degree_code": "BSLAS",
+      "program_code": "STAT-BSLAS",
+      "program_name": "Statistics, BSLAS",
+      "catalog_year": "2026-2027",
+      "parent_document_key": "UIUC-LAS-BSLAS-2026-2027",
+      "source_url": "https://catalog.illinois.edu/undergraduate/las/statistics-bslas/#degreerequirementstext",
+      "file_name": "statistics_bslas_2026_2027.md"
+    }
+  ]
+}
