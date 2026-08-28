@@ -4,3 +4,5 @@ python-dotenv
 langchain
 langchain-openai
 langgraph
+openai
+supabase
