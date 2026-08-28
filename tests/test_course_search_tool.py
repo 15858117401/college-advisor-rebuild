@@ -86,6 +86,7 @@ class FindCoursesTest(unittest.TestCase):
             {"min_overall_gpa": 3.5, "max_overall_gpa": 3.0},
             {"min_overall_gpa": -0.1},
             {"description_query": "models", "semantic_limit": 21},
+            {"prerequisite_course": "STAT-400"},
         ]
         for payload in invalid:
             with self.subTest(payload=payload), self.assertRaises(ValidationError):
@@ -109,12 +110,27 @@ class FindCoursesTest(unittest.TestCase):
                 "max_course_number": 499,
                 "credit_hours": 4,
                 "gen_ed": "Quantitative Reasoning II",
-                "has_prerequisites": True,
+                "prerequisite_course": "stat107",
                 "min_overall_gpa": 3.55,
             },
             rows,
         )
         self.assertEqual(result, [{"course_code": "STAT 207", "credits": "4 Hours"}])
+        embed_mock.assert_not_called()
+
+    def test_prerequisite_course_matches_exact_codes_in_compound_text(self) -> None:
+        rows = [
+            _row("STAT 410", prerequisites="MATH 241 and STAT 400."),
+            _row("STAT 432", prerequisites="STAT 400A or STAT 425."),
+            _row("STAT 440", prerequisites=None),
+        ]
+
+        result, embed_mock = _invoke(
+            {"prerequisite_course": "stat400"},
+            rows,
+        )
+
+        self.assertEqual([item["course_code"] for item in result], ["STAT 410"])
         embed_mock.assert_not_called()
 
     def test_missing_gpa_passes_gpa_filter(self) -> None:

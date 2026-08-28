@@ -7,7 +7,7 @@ from pydantic import BaseModel, Field, field_validator
 from tools.import_stat_resources import create_supabase_client
 
 
-COURSE_CODE_PATTERN = re.compile(r"^STAT\s+(\d{3})$", re.IGNORECASE)
+COURSE_CODE_PATTERN = re.compile(r"^STAT\s*(\d{3})$", re.IGNORECASE)
 COURSE_SELECT_FIELDS = (
     "course_code,subject,course_number,course_name,credits,description,"
     "prerequisites,credit_restrictions,gen_ed,total_students,total_sections,"

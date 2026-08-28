@@ -1,6 +1,9 @@
 import sys
 import unittest
 from pathlib import Path
+from unittest.mock import patch
+
+from langchain_core.messages import AIMessage
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -27,18 +30,37 @@ class RouterTest(unittest.TestCase):
             },
         )
 
-    def assert_routes_to_clarify(self, user_input: str) -> None:
-        result = graph.invoke({"user_input": user_input})
-        self.assertEqual(result["route"], "clarify")
+    @patch("nodes.compose_response.llm_client")
+    @patch("nodes.catalog_lookup.catalog_agent.invoke")
+    def test_catalog_lookup_conversation(
+        self,
+        invoke_agent,
+        invoke_compose,
+    ) -> None:
+        invoke_agent.return_value = {
+            "messages": [AIMessage(content="STAT 400 is Statistics and Probability I.")]
+        }
+        invoke_compose.invoke.return_value = AIMessage(
+            content="STAT 400 is Statistics and Probability I."
+        )
+        messages = [
+            {"role": "user", "content": "We were discussing STAT courses."},
+            {"role": "assistant", "content": "Which course interests you?"},
+            {"role": "user", "content": "What is STAT 400?"},
+        ]
 
-    def test_course_lookup_routes_to_clarify(self) -> None:
-        self.assert_routes_to_clarify("What is STAT 400?")
+        result = graph.invoke({"messages": messages})
 
-    def test_weather_question_routes_to_clarify(self) -> None:
-        self.assert_routes_to_clarify("今天天气怎么样？")
-
-    def test_course_planning_routes_to_clarify(self) -> None:
-        self.assert_routes_to_clarify("下一学期应该怎么选课？")
+        self.assertEqual(result["route"], "catalog_lookup")
+        self.assertEqual(
+            result["response"],
+            "STAT 400 is Statistics and Probability I.",
+        )
+        agent_messages = invoke_agent.call_args.args[0]["messages"]
+        self.assertEqual(
+            [message.content for message in agent_messages],
+            [message["content"] for message in messages],
+        )
 
 
 if __name__ == "__main__":

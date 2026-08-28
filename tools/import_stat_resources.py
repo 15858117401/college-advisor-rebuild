@@ -11,7 +11,7 @@ from urllib.parse import urlparse
 
 from dotenv import load_dotenv
 
-from embedding_client import EMBEDDING_DIMENSIONS, EMBEDDING_MODEL, embed_texts
+from client.embedding_client import EMBEDDING_DIMENSIONS, EMBEDDING_MODEL, embed_texts
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -38,6 +38,8 @@ COURSE_HEADERS = [
 ]
 INSTRUCTOR_HEADERS = [
     "course_code",
+    "subject",
+    "course_number",
     "instructor_name",
     "instructor_avg_gpa",
     "gpa_delta_from_course",
@@ -182,12 +184,35 @@ def load_resource_data(
     ]
     if duplicate_courses:
         raise ValueError(f"duplicate course codes: {duplicate_courses}")
+    courses_by_code = {course["course_code"]: course for course in courses}
 
     instructors: list[dict[str, Any]] = []
     for row_number, row in enumerate(raw_instructors, start=2):
         course_code = _required_text(
             row["course_code"], field="course_code", row_number=row_number
         )
+        subject = _required_text(
+            row["subject"], field="subject", row_number=row_number
+        )
+        course_number_text = _required_text(
+            row["course_number"], field="course_number", row_number=row_number
+        )
+        try:
+            course_number = int(course_number_text)
+        except ValueError as exc:
+            raise ValueError(
+                f"row {row_number} has invalid course_number: {course_number_text!r}"
+            ) from exc
+        course = courses_by_code.get(course_code)
+        if (
+            course is None
+            or subject != course["subject"]
+            or course_number != course["course_number"]
+        ):
+            raise ValueError(
+                f"row {row_number} has inconsistent course identifiers: "
+                f"{course_code!r}, {subject!r}, {course_number!r}"
+            )
         instructor_name = _required_text(
             row["instructor_name"], field="instructor_name", row_number=row_number
         )
@@ -196,6 +221,8 @@ def load_resource_data(
         instructors.append(
             {
                 "course_code": course_code,
+                "subject": subject,
+                "course_number": course_number,
                 "instructor_name": instructor_name,
                 "instructor_avg_gpa": _optional_float(
                     row["instructor_avg_gpa"],
@@ -222,6 +249,8 @@ def load_resource_data(
     instructor_keys = [
         (
             row["course_code"],
+            row["subject"],
+            row["course_number"],
             row["instructor_name"],
             row["instructor_avg_gpa"],
             row["gpa_delta_from_course"],

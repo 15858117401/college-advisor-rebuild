@@ -6,13 +6,14 @@ from typing import Any, Literal, Self
 from langchain_core.tools import tool
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
-from embedding_client import embed_texts
+from client.embedding_client import embed_texts
 from tools.import_stat_resources import create_supabase_client
 
 
 COURSE_FIELDS = (
     "course_code,course_number,credits,prerequisites,gen_ed,overall_gpa"
 )
+COURSE_CODE_PATTERN = re.compile(r"\b([A-Za-z]{2,4})\s*(\d{3}[A-Za-z]?)\b")
 
 
 class FindCoursesInput(BaseModel):
@@ -29,13 +30,22 @@ class FindCoursesInput(BaseModel):
         "Quantitative Reasoning I",
         "Quantitative Reasoning II",
     ] | None = None
-    has_prerequisites: bool | None = None
+    prerequisite_course: str | None = None
     min_overall_gpa: float | None = Field(default=None, ge=0.0, le=4.0)
     max_overall_gpa: float | None = Field(default=None, ge=0.0, le=4.0)
     semantic_limit: int = Field(default=5, ge=1, le=20)
 
     @model_validator(mode="after")
     def validate_conditions(self) -> Self:
+        if self.prerequisite_course is not None:
+            match = COURSE_CODE_PATTERN.fullmatch(self.prerequisite_course.strip())
+            if match is None:
+                raise ValueError(
+                    "invalid prerequisite course; expected 'STAT 400' or 'STAT400'"
+                )
+            self.prerequisite_course = (
+                f"{match.group(1).upper()} {match.group(2).upper()}"
+            )
         if (
             self.min_course_number is not None
             and self.max_course_number is not None
@@ -64,7 +74,11 @@ def _matches_credit_hours(credits: str, requested: int) -> bool:
 def _matches_rules(row: dict[str, Any], criteria: dict[str, Any]) -> bool:
     number = row["course_number"]
     gpa = row["overall_gpa"]
-    has_prerequisites = bool((row["prerequisites"] or "").strip())
+    prerequisite_codes = COURSE_CODE_PATTERN.findall(row["prerequisites"] or "")
+    listed_prerequisites = {
+        f"{subject.upper()} {course_number.upper()}"
+        for subject, course_number in prerequisite_codes
+    }
     return (
         (
             criteria["min_course_number"] is None
@@ -80,8 +94,8 @@ def _matches_rules(row: dict[str, Any], criteria: dict[str, Any]) -> bool:
         )
         and (criteria["gen_ed"] is None or row["gen_ed"] == criteria["gen_ed"])
         and (
-            criteria["has_prerequisites"] is None
-            or has_prerequisites == criteria["has_prerequisites"]
+            criteria["prerequisite_course"] is None
+            or criteria["prerequisite_course"] in listed_prerequisites
         )
         and (
             gpa is None
@@ -126,13 +140,15 @@ def find_courses(
         "Quantitative Reasoning I",
         "Quantitative Reasoning II",
     ] | None = None,
-    has_prerequisites: bool | None = None,
+    prerequisite_course: str | None = None,
     min_overall_gpa: float | None = None,
     max_overall_gpa: float | None = None,
     semantic_limit: int = 5,
 ) -> list[dict[str, str]]:
     """Find STAT courses using AND rules, then optional semantic Top-K.
 
+    prerequisite_course accepts formats such as STAT400 or STAT 400 and matches
+    a code listed in the catalog text; it does not determine student eligibility.
     The description_query is already rewritten. Returns only course_code and
     the catalog's original credits string.
     """

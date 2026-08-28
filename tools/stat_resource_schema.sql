@@ -17,6 +17,12 @@ create table public.courses (
     total_sections integer check (total_sections >= 0),
     overall_gpa numeric(3, 2) check (overall_gpa between 0 and 4),
     embedding extensions.vector(1536) not null,
+    constraint courses_full_identity_key unique (
+        id,
+        course_code,
+        subject,
+        course_number
+    ),
     constraint courses_code_matches_subject_number check (
         course_code = subject || ' ' || course_number::text
     ),
@@ -32,16 +38,35 @@ create index courses_subject_number_idx
 
 create table public.course_instructor_stats (
     id bigint generated always as identity primary key,
-    course_id bigint not null references public.courses(id) on delete cascade,
+    course_id bigint not null,
+    course_code text not null,
+    subject text not null,
+    course_number integer not null,
     instructor_name text not null,
     instructor_avg_gpa numeric(3, 2)
         check (instructor_avg_gpa between 0 and 4),
     gpa_delta_from_course numeric(4, 2)
-        check (gpa_delta_from_course between -4 and 4)
+        check (gpa_delta_from_course between -4 and 4),
+    constraint course_instructor_stats_course_identity_fkey
+        foreign key (course_id, course_code, subject, course_number)
+        references public.courses (id, course_code, subject, course_number)
+        on update cascade
+        on delete cascade
 );
 
-create index course_instructor_stats_course_id_idx
-    on public.course_instructor_stats (course_id);
+create index course_instructor_stats_course_identity_idx
+    on public.course_instructor_stats (
+        course_id,
+        course_code,
+        subject,
+        course_number
+    );
+
+create index course_instructor_stats_course_code_idx
+    on public.course_instructor_stats (course_code);
+
+create index course_instructor_stats_subject_number_idx
+    on public.course_instructor_stats (subject, course_number);
 
 create unique index course_instructor_stats_exact_row_idx
     on public.course_instructor_stats (
@@ -128,6 +153,18 @@ begin
         embedding = excluded.embedding;
     get diagnostics imported_courses = row_count;
 
+    if exists (
+        select 1
+        from jsonb_array_elements(instructor_rows) as item(payload)
+        left join public.courses as course
+          on course.course_code = payload->>'course_code'
+         and course.subject = payload->>'subject'
+         and course.course_number = (payload->>'course_number')::integer
+        where course.id is null
+    ) then
+        raise exception 'instructor_rows contain inconsistent course identifiers';
+    end if;
+
     delete from public.course_instructor_stats as stats
     using public.courses as course
     where stats.course_id = course.id
@@ -138,18 +175,26 @@ begin
 
     insert into public.course_instructor_stats (
         course_id,
+        course_code,
+        subject,
+        course_number,
         instructor_name,
         instructor_avg_gpa,
         gpa_delta_from_course
     )
     select
         course.id,
+        course.course_code,
+        course.subject,
+        course.course_number,
         payload->>'instructor_name',
         nullif(payload->>'instructor_avg_gpa', '')::numeric,
         nullif(payload->>'gpa_delta_from_course', '')::numeric
     from jsonb_array_elements(instructor_rows) as item(payload)
     join public.courses as course
-      on course.course_code = payload->>'course_code';
+      on course.course_code = payload->>'course_code'
+     and course.subject = payload->>'subject'
+     and course.course_number = (payload->>'course_number')::integer;
     get diagnostics imported_instructors = row_count;
 
     return query select imported_courses, imported_instructors;

@@ -33,6 +33,12 @@ class GetCourseSectionsInputTest(unittest.TestCase):
         with self.assertRaisesRegex(ValidationError, "expected a value like 'STAT 107'"):
             get_course_sections.invoke({"course_codes": ["not-a-course"]})
 
+    def test_normalizes_course_code_without_a_space(self) -> None:
+        validated = get_course_sections.args_schema.model_validate(
+            {"course_codes": ["stat107"]}
+        )
+        self.assertEqual(validated.course_codes, ["STAT 107"])
+
     def test_tool_schema_advertises_one_to_three_courses(self) -> None:
         course_codes = get_course_sections.args_schema.model_json_schema()["properties"][
             "course_codes"

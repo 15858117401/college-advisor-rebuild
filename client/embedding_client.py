@@ -10,7 +10,7 @@ from openai import OpenAI
 EMBEDDING_MODEL = "text-embedding-3-small"
 EMBEDDING_DIMENSIONS = 1536
 EMBEDDING_TIMEOUT_SECONDS = 30.0
-PROJECT_ENV_FILE = Path(__file__).resolve().parent / ".env"
+PROJECT_ENV_FILE = Path(__file__).resolve().parents[1] / ".env"
 
 
 def create_embedding_client() -> OpenAI:

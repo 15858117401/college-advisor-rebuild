@@ -1,5 +1,7 @@
+import csv
 import math
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 from types import SimpleNamespace
@@ -9,8 +11,9 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-from embedding_client import EMBEDDING_DIMENSIONS, EMBEDDING_MODEL, embed_texts
+from client.embedding_client import EMBEDDING_DIMENSIONS, EMBEDDING_MODEL, embed_texts
 from tools.import_stat_resources import (
+    INSTRUCTORS_CSV,
     EXPECTED_PROJECT_REF,
     load_resource_data,
     upload_snapshot,
@@ -123,6 +126,41 @@ class ResourceImportTest(unittest.TestCase):
             )
         )
 
+    def test_instructor_course_identifiers_match_courses(self) -> None:
+        courses_by_code = {
+            course["course_code"]: course for course in self.data.courses
+        }
+
+        for instructor in self.data.instructors:
+            course = courses_by_code[instructor["course_code"]]
+            self.assertEqual(instructor["subject"], course["subject"])
+            self.assertEqual(instructor["course_number"], course["course_number"])
+
+    def test_rejects_inconsistent_instructor_course_identifiers(self) -> None:
+        with INSTRUCTORS_CSV.open(encoding="utf-8-sig", newline="") as source:
+            rows = list(csv.DictReader(source))
+        fieldnames = list(rows[0])
+
+        invalid_values = {
+            "course_code": "STAT 107",
+            "subject": "CS",
+            "course_number": "107",
+        }
+        for field, value in invalid_values.items():
+            with self.subTest(field=field), tempfile.TemporaryDirectory() as directory:
+                invalid_rows = [dict(row) for row in rows]
+                invalid_rows[0][field] = value
+                invalid_path = Path(directory) / INSTRUCTORS_CSV.name
+                with invalid_path.open("w", encoding="utf-8", newline="") as target:
+                    writer = csv.DictWriter(target, fieldnames=fieldnames)
+                    writer.writeheader()
+                    writer.writerows(invalid_rows)
+
+                with self.assertRaisesRegex(
+                    ValueError, "inconsistent course identifiers"
+                ):
+                    load_resource_data(instructors_path=invalid_path)
+
     def test_same_teacher_with_different_stats_is_preserved(self) -> None:
         unger = [
             row
@@ -149,6 +187,17 @@ class ResourceImportTest(unittest.TestCase):
         self.assertEqual(client.calls[0][0], "replace_stat_resource_snapshot")
         self.assertEqual(len(client.calls[0][1]["course_rows"]), 41)
         self.assertEqual(len(client.calls[0][1]["instructor_rows"]), 117)
+        self.assertEqual(
+            {
+                key: client.calls[0][1]["instructor_rows"][0][key]
+                for key in ("course_code", "subject", "course_number")
+            },
+            {
+                "course_code": "STAT 100",
+                "subject": "STAT",
+                "course_number": 100,
+            },
+        )
         self.assertEqual(client.calls[1][0], "match_courses")
 
 

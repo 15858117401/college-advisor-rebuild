@@ -119,7 +119,7 @@ class GetCourseDetailsInputTest(unittest.TestCase):
 class GetCourseDetailsQueryTest(unittest.TestCase):
     def test_normalizes_codes_and_queries_once_without_internal_fields(self) -> None:
         result, client, query = _invoke_with_fake(
-            [" stat 432 ", "Stat   400"],
+            ["stat432", "Stat   400"],
             [COURSE_ROW],
         )
 

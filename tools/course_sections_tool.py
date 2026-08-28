@@ -12,7 +12,7 @@ COURSE_URL_TEMPLATE = (
     "https://courses.illinois.edu/schedule/2026/spring/{subject}/{number}"
 )
 REQUEST_TIMEOUT_SECONDS = 15
-COURSE_CODE_PATTERN = re.compile(r"^([A-Za-z]{2,4})\s+(\d{3}[A-Za-z]?)$")
+COURSE_CODE_PATTERN = re.compile(r"^([A-Za-z]{2,4})\s*(\d{3}[A-Za-z]?)$")
 TIME_RANGE_PATTERN = re.compile(
     r"(\d{1,2}:\d{2}\s*[AP]M)\s*-\s*(\d{1,2}:\d{2}\s*[AP]M)",
     re.IGNORECASE,

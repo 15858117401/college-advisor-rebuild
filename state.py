@@ -1,4 +1,6 @@
-from typing import Literal, NotRequired, TypedDict
+from typing import Literal, NotRequired
+
+from langgraph.graph import MessagesState
 
 
 Route = Literal[
@@ -9,9 +11,9 @@ Route = Literal[
 ]
 
 
-class AdvisorState(TypedDict):
-    user_input: str
+class AdvisorState(MessagesState):
     route: NotRequired[Route]
+    response: NotRequired[str]
 
 
 __all__ = ["AdvisorState", "Route"]
