@@ -7,7 +7,7 @@ from langchain_core.tools import tool
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 from client.embedding_client import embed_texts
-from tools.import_stat_resources import create_supabase_client
+from Supabase.import_stat_resources import create_supabase_client
 
 
 COURSE_FIELDS = (

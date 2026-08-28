@@ -12,7 +12,7 @@ if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
 from client.embedding_client import EMBEDDING_DIMENSIONS, EMBEDDING_MODEL, embed_texts
-from tools.import_stat_resources import (
+from Supabase.import_stat_resources import (
     INSTRUCTORS_CSV,
     EXPECTED_PROJECT_REF,
     load_resource_data,

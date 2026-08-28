@@ -5,7 +5,7 @@ from typing import Annotated
 from langchain_core.tools import tool
 from pydantic import Field
 
-from tools.import_stat_resources import create_supabase_client
+from Supabase.import_stat_resources import create_supabase_client
 
 
 COURSE_CODE_PATTERN = re.compile(r"^STAT\s*(\d{3})$", re.IGNORECASE)
