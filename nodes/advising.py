@@ -1,7 +1,7 @@
 from langchain_core.tools import BaseTool
 
 from react_agent import build_react_agent
-from state import AdvisorState
+from state import AdvisorState, messages_with_current_input
 
 
 ADVISING_SYSTEM_PROMPT = """You are a personalized college advising agent.
@@ -25,9 +25,9 @@ advising_agent = build_react_agent(
 
 
 def advising(state: AdvisorState) -> dict:
-    """Run the advising ReAct agent with the complete conversation."""
+    """Run the advising ReAct agent with past messages and current input."""
     result = advising_agent.invoke(
-        {"messages": state["messages"]},
+        {"messages": messages_with_current_input(state)},
         config={"recursion_limit": 12},
     )
     return {"response": result["messages"][-1].content}

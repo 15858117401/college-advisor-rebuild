@@ -39,12 +39,14 @@ Apply `Supabase/stat_resource_schema.sql` for statistics resources and `Supabase
 
 This project rebuilds the college-advising agent in Python as a LangGraph workflow. `graph.py` defines node registration and transitions, `state.py` defines shared graph state, and `nodes/` contains the node implementations. The intended top-level business routes are Catalog Lookup, Advising, and Out of Scope. Clarify is a shared fallback state rather than a separate user intent.
 
+Graph input must keep the current user input separate from prior conversation history. Store the current turn's raw user text in `current_input`; use the inherited `MessagesState.messages` container only for completed past messages. Nodes that call an LLM or ReAct agent may assemble a temporary message list as `messages + current_input`, but they must not infer the current input from `messages[-1]`.
+
 The intended flow is:
 
 ```text
 START -> Router -> Catalog Lookup -> Compose Response -> END
                 -> Advising       -> Compose Response -> END
-                -> Out of Scope                       -> END
+                -> Out of Scope   -> Compose Response -> END
 
 Any non-Clarify node -> Clarify -> END
 ```
@@ -55,5 +57,5 @@ After Clarify asks its question, the current graph run ends. The user's answer s
 - **Catalog Lookup:** Handles direct, factual questions about the course catalog, such as course details, prerequisites, sections, instructors, and graduation requirements. It retrieves information without creating a personalized course or degree plan. It normally sends a completed factual draft to Compose Response, but it must transition to Clarify if the requested lookup cannot be identified safely from the available conversation.
 - **Advising:** Handles personalized tasks whose results depend on the student's academic history, preferences, constraints, or goals, including course recommendations, schedule building, and degree planning. It may use advising-specific skills and tools, including factual course tools also used by Catalog Lookup, without calling the Catalog Lookup node itself. It normally sends a completed advising draft to Compose Response, but it must transition to Clarify when required student context is missing.
 - **Clarify:** Is the shared missing-information fallback for every node, not a top-level business intent. It asks exactly one concise, targeted follow-up question based on the information the preceding node identified as missing. It does not answer the original request, perform business work, or invent a partial plan.
-- **Compose Response:** Rewrites a completed draft from Catalog Lookup or Advising into a clear final answer while preserving its facts and conclusions and adding no new information. If it cannot safely produce a final response because required information is explicitly missing, it may transition to Clarify instead of filling the gap itself.
-- **Out of Scope:** Gives a concise boundary-aware response when a request falls outside supported college-advising capabilities instead of sending it to Catalog Lookup or Advising. If the request's scope cannot be determined safely because essential context is missing, it may transition to Clarify.
+- **Compose Response:** Rewrites a completed draft from Catalog Lookup, Advising, or Out of Scope into a clear final answer while preserving its facts and conclusions and adding no new information. If it cannot safely produce a final response because required information is explicitly missing, it may transition to Clarify instead of filling the gap itself.
+- **Out of Scope:** Writes the fixed draft `This is beyond the conversation` to the shared response state when a request falls outside supported college-advising capabilities, then sends that draft to Compose Response. It does not perform Catalog Lookup or Advising work. If the request's scope cannot be determined safely because essential context is missing, it may transition to Clarify.

@@ -37,8 +37,8 @@ def build_graph():
     builder.add_edge("clarify", END)
     builder.add_edge("catalog_lookup", "compose_response")
     builder.add_edge("advising", "compose_response")
+    builder.add_edge("out_of_scope", "compose_response")
     builder.add_edge("compose_response", END)
-    builder.add_edge("out_of_scope", END)
 
     return builder.compile()
 

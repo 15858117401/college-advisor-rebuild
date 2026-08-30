@@ -1,4 +1,4 @@
-from state import AdvisorState
+from state import AdvisorState, messages_with_current_input
 from react_agent import build_react_agent
 from tools.course_details_tool import get_course_details
 from tools.graduation_requirements_tool import get_graduation_requirements
@@ -34,9 +34,9 @@ catalog_agent = build_react_agent(
 
 
 def catalog_lookup(state: AdvisorState) -> dict:
-    """Run the catalog ReAct agent with the complete conversation."""
+    """Run the catalog ReAct agent with past messages and current input."""
     result = catalog_agent.invoke(
-        {"messages": state["messages"]},
+        {"messages": messages_with_current_input(state)},
         config={"recursion_limit": 12},
     )
     return {"response": result["messages"][-1].content}

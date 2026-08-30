@@ -1,7 +1,7 @@
 from pydantic import BaseModel, ConfigDict
 
 from client.llm_client import llm_client
-from state import AdvisorState, Route
+from state import AdvisorState, Route, messages_with_current_input
 
 
 class RouteDecision(BaseModel):
@@ -26,11 +26,10 @@ Do not add markdown or any text outside the JSON object.
 
 def router(state: AdvisorState) -> dict[str, Route]:
     """Classify the request before routing it to the next node."""
-    current_message = state["messages"][-1]
     response = llm_client.invoke(
         [
             ("system", ROUTER_SYSTEM_PROMPT),
-            ("human", current_message.content),
+            *messages_with_current_input(state),
         ],
         response_format={"type": "json_object"},
     )
