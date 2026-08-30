@@ -22,13 +22,50 @@ class RouterTest(unittest.TestCase):
                 "router",
                 "clarify",
                 "catalog_lookup",
-                "planning",
-                "execute_tasks",
+                "advising",
                 "compose_response",
                 "out_of_scope",
                 "__end__",
             },
         )
+
+    @patch("nodes.compose_response.llm_client")
+    @patch("nodes.advising.advising_agent.invoke")
+    @patch("nodes.router.llm_client")
+    def test_advising_path_reaches_compose_response(
+        self,
+        router_llm,
+        invoke_agent,
+        compose_llm,
+    ) -> None:
+        router_llm.invoke.return_value = AIMessage(
+            content='{"route": "advising"}'
+        )
+        invoke_agent.return_value = {
+            "messages": [AIMessage(content="Take STAT 410 next.")]
+        }
+        compose_llm.invoke.return_value = AIMessage(
+            content="Take STAT 410 next."
+        )
+
+        messages = [
+            {"role": "user", "content": "I have completed STAT 400."},
+            {"role": "assistant", "content": "What is your goal?"},
+            {"role": "user", "content": "What should I take next?"},
+        ]
+        result = graph.invoke(
+            {"messages": messages}
+        )
+
+        self.assertEqual(result["route"], "advising")
+        self.assertEqual(result["response"], "Take STAT 410 next.")
+        agent_messages = invoke_agent.call_args.args[0]["messages"]
+        self.assertEqual(
+            [message.content for message in agent_messages],
+            [message["content"] for message in messages],
+        )
+        compose_prompt = compose_llm.invoke.call_args.args[0]
+        self.assertEqual(compose_prompt[-1][1], "Take STAT 410 next.")
 
     @patch("nodes.compose_response.llm_client")
     @patch("nodes.catalog_lookup.catalog_agent.invoke")

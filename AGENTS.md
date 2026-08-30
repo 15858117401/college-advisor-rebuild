@@ -4,6 +4,7 @@
 - Write the new Python implementation in this repository root and its normal subdirectories, outside `college_advisor/`.
 - Keep changes minimal. Do not add files, dependencies, configuration, or project structure unless the user explicitly asks for them.
 - Place small local smoke or unit tests in `tests/`. These tests are for simple implementation verification, not evaluation or benchmark suites.
+- Put evaluation assets in `Eval/`. This directory contains evaluation cases, manually labeled evaluation data, and the code used to run evaluation cases. Keep benchmark and prompt-evaluation work in `Eval/`, separate from the small implementation-verification tests in `tests/`.
 - Put only agent-callable runtime tools in the lowercase `tools/` package, with their unit tests in `tests/` (for example, `tools/course_sections_tool.py` is tested by `tests/test_course_sections_tool.py`).
 - Put all current and future Supabase-related code in `Supabase/`, including SQL schemas, migrations, database clients/helpers, validation scripts, and import/upload scripts. Never place this code in `tools/`; `tools/` is reserved exclusively for tools the advising agent can call at runtime.
 - Keep `graph.py` focused on graph assembly: node registration, edges, compilation, and exports. Do not place node business logic or LLM calls in it.
@@ -36,7 +37,23 @@ Apply `Supabase/stat_resource_schema.sql` for statistics resources and `Supabase
 
 ## Project Overview
 
-This project rebuilds the college-advising agent in Python as a LangGraph workflow. A request enters the graph through the router, moves to a specialized node, and then either asks the user for more information or produces a response. `graph.py` defines this flow, `state.py` defines shared graph state, and `nodes/` contains the node implementations.
+This project rebuilds the college-advising agent in Python as a LangGraph workflow. `graph.py` defines node registration and transitions, `state.py` defines shared graph state, and `nodes/` contains the node implementations. The intended top-level business routes are Catalog Lookup, Advising, and Out of Scope. Clarify is a shared fallback state rather than a separate user intent.
 
-- **Router:** Classifies the user's request and selects the appropriate next node. It should only make a routing decision and should not answer the request or perform node business logic.
-- **Catalog Lookup:** Handles direct, factual questions about the course catalog, such as course details, prerequisites, sections, instructors, and graduation requirements. It retrieves information without creating a personalized course or degree plan.
+The intended flow is:
+
+```text
+START -> Router -> Catalog Lookup -> Compose Response -> END
+                -> Advising       -> Compose Response -> END
+                -> Out of Scope                       -> END
+
+Any non-Clarify node -> Clarify -> END
+```
+
+After Clarify asks its question, the current graph run ends. The user's answer starts a new run at Router with the complete conversation history. Every non-Clarify processing node must be able to transition directly to Clarify whenever missing user-provided information prevents that node from safely continuing. Nodes must not guess missing information merely to avoid clarification.
+
+- **Router:** Classifies the user's request primarily as factual catalog lookup, personalized advising, or out of scope. It should only make a routing decision and should not answer the request, call business tools, or perform node business logic. Clarification is not a primary intent category, although Router may use the shared Clarify fallback if it cannot make a safe routing decision without additional user information.
+- **Catalog Lookup:** Handles direct, factual questions about the course catalog, such as course details, prerequisites, sections, instructors, and graduation requirements. It retrieves information without creating a personalized course or degree plan. It normally sends a completed factual draft to Compose Response, but it must transition to Clarify if the requested lookup cannot be identified safely from the available conversation.
+- **Advising:** Handles personalized tasks whose results depend on the student's academic history, preferences, constraints, or goals, including course recommendations, schedule building, and degree planning. It may use advising-specific skills and tools, including factual course tools also used by Catalog Lookup, without calling the Catalog Lookup node itself. It normally sends a completed advising draft to Compose Response, but it must transition to Clarify when required student context is missing.
+- **Clarify:** Is the shared missing-information fallback for every node, not a top-level business intent. It asks exactly one concise, targeted follow-up question based on the information the preceding node identified as missing. It does not answer the original request, perform business work, or invent a partial plan.
+- **Compose Response:** Rewrites a completed draft from Catalog Lookup or Advising into a clear final answer while preserving its facts and conclusions and adding no new information. If it cannot safely produce a final response because required information is explicitly missing, it may transition to Clarify instead of filling the gap itself.
+- **Out of Scope:** Gives a concise boundary-aware response when a request falls outside supported college-advising capabilities instead of sending it to Catalog Lookup or Advising. If the request's scope cannot be determined safely because essential context is missing, it may transition to Clarify.

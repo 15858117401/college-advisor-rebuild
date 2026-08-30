@@ -6,7 +6,7 @@ from langgraph.graph import MessagesState
 Route = Literal[
     "clarify",
     "catalog_lookup",
-    "planning",
+    "advising",
     "out_of_scope",
 ]
 

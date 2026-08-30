@@ -27,7 +27,10 @@ CATALOG_TOOLS = [
     get_course_sections,
 ]
 
-catalog_agent = build_react_agent(CATALOG_SYSTEM_PROMPT, CATALOG_TOOLS)
+catalog_agent = build_react_agent(
+    CATALOG_SYSTEM_PROMPT,
+    tools=CATALOG_TOOLS,
+)
 
 
 def catalog_lookup(state: AdvisorState) -> dict:
