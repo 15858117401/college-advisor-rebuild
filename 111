@@ -1,0 +1,1871 @@
+# 评审 College Advisor Router 架构
+
+> 请帮我评审下面这套 College Advisor 的 Router 架构。请重点判断设计本身是否合理，不要直接开始修改代码。
+>
+> 我准备把系统分成两个主要的 in-scope 执行路径：
+>
+> 1. Catalog Lookup
+> 2. Advisor
+>
+> Catalog Lookup 是一个轻量、快速、边界严格的执行路径。只有当用户的整段请求都是简单、直接、客观的事实查询时，Router 才把它送到 Catalog Lookup。
+>
+> Catalog Lookup 负责：
+>
+> - 课程描述、学分和先修课；
+> - section、时间、CRN 和 instructor；
+> - 历史课程或教师 GPA；
+> - graduation requirements 原文；
+> - 客观的课程搜索和条件过滤。
+>
+> Catalog Lookup 只检索和整理事实，不进行个性化推荐，不替学生选择课程，也不制定课程或毕业计划。
+>
+> Advisor 是能力更强、成本更高的兜底 Agent。
+>
+> 只要用户请求中出现任何有意义的复杂性，就把整段请求交给 Advisor，包括：
+>
+> - 需要结合学生的已修课程、年级、专业、目标或偏好；
+> - 询问“我应该修什么”；
+> - 课程推荐或课程选择；
+> - 下一学期或多学期 Course Planning；
+> - graduation planning；
+> - 需要综合多个事实作判断；
+> - 同一段输入包含多个混合意图；
+> - 一部分是 Catalog 查询，另一部分是个性化咨询；
+> - 因缺少学生信息而需要 clarification。
+>
+> 核心路由规则是：
+>
+> 只有当整个请求明确属于简单的客观事实查询时，才使用 Catalog Lookup。
+>
+> 如果请求包含任何个性化、推荐、判断、规划、歧义、信息缺失或混合任务，就把整个请求交给 Advisor。
+>
+> 例如：
+>
+> “What are the prerequisites and credits for STAT 400?”
+> → Catalog Lookup
+>
+> “Show me the Spring 2026 sections for STAT 107.”
+> → Catalog Lookup
+>
+> “What are the Statistics BSLAS graduation requirements?”
+> → Catalog Lookup
+>
+> “Describe STAT 420 and tell me whether I should take it.”
+> → Advisor
+>
+> “What course should I take next?”
+> → Advisor；如果缺少已修课程，再进入 Clarify
+>
+> “Give me the major requirements and build a graduation plan based on my completed courses.”
+> → Advisor
+>
+> “Answer this factual course question and also recommend courses for next semester.”
+> → 整段进入 Advisor
+>
+> Advisor 可以直接调用与 Catalog Lookup 相同的底层 Catalog tools，例如课程详情、课程搜索、毕业要求和 GPA 查询。Advisor 不需要把 Catalog Lookup 当成另一个 Agent 调用。
+>
+> 如果 Advisor 发现关键资料缺失，可以返回结构化结果，例如：
+>
+> {
+> "status": "needs\_clarification",
+> "missing\_information": ["completed\_courses"],
+> "question": "你已经完成了哪些课程？"
+> }
+>
+> 然后 graph 再进入 Clarify node。用户补充信息后，恢复原来的 Advisor 任务。
+>
+> 概念结构如下：
+>
+> User Request
+> → Router
+> → Catalog Lookup：简单、客观、轻量
+> → Advisor：复杂、混合、个性化的默认兜底
+> → Out of Scope：不属于 college advising
+>
+> 请批判性评审这套设计，并回答：
+>
+> 1. “Catalog Lookup fast path + heavy Advisor fallback”是否是一套合理的生产架构？
+> 2. “只要有任何复杂性，就把整段请求交给 Advisor”是否足够清晰和稳定？
+> 3. 哪些具体输入可能被错误路由或者处理不好？
+> 4. Clarification 应该由 Router 判断，还是由 Advisor 在执行过程中判断？
+> 5. Catalog Lookup 是否值得继续作为独立的轻量节点，还是只保留一个带 Catalog tools 的 Advisor 更合理？
+> 6. 这套设计在实现前最少需要修改什么？
+> 7. 请最终给出明确结论：approve、approve with changes 或 reject，并说明最重要的原因。
+>
+> 请不要默认建议增加多个 Agent 或复杂 Planner。只有当它们确实解决这套设计无法解决的问题时，才提出拆分建议。
+
+<details><summary>4 previous messages</summary>
+
+> 我会把这当作架构评审，不做代码修改。我先只读检查当前的 `graph.py`、state、Router/Clarify/Advisor/Catalog 节点及相关评测，区分“设计本身的问题”和“落地时与现有实现冲突的地方”。
+>
+> <details><summary>Explored a search, ran a command</summary>
+>
+> - Ran `pwd && rg --files -g '!college_advisor/**' | sed -n '1,240p'`
+>
+> <details><summary>Explored a search</summary>
+>
+> - Searched for `^` in `graph.py`
+>
+> </details>
+>
+> </details>
+>
+> 目前现有实现仍是过渡状态：Router 被硬编码为全部进入 Catalog，Advisor/Clarify 还是占位。因此评审的关键不是微调现有 prompt，而是先把路由契约、澄清后的任务恢复，以及对话上下文判定定义清楚。我继续核对 API 调用方式和工具能力边界。
+>
+> <details><summary>Explored a search</summary>
+>
+> - Searched for `^` in `main.py`
+>
+> </details>
+</details>
+
+## 总体结论：approve with changes
+
+方向是合理的，而且不需要增加 Planner 或更多 Agent。`Catalog Lookup fast path + Advisor fallback` 是常见且适合生产的“选择性升级”架构：
+
+- 大量事实查询走约束更强、成本更低的路径；
+- 复杂请求整体交给 Advisor，避免拆分、合并和跨 Agent 协调；
+- Advisor 直接复用底层 Catalog tools，而不是调用 Catalog Agent，这一点尤其正确。
+
+但目前的边界定义还不够可执行，Clarification 的状态恢复也没有被完整定义。如果直接按现在的文字规则实现，会出现稳定性和多轮对话问题。
+
+## 1. Fast path + heavy fallback 是否合理？
+
+合理，前提是 Catalog Lookup 在实践中真的更轻：
+
+- 更少的工具；
+- 更小或更快的模型；
+- 更低的 tool-call/recursion 上限；
+- 最好减少不必要的二次改写；
+- 对推荐、规划、学生资格判断有硬边界。
+
+当前实现实际上是 `Router LLM → Catalog ReAct agent → Compose LLM`，未必天然“快”。因此保留 fast path 的价值最终要通过 Catalog 命中率、p95 延迟、单请求成本和事实错误率验证。
+
+即使成本差异不大，Catalog 独立节点仍有价值：它能提供更严格的行为边界、更小的错误面和更容易单独评测的事实检索路径。
+
+## 2. “任何复杂性都进入 Advisor”是否清晰稳定？
+
+原则正确，但表述不够稳定。“简单”“复杂”“需要综合”“偏好”“歧义”都容易产生不同解释。
+
+建议把规则改成基于“输出需要什么能力”，而不是句子的表面复杂度：
+
+```text
+如果存在待恢复的澄清任务：
+    恢复原执行节点
+
+否则，如果完全不属于支持的 college-advising 范围：
+    Out of Scope
+
+否则，如果请求的任何一部分需要：
+    个体学业状态、资格判断、规范性推荐、取舍、预测或规划
+    → 整段进入 Advisor
+
+否则，如果所有任务都只是：
+    检索、机械过滤、排序、格式化或客观比较现有事实
+    → Catalog Lookup
+```
+
+需要修正两个容易过度升级的点：
+
+- “综合多个事实”不等于 Advisor。
+  “比较 STAT 420 和 STAT 432 的学分与先修课”仍是客观 Catalog 查询。
+- “出现偏好”也不一定等于 Advisor。
+  “Show STAT 107 sections after 10 AM”与“I prefer classes after 10 AM; show matching sections”是同一个机械过滤任务，不应因为第一人称措辞而改变路由。
+
+真正应进入 Advisor 的是需要在约束之间做选择、权衡或形成建议，而不是仅仅将明确约束应用于数据。
+
+另外，“多个混合意图”应明确为“跨执行路径的混合意图”。两个完全客观的事实子问题仍可整体进入 Catalog。
+
+## 3. 容易错误路由或处理不好的输入
+
+| 输入 | 建议路由 | 风险 |
+|---|---|---|
+| “Compare the prerequisites of STAT 420 and 432.” | Catalog | 多事实比较可能被误判为复杂 |
+| “List STAT 420 sections after 10 AM.” | Catalog | 时间约束不等于个性化咨询 |
+| “I prefer classes after 10 AM; show matching STAT 420 sections.” | Catalog | 不应因出现“I prefer”而升级 |
+| “Which instructor has the highest historical GPA?” | Catalog | 客观排序，不是推荐 |
+| “Which instructor should I take?” | Advisor | 规范性选择，即使没有学生资料 |
+| “What are the prerequisites, and do I meet them?” | Advisor | 前半事实，后半涉及个人资格 |
+| “What are the requirements, and am I on track?” | Advisor | 混合事实与个人毕业判断 |
+| “What are the prerequisites?” | Catalog → Clarify | 只是缺 course code，不需要重型 Advisor |
+| “STAT 420 怎么样？” | Advisor → Clarify/回答 | 可能指课程描述，也可能指是否值得修 |
+| “Can I take STAT 420?” | Advisor | 可能需要成绩、先修课、专业限制等 |
+| “Find easy STAT courses.” | Advisor | “easy”是未定义的主观判断 |
+| “Rank STAT courses by historical GPA.” | Catalog | 已给出明确客观排序标准 |
+| “Give prerequisites and debug my Python.” | 需明确 mixed-scope policy | 不能因为“混合”就假设 Advisor 能处理范围外任务 |
+| “Show Fall 2026 STAT 107 sections.” | Catalog，但应报告数据不可用 | 当前 section tool 固定为 Spring 2026，不能默默返回错误学期 |
+
+最后一类很重要：**in-scope 但当前数据不可用，不等于 Out of Scope，也不会因为升级到 Advisor 就自动解决**。需要允许执行节点明确返回“当前数据源不支持该学期/专业/课程”。
+
+## 4. Clarification 应由谁判断？
+
+应主要由拥有任务语义的执行节点判断，而不是 Router。
+
+推荐职责：
+
+- Router：判断任务属于 Catalog、Advisor 还是 Out of Scope；
+- Catalog/Advisor：判断完成该任务具体缺少什么；
+- Clarify：保存 pending task，输出一个简洁问题，结束本轮；
+- 用户回复后：绕过普通重新分类，恢复原执行节点。
+
+而且不应规定“任何信息缺失都进入 Advisor”：
+
+- 缺学生信息、目标或偏好：Advisor 判断并请求澄清；
+- 缺事实查询参数，例如 course code、term、major/catalog year：Catalog 也应能返回 `needs_clarification`。
+
+否则“这门课先修是什么？”这种明显的事实查询也会被不必要地升级。
+
+你提出的结构化结果方向正确，但至少还需要：
+
+```json
+{
+  "status": "needs_clarification",
+  "resume_to": "advising",
+  "pending_request": "...original task...",
+  "missing_information": ["completed_courses"],
+  "question": "你已经完成了哪些课程？"
+}
+```
+
+最关键的是 `resume_to` 和 `pending_request`。用户回答“STAT 400 和 STAT 410”时，这句话本身无法被正确路由；系统必须知道它是在回答之前的 Advisor 澄清。
+
+## 5. 是否保留独立 Catalog Lookup？
+
+建议现阶段保留。
+
+理由不是它能访问不同数据，而是它具有不同的执行策略：
+
+- 只允许事实检索和机械整理；
+- 更严格的 grounding；
+- 更低的工具调用上限；
+- 可以针对 Catalog false-positive 单独评测；
+- 避免重型 Advisor 对简单查询过度推理。
+
+底层 tools 应继续共享，不能复制，也不需要 Advisor 调用 Catalog Agent。
+
+未来只有在以下情况同时出现时，才值得合并成单一 Advisor：
+
+- Catalog 流量占比低；
+- 两条路径使用相同模型、相同调用次数和相近 prompt；
+- fast path 没有可测量的成本、延迟或正确率收益；
+- 双路径维护成本明显高于收益。
+
+## 6. 实现前最少需要修改什么？
+
+最少需要四项设计修订：
+
+1. **把路由规则写成可判定的 decision table**
+
+   明确区分机械检索/过滤、规范性判断、个人资格、规划、缺少事实参数和缺少学生资料。
+
+2. **允许 Catalog 和 Advisor 使用统一的执行结果协议**
+
+   至少支持 `completed`、`needs_clarification` 和 `unavailable/unsupported_data`。`clarify` 不应继续作为 Router 直接选择的普通 intent。
+
+3. **定义澄清恢复机制**
+
+   State 中保存 pending request、resume target 和 missing fields，并要求同一会话持久化。当前 [router.py](./nodes/router.py:27) 只查看最后一条消息，[state.py](./state.py:14) 也没有 pending-task 状态，因此无法可靠恢复。
+
+4. **先建立有标签的边界评测**
+
+   当前 [Eval/router_cases.csv](./Eval/router_cases.csv:1) 的标签还是空的。至少补充：
+
+   - 全客观的复合查询；
+   - 机械过滤与个人偏好的等价表达；
+   - Catalog + Advisor 混合任务；
+   - 缺事实参数与缺学生资料；
+   - 多轮 follow-up；
+   - 澄清回复；
+   - in-scope 但数据不可用；
+   - 中英文及短句歧义。
+
+指标应是不对称的：**误送 Catalog 比误送 Advisor 更严重**。因此优化目标应是 Catalog 高精度，而不是尽量提高其覆盖率。
+
+落地时还需要把 [graph.py](./graph.py:37) 的无条件边改为根据执行结果进入 Compose 或 Clarify。对于“graduation requirements 原文”，还要避免通用 Compose 改写 Markdown。
+
+## 最终判断
+
+**Approve with changes。**
+
+最重要的原因是：两级执行架构本身简洁、合理，也避免了不必要的多 Agent 编排；但当前规则混淆了“客观的多事实处理”“缺少事实查询参数”和“真正需要个性化判断”三类情况，同时尚未定义 Clarification 后如何恢复原任务。
+
+只要先正式化这两个部分——**可操作的 Catalog 准入条件**和**可恢复的澄清状态机**——这套架构就足以进入实现阶段。
+
+> 那么这个有一点就是很重要的点，就在于说我其实目前工具类是不够的，覆盖的范围可能没有特别的完善。
+
+对，这一点会直接改变 Router 的设计边界：**“任务是否复杂”和“系统是否有能力回答”必须分开判断。**
+
+工具覆盖不足并不会推翻两路径架构，但意味着不能把 Advisor 当作 Catalog 工具不足时的万能兜底。因为 Advisor 调用的还是同一批工具；缺数据、缺学期、缺专业覆盖时，换一个更强模型也无法得到可靠事实，反而更容易产生幻觉。
+
+建议区分三个维度：
+
+1. **Domain scope**：是不是 College Advisor 范围；
+2. **Reasoning type**：只是客观检索，还是需要推荐、判断、规划；
+3. **Capability availability**：当前工具和数据是否真的支持。
+
+路由仍然主要由前两个维度决定：
+
+```text
+客观检索、过滤、机械比较
+→ Catalog Lookup
+
+推荐、个性化判断、规划、取舍
+→ Advisor
+
+完全不属于 College Advisor
+→ Out of Scope
+```
+
+第三个维度由执行节点处理，不要混进“复杂度”：
+
+```text
+supported
+not_found
+missing_parameter
+unsupported_capability
+data_unavailable
+upstream_error
+```
+
+例如：
+
+- “Show Fall 2026 sections for STAT 107.”
+  - 语义路由：Catalog
+  - 当前工具只支持 Spring 2026：`unsupported_capability`
+  - 不能自动改查 Spring 2026，也不应升级 Advisor 后猜测。
+
+- “What are the CS graduation requirements?”
+  - 语义上是 Catalog；
+  - 当前只覆盖 Math/Statistics：返回当前没有该专业的数据；
+  - 这是能力缺口，不是 Out of Scope。
+
+- “Build a CS graduation plan.”
+  - 路由：Advisor；
+  - 如果缺少 CS requirements 数据，Advisor 应说明无法可靠完成，或者请用户提供 degree audit/requirements；
+  - 不能仅凭通用知识生成计划。
+
+- “What are the prerequisites?”
+  - 路由：Catalog；
+  - 缺 course code：`missing_parameter`，进入 Clarify。
+  - 这和“工具不支持该课程”是两种完全不同的状态。
+
+这里有一个很实用的判定：
+
+> Clarify 只用于用户补充信息后系统就有能力继续的情况；如果补充信息也无法弥补工具或数据源缺失，就应明确报告 capability gap。
+
+### 对 Router 的具体影响
+
+不要让 Router 掌握每个工具的所有参数限制，否则工具一变，Router prompt 和路由评测就都要跟着变，会非常脆弱。
+
+Router 只需要知道较粗粒度的能力边界，例如：
+
+- Catalog：课程事实、section、历史 GPA、已覆盖专业的 graduation requirements；
+- Advisor：基于这些事实进行学生相关判断和规划；
+- Out of Scope：完全不属于支持的 advising domain。
+
+具体的 subject、term、catalog year、专业范围和字段覆盖，由 Catalog/Advisor 调用工具后判断。
+
+可以维护一个非常小的 capability matrix，但它属于工具契约，而不是路由逻辑：
+
+| 能力 | 当前覆盖 |
+|---|---|
+| Course details | STAT |
+| Sections | 当前实现固定 Spring 2026 |
+| GPA | STAT 历史统计 |
+| Graduation requirements | Math/Statistics，2026–2027 |
+| Personalized planning | 受上述数据覆盖限制 |
+
+### 这反而加强了保留 Catalog 的理由
+
+在工具不完善阶段，Catalog 的价值不只是“快”，还是**限制模型不能越过数据边界**。它应该能够非常明确地说：
+
+- 数据库中没有找到；
+- 当前不支持这个学期；
+- 当前只覆盖哪些专业；
+- 可以回答请求中的哪一部分；
+- 哪些部分无法可靠回答。
+
+但是不要把 Catalog 的命中率预期设得过高。早期它可以是一个覆盖范围窄但高精度的 fast path。
+
+### 评测也应该拆成两个标签
+
+不要只标一个 `route_label`。建议每个 case 至少有：
+
+```text
+expected_route:
+  catalog_lookup | advising | out_of_scope
+
+expected_capability:
+  supported | missing_parameter | unsupported | partial
+```
+
+这样才能区分：
+
+- Router 路由错了；
+- Router 路由正确，但工具覆盖不足；
+- 工具支持，却被 Agent 错误调用；
+- 数据源没有结果。
+
+所以更准确的结论是：**你的两路径设计仍然成立，但 Advisor fallback 只能解决“推理复杂度”，不能解决“工具覆盖不足”。** 在实现前，应把 capability gap 设计成一等结果，避免它被错误地解释为 Clarification、Out of Scope，或者被 Advisor 用模型知识强行补全。
+
+> 关于 false spring的问题，你就不要管了，我们就不要管这个 semester 的问题了，好吗。
+
+好的，后续评审中忽略 semester 覆盖问题。
+
+统一假设：
+
+- Section 查询都针对系统当前支持的学期数据；
+- Router 不判断 Spring/Fall；
+- 不把 semester 当作缺失信息；
+- 不因学期不匹配触发 Clarify、Advisor 或 capability gap；
+- 评测中也不测试跨学期支持。
+
+工具覆盖问题只关注课程、专业、毕业要求、GPA、学生信息及规划能力等其他维度。
+
+> 重点是功能上，功能上，功能上。我记得你之前好像在某一个Chat里面你也讲了，就是功能上还有哪些缺陷，还差了哪些，是不是什么结构化比对，那个上过的课和没上过的课这个东西。
+
+<details><summary>2 previous messages</summary>
+
+> 明白，你问的不是 semester 或路由措辞，而是：**现有工具链是否足以真正完成 advising**。你记得的“已修课与要求做结构化比对”很可能正是核心缺口。我先找一下相关历史任务，再结合当前工具能力把功能缺口归纳出来。
+>
+> <details><summary>Called 11 tools</summary>
+>
+> Tool call
+>
+> Tool: list_threads
+> Status: completed
+>
+> Tool call
+>
+> Tool: read_thread
+> Status: completed
+>
+> Tool call
+>
+> Tool: read_thread
+> Status: completed
+>
+> Tool call
+>
+> Tool: read_thread
+> Status: completed
+>
+> Tool call
+>
+> Tool: read_thread
+> Status: completed
+>
+> Tool call
+>
+> Tool: read_thread
+> Status: completed
+>
+> Tool call
+>
+> Tool: read_thread
+> Status: completed
+>
+> Tool call
+>
+> Tool: read_thread
+> Status: completed
+>
+> Tool call
+>
+> Tool: read_thread
+> Status: completed
+>
+> Tool call
+>
+> Tool: read_thread
+> Status: completed
+>
+> Tool call
+>
+> Tool: read_thread
+> Status: completed
+>
+> </details>
+</details>
+
+对，你记得没错。我找到了之前的任务《对比 Java 版缺失功能》。当时的核心结论就是：
+
+> 你已经完成了“事实数据层”，但还没有完成“根据学生情况进行计算和决策的 advising 层”。
+
+其中最关键的功能缺口，正是你说的：**把学生已修课程与毕业要求做结构化比对。**
+
+## 现在已经有的功能
+
+现有工具能够回答：
+
+- 某门课是什么、多少学分、先修课是什么；
+- 有哪些符合条件的课程；
+- section、CRN、教师和时间；
+- 历史课程/教师 GPA；
+- Math、Statistics 的毕业要求原文。
+
+这本质上还是“查资料”。
+
+## 最核心的缺失：Degree Audit
+
+当前系统不能可靠回答：
+
+- 我完成了哪些毕业要求？
+- 哪些要求还没有完成？
+- 我正在修的课程算在哪一项？
+- 某个“多选一”要求是否已经满足？
+- 高级选修课已经完成几门，还缺几门？
+- 一门课能否同时计算到两个 requirement？
+- 哪些课程因为规则不明确，需要 advisor 人工确认？
+
+这里不能简单做：
+
+```text
+毕业要求里的课程 - 已修课程 = 未修课程
+```
+
+因为毕业要求包含复杂规则：
+
+- `MATH 220 or MATH 221`
+- 从三门课程中选择一门
+- 从列表中选择四门高级选修
+- 至少完成 12 学分
+- 任意 400-level STAT 课程
+- advisor-approved supporting coursework
+- 某门课可能出现在多个 requirement group 中
+- 有些课程不能重复计算
+
+所以真正需要的是：
+
+```text
+学生已修/在修课程
+        ↓
+结构化毕业要求规则
+        ↓
+Requirement Matcher / Degree Audit
+        ↓
+已完成、进行中、未完成、需要人工确认
+```
+
+例如：
+
+```json
+{
+  "completed_requirements": [
+    {
+      "requirement": "Introductory Statistics",
+      "satisfied_by": ["STAT 107"]
+    }
+  ],
+  "in_progress_requirements": [],
+  "remaining_requirements": [
+    {
+      "requirement": "Statistical Core",
+      "missing_courses": ["STAT 410", "STAT 425", "STAT 426"]
+    },
+    {
+      "requirement": "Advanced Statistics Electives",
+      "completed_count": 1,
+      "required_count": 4
+    }
+  ],
+  "manual_review": [
+    "Advisor-approved supporting coursework"
+  ]
+}
+```
+
+## Markdown 毕业要求的问题
+
+之前把毕业要求保存成 Markdown，这个决定对于下面的功能是正确的：
+
+- “Statistics 专业毕业要求是什么？”
+- “Math 是否要求 Abstract Algebra？”
+- 给人和 LLM 阅读官方要求。
+
+但 Markdown 本身不足以支撑可靠的 Degree Audit。
+
+这并不意味着要废弃 Markdown。更合理的是保留两层：
+
+```text
+Markdown
+→ 官方原文、Catalog Lookup、source of truth
+
+结构化 requirement rules
+→ 已修/未修比对、degree audit、课程规划
+```
+
+结构化规则是 Markdown 的派生数据，不替代 Markdown。
+
+## 除了 Degree Audit，还缺什么？
+
+如果只看业务功能、不谈 semester、重试、memory 等基础设施，主要还缺以下能力。
+
+### 1. 学生课程记录模型
+
+至少需要接收：
+
+- completed courses；
+- in-progress courses；
+- 成绩或是否通过；
+- 已获得学分。
+
+第一版不需要接学校 SIS，用户直接提供课程列表就可以。
+
+### 2. 先修课资格判断
+
+当前 [course_details_tool.py](./tools/course_details_tool.py:43) 只返回先修课原文，[course_search_tool.py](./tools/course_search_tool.py:148) 也明确不判断学生是否 eligible。
+
+系统还不能可靠计算：
+
+```text
+学生完成了 STAT 400 和 STAT 410
+→ 是否满足 STAT 432 的先修要求？
+```
+
+尤其是带有 `AND/OR` 的先修关系，不能只提取课程编号。
+
+### 3. 候选课程生成与推荐
+
+Degree Audit 得到“还缺高级选修”之后，还需要：
+
+- 找到能够满足该 requirement 的课程；
+- 排除学生已经完成的课程；
+- 排除尚未满足先修条件的课程；
+- 根据兴趣、GPA、难度偏好等排序。
+
+否则 Advisor 即使知道“还缺四门选修”，也不知道应该推荐哪四门。
+
+### 4. 多阶段课程规划
+
+需要把候选课程按照先修顺序安排：
+
+```text
+剩余要求
+→ 候选课程
+→ 先修依赖
+→ 每阶段合理学分
+→ 多阶段课程计划
+```
+
+它依赖前面的 Degree Audit 和 prerequisite evaluator。
+
+### 5. 确定性排课
+
+课程选定以后，还缺：
+
+- Lecture/Discussion 合法组合；
+- 时间冲突检查；
+- no-Friday、最早开始时间等限制；
+- 多个合法方案排序。
+
+这部分适合做确定性 solver/tool，不应完全交给 LLM。
+
+## 最合理的实现优先级
+
+不需要增加多个 Agent。Advisor 调用几个确定性业务工具就够了：
+
+1. `evaluate_degree_progress`
+   - 已完成、进行中、未完成、人工确认。
+
+2. `check_course_eligibility`
+   - 根据已修课程判断先修要求。
+
+3. 推荐逻辑
+   - 根据剩余要求生成和排序候选课程。
+
+4. `build_course_schedule`
+   - 对选定课程进行无冲突排课。
+
+所以你现在最值得优先补的，不是再增加一个普通 Catalog 查询工具，而是：
+
+> **结构化 Degree Audit：毕业要求规则与学生已修课程的匹配。**
+
+没有它，Advisor 只能“阅读毕业要求后凭 LLM 感觉规划”；有了它，Advisor 才真正知道学生完成了什么、缺什么，以及下一步应该从哪些课程中选择。
+
+> 我们探究一下我们的state长啥样可以吗?
+
+<details><summary>2 previous messages</summary>
+
+> 可以。这个问题正好应该在实现 Degree Audit 和 Clarification 之前定下来。我先只读对照当前 Python state 与旧 Java 的 state，重点区分：哪些是跨节点共享的“会话状态”，哪些只是某个 tool 的输入/输出，避免把所有业务数据都塞进 LangGraph state。
+>
+> <details><summary>Explored 2 searches, a list</summary>
+>
+> - Searched for `class .*State|record .*State|interface .*State|AdvisorState|MessagesState|pending|completedCourses|completed_courses|profile|task|error` in `state.py`
+> - Listed files in `state`
+> - Searched for `^` in `state.py`
+>
+> </details>
+</details>
+
+可以。我的核心判断是：**State 应该是工作流的“共享工作台”，不是课程数据库，也不是把所有工具结果都永久塞进去。**
+
+当前 [state.py](./state.py:14) 只有：
+
+```python
+class AdvisorState(MessagesState):
+    route: NotRequired[Route]
+    response: NotRequired[str]
+```
+
+其中 `MessagesState` 已经提供 `messages`。这个结构足够 Catalog MVP，但不够支持 Advisor、Degree Audit 和 Clarification 恢复。
+
+## 推荐的 State 组成
+
+我建议分成五块：
+
+```text
+AdvisorState
+├── messages                 对话历史
+├── student_context          当前已确认的学生信息
+├── pending_task             等待澄清的任务
+├── route                    本轮执行路径
+└── outcome                  本轮执行结果
+```
+
+大概可以长这样：
+
+```python
+class StudentCourse(TypedDict):
+    course_code: str
+    status: Literal["completed", "in_progress"]
+    grade: NotRequired[str]
+    credits: NotRequired[float]
+
+class StudentContext(TypedDict, total=False):
+    major: str
+    catalog_year: str
+    academic_year: str
+
+    courses: list[StudentCourse]
+
+    target_graduation: str
+    max_credits: int
+
+    interests: list[str]
+    avoid_topics: list[str]
+
+    earliest_start: str
+    latest_end: str
+    avoid_days: list[str]
+
+class PendingTask(TypedDict):
+    original_request: str
+    resume_to: Literal["catalog_lookup", "advising"]
+    missing_information: list[str]
+    question: str
+
+class ExecutionOutcome(TypedDict, total=False):
+    status: Literal[
+        "completed",
+        "needs_clarification",
+        "unavailable",
+        "failed",
+    ]
+
+    draft_response: str
+
+    missing_information: list[str]
+    clarification_question: str
+
+    error_message: str
+
+Route = Literal[
+    "catalog_lookup",
+    "advising",
+    "out_of_scope",
+]
+
+class AdvisorState(MessagesState):
+    student_context: NotRequired[StudentContext]
+
+    pending_task: NotRequired[PendingTask | None]
+
+    route: NotRequired[Route]
+    outcome: NotRequired[ExecutionOutcome]
+
+    final_response: NotRequired[str]
+```
+
+这只是设计草图，不是建议现在立刻照抄实现。
+
+## 哪些字段需要跨轮保留？
+
+State 中的字段有两种生命周期。
+
+| 类型 | 字段 | 生命周期 |
+|---|---|---|
+| 会话级 | `messages` | 整个对话保留 |
+| 会话级 | `student_context` | 用户补充后持续保留 |
+| 会话级 | `pending_task` | 澄清完成前保留 |
+| 本轮级 | `route` | 每个新任务重新计算 |
+| 本轮级 | `outcome` | 每轮执行后覆盖 |
+| 本轮级 | `final_response` | 每轮覆盖 |
+
+这是非常重要的区分。否则 checkpointer 保存 State 以后，上一轮的 `route="catalog_lookup"` 或旧的 `outcome` 可能污染下一轮。
+
+## `student_context` 应保存什么？
+
+只保存已经确认、会被业务逻辑使用的学生信息。
+
+例如用户说：
+
+> I completed STAT 107 and STAT 400, and I am currently taking STAT 410.
+
+应该进入：
+
+```json
+{
+  "courses": [
+    {
+      "course_code": "STAT 107",
+      "status": "completed"
+    },
+    {
+      "course_code": "STAT 400",
+      "status": "completed"
+    },
+    {
+      "course_code": "STAT 410",
+      "status": "in_progress"
+    }
+  ]
+}
+```
+
+不要只使用：
+
+```python
+completed_courses: list[str]
+```
+
+因为 Degree Audit 至少需要区分：
+
+- completed；
+- in progress；
+- 以后可能还需要 grade、credits、transfer/AP 等信息。
+
+但第一版可以只实现 `course_code + status`，其他字段保持 optional。
+
+另外，只有用户明确说“修完了”“正在修”，才能写入这个结构。用户只是问“STAT 400 怎么样”，不能把 STAT 400 当成已修课程。
+
+## Clarification 如何依赖 State？
+
+例如用户问：
+
+> 根据我的情况制定毕业计划。
+
+Advisor 发现缺少已修课程，返回：
+
+```json
+{
+  "status": "needs_clarification",
+  "missing_information": ["completed_courses"],
+  "clarification_question": "你已经完成和正在修读哪些课程？"
+}
+```
+
+然后 Graph 写入：
+
+```json
+{
+  "pending_task": {
+    "original_request": "根据我的情况制定毕业计划。",
+    "resume_to": "advising",
+    "missing_information": ["completed_courses"],
+    "question": "你已经完成和正在修读哪些课程？"
+  }
+}
+```
+
+用户下一轮回答：
+
+> 修完了 STAT 107 和 STAT 400，现在在修 STAT 410。
+
+系统应该：
+
+1. 更新 `student_context.courses`；
+2. 看到 `pending_task.resume_to == "advising"`；
+3. 恢复原来的毕业规划任务；
+4. 完成后清除 `pending_task`。
+
+这时不应该让普通 Router 单独判断“修完了 STAT 107……”是什么意图。
+
+## Degree Audit 结果放不放进 State？
+
+第一版建议**不直接放**。
+
+例如这些内容不应成为顶层 State：
+
+- 整份 graduation requirements Markdown；
+- 所有课程详情；
+- 所有候选课程；
+- 全部 section；
+- Supabase 查询结果；
+- 大型 Degree Audit 中间结果。
+
+推荐流程是：
+
+```text
+student_context
+    ↓
+Advisor 调用 evaluate_degree_progress
+    ↓
+Tool 返回结构化 audit
+    ↓
+Advisor 形成 draft_response
+    ↓
+outcome.draft_response
+```
+
+只有当多个 graph node 确实需要共享 Degree Audit 结果时，再增加：
+
+```python
+advising_artifact: NotRequired[DegreeAuditResult]
+```
+
+现在提前加入会让 State 越来越重。
+
+## Profile 与 State 也要分开
+
+长期用户 Profile 和 Graph State 不是一回事：
+
+```text
+Profile database
+→ 跨会话的长期事实
+
+AdvisorState.student_context
+→ 当前会话使用的 Profile 快照和本轮补充信息
+```
+
+例如用户下次重新打开新对话：
+
+1. 根据 `user_id` 读取长期 Profile；
+2. 将已修课程、专业等注入 `student_context`；
+3. Graph 在本次对话中使用；
+4. 明确的新信息再写回 Profile。
+
+课程目录、毕业要求等公共数据则完全不属于 State。
+
+## 我建议删除 `clarify` Route
+
+在新的语义下：
+
+```python
+Route = Literal[
+    "catalog_lookup",
+    "advising",
+    "out_of_scope",
+]
+```
+
+Clarification 是执行结果：
+
+```python
+outcome.status == "needs_clarification"
+```
+
+而不是一种用户意图。
+
+这样 Graph 更自然：
+
+```text
+Router
+  ↓
+Catalog / Advisor
+  ├── completed → Compose
+  └── needs_clarification → Clarify
+```
+
+Catalog 也可以因为缺少 course code 而进入 Clarify，不必把所有缺信息的请求都升级到 Advisor。
+
+## 最小版本
+
+如果现在只实现 Router、Advisor 和 Clarification，我建议 State 先控制在这几个字段：
+
+```python
+class AdvisorState(MessagesState):
+    route: NotRequired[Route]
+
+    student_context: NotRequired[StudentContext]
+
+    pending_task: NotRequired[PendingTask | None]
+
+    outcome: NotRequired[ExecutionOutcome]
+
+    final_response: NotRequired[str]
+```
+
+暂时不要加入：
+
+- 通用 task plan；
+- task result 列表；
+- node history；
+- 全部 tool traces；
+- 大型 course catalog 数据；
+- Degree Audit 缓存；
+- Java 版复杂的 error context。
+
+接下来真正需要决定的是：**`student_context` 只在当前对话内保存，还是一开始就准备与长期 Profile 合并。** 这会影响 completed courses 是纯 State 字段，还是长期用户数据的会话快照。
+
+> 这个问题，首先 degree audit 是已经做好了，所以我是不是可以 suppose，就是我做一个 degree audit reader 就可以了。因为就是 degree audit 是学校提供好的，所以说我是不是可以说我做个 degree audit reader，然后我负责是接下来的 planning 就可以了。
+
+是的。**如果学校提供的 Degree Audit 已经完成了“已满足、未满足、进行中、例外替代”的计算，那么你不需要再自己实现一套 Degree Audit engine。**
+
+更合理的架构是：
+
+```text
+学校 Degree Audit
+    ↓
+Degree Audit Reader
+    ↓
+标准化的 DegreeAuditSnapshot
+    ↓
+Advisor / Course Planner
+    ↓
+接下来修什么、如何安排
+```
+
+一句话区分：
+
+> Degree Audit 负责回答“学生现在在哪里”，Planner 负责回答“学生接下来怎么走”。
+
+## Reader 不能只是把 PDF 丢给 LLM
+
+它最好输出一个稳定的结构，例如：
+
+```json
+{
+  "program": "Statistics BSLAS",
+  "catalog_year": "2026-2027",
+  "generated_at": "2026-08-30",
+  "report_type": "official",
+  "credits": {
+    "completed": 82,
+    "in_progress": 15,
+    "required": 120
+  },
+  "courses": [
+    {
+      "course_code": "STAT 400",
+      "status": "completed",
+      "credits": 4,
+      "grade": "A"
+    },
+    {
+      "course_code": "STAT 410",
+      "status": "in_progress",
+      "credits": 3
+    }
+  ],
+  "requirements": [
+    {
+      "requirement_id": "statistical_core",
+      "title": "Statistical Core Coursework",
+      "status": "in_progress",
+      "satisfied_by": ["STAT 400", "STAT 410"],
+      "remaining_text": "STAT 425 and STAT 426 are still required"
+    },
+    {
+      "requirement_id": "advanced_electives",
+      "title": "Advanced Statistics Electives",
+      "status": "not_satisfied",
+      "completed_count": 1,
+      "required_count": 4,
+      "remaining_count": 3
+    }
+  ],
+  "manual_review": []
+}
+```
+
+这样 Advisor 不需要重新解释所有毕业规则，而是直接消费学校已经计算好的结果。
+
+## 可以删除哪些自建功能？
+
+如果 Degree Audit 足够完整，可以不自己实现：
+
+- Graduation requirement matcher；
+- 已修课程与毕业规则的完整匹配；
+- 多选一 requirement 的满足判断；
+- requirement 学分累计；
+- double-counting 的主要判定；
+- waiver、substitution、exception 的重新计算。
+
+这些应该以学校 Audit 为准。自建引擎反而可能与学校结果不一致。
+
+Markdown graduation requirements 仍然有用，但用途变成：
+
+- Catalog Lookup 回答要求原文；
+- 给用户解释规则；
+- Audit 某项含义不清时提供背景；
+- 不再作为个性化规划的主要计算来源。
+
+## Planning 仍然需要完成哪些功能？
+
+Degree Audit 只解决“缺什么”，通常不会完整解决“下一步选什么”。
+
+Planner 仍然需要：
+
+1. 读取 remaining requirements；
+2. 找到可以填这些 requirement 的候选课程；
+3. 排除已经修过或正在修的课程；
+4. 检查候选课程的先修条件；
+5. 根据兴趣、难度、GPA、目标和负担进行选择；
+6. 将课程按照先修顺序和合理负载排列；
+7. 如果还要排具体 section，再调用排课 solver。
+
+也就是：
+
+```text
+Degree Audit：
+还缺 3 门 Advanced STAT electives
+
+Planner：
+哪些课能填这 3 个位置？
+哪些课现在具备先修资格？
+哪几门符合学生目标和偏好？
+应该以什么顺序修？
+```
+
+因此还需要一个 prerequisite eligibility 功能。Degree Audit 通常告诉你毕业要求完成情况，但不一定告诉你每门候选课程现在是否满足先修条件。
+
+## State 可以随之简化
+
+不需要在 State 里分别维护一套可能与 Audit 冲突的 `completed_courses`。可以改为：
+
+```python
+class AdvisorState(MessagesState):
+    route: NotRequired[Route]
+
+    degree_audit: NotRequired[DegreeAuditSnapshot]
+
+    student_preferences: NotRequired[StudentPreferences]
+    planning_goal: NotRequired[PlanningGoal]
+
+    pending_task: NotRequired[PendingTask | None]
+    outcome: NotRequired[ExecutionOutcome]
+
+    final_response: NotRequired[str]
+```
+
+其中：
+
+- 原始 Degree Audit PDF/HTML 不要塞进 State；
+- State 保存文件引用和解析后的 snapshot；
+- Audit 中的课程记录是主要依据；
+- 用户在 Audit 生成后新增的信息，可以作为明确的 override，例如“我刚加了 STAT 425”。
+
+## Reader 必须保留的几个信息
+
+Reader 不能只抽取课程代码，还要保留：
+
+- Audit 对应的专业；
+- catalog year；
+- 报告生成时间；
+- 是 official audit 还是 what-if audit；
+- completed 与 in-progress 的区别；
+- 每个 requirement 的原始状态；
+- substitution、waiver、exception；
+- 无法确定的内容；
+- 原始位置或文本证据。
+
+遇到无法解析的 requirement，应该输出：
+
+```json
+{
+  "status": "needs_manual_review",
+  "raw_text": "...",
+  "reason": "Requirement status could not be determined reliably"
+}
+```
+
+不能由 LLM自行猜测。
+
+## 最终判断
+
+**可以，而且我认为这是比自建 Degree Audit matcher 更好的方案。**
+
+前提是学校的 Audit 确实已经提供 requirement-level 的满足状态，而不只是成绩单课程列表。
+
+新的核心业务链可以收敛为：
+
+```text
+Degree Audit Reader
+→ Remaining Requirements
+→ Prerequisite Check
+→ Course Recommendation
+→ Multi-stage Planning
+→ 可选的 Section Scheduling
+```
+
+下一步最有价值的是拿一份脱敏后的真实 Degree Audit 样本，确认它是 PDF、HTML、截图还是其他格式，以及里面是否稳定包含 requirement 状态。Reader 的结构应该从真实报告格式反推，而不是先凭空设计。
+
+> 但是从用户角度来说，并不是每一个用户都会upload degree audit, 有可能只是单纯的问一问？？
+
+对，所以 **Degree Audit 只能是可选的高质量输入，不能成为使用 Advisor 的前置条件**。
+
+从用户角度，系统需要支持三种使用深度。
+
+| 使用方式 | 用户提供的信息 | 系统能做什么 |
+|---|---|---|
+| 事实查询 | 什么都不提供 | 查课程、先修课、GPA、毕业要求 |
+| 轻量咨询 | 提供部分背景 | 给条件性推荐、比较课程、建议下一步 |
+| 完整规划 | Degree Audit 或完整学业记录 | 判断剩余要求，生成较可靠的毕业计划 |
+
+## 典型例子
+
+### 不需要 Degree Audit
+
+> What are the prerequisites for STAT 420?
+
+直接走 Catalog。
+
+> I like machine learning. Which STAT courses should I look at?
+
+走 Advisor。即使没有 Degree Audit，也可以给一般性建议。
+
+> I completed STAT 400 and STAT 410. What should I take next?
+
+走 Advisor，根据用户明确提供的课程做推荐。可以说明这是基于目前提供的信息，而不是完整毕业审计。
+
+### 可能需要更多信息，但不强制上传
+
+> Can I graduate next year?
+
+这个问题需要完整度更高的信息。Advisor 可以问：
+
+> 如果你有 Degree Audit，可以上传；也可以直接告诉我你的专业、已经完成和正在修读的课程。
+
+也就是说给用户两条路：
+
+```text
+上传 Degree Audit
+或
+手动提供课程信息
+```
+
+### 应该强烈建议 Degree Audit
+
+> Build a complete semester-by-semester plan that satisfies every remaining graduation requirement.
+
+如果没有完整课程记录，系统无法可靠判断所有剩余要求。这时可以：
+
+- 建议上传 Degree Audit；
+- 或要求用户提供完整已修/在修课程；
+- 如果用户都不提供，只能给示例性、非完整计划。
+
+## State 应因此改成可选输入
+
+不应设计成：
+
+```python
+degree_audit: DegreeAuditSnapshot  # 必须存在
+```
+
+而应该是统一的学生上下文：
+
+```python
+class StudentCourse(TypedDict):
+    course_code: str
+    status: Literal["completed", "in_progress"]
+    source: Literal["user", "degree_audit", "profile"]
+
+class StudentContext(TypedDict, total=False):
+    major: str
+    catalog_year: str
+
+    courses: list[StudentCourse]
+
+    record_completeness: Literal[
+        "unknown",
+        "partial",
+        "complete",
+    ]
+
+    degree_audit: DegreeAuditSnapshot
+
+    goals: list[str]
+    interests: list[str]
+    preferences: dict
+```
+
+这里最重要的新字段是：
+
+```python
+record_completeness
+```
+
+因为：
+
+> “我修过 STAT 400”
+
+只能说明 STAT 400 已完成，不能说明这是用户的完整课程历史。
+
+例如：
+
+```json
+{
+  "courses": [
+    {
+      "course_code": "STAT 400",
+      "status": "completed",
+      "source": "user"
+    }
+  ],
+  "record_completeness": "partial"
+}
+```
+
+如果来自完整 Degree Audit，则可以是：
+
+```json
+{
+  "courses": [...],
+  "record_completeness": "complete",
+  "degree_audit": {...}
+}
+```
+
+## Advisor 应根据上下文完整度调整回答
+
+```text
+没有学生信息
+→ 给一般性建议，或在确实必要时 Clarify
+
+部分学生信息
+→ 基于已知信息给推荐，同时说明没有进行完整毕业审计
+
+完整手动记录
+→ 可以做较完整的规划
+
+Degree Audit
+→ 以学校审计结果为基础做最可靠的规划
+```
+
+因此不是“没有 Degree Audit 就不能 Planning”，而是 Planning 有不同置信层级。
+
+### Partial-context planning
+
+> 根据你告诉我的 STAT 400 和 STAT 410，我可以推荐下一步课程；但由于我没有你的完整学业记录，这不是完整的毕业进度检查。
+
+### Audit-backed planning
+
+> 根据 Degree Audit，目前剩余三门高级选修和某项 LAS requirement，下面的计划针对这些明确缺口生成。
+
+## Clarify 的正确标准
+
+Advisor 不应该一看到没有 Degree Audit 就追问上传。
+
+应该判断：
+
+> 缺少这些信息，会不会导致当前问题无法负责任地回答？
+
+- 一般课程推荐：可以直接回答；
+- 两门课比较：可以直接回答；
+- 根据部分已修课程推荐下一门：通常可以回答；
+- 判断能否按时毕业：需要 Clarify；
+- 保证满足全部毕业要求：需要完整记录或 Degree Audit；
+- 精确多阶段计划：强烈建议 Degree Audit，但可以接受用户手动提供完整课程记录。
+
+## 修正后的完整架构
+
+```text
+User Request
+    ↓
+Router
+    ├── Catalog Lookup
+    │     └── 不需要学生资料
+    │
+    └── Advisor
+          ↓
+       检查 StudentContext
+          ├── 信息足够 → 直接咨询或规划
+          ├── 信息部分充分 → 条件性建议
+          └── 关键资料缺失 → Clarify
+                                 ├── 上传 Degree Audit
+                                 └── 手动提供信息
+```
+
+所以最终定位应该是：
+
+> **Degree Audit Reader 是增强 Advisor 可靠性的可选输入工具，不是系统的必经入口。**
+
+用户可以从“随便问一门课”开始，逐渐补充背景；只有当他要求完整毕业判断或精确规划时，系统才需要更完整的学业记录。
+
+> 那么这个我们存起来的degree audit其实应该是profile的内容对不对，我们设计一个极简的 profile存储？？？ 然后我们要给一个通过对话临时改变audit的机制？？？ ，还是说audit不允许通过input修改？？？ ，或者上交
+
+对，但要稍微区分一下：
+
+> Degree Audit 属于用户 Profile 的一部分，但它应该作为“带日期的不可变快照”，不能被普通对话直接修改。
+
+推荐的数据模型是：
+
+```text
+上传的 Degree Audit 快照
+        +
+用户明确确认的长期更新
+        +
+当前对话的临时更新 / what-if
+        =
+本轮 Planning 使用的 Academic Context
+```
+
+## 1. 极简 Profile
+
+第一版可以非常小：
+
+```python
+class UserProfile(TypedDict, total=False):
+    major: str
+    catalog_year: str
+
+    degree_audit: DegreeAuditSnapshot
+
+    confirmed_academic_updates: list[AcademicUpdate]
+
+    preferences: StudentPreferences
+```
+
+Degree Audit 至少保存：
+
+```python
+class DegreeAuditSnapshot(TypedDict):
+    source_file_ref: str
+    parsed_at: str
+    audit_as_of: str
+
+    program: str
+    catalog_year: str
+
+    courses: list[AuditCourse]
+    requirements: list[AuditRequirement]
+```
+
+原始 PDF 不必放进 Graph State。Profile 保存文件引用和解析后的结构化 snapshot。
+
+## 2. 对话不能直接修改 Degree Audit
+
+例如 Audit 写着：
+
+```text
+STAT 410 — not completed
+```
+
+用户说：
+
+> 我现在正在修 STAT 410。
+
+系统不应该把原始 Audit 改成：
+
+```text
+STAT 410 — completed
+```
+
+而应该新增一条 overlay：
+
+```json
+{
+  "course_code": "STAT 410",
+  "status": "in_progress",
+  "source": "user_reported",
+  "reported_at": "2026-08-30"
+}
+```
+
+原因是：
+
+- Audit 是学校在某个时间点生成的记录；
+- 用户的信息可能发生在 Audit 生成之后；
+- 用户可能说错、表达不清或者只是做假设；
+- 修改原 Audit 后，会失去“学校报告原来写了什么”的证据。
+
+因此 Audit 是 baseline，用户输入是 overlay。
+
+## 3. 对话中的更新分三类
+
+### 当前会话的真实更新
+
+> 我这个学期正在修 STAT 410。
+
+写入：
+
+```python
+session_academic_updates
+```
+
+当前 Planning 使用，但默认不修改长期 Profile。
+
+### 用户明确要求记住
+
+> 我已经完成 STAT 410，把这个更新到我的资料里。
+
+这时可以保存到：
+
+```python
+profile.confirmed_academic_updates
+```
+
+但仍然不是修改 Degree Audit，而是在 Profile 里保存一条经过确认的补充记录。
+
+### What-if 假设
+
+> 假设我下学期修完 STAT 425，会怎么样？
+
+写入：
+
+```json
+{
+  "course_code": "STAT 425",
+  "status": "hypothetical_completed",
+  "scope": "current_conversation"
+}
+```
+
+它只参与当前模拟，绝对不能写入长期 Profile。
+
+## 4. State 可以这样设计
+
+```python
+class AdvisorState(MessagesState):
+    route: NotRequired[Route]
+
+    profile_snapshot: NotRequired[UserProfile]
+
+    session_academic_updates: NotRequired[list[AcademicUpdate]]
+
+    planning_goal: NotRequired[PlanningGoal]
+    pending_task: NotRequired[PendingTask | None]
+
+    outcome: NotRequired[ExecutionOutcome]
+    final_response: NotRequired[str]
+```
+
+实际 Planning 使用：
+
+```text
+profile_snapshot.degree_audit
++ profile_snapshot.confirmed_academic_updates
++ session_academic_updates
+```
+
+得到：
+
+```python
+effective_academic_context
+```
+
+这个 effective context 可以临时计算，不一定需要继续存入 State，避免同时保存三份重复数据。
+
+## 5. 什么情况下替换 Degree Audit？
+
+只有用户上传一份新的 Degree Audit 时，才更新 baseline：
+
+```text
+旧 Audit：as of 2026-01-15
+新 Audit：as of 2026-08-20
+```
+
+新上传后的处理是：
+
+1. Reader 解析新 Audit；
+2. 将它设为最新 snapshot；
+3. 对比已有的 confirmed updates；
+4. 已经出现在新 Audit 中的更新可以移除；
+5. 新 Audit 仍未体现的更新继续保留；
+6. 矛盾项标记出来，不要静默覆盖。
+
+极简第一版甚至可以只保留最新一份 Audit，但至少要保存：
+
+- `audit_as_of`
+- `source_file_ref`
+- 文件 hash
+- 解析时间
+
+## 6. 冲突不能自动覆盖
+
+例如 Audit 说：
+
+```text
+STAT 400 — completed
+```
+
+用户说：
+
+> 我没有修过 STAT 400。
+
+这不是普通更新，而是冲突。系统不应该删除 STAT 400，可以：
+
+- 当前 Planning 暂时将它标记为 disputed；
+- 提醒用户 Audit 与输入不一致；
+- 对需要精确判断的任务请求确认或上传更新后的 Audit。
+
+同样，用户说“我想修 STAT 425”，不能被解析成“我已经修完 STAT 425”。
+
+## 7. 需要区分 Audit 状态和推测状态
+
+用户提供 Audit 后又报告完成了一门课程，系统最好这样表达：
+
+```text
+学校 Audit（截至 2026-05-20）：
+Advanced Electives 还缺 3 门。
+
+结合你之后报告完成的 STAT 425：
+规划时可以按还缺 2 门处理，但这不是更新后的学校审计结果。
+```
+
+也就是保留两个概念：
+
+```text
+audit_status       学校 Audit 原始结果
+projected_status   加上用户补充后的规划视图
+```
+
+如果用户需要准确确认官方毕业进度，就应该上传新的 Audit，而不是让系统声称已经修改学校结果。
+
+## 最终建议
+
+采用这套规则：
+
+1. **Degree Audit 存入 Profile，但作为不可变快照。**
+2. **普通对话不能修改 Audit。**
+3. **对话允许添加 session-only academic updates。**
+4. **只有用户明确确认，才把更新长期保存到 Profile。**
+5. **What-if 永远只存在于当前会话。**
+6. **上传新 Audit 才能替换 Profile 中的 Audit baseline。**
+7. **Planner 使用 Audit + overlays，但明确区分官方状态和推测状态。**
+
+这样既支持“用户刚修了一门课但 Audit 还没更新”，也不会让一句随意输入污染长期学业记录。
+
+> 那么首先这个玩意儿其实跟 AI 没有什么关系。我们重点是设计一下 Ogit 怎么存成 profile。然后至于说上传 Ogit 这个行为，其实就是个 HTTP request，其实跟 AI 没啥关系。
+
+对。我把你说的 “Ogit” 理解为 Degree Audit。这个流程本质上是普通后端功能，不应该设计成 Agent tool：
+
+```text
+用户上传文件
+→ HTTP API
+→ 确定性解析器
+→ 存入 Profile
+→ Advisor 运行时读取 Profile
+```
+
+AI 不负责上传、不负责决定是否保存，也不应该直接修改 Profile。
+
+## 极简存储方案
+
+如果第一版只需要保留用户最新的一份 Degree Audit，一张 `user_profiles` 表就够了：
+
+```sql
+create table user_profiles (
+    user_id uuid primary key,
+
+    degree_audit_file_path text,
+    degree_audit_file_hash text,
+    degree_audit_as_of date,
+    degree_audit_schema_version integer,
+    degree_audit_data jsonb,
+
+    updated_at timestamptz not null default now()
+);
+```
+
+其中：
+
+- 原始 PDF 放在私有 Supabase Storage；
+- 数据库只保存文件路径；
+- 解析后的结构化结果放在 `degree_audit_data`；
+- 每个用户只保存当前最新的 Audit；
+- 暂时不做历史版本表。
+
+`degree_audit_data` 可以是：
+
+```json
+{
+  "schema_version": 1,
+  "program": {
+    "major": "Statistics",
+    "degree": "BSLAS",
+    "catalog_year": "2026-2027"
+  },
+  "audit_as_of": "2026-08-30",
+  "credits": {
+    "completed": 82,
+    "in_progress": 15,
+    "required": 120
+  },
+  "courses": [
+    {
+      "course_code": "STAT 400",
+      "status": "completed",
+      "credits": 4,
+      "grade": "A"
+    }
+  ],
+  "requirements": [
+    {
+      "requirement_id": "advanced_statistics_electives",
+      "title": "Advanced Statistics Electives",
+      "status": "not_satisfied",
+      "completed_count": 1,
+      "required_count": 4,
+      "remaining_count": 3,
+      "raw_text": "Select four courses..."
+    }
+  ],
+  "warnings": []
+}
+```
+
+不需要把 courses 和 requirements 再拆成很多数据库表。对于 Profile 读取来说，一个带版本号的 JSONB 足够。
+
+## HTTP 上传流程
+
+可以是：
+
+```http
+PUT /api/me/profile/degree-audit
+Content-Type: multipart/form-data
+```
+
+后端执行：
+
+1. 验证登录用户；
+2. 计算文件 hash；
+3. 将文件保存到私有 Storage；
+4. 调用 Degree Audit parser；
+5. 校验解析结果；
+6. 原子更新 `user_profiles.degree_audit_data`；
+7. 更新文件路径和 `audit_as_of`；
+8. 返回新的 Profile 摘要。
+
+解析成功之前，不要覆盖原来的 Audit。这样新文件解析失败时，旧 Profile 仍然有效。
+
+读取：
+
+```http
+GET /api/me/profile
+```
+
+删除：
+
+```http
+DELETE /api/me/profile/degree-audit
+```
+
+## Degree Audit Reader 的定位需要修正
+
+它不应该是：
+
+```text
+Advisor
+→ 调用 degree_audit_reader tool
+→ 读取文件
+```
+
+而应该是：
+
+```text
+HTTP Upload Handler
+→ degree_audit_parser
+→ Profile Repository
+```
+
+它是应用层的 ingestion/parser，不是 Agent 可以临时调用的 runtime tool，因此也不应该放进当前用于 Agent 工具的 `tools/` 包。
+
+即使以后解析器内部用了 OCR 或模型，它仍然属于上传处理流程，不属于 Advisor graph。
+
+## Advisor 怎么使用？
+
+每次开始请求时，由普通应用代码读取 Profile：
+
+```python
+profile = profile_repository.get(user_id)
+
+graph.invoke(
+    {
+        "messages": [new_message],
+        "profile_snapshot": profile,
+    },
+    config=conversation_config,
+)
+```
+
+State 只接收一份只读快照：
+
+```python
+class AdvisorState(MessagesState):
+    profile_snapshot: NotRequired[UserProfile]
+
+    route: NotRequired[Route]
+    pending_task: NotRequired[PendingTask | None]
+    session_academic_updates: NotRequired[list[AcademicUpdate]]
+
+    outcome: NotRequired[ExecutionOutcome]
+```
+
+Advisor 可以读 `profile_snapshot`，但第一版不应该获得“写 Profile”的 tool。
+
+## 对话里的临时修改
+
+对话输入不修改数据库 Profile，只放在本次 State：
+
+```python
+session_academic_updates
+```
+
+例如：
+
+> Audit 生成以后，我又开始修 STAT 410。
+
+本轮 State：
+
+```json
+{
+  "session_academic_updates": [
+    {
+      "course_code": "STAT 410",
+      "status": "in_progress",
+      "source": "current_conversation"
+    }
+  ]
+}
+```
+
+Planner 使用：
+
+```text
+Profile 中的 Degree Audit
++ 当前会话更新
+```
+
+但是数据库里的 `degree_audit_data` 不变。
+
+会话结束后，这个临时更新可以直接消失。以后如果真的需要“记住这条信息”，再单独设计显式的 Profile Update HTTP API，而不是让聊天内容自动污染 Profile。
+
+## 将来需要历史版本时再拆表
+
+如果未来需要保存多次上传记录，再升级成：
+
+```text
+user_profiles
+└── current_degree_audit_id
+
+degree_audit_snapshots
+├── id
+├── user_id
+├── file_path
+├── file_hash
+├── parsed_data
+└── uploaded_at
+```
+
+但第一版没有必要。
+
+最终的极简边界是：
+
+- **Upload API 负责写入 Profile；**
+- **Parser 负责把文件转换成 JSON；**
+- **Profile 保存最新 Audit；**
+- **Graph 只读 Profile snapshot；**
+- **对话更新只存在于当前 State；**
+- **AI 没有修改长期 Audit 的权限。**

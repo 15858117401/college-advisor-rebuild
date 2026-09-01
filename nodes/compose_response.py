@@ -4,6 +4,8 @@ from state import AdvisorState
 
 COMPOSE_SYSTEM_PROMPT = """Rewrite the provided draft as a clear, concise, human-readable answer.
 Preserve the facts in the draft and do not add new information.
+Preserve source URLs, attribution, dates, rating counts, and uncertainty or
+sample-size caveats from the draft.
 Return only the final answer.
 """
 

@@ -1,3 +1,4 @@
+import json
 import sys
 import unittest
 from pathlib import Path
@@ -101,7 +102,14 @@ class RouterTest(unittest.TestCase):
             ],
         )
         router_messages = router_llm.invoke.call_args.args[0]
-        self.assertEqual(router_messages[-1].content, current_input)
+        router_input = json.loads(router_messages[-1].content)
+        self.assertEqual(
+            router_input,
+            {
+                "conversation_context": past_messages,
+                "current_input": current_input,
+            },
+        )
         compose_prompt = compose_llm.invoke.call_args.args[0]
         self.assertEqual(compose_prompt[-1][1], "Take STAT 410 next.")
 

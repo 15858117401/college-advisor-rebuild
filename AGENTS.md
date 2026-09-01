@@ -39,7 +39,7 @@ Apply `Supabase/stat_resource_schema.sql` for statistics resources and `Supabase
 
 This project rebuilds the college-advising agent in Python as a LangGraph workflow. `graph.py` defines node registration and transitions, `state.py` defines shared graph state, and `nodes/` contains the node implementations. The intended top-level business routes are Catalog Lookup, Advising, and Out of Scope. Clarify is a shared fallback state rather than a separate user intent.
 
-Graph input must keep the current user input separate from prior conversation history. Store the current turn's raw user text in `current_input`; use the inherited `MessagesState.messages` container only for completed past messages. Nodes that call an LLM or ReAct agent may assemble a temporary message list as `messages + current_input`, but they must not infer the current input from `messages[-1]`.
+Graph input must keep the current user input separate from prior conversation history. Store the current turn's raw user text in `current_input`; use the inherited `MessagesState.messages` container only for completed past messages. Nodes must not infer the current input from `messages[-1]`. The Router LLM call must send one structured user payload with separate `conversation_context` and `current_input` fields so the model never has to infer which message is current. ReAct nodes may assemble a temporary message list as `messages + current_input` when they need the native chat history format.
 
 The intended flow is:
 

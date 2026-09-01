@@ -1,7 +1,12 @@
 from langchain_core.tools import BaseTool
 
 from react_agent import build_react_agent
+from skills import load_skill
 from state import AdvisorState, messages_with_current_input
+from tools.professor_research_tools import (
+    search_rate_my_professor,
+    search_reddit,
+)
 
 
 ADVISING_SYSTEM_PROMPT = """You are a personalized college advising agent.
@@ -12,10 +17,11 @@ course information. If the available information is insufficient, explain
 what information is needed.
 """
 
-# Advising skills and tools are intentionally configured independently from
-# Catalog Lookup. Add advising-specific capabilities here as they are built.
-ADVISING_SKILLS: list[str] = []
-ADVISING_TOOLS: list[BaseTool] = []
+ADVISING_SKILLS: list[str] = [load_skill("professor_research")]
+ADVISING_TOOLS: list[BaseTool] = [
+    search_rate_my_professor,
+    search_reddit,
+]
 
 advising_agent = build_react_agent(
     ADVISING_SYSTEM_PROMPT,
