@@ -14,7 +14,7 @@ from graph import graph
 
 
 DEFAULT_INPUT = EVAL_DIR / "router_eval" / "router_cases_with_responses.csv"
-DEFAULT_OUTPUT = EVAL_DIR / "full_eval_results.md"
+DEFAULT_OUTPUT = EVAL_DIR / "full_eval_results.csv"
 DEFAULT_MAX_WORKERS = 10
 MAX_ATTEMPTS_PER_CASE = 2
 
@@ -37,62 +37,16 @@ def run_case(user_query: str) -> tuple[str, str]:
     raise AssertionError("unreachable")
 
 
-def _blockquote(text: str) -> str:
-    if not text:
-        return "> _No content returned._"
-    return "\n".join(f"> {line}" if line else ">" for line in text.splitlines())
-
-
-def _render_report(rows: list[dict[str, str]], workers: int) -> str:
-    correct = sum(
-        row["predicted_route"] == row["expected_route"] for row in rows
-    )
-    errors = sum(bool(row["error"]) for row in rows)
-    accuracy = correct / len(rows) if rows else 0.0
-    lines = [
-        "# Full Graph Evaluation Results",
-        "",
-        f"- Cases: {len(rows)}",
-        f"- Route matches: {correct}/{len(rows)} ({accuracy:.1%})",
-        f"- Execution errors: {errors}",
-        f"- Concurrency: {workers}",
-        "",
-    ]
-
+def _print_final_results(rows: list[dict[str, str]]) -> None:
+    print("\nFinal results:")
     for row in rows:
-        route_status = (
-            "route matched"
-            if row["predicted_route"] == row["expected_route"]
-            else "route mismatch"
+        print(
+            f"\n=== Case {row['case_id']} ===\n"
+            f"Expected route: {row['expected_route']}\n"
+            f"Actual route: {row['predicted_route']}\n"
+            f"User query: {row['user_query']}\n"
+            f"Response:\n{row['response']}"
         )
-        lines.extend(
-            [
-                f"## Case {row['case_id']} — {route_status}",
-                "",
-                f"- Expected route: `{row['expected_route']}`",
-                f"- Actual route: `{row['predicted_route']}`",
-                "",
-                "### User query",
-                "",
-                _blockquote(row["user_query"]),
-                "",
-                "### Final response",
-                "",
-                _blockquote(row["response"]),
-                "",
-            ]
-        )
-        if row["error"]:
-            lines.extend(
-                [
-                    "### Execution error",
-                    "",
-                    _blockquote(row["error"]),
-                    "",
-                ]
-            )
-
-    return "\n".join(lines)
 
 
 def parse_args() -> argparse.Namespace:
@@ -113,25 +67,24 @@ def main() -> None:
     with args.input.open(newline="", encoding="utf-8-sig") as source:
         reader = csv.DictReader(source)
         source_rows = list(reader)
-        fieldnames = set(reader.fieldnames or [])
+        fieldnames = reader.fieldnames or []
 
-    required_columns = {"case_id", "user_query", "expected_route"}
-    missing_columns = required_columns.difference(fieldnames)
+    required_columns = {
+        "case_id",
+        "user_query",
+        "expected_route",
+        "predicted_route",
+        "response",
+    }
+    missing_columns = required_columns.difference(set(fieldnames))
     if missing_columns:
         missing = ", ".join(sorted(missing_columns))
         raise ValueError(f"missing required CSV columns: {missing}")
 
-    rows = [
-        {
-            "case_id": row["case_id"],
-            "user_query": row["user_query"],
-            "expected_route": row["expected_route"],
-            "predicted_route": "",
-            "response": "",
-            "error": "",
-        }
-        for row in source_rows
-    ]
+    rows = [dict(row) for row in source_rows]
+    for row in rows:
+        row["predicted_route"] = ""
+        row["response"] = ""
 
     completed = 0
     with ThreadPoolExecutor(max_workers=args.workers) as executor:
@@ -148,7 +101,7 @@ def main() -> None:
                 row["response"] = response
             except Exception as exc:
                 row["predicted_route"] = "error"
-                row["error"] = f"{type(exc).__name__}: {exc}"
+                row["response"] = f"ERROR: {type(exc).__name__}: {exc}"
 
             completed += 1
             print(
@@ -158,18 +111,21 @@ def main() -> None:
                 flush=True,
             )
 
-    report = _render_report(rows, args.workers)
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(report, encoding="utf-8")
+    with args.output.open("w", newline="", encoding="utf-8") as destination:
+        writer = csv.DictWriter(destination, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(rows)
 
     correct = sum(
         row["predicted_route"] == row["expected_route"] for row in rows
     )
-    errors = sum(bool(row["error"]) for row in rows)
+    errors = sum(row["predicted_route"] == "error" for row in rows)
     accuracy = correct / len(rows) if rows else 0.0
+    _print_final_results(rows)
     print(f"\nRoute matches: {correct}/{len(rows)} ({accuracy:.1%})")
     print(f"Execution errors: {errors}")
-    print(f"Saved readable report to {args.output}")
+    print(f"Saved full results to {args.output}")
 
 
 if __name__ == "__main__":

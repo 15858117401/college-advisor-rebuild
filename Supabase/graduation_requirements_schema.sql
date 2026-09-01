@@ -3,9 +3,8 @@ begin;
 create table public.graduation_requirement_documents (
     document_key text primary key,
     document_type text not null
-        check (document_type in ('shared', 'program')),
+        check (document_type = 'program'),
     institution_code text not null,
-    college_code text not null,
     degree_code text not null,
     program_code text,
     program_name text,
@@ -20,33 +19,15 @@ create table public.graduation_requirement_documents (
         check (btrim(content_markdown) <> ''),
     updated_at timestamptz not null default now(),
     constraint graduation_requirement_document_scope_is_valid check (
-        (
-            document_type = 'shared'
-            and program_code is null
-            and program_name is null
-            and parent_document_key is null
-        )
-        or
-        (
-            document_type = 'program'
-            and program_code is not null
-            and program_name is not null
-            and parent_document_key is not null
-        )
+        document_type = 'program'
+        and program_code is not null
+        and program_name is not null
+        and parent_document_key is null
     )
 );
 
 create index graduation_requirement_parent_idx
     on public.graduation_requirement_documents (parent_document_key);
-
-create unique index graduation_requirement_shared_version_idx
-    on public.graduation_requirement_documents (
-        institution_code,
-        college_code,
-        degree_code,
-        catalog_year
-    )
-    where document_type = 'shared';
 
 create unique index graduation_requirement_program_version_idx
     on public.graduation_requirement_documents (
@@ -57,7 +38,7 @@ create unique index graduation_requirement_program_version_idx
     )
     where document_type = 'program';
 
-create function public.touch_graduation_requirement_document_updated_at()
+create or replace function public.touch_graduation_requirement_document_updated_at()
 returns trigger
 language plpgsql
 security invoker

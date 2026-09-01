@@ -1,6 +1,13 @@
-from state import AdvisorState, messages_with_current_input
+from langgraph.runtime import Runtime
+
 from react_agent import build_react_agent
 from skills import load_skill
+from state import (
+    AdvisorContext,
+    AdvisorState,
+    messages_with_current_input,
+    profile_from_runtime,
+)
 from tools.course_details_tool import get_course_details
 from tools.graduation_requirements_tool import get_graduation_requirements
 from tools.course_instructor_gpa_tool import get_course_instructor_gpas
@@ -45,10 +52,14 @@ catalog_agent = build_react_agent(
 )
 
 
-def catalog_lookup(state: AdvisorState) -> dict:
+def catalog_lookup(
+    state: AdvisorState,
+    runtime: Runtime[AdvisorContext] | None = None,
+) -> dict:
     """Run the catalog ReAct agent with past messages and current input."""
+    profile = profile_from_runtime(runtime)
     result = catalog_agent.invoke(
-        {"messages": messages_with_current_input(state)},
+        {"messages": messages_with_current_input(state, profile=profile)},
         config={"recursion_limit": 12},
     )
     return {"response": result["messages"][-1].content}

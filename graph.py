@@ -10,11 +10,11 @@ from nodes import (
     route_request,
     router,
 )
-from state import AdvisorState, Route
+from state import AdvisorContext, AdvisorState, Route
 
 
 def build_graph():
-    builder = StateGraph(AdvisorState)
+    builder = StateGraph(AdvisorState, context_schema=AdvisorContext)
 
     builder.add_node("router", router)
     builder.add_node("clarify", clarify)
@@ -48,6 +48,7 @@ graph = build_graph()
 
 __all__ = [
     "AdvisorState",
+    "AdvisorContext",
     "Route",
     "RouteDecision",
     "build_graph",

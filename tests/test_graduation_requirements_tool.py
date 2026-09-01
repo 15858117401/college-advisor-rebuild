@@ -12,7 +12,6 @@ if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
 from tools.graduation_requirements_tool import (
-    LAS_DOCUMENT_KEY,
     MAJOR_DOCUMENT_KEYS,
     TABLE_NAME,
     get_graduation_requirements,
@@ -28,14 +27,14 @@ class _FakeTableQuery:
         self.client.calls.append(("select", fields))
         return self
 
-    def in_(self, column: str, values: list[str]):
-        self.client.calls.append(("in", column, list(values)))
-        self.values = values
+    def eq(self, column: str, value: str):
+        self.client.calls.append(("eq", column, value))
+        self.value = value
         return self
 
     def execute(self):
         return SimpleNamespace(
-            data=[row for row in self.rows if row.get("document_key") in self.values]
+            data=[row for row in self.rows if row.get("document_key") == self.value]
         )
 
 
@@ -49,15 +48,11 @@ class _FakeSupabase:
         return _FakeTableQuery(self, self.rows)
 
 
-def _document_rows(major: str, *, las_content: str, major_content: str) -> list[dict]:
+def _document_rows(major: str, *, major_content: str) -> list[dict]:
     return [
         {
             "document_key": MAJOR_DOCUMENT_KEYS[major],
             "content_markdown": major_content,
-        },
-        {
-            "document_key": LAS_DOCUMENT_KEY,
-            "content_markdown": las_content,
         },
     ]
 
@@ -72,44 +67,32 @@ class GraduationRequirementsToolTest(unittest.TestCase):
             result = get_graduation_requirements.invoke({"major": major})
         return result, client
 
-    def test_math_returns_common_then_major_markdown_from_one_query(self) -> None:
-        las = "# LAS Requirements\n\nLAS body\n"
+    def test_math_returns_exact_major_markdown_from_one_query(self) -> None:
         math = "# Mathematics, BSLAS\n\nMath body\n"
         result, client = self.invoke_with_rows(
             "math",
-            _document_rows("math", las_content=las, major_content=math),
+            _document_rows("math", major_content=math),
         )
 
-        self.assertEqual(
-            result,
-            "# LAS COMMON REQUIREMENTS\n\n"
-            f"{las}\n\n# MAJOR REQUIREMENTS\n\n{math}",
-        )
+        self.assertEqual(result, math)
         self.assertEqual(
             client.calls,
             [
                 ("table", TABLE_NAME),
-                ("select", "document_key,content_markdown"),
-                (
-                    "in",
-                    "document_key",
-                    [LAS_DOCUMENT_KEY, MAJOR_DOCUMENT_KEYS["math"]],
-                ),
+                ("select", "content_markdown"),
+                ("eq", "document_key", MAJOR_DOCUMENT_KEYS["math"]),
             ],
         )
 
     def test_stats_returns_exact_stored_markdown(self) -> None:
-        las = "shared markdown"
         stats = "statistics markdown"
         result, _ = self.invoke_with_rows(
             "stats",
-            _document_rows("stats", las_content=las, major_content=stats),
+            _document_rows("stats", major_content=stats),
         )
 
-        self.assertIn(las, result)
-        self.assertIn(stats, result)
-        self.assertLess(result.index(las), result.index(stats))
-        self.assertNotIn(MAJOR_DOCUMENT_KEYS["math"], result)
+        self.assertEqual(result, stats)
+        self.assertNotIn("General Education", result)
 
     def test_input_only_accepts_math_or_stats(self) -> None:
         with self.assertRaises(ValidationError):
@@ -117,15 +100,8 @@ class GraduationRequirementsToolTest(unittest.TestCase):
 
     def test_missing_or_empty_document_fails(self) -> None:
         cases = {
-            "missing major": [
-                {
-                    "document_key": LAS_DOCUMENT_KEY,
-                    "content_markdown": "LAS",
-                }
-            ],
-            "empty LAS": _document_rows(
-                "stats", las_content="  ", major_content="Statistics"
-            ),
+            "missing major": [],
+            "empty major": _document_rows("stats", major_content="  "),
         }
         for name, rows in cases.items():
             with self.subTest(name=name):

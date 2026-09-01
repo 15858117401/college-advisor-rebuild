@@ -103,47 +103,27 @@ class GraduationRequirementResourceTest(unittest.TestCase):
             document.document_key: document for document in cls.documents
         }
 
-    def test_snapshot_has_one_shared_and_two_program_documents(self) -> None:
+    def test_snapshot_has_only_two_program_documents(self) -> None:
         self.assertEqual(
             validation_summary(self.documents),
             {
-                "documents": 3,
-                "shared_documents": 1,
+                "documents": 2,
+                "shared_documents": 0,
                 "program_documents": 2,
                 "document_keys": sorted(EXPECTED_DOCUMENT_KEYS),
             },
         )
 
-        parent_key = "UIUC-LAS-BSLAS-2026-2027"
-        self.assertIsNone(self.by_key[parent_key].parent_document_key)
-        self.assertEqual(
-            self.by_key["UIUC-MATH-BSLAS-2026-2027"].parent_document_key,
-            parent_key,
-        )
-        self.assertEqual(
-            self.by_key["UIUC-STAT-BSLAS-2026-2027"].parent_document_key,
-            parent_key,
-        )
-
-    def test_las_document_contains_only_shared_requirements(self) -> None:
-        content = self.by_key[
-            "UIUC-LAS-BSLAS-2026-2027"
-        ].content_markdown
-
-        self.assertIn("**120 total credit hours**", content)
-        self.assertIn("**40 hours of upper-division coursework**", content)
-        self.assertIn("## General Education Requirements", content)
-        self.assertIn("## Language Other Than English", content)
-        self.assertNotIn("Orientation and Professional Development", content)
-        self.assertNotIn("STAT 400", content)
-        self.assertNotIn("MATH 416", content)
+        for document in self.documents:
+            self.assertEqual(document.document_type, "program")
+            self.assertIsNone(document.parent_document_key)
+            self.assertNotIn("college_code", document.database_row())
 
     def test_mathematics_document_has_required_spot_checks(self) -> None:
         content = self.by_key[
             "UIUC-MATH-BSLAS-2026-2027"
         ].content_markdown
 
-        self.assertIn("**54–59 hours**", content)
         self.assertIn("### Approved Supporting Coursework — 12 hours", content)
         self.assertIn("### Analysis Requirement — 3 hours", content)
         self.assertIn("### Breadth Requirement — 6 hours", content)
@@ -194,13 +174,11 @@ class GraduationRequirementResourceTest(unittest.TestCase):
         ):
             self.assertIn(course_code, content)
 
-    def test_program_documents_do_not_repeat_common_requirement_sections(self) -> None:
-        for document_key in (
-            "UIUC-MATH-BSLAS-2026-2027",
-            "UIUC-STAT-BSLAS-2026-2027",
-        ):
-            content = self.by_key[document_key].content_markdown
-            self.assertNotIn("## General Education Requirements", content)
+    def test_program_documents_exclude_general_education_content(self) -> None:
+        for document in self.documents:
+            content = document.content_markdown
+            self.assertNotIn("General Education", content)
+            self.assertNotIn("LAS BSLAS common requirements", content)
             self.assertNotIn("## Language Other Than English", content)
             self.assertNotIn("| Composition I |", content)
 
@@ -230,7 +208,7 @@ class GraduationRequirementUploadTest(unittest.TestCase):
     def setUpClass(cls) -> None:
         cls.documents = load_requirement_documents()
 
-    def test_uploads_shared_first_and_verifies_exact_markdown(self) -> None:
+    def test_uploads_program_documents_and_verifies_exact_markdown(self) -> None:
         client = _FakeSupabase()
 
         result = upload_documents(self.documents, supabase_client=client)
@@ -238,32 +216,33 @@ class GraduationRequirementUploadTest(unittest.TestCase):
         self.assertEqual(
             result,
             {
-                "documents": 3,
+                "documents": 2,
                 "document_keys": sorted(EXPECTED_DOCUMENT_KEYS),
                 "content_verified": True,
             },
         )
         self.assertEqual(client.calls[0][0:3], ("upsert", TABLE_NAME, "document_key"))
-        self.assertEqual(client.calls[0][3][0]["document_type"], "shared")
-        self.assertEqual(client.calls[1][0:3], ("upsert", TABLE_NAME, "document_key"))
         self.assertEqual(
-            {row["document_type"] for row in client.calls[1][3]}, {"program"}
+            {row["document_type"] for row in client.calls[0][3]}, {"program"}
         )
-        self.assertEqual(client.calls[2][0], "select")
+        self.assertTrue(
+            all("college_code" not in row for row in client.calls[0][3])
+        )
+        self.assertEqual(client.calls[1][0], "select")
         for document in self.documents:
             self.assertEqual(
                 client.rows[document.document_key]["content_markdown"],
                 document.content_markdown,
             )
 
-    def test_repeated_upload_remains_three_rows(self) -> None:
+    def test_repeated_upload_remains_two_rows(self) -> None:
         client = _FakeSupabase()
 
         upload_documents(self.documents, supabase_client=client)
         upload_documents(self.documents, supabase_client=client)
 
         self.assertEqual(set(client.rows), EXPECTED_DOCUMENT_KEYS)
-        self.assertEqual(len(client.rows), 3)
+        self.assertEqual(len(client.rows), 2)
 
     def test_rejects_markdown_changed_after_upload(self) -> None:
         with self.assertRaisesRegex(RuntimeError, "stored Markdown does not match"):
@@ -281,10 +260,30 @@ class GraduationRequirementSchemaTest(unittest.TestCase):
 
         self.assertIn("content_markdown text not null", schema)
         self.assertIn("parent_document_key text", schema)
+        self.assertNotIn("college_code", schema)
+        self.assertNotIn("graduation_requirement_shared_version_idx", schema)
+        self.assertIn(
+            "create or replace function public.touch_graduation_requirement_document_updated_at()",
+            schema,
+        )
         self.assertIn("enable row level security", schema)
         self.assertIn("to service_role", schema)
         self.assertNotIn("embedding", schema)
         self.assertNotIn("jsonb", schema)
+
+    def test_migration_removes_shared_document_and_college_code(self) -> None:
+        migration = (
+            PROJECT_ROOT
+            / "Supabase"
+            / "major_only_graduation_requirements_migration.sql"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("set parent_document_key = null", migration)
+        self.assertIn(
+            "where document_key = 'UIUC-LAS-BSLAS-2026-2027'", migration
+        )
+        self.assertIn("drop column if exists college_code", migration)
+        self.assertIn("check (document_type = 'program')", migration)
 
 
 if __name__ == "__main__":

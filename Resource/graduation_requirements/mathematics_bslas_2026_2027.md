@@ -1,44 +1,12 @@
 # Mathematics, BSLAS — Graduation Requirements
-
+ 
 - **Catalog year:** 2026–2027
 - **Institution:** University of Illinois Urbana-Champaign
 - **College:** College of Liberal Arts & Sciences
 - **Official source:** [Mathematics, BSLAS](https://catalog.illinois.edu/undergraduate/las/mathematics-bslas/#degreerequirementstext)
 
-This document contains requirements specific to the Mathematics BSLAS program. The 120-hour minimum, university requirements, common General Education categories, and LAS language requirement are stored separately in the LAS BSLAS common requirements document.
 
-## Major and Supporting Coursework Overview
-
-The required major and supporting coursework normally totals **54–59 hours**, including:
-
-- **27–35 hours** of mathematics beyond calculus.
-- **3–4 hours** of computer science.
-- **12 hours** of approved supporting coursework.
-
-At least **12 hours of 300- or 400-level, non-S/U-graded coursework in the major** must be completed on the UIUC campus.
-
-## Major Plan of Study
-
-A Major Plan of Study declaring the student's concentration and supporting coursework must be completed with an advisor in the Mathematics Undergraduate Office and submitted to LAS Student Academic Affairs. It should be completed within one or two semesters after completing MATH 347 or MATH 348. Students in the Mathematics Teaching concentration are excepted from this form requirement.
-
-## Quantitative Reasoning General Education Overlap
-
-The Mathematics program identifies the following required or elective major courses as fulfilling its Quantitative Reasoning line:
-
-- CS 101 — Intro Computing: Engrg & Sci, or CS 124 — Introduction to Computer Science I
-- MATH 220 — Calculus, or MATH 221 — Calculus I
-- MATH 231 — Calculus II
-- MATH 241 — Calculus III
-
-## Orientation and Professional Development
-
-Complete one of the following:
-
-| Option | Hours |
-| :-- | --: |
-| LAS 101 — Design Your First Year Experience | 1 |
-| LAS 100 — Success in LAS for International Students, and LAS 101 — Design Your First Year Experience | 3 |
-| LAS 102 — Transfer Advantage | 1 |
+This document contains requirements specific to the Mathematics BSLAS program.
 
 ## Major Core Requirements
 

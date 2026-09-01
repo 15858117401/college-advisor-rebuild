@@ -1,11 +1,13 @@
-from langchain_core.tools import BaseTool
+from langgraph.runtime import Runtime
 
+from nodes.catalog_lookup import CATALOG_TOOLS
 from react_agent import build_react_agent
 from skills import load_skill
-from state import AdvisorState, messages_with_current_input
-from tools.professor_research_tools import (
-    search_rate_my_professor,
-    search_reddit,
+from state import (
+    AdvisorContext,
+    AdvisorState,
+    messages_with_current_input,
+    profile_from_runtime,
 )
 
 
@@ -18,10 +20,7 @@ what information is needed.
 """
 
 ADVISING_SKILLS: list[str] = [load_skill("professor_research")]
-ADVISING_TOOLS: list[BaseTool] = [
-    search_rate_my_professor,
-    search_reddit,
-]
+ADVISING_TOOLS = CATALOG_TOOLS
 
 advising_agent = build_react_agent(
     ADVISING_SYSTEM_PROMPT,
@@ -30,10 +29,14 @@ advising_agent = build_react_agent(
 )
 
 
-def advising(state: AdvisorState) -> dict:
+def advising(
+    state: AdvisorState,
+    runtime: Runtime[AdvisorContext] | None = None,
+) -> dict:
     """Run the advising ReAct agent with past messages and current input."""
+    profile = profile_from_runtime(runtime)
     result = advising_agent.invoke(
-        {"messages": messages_with_current_input(state)},
+        {"messages": messages_with_current_input(state, profile=profile)},
         config={"recursion_limit": 12},
     )
     return {"response": result["messages"][-1].content}

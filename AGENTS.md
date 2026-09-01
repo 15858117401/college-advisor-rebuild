@@ -32,7 +32,7 @@ Before the first upload, or after a schema change, apply the corresponding SQL f
 .venv/bin/python -m Supabase.import_graduation_requirements upload
 ```
 
-Apply `Supabase/stat_resource_schema.sql` for statistics resources and `Supabase/graduation_requirements_schema.sql` for graduation-requirement documents. The graduation importer reads `Resource/graduation_requirements/manifest.json`, uploads the shared LAS document before its two child program documents, and verifies that the Markdown read back from Supabase exactly matches the local files.
+Apply `Supabase/stat_resource_schema.sql` for statistics resources and `Supabase/graduation_requirements_schema.sql` for graduation-requirement documents. The graduation importer reads `Resource/graduation_requirements/manifest.json`, uploads the Mathematics and Statistics major documents, and verifies that the Markdown read back from Supabase exactly matches the local files.
 
 
 ## Project Overview

@@ -2,10 +2,17 @@ import json
 from pathlib import Path
 
 from langchain_core.messages import HumanMessage, convert_to_openai_messages
+from langgraph.runtime import Runtime
 from pydantic import BaseModel, ConfigDict
 
 from client.llm_client import llm_client
-from state import AdvisorState, Route
+from state import (
+    AdvisorContext,
+    AdvisorState,
+    Route,
+    StudentProfile,
+    profile_from_runtime,
+)
 
 
 class RouteDecision(BaseModel):
@@ -21,24 +28,29 @@ ROUTER_SYSTEM_PROMPT = (
 ).read_text(encoding="utf-8")
 
 
-def _router_input(state: AdvisorState) -> str:
+def _router_input(state: AdvisorState, profile: StudentProfile) -> str:
     return json.dumps(
         {
             "conversation_context": convert_to_openai_messages(
                 state.get("messages", [])
             ),
             "current_input": state["current_input"],
+            "profile": profile,
         },
         ensure_ascii=False,
     )
 
 
-def router(state: AdvisorState) -> dict[str, Route]:
+def router(
+    state: AdvisorState,
+    runtime: Runtime[AdvisorContext] | None = None,
+) -> dict[str, Route]:
     """Classify the request before routing it to the next node."""
+    profile = profile_from_runtime(runtime)
     response = llm_client.invoke(
         [
             ("system", ROUTER_SYSTEM_PROMPT),
-            HumanMessage(content=_router_input(state)),
+            HumanMessage(content=_router_input(state, profile)),
         ],
         response_format={"type": "json_object"},
     )

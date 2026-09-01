@@ -1,3 +1,14 @@
 # User Profile
 
-This directory contains the User Profile system for the UIUC college-advising application. Its authoritative academic source is the student's UIUC uAchieve Degree Audit: a dated PDF report that typically contains program, college, degree, major, program code, catalog year, audit date, overall progress, credit-hour and GPA summaries, requirement and subrequirement blocks marked with statuses such as `OK`, `NO`, or `IP`, and course rows containing term, subject, number, title, grade, hours, and flags for conditions such as in-progress, duplicate, split, reduced, excluded, repeatable, or what-if credit. The Profile system will deterministically parse and validate an uploaded audit, privately retain the source PDF, and store a normalized immutable audit snapshot containing program and catalog information, summary metrics, course attempts, requirement statuses, parser warnings, the source hash, and relevant dates. Student-confirmed academic updates and advising preferences are stored separately from the official audit, while temporary what-if information remains session-only. The advising agent receives only a normalized read-only profile view—never the raw PDF—and ordinary conversation must not modify the official audit baseline.
+This directory will contain the User Profile data for the UIUC college-advising application. For now, keep the User Profile as simple as possible and use only this schema:
+
+```json
+{
+  "major": "Mathematics - Applied Mathematics",
+  "completed_courses": ["MATH 220", "MATH 231", "RHET 105"],
+  "cumulative_gpa": 3.25,
+  "major_gpa": 3.10
+}
+```
+
+`major` is one string that includes any concentration or similar program detail. `completed_courses` is an array containing only the course ID for every completed course, including General Education courses. `cumulative_gpa` and `major_gpa` are the only GPA fields. This is the complete planned Profile model for now; do not add other fields or functionality unless explicitly requested later.

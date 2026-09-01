@@ -12,7 +12,6 @@ RESOURCE_DIR = PROJECT_ROOT / "Resource" / "graduation_requirements"
 MANIFEST_PATH = RESOURCE_DIR / "manifest.json"
 TABLE_NAME = "graduation_requirement_documents"
 EXPECTED_DOCUMENT_KEYS = {
-    "UIUC-LAS-BSLAS-2026-2027",
     "UIUC-MATH-BSLAS-2026-2027",
     "UIUC-STAT-BSLAS-2026-2027",
 }
@@ -20,7 +19,6 @@ MANIFEST_FIELDS = {
     "document_key",
     "document_type",
     "institution_code",
-    "college_code",
     "degree_code",
     "program_code",
     "program_name",
@@ -29,11 +27,6 @@ MANIFEST_FIELDS = {
     "source_url",
     "file_name",
 }
-SHARED_MARKDOWN_HEADINGS = {
-    "## University Requirements",
-    "## General Education Requirements",
-    "## Language Other Than English",
-}
 
 
 @dataclass(frozen=True)
@@ -41,7 +34,6 @@ class GraduationRequirementDocument:
     document_key: str
     document_type: str
     institution_code: str
-    college_code: str
     degree_code: str
     program_code: str | None
     program_name: str | None
@@ -56,7 +48,6 @@ class GraduationRequirementDocument:
             "document_key": self.document_key,
             "document_type": self.document_type,
             "institution_code": self.institution_code,
-            "college_code": self.college_code,
             "degree_code": self.degree_code,
             "program_code": self.program_code,
             "program_name": self.program_name,
@@ -119,7 +110,7 @@ def load_requirement_documents(
         document_type = _required_string(
             raw["document_type"], field="document_type", row_number=row_number
         )
-        if document_type not in {"shared", "program"}:
+        if document_type != "program":
             raise ValueError(
                 f"manifest document {row_number} has invalid document_type: "
                 f"{document_type!r}"
@@ -171,9 +162,6 @@ def load_requirement_documents(
                 field="institution_code",
                 row_number=row_number,
             ),
-            college_code=_required_string(
-                raw["college_code"], field="college_code", row_number=row_number
-            ),
             degree_code=_required_string(
                 raw["degree_code"], field="degree_code", row_number=row_number
             ),
@@ -213,57 +201,19 @@ def _validate_documents(documents: list[GraduationRequirementDocument]) -> None:
     if len(file_names) != len(set(file_names)):
         raise ValueError("manifest contains duplicate Markdown file names")
 
-    documents_by_key = {
-        document.document_key: document for document in documents
-    }
-    shared_documents = [
-        document for document in documents if document.document_type == "shared"
-    ]
-    if len(shared_documents) != 1:
-        raise ValueError("manifest must contain exactly one shared document")
-
     for document in documents:
-        if document.document_type == "shared":
-            if any(
-                value is not None
-                for value in (
-                    document.program_code,
-                    document.program_name,
-                    document.parent_document_key,
-                )
-            ):
-                raise ValueError(
-                    f"shared document {document.document_key} has program metadata"
-                )
-            continue
-
         if not document.program_code or not document.program_name:
             raise ValueError(
                 f"program document {document.document_key} is missing program metadata"
             )
-        parent = documents_by_key.get(document.parent_document_key or "")
-        if parent is None or parent.document_type != "shared":
+        if document.parent_document_key is not None:
             raise ValueError(
-                f"program document {document.document_key} has invalid shared parent"
+                f"program document {document.document_key} must not have a parent"
             )
-        if (
-            parent.institution_code != document.institution_code
-            or parent.college_code != document.college_code
-            or parent.degree_code != document.degree_code
-            or parent.catalog_year != document.catalog_year
-        ):
+        if "General Education" in document.content_markdown:
             raise ValueError(
-                f"program document {document.document_key} does not match its parent"
-            )
-        duplicated_headings = sorted(
-            heading
-            for heading in SHARED_MARKDOWN_HEADINGS
-            if heading in document.content_markdown
-        )
-        if duplicated_headings:
-            raise ValueError(
-                f"program document {document.document_key} duplicates shared headings: "
-                f"{duplicated_headings}"
+                f"program document {document.document_key} contains "
+                "General Education content"
             )
 
 
@@ -287,20 +237,7 @@ def upload_documents(
     *,
     supabase_client: Any,
 ) -> dict[str, Any]:
-    shared_rows = [
-        document.database_row()
-        for document in documents
-        if document.document_type == "shared"
-    ]
-    program_rows = [
-        document.database_row()
-        for document in documents
-        if document.document_type == "program"
-    ]
-
-    supabase_client.table(TABLE_NAME).upsert(
-        shared_rows, on_conflict="document_key"
-    ).execute()
+    program_rows = [document.database_row() for document in documents]
     supabase_client.table(TABLE_NAME).upsert(
         program_rows, on_conflict="document_key"
     ).execute()

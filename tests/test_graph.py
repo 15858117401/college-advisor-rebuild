@@ -13,6 +13,7 @@ if str(PROJECT_ROOT) not in sys.path:
 
 from graph import graph
 from nodes.out_of_scope import OUT_OF_SCOPE_RESPONSE, out_of_scope
+from state import load_local_profile, profile_reference_message
 
 
 class RouterTest(unittest.TestCase):
@@ -93,10 +94,12 @@ class RouterTest(unittest.TestCase):
 
         self.assertEqual(result["route"], "advising")
         self.assertEqual(result["response"], "Take STAT 410 next.")
+        profile = load_local_profile()
         agent_messages = invoke_agent.call_args.args[0]["messages"]
         self.assertEqual(
             [message.content for message in agent_messages],
             [
+                profile_reference_message(profile).content,
                 *[message["content"] for message in past_messages],
                 current_input,
             ],
@@ -108,6 +111,7 @@ class RouterTest(unittest.TestCase):
             {
                 "conversation_context": past_messages,
                 "current_input": current_input,
+                "profile": profile,
             },
         )
         compose_prompt = compose_llm.invoke.call_args.args[0]
@@ -115,11 +119,16 @@ class RouterTest(unittest.TestCase):
 
     @patch("nodes.compose_response.llm_client")
     @patch("nodes.catalog_lookup.catalog_agent.invoke")
+    @patch("nodes.router.llm_client")
     def test_catalog_lookup_conversation(
         self,
+        router_llm,
         invoke_agent,
         invoke_compose,
     ) -> None:
+        router_llm.invoke.return_value = AIMessage(
+            content='{"route": "catalog_lookup"}'
+        )
         invoke_agent.return_value = {
             "messages": [AIMessage(content="STAT 400 is Statistics and Probability I.")]
         }
@@ -144,10 +153,12 @@ class RouterTest(unittest.TestCase):
             result["response"],
             "STAT 400 is Statistics and Probability I.",
         )
+        profile = load_local_profile()
         agent_messages = invoke_agent.call_args.args[0]["messages"]
         self.assertEqual(
             [message.content for message in agent_messages],
             [
+                profile_reference_message(profile).content,
                 *[message["content"] for message in past_messages],
                 current_input,
             ],

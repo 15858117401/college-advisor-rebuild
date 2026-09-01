@@ -154,8 +154,11 @@ class ProfessorResearchToolsTest(unittest.TestCase):
 class ProfessorResearchIntegrationTest(unittest.TestCase):
     def test_tools_are_registered_for_catalog_and_advising(self) -> None:
         expected = {"search_rate_my_professor", "search_reddit"}
-        self.assertTrue(expected.issubset({tool.name for tool in CATALOG_TOOLS}))
-        self.assertTrue(expected.issubset({tool.name for tool in ADVISING_TOOLS}))
+        catalog_tool_names = {tool.name for tool in CATALOG_TOOLS}
+        advising_tool_names = {tool.name for tool in ADVISING_TOOLS}
+
+        self.assertTrue(expected.issubset(catalog_tool_names))
+        self.assertEqual(advising_tool_names, catalog_tool_names)
 
     def test_skill_is_registered_for_catalog_and_advising(self) -> None:
         self.assertEqual(len(CATALOG_SKILLS), 1)

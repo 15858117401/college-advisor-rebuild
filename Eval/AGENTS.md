@@ -4,7 +4,7 @@
 
 The Python advising workflow lives one level above this directory: `../graph.py` assembles the LangGraph, `../state.py` defines shared state, and each business node belongs in `../nodes/`. Agent-callable runtime tools live in `../tools/`; Supabase schemas and import utilities stay in `../Supabase/`. Treat `../college_advisor/` as read-only legacy reference material.
 
-Keep benchmark assets in `Eval/`. Router cases, predictions, and the focused runner are under `router_eval/`; `run_full_eval.py` exercises the complete graph and writes `full_eval_results.md`. Small implementation tests belong in `../tests/`, while reference datasets belong in `../Resource/`.
+Keep benchmark assets in `Eval/`. Router cases, predictions, and the focused runner are under `router_eval/`; `run_full_eval.py` exercises the complete graph and writes each predicted route and final response to `full_eval_results.csv`. Small implementation tests belong in `../tests/`, while reference datasets belong in `../Resource/`.
 
 ## Build, Test, and Development Commands
 

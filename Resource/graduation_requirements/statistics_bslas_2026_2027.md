@@ -5,20 +5,13 @@
 - **College:** College of Liberal Arts & Sciences
 - **Official source:** [Statistics, BSLAS](https://catalog.illinois.edu/undergraduate/las/statistics-bslas/#degreerequirementstext)
 
-This document contains requirements specific to the Statistics BSLAS program. The 120-hour minimum, university requirements, common General Education categories, and LAS language requirement are stored separately in the LAS BSLAS common requirements document.
+This document contains requirements specific to the Statistics BSLAS program.
 
 ## Major and Supporting Coursework Overview
 
 The program overview states that the required major and supporting coursework normally totals **70–72 hours**. At least **12 hours of 300- or 400-level coursework in the major** must be completed on the UIUC campus.
 
 The degree-requirement course table separately reports **42–44 total hours** for the Statistics coursework listed below. Both figures are retained because they describe different totals on the official page.
-
-## Quantitative Reasoning General Education Overlap
-
-The program identifies these courses as fulfilling its Quantitative Reasoning line:
-
-- MATH 241 — Calculus III
-- One of STAT 107 — Data Science Discovery, STAT 200 — Statistical Analysis, or STAT 212 — Biostatistics
 
 ## Introductory and Preparatory Coursework — 17–19 hours
 
