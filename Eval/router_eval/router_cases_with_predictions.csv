@@ -30,3 +30,8 @@ case_id,user_query,expected_route,predicted_route,route_label,annotation_notes,r
 29,I am double-majoring in Mathematics and Statistics and have completed the calculus sequence. Help me choose courses that make progress toward both majors without exceeding 15 credits.,advising,advising,,,
 30,"I need three courses next semester, prefer instructors with higher historical GPAs, and want to avoid proof-heavy classes. What should I take based on my completed STAT 400 and STAT 410?",advising,advising,,,
 31,I am a senior Statistics major with two semesters left. Review my completed courses and help me plan how to finish my remaining degree requirements on time.,advising,advising,,,
+32,What do Rate My Professors and Reddit say about Professor Albert Yu?,catalog_lookup,catalog_lookup,,,
+33,I prefer well-structured lectures and lower exam difficulty. Should I take STAT 400 with Albert Yu or David Unger?,advising,advising,,,
+34,What do students say about Professor David Douglas at UIUC?,catalog_lookup,catalog_lookup,,,
+35,What is Professor Albert Yu's Rate My Professors rating?,catalog_lookup,catalog_lookup,,,
+36,What does Reddit say about Professor Albert Yu for STAT 400?,catalog_lookup,catalog_lookup,,,

@@ -3,6 +3,7 @@ from nodes.catalog_lookup import catalog_lookup
 from nodes.clarify import clarify
 from nodes.compose_response import compose_response
 from nodes.out_of_scope import out_of_scope
+from nodes.planner import planner
 from nodes.router import RouteDecision, route_request, router
 
 
@@ -13,6 +14,7 @@ __all__ = [
     "clarify",
     "compose_response",
     "out_of_scope",
+    "planner",
     "route_request",
     "router",
 ]

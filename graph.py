@@ -7,6 +7,7 @@ from nodes import (
     clarify,
     compose_response,
     out_of_scope,
+    planner,
     route_request,
     router,
 )
@@ -17,6 +18,7 @@ def build_graph():
     builder = StateGraph(AdvisorState, context_schema=AdvisorContext)
 
     builder.add_node("router", router)
+    builder.add_node("planner", planner)
     builder.add_node("clarify", clarify)
     builder.add_node("catalog_lookup", catalog_lookup)
     builder.add_node("advising", advising)
@@ -24,8 +26,9 @@ def build_graph():
     builder.add_node("out_of_scope", out_of_scope)
 
     builder.add_edge(START, "router")
+    builder.add_edge("router", "planner")
     builder.add_conditional_edges(
-        "router",
+        "planner",
         route_request,
         {
             "clarify": "clarify",

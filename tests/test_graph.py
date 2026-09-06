@@ -13,6 +13,7 @@ if str(PROJECT_ROOT) not in sys.path:
 
 from graph import graph
 from nodes.out_of_scope import OUT_OF_SCOPE_RESPONSE, out_of_scope
+from nodes.planner import PLANNER_SYSTEM_PROMPT, planner
 from state import load_local_profile, profile_reference_message
 
 
@@ -23,6 +24,7 @@ class RouterTest(unittest.TestCase):
             {
                 "__start__",
                 "router",
+                "planner",
                 "clarify",
                 "catalog_lookup",
                 "advising",
@@ -38,11 +40,29 @@ class RouterTest(unittest.TestCase):
             {"response": OUT_OF_SCOPE_RESPONSE},
         )
 
+    @patch("nodes.planner.llm_client")
+    def test_planner_calls_llm_without_changing_state(self, planner_llm) -> None:
+        state = {
+            "current_input": "Plan my next semester.",
+            "messages": [],
+            "route": "advising",
+        }
+
+        self.assertEqual(planner(state), {})
+        planner_llm.invoke.assert_called_once_with(
+            [
+                ("system", PLANNER_SYSTEM_PROMPT),
+                ("human", "Plan my next semester."),
+            ]
+        )
+
     @patch("nodes.compose_response.llm_client")
+    @patch("nodes.planner.llm_client")
     @patch("nodes.router.llm_client")
     def test_out_of_scope_path_reaches_compose_response(
         self,
         router_llm,
+        planner_llm,
         compose_llm,
     ) -> None:
         router_llm.invoke.return_value = AIMessage(
@@ -60,13 +80,16 @@ class RouterTest(unittest.TestCase):
         self.assertEqual(result["response"], OUT_OF_SCOPE_RESPONSE)
         compose_prompt = compose_llm.invoke.call_args.args[0]
         self.assertEqual(compose_prompt[-1][1], OUT_OF_SCOPE_RESPONSE)
+        planner_llm.invoke.assert_called_once()
 
     @patch("nodes.compose_response.llm_client")
     @patch("nodes.advising.advising_agent.invoke")
+    @patch("nodes.planner.llm_client")
     @patch("nodes.router.llm_client")
     def test_advising_path_reaches_compose_response(
         self,
         router_llm,
+        planner_llm,
         invoke_agent,
         compose_llm,
     ) -> None:
@@ -116,13 +139,16 @@ class RouterTest(unittest.TestCase):
         )
         compose_prompt = compose_llm.invoke.call_args.args[0]
         self.assertEqual(compose_prompt[-1][1], "Take STAT 410 next.")
+        planner_llm.invoke.assert_called_once()
 
     @patch("nodes.compose_response.llm_client")
     @patch("nodes.catalog_lookup.catalog_agent.invoke")
+    @patch("nodes.planner.llm_client")
     @patch("nodes.router.llm_client")
     def test_catalog_lookup_conversation(
         self,
         router_llm,
+        planner_llm,
         invoke_agent,
         invoke_compose,
     ) -> None:
@@ -163,6 +189,7 @@ class RouterTest(unittest.TestCase):
                 current_input,
             ],
         )
+        planner_llm.invoke.assert_called_once()
 
 
 if __name__ == "__main__":

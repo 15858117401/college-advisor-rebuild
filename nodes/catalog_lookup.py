@@ -1,7 +1,6 @@
 from langgraph.runtime import Runtime
 
 from react_agent import build_react_agent
-from skills import load_skill
 from state import (
     AdvisorContext,
     AdvisorState,
@@ -34,7 +33,7 @@ Do not create personalized course or degree plans.
 
 """
 
-CATALOG_SKILLS: list[str] = [load_skill("professor_research")]
+CATALOG_SKILLS: list[str] = []
 CATALOG_TOOLS = [
     get_course_details,
     get_graduation_requirements,

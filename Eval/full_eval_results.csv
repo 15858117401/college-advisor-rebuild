@@ -1,97 +1,83 @@
 case_id,user_query,expected_route,predicted_route,route_label,annotation_notes,response
 1,What are the prerequisites and credit hours for STAT 400?,catalog_lookup,catalog_lookup,,,"**STAT 400 – Statistics and Probability I**  
-**Credit hours:** 4  
-**Prerequisite:** MATH 231  
+4 credit hours. Prerequisite: MATH 231.
 
-This course is an introduction to mathematical statistics. Topics include probability calculus, random variables, expectation, distribution functions, the central limit theorem, point estimation, confidence intervals, and hypothesis testing. It also prepares students for STAT 410 and STAT 425, and is equivalent to MATH 463."
-2,Show me all Spring 2026 sections and meeting times for STAT 107.,catalog_lookup,catalog_lookup,,,"Here are the Spring 2026 sections for **STAT 107**.
+This course is an introduction to mathematical statistics. Topics include probability calculus, random variables, expectation, distribution functions, the central limit theorem, point estimation, confidence intervals, and hypothesis testing.
 
-## Lectures
+It prepares students for STAT 410 and STAT 425. This course is equivalent to MATH 463."
+2,Show me all Spring 2026 sections and meeting times for STAT 107.,catalog_lookup,catalog_lookup,,,"Here are the Spring 2026 sections for **STAT 107 (Data Science Discovery)**:
 
-| Section | CRN | Days | Time | Location | Instructor |
-|---|---:|---|---|---|---|
-| L1 | 70317 | MWF | 10:00–10:50 | THEAT Lincoln Hall | Fagen-Ulmschneider, W \| Flanagan, K |
-| L2 | 75730 | MWF | 11:00–11:50 | THEAT Lincoln Hall | Fagen-Ulmschneider, W \| Flanagan, K |
+**Lecture sections (both cover the same content on MWF):**
+- **L1** (CRN 70317): MWF 10:00–10:50 AM, THEAT Lincoln Hall — Instructors: Fagen-Ulmschneider, W & Flanagan, K
+- **L2** (CRN 75730): MWF 11:00–11:50 AM, THEAT Lincoln Hall — Instructors: Fagen-Ulmschneider, W & Flanagan, K
 
-## Laboratory-Discussion Sections
+**Laboratory-Discussion sections (Y-sections):**
+- **Y01** (70318): R 11:00 AM–12:20 PM, 2036 Campus Instructional Facility — Chen, E
+- **Y02** (70322): R 12:30–1:50 PM, 2036 Campus Instructional Facility — Hermon, M
+- **Y03** (70326): W 2:00–3:20 PM, 2036 Campus Instructional Facility — Hunnius, J
+- **Y04** (70327): W 3:30–4:50 PM, 1047 Sidney Lu Mech Engr Bldg — Hecht, T
+- **Y05** (70329): R 11:00 AM–12:20 PM, 2018 Campus Instructional Facility — Hermon, M
+- **Y06** (70330): R 12:30–1:50 PM, 3038 Campus Instructional Facility — Tsiamalos, E
+- **Y07** (70331): W 2:00–3:20 PM, 1047 Sidney Lu Mech Engr Bldg — Hecht, T
+- **Y08** (70332): W 3:30–4:50 PM, 3117 Everitt Laboratory — Hunnius, J
+- **Y09** (70334): R 9:30–10:50 AM, 2078 Natural History Building — Khirwadkar, A
+- **Y10** (70320): R 11:00 AM–12:20 PM, 3038 Campus Instructional Facility — Littlefield, S
+- **Y11** (70321): R 12:30–1:50 PM, 4101 Materials Science & Eng Bld — Khirwadkar, A
+- **Y12** (70333): R 2:00–3:20 PM, 2036 Campus Instructional Facility — Korkmaz, M
+- **Y13** (74092): R 11:00 AM–12:20 PM, 1047 Sidney Lu Mech Engr Bldg — Zhang, J
+- **Y14** (74093): R 12:30–1:50 PM, 1047 Sidney Lu Mech Engr Bldg — Zhang, J
+- **Y15** (74094): R 11:00 AM–12:20 PM, 3018 Campus Instructional Facility — Tsiamalos, E
+- **Y16** (74095): R 12:30–1:50 PM, 2018 Campus Instructional Facility — Chen, E
+- **Y17** (74096): W 2:00–3:20 PM, 1043 Sidney Lu Mech Engr Bldg — Jarrold, G
+- **Y18** (74097): W 3:30–4:50 PM, 136 Loomis Laboratory — Jarrold, G
+- **Y19** (74098): R 9:30–10:50 AM, 300 Noyes Laboratory — Bao, Y
+- **Y20** (74099): R 11:00 AM–12:20 PM, 1043 Sidney Lu Mech Engr Bldg — Zhou, X
+- **Y21** (76949): W 2:00–3:20 PM, 156 Henry Administration Bldg — Korkmaz, M
+- **Y23** (76955): F 3:30–4:50 PM, G32 Literatures, Cultures, & Ling — Adeline, M
+- **Y24** (76958): R 8:00–9:20 AM, 136 Armory — Littlefield, S
+- **Y26** (76964): F 2:00–3:20 PM, 106B6 Engineering Hall — Shimgekar, S
+- **Y27** (76967): F 3:30–4:50 PM, G36 Literatures, Cultures, & Ling — Zhou, X
 
-Note: Days are abbreviated (M=Monday, T=Tuesday, W=Wednesday, R=Thursday, F=Friday). No Y22 or Y25 is listed in the catalog data.
+You would pair one lecture with a lab-discussion section that fits your schedule. Note that no Y22 or Y25 sections are listed among the current offerings."
+3,Which instructors have the highest historical average GPA for STAT 420?,catalog_lookup,catalog_lookup,,,"Based on historical average GPA data for STAT 420, the instructors ranked from highest to lowest are:
 
-| Section | CRN | Day | Time | Location | Instructor |
-|---|---:|---|---|---|---|
-| Y01 | 70318 | R | 11:00–12:20 | 2036 Campus Instructional Facility | Chen, E |
-| Y02 | 70322 | R | 12:30–13:50 | 2036 Campus Instructional Facility | Hermon, M |
-| Y03 | 70326 | W | 14:00–15:20 | 2036 Campus Instructional Facility | Hunnius, J |
-| Y04 | 70327 | W | 15:30–16:50 | 1047 Sidney Lu Mech Engr Bldg | Hecht, T |
-| Y05 | 70329 | R | 11:00–12:20 | 2018 Campus Instructional Facility | Hermon, M |
-| Y06 | 70330 | R | 12:30–13:50 | 3038 Campus Instructional Facility | Tsiamalos, E |
-| Y07 | 70331 | W | 14:00–15:20 | 1047 Sidney Lu Mech Engr Bldg | Hecht, T |
-| Y08 | 70332 | W | 15:30–16:50 | 3117 Everitt Laboratory | Hunnius, J |
-| Y09 | 70334 | R | 09:30–10:50 | 2078 Natural History Building | Khirwadkar, A |
-| Y10 | 70320 | R | 11:00–12:20 | 3038 Campus Instructional Facility | Littlefield, S |
-| Y11 | 70321 | R | 12:30–13:50 | 4101 Materials Science & Eng Bld | Khirwadkar, A |
-| Y12 | 70333 | R | 14:00–15:20 | 2036 Campus Instructional Facility | Korkmaz, M |
-| Y13 | 74092 | R | 11:00–12:20 | 1047 Sidney Lu Mech Engr Bldg | Zhang, J |
-| Y14 | 74093 | R | 12:30–13:50 | 1047 Sidney Lu Mech Engr Bldg | Zhang, J |
-| Y15 | 74094 | R | 11:00–12:20 | 3018 Campus Instructional Facility | Tsiamalos, E |
-| Y16 | 74095 | R | 12:30–13:50 | 2018 Campus Instructional Facility | Chen, E |
-| Y17 | 74096 | W | 14:00–15:20 | 1043 Sidney Lu Mech Engr Bldg | Jarrold, G |
-| Y18 | 74097 | W | 15:30–16:50 | 136 Loomis Laboratory | Jarrold, G |
-| Y19 | 74098 | R | 09:30–10:50 | 300 Noyes Laboratory | Bao, Y |
-| Y20 | 74099 | R | 11:00–12:20 | 1043 Sidney Lu Mech Engr Bldg | Zhou, X |
-| Y21 | 76949 | W | 14:00–15:20 | 156 Henry Administration Bldg | Korkmaz, M |
-| Y23 | 76955 | F | 15:30–16:50 | G32 Literatures, Cultures, & Ling | Adeline, M |
-| Y24 | 76958 | R | 08:00–09:20 | 136 Armory | Littlefield, S |
-| Y26 | 76964 | F | 14:00–15:20 | 106B6 Engineering Hall | Shimgekar, S |
-| Y27 | 76967 | F | 15:30–16:50 | G36 Literatures, Cultures, & Ling | Zhou, X |"
-3,Which instructors have the highest historical average GPA for STAT 420?,catalog_lookup,catalog_lookup,,,"Here are the historical average GPAs by instructor for **STAT 420**, ranked from highest to lowest:
+1. **Unger, D.** – 3.82  
+2. **Findley, K.** – 3.59  
+3. **Li, X.** – 3.59  
+4. **Yu, A.** – 3.54  
+5. **Deeke, J.** – 3.47  
+6. **Icaza, E.** – 3.45  
 
-1. **Unger, D.** — 3.82 (highest)  
-2. **Findley, K.** — 3.59  
-3. **Li, X.** — 3.59  
-4. **Yu, A.** — 3.54  
-5. **Deeke, J.** — 3.47  
-6. **Icaza, E.** — 3.45  
+**Unger, D.** has the highest historical average GPA for STAT 420 at **3.82**.
 
-So **D. Unger** has the highest historical average GPA for STAT 420.
+Note: These statistics are historical averages and are not tied to any specific section or academic term."
+4,What are the 2026-2027 graduation requirements for the Statistics BSLAS?,catalog_lookup,catalog_lookup,,,"## Statistics, BSLAS — 2026–2027 Graduation Requirements (UIUC)
 
-Note: These statistics are historical averages, not tied to specific sections or academic terms."
-4,What are the 2026-2027 graduation requirements for the Statistics BSLAS?,catalog_lookup,catalog_lookup,,,"# Statistics, BSLAS — Graduation Requirements (2026–2027)
+**Catalog year:** 2026–2027  
+**College:** College of Liberal Arts & Sciences
 
-- **Institution:** University of Illinois Urbana-Champaign
-- **College:** College of Liberal Arts & Sciences
-- **Catalog year:** 2026–2027
-- **Official source:** [Statistics, BSLAS](https://catalog.illinois.edu/undergraduate/las/statistics-bslas/#degreerequirementstext)
+Major and supporting coursework normally totals **70–72 hours**. At least **12 hours of 300- or 400-level coursework in the major** must be completed on the UIUC campus.
 
-This document covers requirements specific to the Statistics BSLAS major. Note that the program overview states required major and supporting coursework normally totals **70–72 hours**, while the degree-requirement course table separately reports **42–44 total hours** for the Statistics coursework listed below. Both figures are retained here because they describe different totals on the official page. At least **12 hours of 300- or 400-level coursework in the major** must be completed on the UIUC campus.
+### Introductory and Preparatory Coursework — 17–19 hours
 
-## Introductory and Preparatory Coursework — 17–19 hours
-
-### Calculus through MATH 241 — 11–12 hours
-
-The catalog describes this as **""Calculus through MATH 241.""** For readability, the sequence is:
-
+**Calculus through MATH 241 — 11–12 hours**
 - MATH 220 — Calculus, or MATH 221 — Calculus I
 - MATH 231 — Calculus II
 - MATH 241 — Calculus III
 
-### Introductory Statistics — 3–4 hours
-
+**Introductory Statistics — 3–4 hours**  
 Select one:
-
 - STAT 107 — Data Science Discovery
 - STAT 200 — Statistical Analysis
 - STAT 212 — Biostatistics
 
-### Linear Algebra — 3 hours
-
+**Linear Algebra — 3 hours**  
 Select one:
-
 - MATH 257 — Linear Algebra with Computational Applications
 - MATH 415 — Applied Linear Algebra
 - MATH 416 — Abstract Linear Algebra
 
-## Statistical Core Coursework — 13 hours
+### Statistical Core Coursework — 13 hours
 
 | Course | Hours |
 | :-- | --: |
@@ -100,10 +86,9 @@ Select one:
 | STAT 425 — Statistical Modeling I | 3 |
 | STAT 426 — Statistical Modeling II | 3 |
 
-## Advanced Statistics Electives — 12 hours
+### Advanced Statistics Electives — 12 hours
 
-Select four courses from the following list:
-
+Select four courses from:
 - STAT 385 — Statistics Programming Methods
 - STAT 424 — Design of Experiments
 - STAT 427 — Statistical Consulting
@@ -121,884 +106,959 @@ Select four courses from the following list:
 - STAT 480 — Big Data Analytics
 - MATH 444 — Elementary Real Analysis, or MATH 447 — Real Variables
 
-## Statistics Coursework Total
+### Statistics Coursework Total
 
-The degree-requirement course table totals **42–44 hours**.
+The degree-requirement course table totals **42–44 hours**."
+5,Does the Mathematics BSLAS require an abstract algebra course?,catalog_lookup,catalog_lookup,,,"Yes, the Mathematics BSLAS degree requires an abstract algebra course.
 
-These are the requirements specific to the Statistics BSLAS major itself. The full degree also includes general education and other campus requirements, given the major/supporting coursework total of 70–72 hours."
-5,Does the Mathematics BSLAS require an abstract algebra course?,catalog_lookup,catalog_lookup,,,"Yes — the Mathematics BSLAS (2026–2027 Catalog) requires an abstract algebra course as part of the Major Core Requirements:
+According to the 2026–2027 Catalog requirements, the Major Core Requirements include:
 
-- **Abstract algebra** — 3 hours: **MATH 417** (Intro to Abstract Algebra) or **MATH 427** (Honors Abstract Algebra)
+| Abstract algebra | MATH 417 — Intro to Abstract Algebra, or MATH 427 — Honors Abstract Algebra | 3 hours |
 
-Note that the linear algebra requirement (MATH 416 — Abstract Linear Algebra) is a separate, distinct requirement.
-
-The full core also includes Calculus I–III, MATH 347 or 314 (intro to higher mathematics), a probability course (MATH 461 or STAT 400), and a CS course (CS 101 or CS 124), followed by analysis, breadth, and additional advanced math requirements."
-6,Find 400-level STAT courses worth four credit hours.,catalog_lookup,catalog_lookup,,,"Here are the 400-level STAT courses that can be taken for 4 credit hours:
+You must complete either **MATH 417** or **MATH 427** to fulfill the major core. Note that this is separate from **MATH 416 — Abstract Linear Algebra**, which is also a required core course."
+6,Find 400-level STAT courses worth four credit hours.,catalog_lookup,catalog_lookup,,,"Here are the 400-level STAT courses that can be taken for four credit hours:
 
 **Fixed at 4 credit hours:**
 - STAT 400 – Statistics and Probability I (4 Hours)
-- STAT 408 – Statistical Data Management (4 Hours)
+- STAT 408 – Statistical Programming with R (4 Hours)
 - STAT 448 – Advanced Data Analysis (4 Hours)
 
-**Offered as 3 or 4 credit hours (can be taken for 4):**
-- STAT 410 – Statistics and Probability II
-- STAT 420 – Methods of Applied Statistics
-- STAT 425 – Statistical Modeling I
-- STAT 426 – Statistical Modeling II
-- STAT 427 – Statistical Consulting
-- STAT 428 – Statistical Computing
-- STAT 429 – Time Series Analysis
-- STAT 430 – Topics in Applied Statistics
-- STAT 431 – Advanced Statistics I
-- STAT 432 – Basics of Statistical Learning
-- STAT 433 – Stochastic Processes
-- STAT 434 – Survival Analysis
-- STAT 437 – Mathematical Statistics
-- STAT 440 – Statistical Data Management
-- STAT 443 – Professional Statistics
-- STAT 447 – Statistical Computing
-- STAT 463 – Statistics in the Health Sciences
+**Offered for 3 or 4 credit hours** (so they can be taken for 4):
+- STAT 410, STAT 420, STAT 425, STAT 426, STAT 427, STAT 428, STAT 429, STAT 430, STAT 431, STAT 432, STAT 433, STAT 434, STAT 437, STAT 440, STAT 443, STAT 447, STAT 463
 
-Would you like catalog details, section information, or instructor GPA statistics for any of these?"
-7,"I am a junior in Statistics and have completed STAT 107, STAT 400, and STAT 410. What should I take next?",advising,advising,,,"Based on the Statistics BSLAS degree requirements (2026–2027 catalog), here’s where you stand and what to take next.
+Would you like catalog details, instructor GPA history, or section information for any of these courses?"
+7,"I am a junior in Statistics and have completed STAT 107, STAT 400, and STAT 410. What should I take next?",advising,advising,,,"Based on your Statistics BSLAS core sequence, your next course is **STAT 425 — Statistical Modeling I**.
 
-## Core requirement status
-The Stats major requires a 13-hour statistical core:
+### Recommended path
 
-- STAT 400 — Statistics and Probability I ✅ completed  
-- STAT 410 — Statistics and Probability II ✅ completed  
-- **STAT 425 — Statistical Modeling I** ⬅️ next up  
-- **STAT 426 — Statistical Modeling II** ⬅️ after that  
+- **STAT 400** ✔️ completed  
+- **STAT 410** ✔️ completed  
+- **STAT 425** ← next  
+- **STAT 426** — after STAT 425  
 
-Since STAT 400 and 410 are done, **STAT 425 is the natural next course** — it’s the required core course you’re now eligible for, and STAT 426 (the final core course) requires STAT 425 first.
+STAT 425 covers linear regression, ANOVA, residuals/diagnostics, model building, and mixed effects, with statistical computing built in. Note that the catalog says STAT 410 is preferred concurrently, but since you’ve already finished STAT 410, you’re well positioned.
 
-## One prerequisite to double-check
-STAT 425’s catalog prerequisite is **STAT 400 + MATH 257 or MATH 415** (linear algebra). My records don’t show a linear algebra course on your transcript, so if you haven’t taken one, you’ll need MATH 257 or MATH 415 before or alongside STAT 425. This is also a degree requirement for the Stats major, so it needs to happen regardless.
+**Prerequisite check:** STAT 425 requires STAT 400 plus either **MATH 257 or MATH 415** (linear algebra). Confirm you’ve completed that linear algebra requirement; if not, plan to take it first or alongside.
 
-## Good options to pair with STAT 425
-- **STAT 385 — Statistics Programming Methods** (3 hrs) — only requires one intro stats course (STAT 107 qualifies ✅). It’s a common early/parallel course and builds the R/programming skills used throughout the modeling sequence.
-- **STAT 448 — Advanced Data Analysis** (4 hrs) — requires STAT 400 + credit for/concurrent registration in STAT 410, so you’re eligible right now if you want a project-heavy applied course.
-- If you’d rather front-load, you could take the linear algebra course this term and delay STAT 425.
+### After STAT 425
 
-## For later semesters
-Once STAT 425 is done, you’ll want **STAT 426** plus your **12 hours of advanced electives** (4 courses), such as:
+Take **STAT 426 — Statistical Modeling II**, which covers categorical data, logistic regression, and generalized linear models. It requires STAT 410 and STAT 425.
 
-- STAT 432 — Basics of Statistical Learning (needs STAT 425)
-- STAT 440 — Statistical Data Management
-- STAT 424 — Design of Experiments
-- STAT 429 — Time Series Analysis
-- STAT 433 — Stochastic Processes
+From there, choose advanced electives such as:
+- STAT 432 — Basics of Statistical Learning
+- STAT 440 — Data Management
 - STAT 448 — Advanced Data Analysis
+- STAT 385 — Programming Methods
 
-## Spring 2026 section availability
-- **STAT 425**: TR 9:30 (Zheng) and TR 11:00 (Zheng), or MWF 1:00 (Bravo De Guenni)
-- **STAT 426**: TR 2:00 (Jia), or MWF 9:00/10:00 (Yu)
-- **STAT 432**: TR 12:30 or TR 2:00 (Dayanikli)
+These can help fulfill the 12 hours of electives required for the Statistics BSLAS.
 
-## A note on your records
-My student profile lists you as a **Mathematics–Applied Mathematics** major with additional STAT coursework already completed (STAT 385, 425, 426, 432, 440, 448, etc.), which conflicts with what you’ve told me. If you’ve recently switched to Statistics or those records are outdated, let me know — the plan above could look quite different if some of those are already done.
+### Spring 2026 availability
 
-Want me to look into specific instructors for STAT 425, or check how this fits with your overall degree timeline?"
-8,I need one easy STAT elective to graduate and would prefer a class with a higher historical GPA.,catalog_lookup,advising,,,"Here’s a shortlist of easy-ish STAT electives for Spring 2026 that fit your completed coursework and have strong historical GPA patterns.
+- **STAT 425** — sections with Zheng (Tues/Thurs) and Bravo De Guenni (Mon/Wed/Fri)
+- **STAT 426** — sections with Jia (Tues/Thurs) and Yu (Mon/Wed/Fri)
 
-## Top options
+---
 
-| Course | Credits | Prereqs met? | Historical GPA | Notes |
-|---|---|---|---|---|
-| **STAT 107 – Data Science Discovery** | 4 | No prerequisites | **3.56** overall (6,113 students) | Project-driven intro; taught by Flanagan this spring (3.57 avg). Easiest option by far. |
-| **STAT 420 – Methods of Applied Statistics** | 3–4 | Yes (STAT 400, MATH 231) | **3.58** overall; instructors range 3.45–3.82 | Classic applied stats. In-person with Jia (no data) or online with Yu (3.54). Fits your background well. |
-| **STAT 431 – Applied Bayesian Analysis** | 3–4 | Yes (STAT 410 + R) | **3.65** overall (549 students); Park 3.72 | Highest historical GPA, but the most conceptually demanding option. |
-| **STAT 447 – Data Science Programming Methods** | 3–4 | None listed | 3.57 overall | Shell/git/SQL/R/Docker/C++; matches your CS background. Online with Eddelbuettel (no GPA data). |
-| **STAT 463 – Baseball Analytics** | 3–4 | Yes (STAT 385/410/425) | No GPA data (newer course) | Fun and applied, but unproven GPA track record. |
+⚠️ **One important flag:** the academic record on file for you doesn’t quite match your question. It lists your major as **Mathematics – Applied Mathematics**, not Statistics. It also doesn’t show STAT 107 among completed courses, and it lists STAT 400/410 **plus** higher-level STAT courses (425, 426, 432, 440, 448, 385) as already completed.
 
-## My take
+Can you confirm:
+1. Whether you’re pursuing or planning to switch into the **Statistics BSLAS**, and  
+2. Whether your actual completed STAT coursework is **107, 400, and 410 only**?
 
-- **Safest “easy” pick:** **STAT 107** — no prereqs, project-based, 3.56 GPA over a huge sample, and a well-rated lecturer (Flanagan) this spring. Downside: 4 credits with a weekly lab, and very introductory relative to your background.
-- **Best “high GPA + right level” pick:** **STAT 420** — 3.58 average, and you’re fully prepared. Instructor data tops out at Unger (3.82), though he’s not teaching it this spring.
-- **If you want the highest average outright:** **STAT 431** with Park (3.72) — just be ready for Bayesian methodology rather than “easy” material.
+If the on-file profile is accurate, the “next step” conversation would be very different — so it’s worth clarifying before you register."
+8,I need one easy STAT elective to graduate and would prefer a class with a higher historical GPA.,catalog_lookup,error,,,"ERROR: GraphRecursionError: Recursion limit of 12 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+9,"Plan my next semester with no classes before 10 AM, no Friday classes, and a maximum of 15 credits.",advising,advising,,,"I checked the Math BSLAS requirements and the Spring 2026 schedules for the math courses you’d most likely take next. Here’s what I found, and what I need from you before I can build a complete schedule.
 
-## Watch-outs
+## Where you stand in the major
+Based on your completed courses, the major requirements you still need are:
 
-- **Skip STAT 212 (Biostatistics, 3.53 GPA):** credit is *not* given for both STAT 212 and STAT 200, which you’ve already completed — it wouldn’t count.
-- Historical GPAs are averages across many terms and sections — they indicate grading patterns, not a guaranteed grade.
-- Your Math BSLAS supporting coursework requires 12 hours in a math-related area *outside* MATH/ASRM, with at least one advanced course. STAT qualifies, and your 400-level STAT work covers the “advanced” condition. Still, confirm with your advisor that a given course fills your specific remaining slot before registering.
+- **MATH 416** (Abstract Linear Algebra) — core
+- **MATH 417/427** (Abstract Algebra) — core
+- **Analysis** — one of MATH 444, MATH 447, or MATH 424
+- **Two breadth courses** — e.g., MATH 441, 446, 448, 453, 481, 402/403, 423
+- **Two additional advanced MATH courses**
 
-Want me to dig into student reviews for any of these instructors (e.g., Flanagan for STAT 107, or the STAT 420/431 instructors) to help you choose?"
-9,"Plan my next semester with no classes before 10 AM, no Friday classes, and a maximum of 15 credits.",advising,advising,,,"Here’s what I found, and where I need your input before locking in a schedule.
+## Scheduling reality
+UIUC math courses are almost all **MWF**, which conflicts with your “no Friday classes” rule. Of the options I checked, only these satisfy both **no Friday** and **start at or after 10:00 AM**:
 
-## Remaining Math BSLAS / Applied Math requirements
+| Course | Section | Days/Time | Meets your rules? |
+|---|---|---|---|
+| MATH 444 (Real Analysis) | D13 | TR 11:00–12:20 | ✅ |
+| MATH 447 (Real Variables) | A13 | TR 11:00–12:20 | ✅ |
+| MATH 481 (Vector & Tensor Analysis) | A13 | TR 9:30–10:50 | ⚠️ Starts too early |
 
-Based on your completed courses, the major requirements still open are:
+Everything else — including **all sections of MATH 416, MATH 417, MATH 441, MATH 446, MATH 448, MATH 453, and MATH 402/403** — meets on **MWF**, so it would include Fridays and violate your rule.
 
-- **MATH 416** – Abstract Linear Algebra (3 cr) — required core  
-- **MATH 417** (or 427) – Abstract Algebra (3 cr) — required core  
-- **Analysis** – MATH 444, 447, or 424 (3 cr)  
-- **Breadth** – two of MATH 402/403/423/441/446/448/453/481 (6 cr)  
-- **Additional advanced math** – two more 400-level MATH courses (6 cr)  
+Also note: **MATH 444 and MATH 447 meet at the same time**, so you can only take one of them, and both fulfill the same analysis requirement.
 
-Your 12-hour supporting coursework requirement appears largely satisfied by extensive STAT coursework, but that needs advisor sign-off — I wouldn’t count it as done without confirmation.
+## What I need from you to finalize the plan
 
-## The scheduling problem
+1. **Which courses are you planning to take next semester?** I can’t build an accurate schedule from your degree audit alone. I need your intended course list, or at least the subjects you want to prioritize.
 
-Looking at Spring 2026 sections, nearly every MATH 400-level course meets **MWF**, which conflicts with a strict no-Friday rule. That removes:
+2. **Is “no Friday classes” a strict rule?** If it is, then you realistically can’t take MATH 416 or MATH 417 in Spring 2026 because both are MWF-only that term. That would delay core progress. If you have flexibility for even one course, many more options open up.
 
-- MATH 416: all 6 sections are MWF  
-- MATH 417: all 5 sections are MWF  
-- MATH 444, 447, 424, 441, 446, 448, 453, 402, 412, 413: MWF sections  
-- MATH 481: TR, but starts at 9:30 AM, which is before your 10 AM threshold  
+3. **Are we targeting Spring 2026?** That’s the term I have section data for.
 
-The only math sections that clear both constraints are:
+4. **Do you have instructor, difficulty, or course-load preferences?** Given your current GPA, I’d want to keep the term balanced and avoid overloading you with too many proof-heavy courses.
 
-| Course | Time | Meets requirement |
+Let me know your intended course list, and I’ll check exact sections for time conflicts, verify credit totals stay at or below 15, and flag anything that doesn’t fit your constraints."
+10,I am a sophomore majoring in Mathematics and want to graduate one semester early. Build a course plan for me.,advising,advising,,,"Based on the catalog requirements and your completed coursework, here’s where you stand for the **Math BSLAS core**:
+
+| Requirement | Status |
+|---|---|
+| Calculus I (MATH 220/221) | ✅ MATH 220 |
+| Calculus II (MATH 231) | ✅ |
+| Calculus III (MATH 241) | ✅ |
+| Intro to Higher Math (MATH 347/314) | ✅ MATH 347 |
+| Linear Algebra (MATH 416) | ❌ Still needed |
+| Abstract Algebra (MATH 417 or 427) | ❌ Still needed |
+| Probability (MATH 461 **or** STAT 400) | ✅ STAT 400 |
+| Computer Science (CS 101 **or** CS 124) | ✅ Both done |
+| Analysis (MATH 444/447/424) | ❌ Still needed |
+| Breadth (2 of: 402/403/423/441/446/448/453/481) | ❌ Still needed |
+| 2 additional 400-level MATH courses | ❌ Still needed |
+
+So you still need **7 MATH courses, roughly 21 credit hours**: MATH 416, MATH 417, one analysis course, two breadth courses, and two additional 400-level MATH courses.
+
+## Supporting coursework
+
+Good news: your extensive Statistics record (STAT 207, 385, 410, 425, 426, 432, 440, 448, etc.) very plausibly satisfies the “12 advisor-approved hours in one mathematics-related area outside MATH/ASRM, including at least one advanced course” requirement. This still needs **advisor sign-off**, and STAT 400 can’t be double-counted because it already satisfies the Probability requirement.
+
+## Proposed plan if you have about 3 semesters left
+
+Assuming you’re in your second year and targeting a December 2027 graduation — leaving roughly Fall 2026, Spring 2027, and Fall 2027 — this sequence could work.
+
+Schedule note: I checked the Spring 2026 schedule and confirmed sections for MATH 416, 417, 444, 441, 446, 448, 453, 447, 424, and 402. MATH 423 does not appear to run that term, so avoid relying on it.
+
+### Semester 1 — e.g., Fall 2026
+This is your heaviest term and gets the algebra chain started.
+
+- **MATH 416 — Abstract Linear Algebra** — core requirement, unlocks MATH 417
+- **MATH 444 — Elementary Real Analysis** — satisfies the Analysis requirement
+- **MATH 441 — Differential Equations** — breadth, very applied-math friendly
+
+That’s 9 MATH credits, so keep other courses light this term.
+
+### Semester 2 — e.g., Spring 2027
+- **MATH 417 — Intro to Abstract Algebra** — core, requires MATH 416
+- **MATH 446 — Applied Complex Variables** — breadth, applied flavored
+
+### Semester 3 — e.g., Fall 2027 — final
+- **MATH 448 — Complex Variables** — additional 400-level MATH
+- **MATH 453 — Number Theory** — additional 400-level MATH
+
+Then handle any remaining gen-ed/LAS requirements and the supporting-coursework paperwork.
+
+If you’d rather not carry a 3-proof-course term, move MATH 444 to Semester 2 instead, making that term MATH 417 + 444 + 446, and keep Semesters 1 and 3 at two MATH courses each.
+
+If you have a **fourth semester** available, spread MATH 444 and MATH 441 into separate terms. With a 2.71 cumulative GPA, taking 9 MATH credits including two proof-heavy courses at once is a real load, so more headroom is safer.
+
+## What I still need to finalize this
+
+1. **Your exact timeline** — What is your current term, and how many semesters remain before your target early-graduation term? The plan above assumes 3 remaining terms.
+2. **Applied Mathematics concentration requirements** — The catalog text I retrieved covers the general Math BSLAS requirements but doesn’t spell out the Applied Mathematics concentration course list. Many applied tracks effectively want MATH 441/442/446-type coursework, so the sequence above should align well, but verify with your math advisor.
+3. **LAS general-education status** — You’ve completed a wide range of courses (FR 156, HIST, ECON, ANTH, SHS, etc.), but the math catalog doesn’t cover LAS gen-ed requirements. Your degree audit is needed to confirm nothing is outstanding.
+4. **Statistics supporting-coursework approval** — Confirm with an advisor that your STAT sequence qualifies as the approved related area, and whether you want to formalize it as a Statistics minor."
+11,I enjoy machine learning but dislike theoretical proofs. Which STAT courses would fit me best?,advising,advising,,,"Based on your completed applied stats core (STAT 400, 410, 425, 426, 432, 440, 448, 385), your ML interest, and your preference to avoid proof-heavy theory, these STAT courses are the strongest fits.
+
+## Strongest Fits
+
+**STAT 437 – Unsupervised Learning (3–4 cr)**  
+Your most direct ML fit: clustering and dimensionality reduction, with emphasis on methods, evaluation metrics, and interpretation of results on real datasets in Python — not proofs. It is clearly applied and project-oriented.  
+- ⚠️ **Prerequisite gap:** Requires STAT 410 (✓ you have it) **and MATH 415 or MATH 257** — neither appears in your completed courses. You would need one of those (or instructor consent). If your applied math plan includes linear algebra, this is worth sequencing around.  
+- Offered Spring 2026 (online, MWF 4:00, Ellison).
+
+**STAT 542 – Statistical Learning (4 cr)**  
+The natural grad-level sequel to STAT 432. Covers regularization, trees, neural networks, boosting, SVM, and model selection — the full modern ML toolkit. Prereqs (STAT 410 + STAT 425) are fully satisfied.  
+- ⚠️ Caveat: the catalog notes “computation **and theory**,” so expect some mathematical depth, though historically it is very well taught (avg GPA ~3.82, and Liu’s sections ~3.88). If “no proofs at all” is a hard line, this is your borderline option — otherwise it is arguably the best ML course available to you.  
+- Offered Spring 2026 (MWF 3:00, Liu).
+
+**STAT 463 – Baseball Analytics (3–4 cr)**  
+Pure applied data science: data transformation, visualization, predictive modeling, and performance analytics. No proofs whatsoever, and all prereqs (STAT 385, 425, 410) are already satisfied. Even if baseball is not your interest, the methods generalize to any data science setting.  
+- Offered Spring 2026 (TR 12:30, Eck).
+
+**STAT 431 – Applied Bayesian Analysis (3–4 cr)**  
+Applied Bayesian methods implemented in R — priors, MCMC, hierarchical models — focused on computation and practice rather than proof. You have STAT 410 and R experience from STAT 385/425/432, so you are ready. Good fit if you want ML-adjacent probabilistic modeling.  
+- Offered Spring 2026 (MWF 2:00, Park).
+
+## Also Worth Considering
+
+**STAT 428 – Statistical Computing (3–4 cr):** Monte Carlo methods, random number generation, numerical analysis for models. Computing-heavy, low on proofs; prereq STAT 410 plus programming knowledge (you have plenty). A solid skill-builder that complements ML.
+
+**STAT 447 – Data Science Programming Methods (3–4 cr):** Shell, git, SQL, R, and Docker — entirely hands-on tooling with no theory/proofs, and no prerequisites. Slightly more “engineering” than ML, and possibly below your current level, but useful for industry-oriented data science.
+
+## I’d Steer You Away From
+
+- **STAT 420** – you have already surpassed it with STAT 425; it would be a step backward.
+- **STAT 528** – graduate-only, and it emphasizes statistical properties/theory (contrary to your preference).
+- **STAT 212** – overlaps with STAT 200, far too introductory.
+
+## Bottom Line
+
+If you want to stay maximally ML-focused with the least proof exposure, the order I would suggest is **STAT 437** (once the MATH 415/257 prerequisite is handled) and **STAT 463** immediately, with **STAT 431** or **STAT 542** depending on how much mathematical depth you will tolerate. If you let me know whether you have taken (or can take) MATH 415/MATH 257, and how many credits/terms you are planning around, I can help you sequence these with your remaining applied math requirements."
+12,帮我选一下下学期的课。,advising,advising,,,"我看了你的学业记录，先帮你盘点进度、给建议，最后需要确认几个问题，才能把方案定得更准。
+
+## 1. 你目前的进度（对照 Math BSLAS 要求）
+
+你已完成：微积分序列（MATH 220/231/241）、MATH 347、CS 101/124，以及用 STAT 400 满足概率要求。这些都没问题。
+
+但对照 2026–2027 数学专业要求，你还缺不少 MATH 核心课：
+
+| 要求 | 可选课程 | 状态 |
 |---|---|---|
-| MATH 444 D13 (Wang) | TR 11:00–12:20 | Analysis ✓ |
-| MATH 447 A13 (Hinkkanen) | TR 11:00–12:20 | Analysis ✓ (same slot — pick one) |
+| 线性代数 | MATH 416 | ❌ 未修 |
+| 抽象代数 | MATH 417 或 427 | ❌ 未修 |
+| 分析 | MATH 444 / 447 / 424 | ❌ 未修 |
+| 广度（选 2 门） | 441/446/448/453/423/402/403/481 等 | ❌ 未修 |
+| 额外高阶 MATH（2 门 400 级） | 自选 | ❌ 未修 |
 
-That’s only 3 credits of degree progress. The required MATH 416/417 core simply has **no no-Friday option** this term.
+粗略估算你还有约 7 门 MATH 高阶课（约 21 学分）要完成，最好和导师排一个多学期路线，而不只是盯着下学期。
 
-## STAT options that fit
+**好消息**：你 STAT 修得非常多（385/400/410/425/426/432/440/448 基本覆盖统计核心），大概率能满足专业里“12 学分 supporting coursework（数学相关非 MATH 领域）”的要求——但需要 advisor 审批确认；另外 STAT 400 已用于概率要求，不能重复计入。
 
-Since your stats background is strong, these TR sections also clear both constraints and could count toward supporting coursework:
+## 2. 建议的 Spring 2026 选课思路
 
-- **STAT 433** – Stochastic Processes, TR 11:00–12:20 (Fellouris) — conflicts with MATH 444/447  
-- **STAT 430** – Topics in Applied Statistics, TR 12:30–13:50 (Martinez Vargas) — prereqs met (STAT 410, 425) ✓  
-- **STAT 434** – Survival Analysis, TR 12:30–13:50 (Zhao) — same slot as 430, prereqs met ✓  
+考虑到你的 GPA（总 2.71 / 专业 2.92），我不建议一学期全上纯证明课。一个比较平衡的方案是“线性代数 + 分析 + 一门应用向广度课”：
 
-A strict-constraint schedule would top out around **6–7 credits** (e.g., MATH 444 + STAT 430), which wastes the semester and leaves MATH 416/417 unfinished.
+- **MATH 416（Abstract Linear Algebra，3 cr）**——专业核心必修，今年春季有多种班次（如 MWF 10:00/11:00 在线 Albin；MWF 14:00 Tolman；MWF 12:00/13:00 Kerman）。  
+  ⚠️ 注意：MATH 416 通常要求 MATH 415 或等效基础。你记录里没看到 MATH 415，请先确认你是否满足先修（或是否需要先补 MATH 415）。
 
-## What I need from you
+- **MATH 444（Elementary Real Analysis，3 cr）**——满足分析要求，你有 MATH 347 基础比较合适。春季有 MWF 11:00（Young）、12:00（Shaw）、14:00（Oikhberg）、TR 11:00（Wang）等班次。
 
-1. **Does “no Friday classes” mean no MWF courses at all?** If you’d accept MWF classes starting at or after 10 AM — like MATH 416 at 10:00 or MATH 417 at 10:00 — I can build a full 12–15 credit plan that finishes most of your remaining math requirements. If Fridays are truly off-limits, you’ll likely need to take MATH 416/417 in a later term or via a different format.  
-2. **Which courses do you actually want to take?** Should I build the plan around remaining Math degree requirements, STAT electives, or a mix?  
-3. **Any preference** between MATH 444 vs. 447, or STAT 430 vs. 434?
+- **MATH 446（Applied Complex Variables，3 cr）**——应用数学向的广度课，比纯代数证明友好，春季 MWF 10:00/13:00（Nikolaev）有班次。
 
-Also note: with your 2.71 GPA, stacking MATH 416 + 417 + an analysis course in one term is a heavy proof-based load — doable, but I’d flag it as high-intensity. Happy to research instructors for any section you’re leaning toward."
-10,I am a sophomore majoring in Mathematics and want to graduate one semester early. Build a course plan for me.,advising,advising,,,"Based on the 2026–2027 Math BSLAS catalog and your profile, here’s a draft plan. It assumes you are finishing your sophomore year now and have three semesters left: **Fall 2026, Spring 2027, Fall 2027**.
+这样约 9–10 学分，可以再搭 1 门较轻松的课（如通识或一门你感兴趣的 STAT 选修）凑到 12–13 学分。
+
+**MATH 441（微分方程）也值得放入计划**，对你“应用数学”方向很合适，春季有 3 个班次；但它通常需要 MATH 285（ODE）基础，而你记录里没有 MATH 285，若想走这条线可能得先修 MATH 285。
+
+MATH 417（抽象代数）也是核心必修，通常建议在 MATH 416 之后修，建议放到后续学期而不是这学期硬挤。
+
+## 3. 我需要你再确认几个信息
+
+1. **“下学期”是指 2026 春季吗？** 大概想修多少学分？
+2. 这学期的**优先级**是什么——尽快推进毕业要求，还是优先稳住/提升 GPA？
+3. 你之后的规划是**专注补 MATH 毕业核心**，还是也想继续走统计/数据方向（比如统计辅修或 supporting coursework 的审批）？
+4. 你的**入学 catalog 年份 / 最新 DARS**里，Applied Mathematics 方向是否有额外的具体要求？我这边能精确查证目录细节的主要是 STAT 课程，MATH 课的先修和等效认定建议以课程目录和你 advisor 的审核为准。
+
+你先告诉我这几点，我再帮你把班次、教授口碑和具体排课组合敲定。另外，如果你想让我查一下上面几位 MATH 授课老师（比如 Tolman、Young、Nikolaev）在 RateMyProfessor / r/UIUC 的口碑，也可以说一声。"
+13,STAT 420 怎么样？,catalog_lookup,catalog_lookup,,,"# STAT 420 — Methods of Applied Statistics
+
+**Course overview**
+- **Credit hours**: 3 or 4
+- **Content**: Calculus-based classical applied statistics: simple and multiple regression, correlation, ANOVA/ANCOVA, multiple comparisons, goodness-of-fit tests, contingency tables, nonparametric methods, and power. Emphasis is on when, why, and how to use various tests.
+- **Prerequisites**: STAT 408 or STAT 400; MATH 231 or equivalent; basic matrix operations recommended.
+- **Overall historical data**: ~1,519 students, average GPA **3.58**.
+
+**Spring 2026 offerings**
+- **In-person Lecture-Discussion** (CRN 46308 / 46320): Tue/Thu 11:00–12:20, 2 Education Building. Instructor: **W. Jia**
+- **Online** (CRN 69352 / 69351): Asynchronous. Instructor: **Albert Yu**
+
+**Historical average GPA by instructor (not broken down by specific semester/section)**
+| Instructor | Avg GPA |
+|---|---|
+| Unger, D. | 3.82 |
+| Findley, K. | 3.59 |
+| Li, X. | 3.59 |
+| Yu, A. | 3.54 |
+| Deeke, J. | 3.47 |
+| Icaza, E. | 3.45 |
+
+**Instructor reputation (Spring 2026 instructors)**
+- **Albert Yu (online)**: Generally well regarded by students — described as very nice, understanding, flexible, responsive, and organized. Some found lectures a bit long or dull at times, but exams were considered straightforward and not difficult.
+- **Wenyan Jia (in-person)**: No public reviews found on Rate My Professors or r/UIUC, so there is limited information on teaching style or reputation.
+
+**Summary**: STAT 420 is a solid applied statistics core course with broad coverage and manageable difficulty (overall GPA 3.58). In Spring 2026 you can choose between in-person and online. If flexibility and a strong record of student satisfaction matter to you, Albert Yu’s online section is a reliable option. For Jia’s in-person section, there are currently no student evaluations available to reference.
+
+Want me to compare STAT 420 with other statistics courses (e.g., STAT 425/426), or check whether it fits into your degree requirements?"
+14,Can I still graduate on time?,advising,advising,,,"Here’s where you stand against the Math BSLAS graduation requirements (2026–2027).
+
+## Already satisfied
+
+- **Calculus I** — MATH 220 ✅  
+- **Calculus II** — MATH 231 ✅  
+- **Calculus III** — MATH 241 ✅  
+- **Intro to Higher Math** — MATH 347 ✅  
+- **Probability requirement** — STAT 400 ✅  
+- **CS requirement** — CS 101 & CS 124 ✅  
+- **Supporting coursework (12 hrs, incl. advanced)** — Likely met through your STAT courses; STAT 410, 425, 426, 432, 440, and 448 all appear to qualify as advanced. Needs advisor sign-off.
+
+## Still outstanding
+
+The entire upper-level math sequence remains:
+
+1. **MATH 416 — Abstract Linear Algebra** (3 cr)
+2. **MATH 417 or MATH 427 — Abstract Algebra** (3 cr)
+3. **Analysis requirement** (3 cr) — MATH 444, MATH 447, or MATH 424
+4. **Breadth requirement** (6 cr) — two of MATH 402, 403, 423, 441, 446, 448, 453, 481
+5. **Additional advanced math** (6 cr) — two more 400-level or approved 500-level MATH courses
+
+That’s roughly **7 more MATH courses, or about 21 credit hours**, of math major coursework. There also isn’t yet clear evidence that general-education or total-hour requirements are complete.
+
+## Can you graduate “on time”?
+
+I can’t give a definitive yes/no yet because key information isn’t in your profile. To answer precisely, I’d need:
+
+1. **Your intended graduation term and how many semesters remain.** About 21 credits of upper-level MATH is feasible in two semesters only if you’re comfortable taking 2–3 upper-division math courses per term, e.g., MATH 416 + 417 together, then analysis plus breadth/advanced courses. That’s a heavy, proof-based load. Three semesters would be much more manageable.
+
+2. **Whether LAS general education and the ~120 total-hour requirement are complete**, plus your current credit total. You’ve taken roughly 42 courses, so credits may be fine — but any gen-ed gaps would still need to be scheduled.
+
+3. **Whether “Applied Mathematics” is your formal concentration.** The catalog says concentrations are elected with an advisor. If your concentration has required courses beyond the general list above, that changes the remaining math needed.
+
+4. **GPA constraints.** Your cumulative GPA is 2.71 and major GPA is 2.92 — comfortably above the typical 2.0 graduation floors. But upper-level MATH courses are often grade-gated (C or better prerequisites for MATH 417/444-level work), so you’ll want to keep performance up in the sequence.
+
+If you tell me your target graduation term, how many terms remain, and whether the Applied Math concentration adds courses, I can map out a term-by-term plan and let you know whether it fits."
+15,What course should I take next?,advising,advising,,,"Based on your record and the Math BSLAS requirements, here’s where things stand.
+
+## Where you stand
+
+You’ve completed the major’s entry sequence: **MATH 220 → 231 → 241 → 347**, plus the **computer science core** (CS 101/124) and the **probability core** (STAT 400 counts for MATH 461). Your extensive statistics coursework (STAT 410/425/426/432/440/448, etc.) very likely satisfies the **Approved Supporting Coursework (12 hrs)** requirement, though that still needs advisor sign-off.
+
+**What still remains in the MATH major core and upper-level requirements:**
+- **MATH 416 — Abstract Linear Algebra** (core, not yet taken)
+- **MATH 417 — Intro to Abstract Algebra** (core, not yet taken)
+- **Analysis requirement** — MATH 444, 447, or 424 (one course)
+- **Breadth** — two courses from the list (MATH 402/403/423/441/446/448/453/481)
+- **Additional advanced math** — two more 400-level MATH courses
+
+So you have roughly six to seven more MATH courses ahead of you — this is the biggest remaining lift before graduation.
+
+## My recommendation: MATH 416 next
+
+**MATH 416 (Abstract Linear Algebra)** is the natural and highest-priority next step:
+
+1. **It’s the missing core requirement** and the foundation for nearly everything else in the major — most upper-level MATH courses assume the abstract linear algebra maturity it builds.
+2. **You’re ready for it now** — your MATH 347 + MATH 241 background is exactly the intended preparation.
+3. **It’s offered in Spring 2026** with several sections, including an online option and an honors section, so there’s scheduling flexibility.
+
+Given your cumulative GPA (2.71), I’d also caution against pairing MATH 416 with another heavy proof-based course in the same term — these abstract-algebra-style courses tend to reward focused effort. A sensible longer-term order might be:
+
+- **Next term:** MATH 416
+- **Following term:** MATH 417 (abstract algebra) *or* an analysis course (MATH 444/447) — but one at a time
+- Then fill in the two breadth + two additional advanced courses
+
+## What would sharpen this advice?
+
+A few things would help me tailor this further:
+- **When do you plan to graduate**, and how many courses do you intend to take per term?
+- **Are you aiming for a particular career path** (e.g., data science/stats jobs, grad school in math/stats)? Your course mix is unusually statistics-heavy for a math major, so I want to confirm whether your plan is to lean into stats or round out pure math.
+- Do you already have **advisor approval** on using your STAT hours as the supporting coursework?
+
+If you’d like, I can also check instructor ratings for the available MATH 416 sections (Tolman, Kerman, Albin, etc.) to help you pick a section."
+16,What will the weather be like in Chicago this weekend?,out_of_scope,out_of_scope,,,"""Your message says 'This is beyond the conversation,' but I don’t see a draft or specific request in the current thread. Please provide the text you’d like rewritten, or clarify what you need."""
+17,Can you debug this Python function for me?,out_of_scope,out_of_scope,,,This is outside the scope of our conversation.
+18,Write a five-paragraph essay about the history of Illinois.,out_of_scope,out_of_scope,,,It looks like you may be referring to a draft or earlier context that wasn’t included. Could you please share the draft you’d like me to rewrite?
+19,I have had a severe headache for three days. What medication should I take?,out_of_scope,out_of_scope,,,It sounds like you’re referring to something outside our current conversation. Could you paste the draft you’d like me to rewrite? I’m happy to help once I can see it.
+20,"What are the Statistics major requirements, and based on the courses I have completed, create a semester-by-semester plan for graduation.",advising,advising,,,"Here’s a rewritten version of the plan, based on the information you provided.
+
+---
+
+## Important heads-up
+
+Your profile lists your current major as **Mathematics – Applied Mathematics**, not Statistics. The plan below assumes you intend to **add or switch into the Statistics BSLAS** within LAS. If you’re actually planning to keep the Math major *and* add Statistics, the roadmap changes — let me know and I can rework it for a double major.
+
+---
+
+## Statistics BSLAS — Catalog Requirements
+
+Per the 2026–2027 LAS catalog, the Statistics major requires:
+
+**Introductory & Preparatory (17–19 hrs)**
+- Calculus through MATH 241 (MATH 220/221 → MATH 231 → MATH 241)
+- Introductory Statistics (STAT 107, STAT 200, or STAT 212)
+- Linear Algebra (MATH 257, MATH 415, or MATH 416)
+
+**Statistical Core (13 hrs)**
+- STAT 400, STAT 410, STAT 425, STAT 426
+
+**Advanced Statistics Electives (12 hrs — pick 4)**
+- Includes STAT 385, 424, 427–434, 440, 443, 447, 448, 480, or MATH 444/447
+
+**Other rules**
+- At least **12 hours of 300/400-level major coursework must be completed on the UIUC campus**
+- Total major + supporting coursework is ~70–72 hours (this includes general education/LAS requirements outside the table above)
+
+---
 
 ## Where You Already Stand
 
-| Requirement | Status |
-|---|---|
-| Calculus I–III (MATH 220/231/241) | ✅ Done |
-| Intro to Higher Math (MATH 347) | ✅ Done |
-| Probability (STAT 400 satisfies this) | ✅ Done |
-| CS requirement (CS 101 or CS 124) | ✅ Done (both) |
-| Linear algebra — **MATH 416** | ❌ Needed |
-| Abstract algebra — **MATH 417** | ❌ Needed |
-| Analysis (MATH 444 / 447 / 424) | ❌ Needed |
-| Breadth (2 courses: 402, 403, 423, 441, 446, 448, 453, 481) | ❌ Needed |
-| Additional advanced MATH (2 × 400/500-level) | ❌ Needed |
-| Supporting coursework (12 hrs, one area outside MATH/ASRM, incl. 1 advanced course) | ✅ Likely already met via STAT coursework (STAT 410/425/426/432/440/448 are 400-level; STAT 400 itself can’t be double-counted since it fills Probability) |
-
-That leaves roughly **21 credit-hours of MATH**: MATH 416 (3), MATH 417 (3), one analysis course (3), two breadth courses (6), and two additional advanced MATH courses (6).
-
-## Draft Plan — Graduate in Fall 2027
-
-**Fall 2026 (Junior)**
-- MATH 416 — Abstract Linear Algebra (core; instructors incl. Tolman, Kerman)
-- MATH 444 — Elementary Real Analysis (analysis req; instructors incl. Oikhberg, Wang)
-- MATH 441 — Differential Equations (breadth; instructors incl. Tzirakis)
-- Any remaining gen-ed/elective if needed
-
-**Spring 2027 (Junior)**
-- MATH 417 — Intro to Abstract Algebra (requires MATH 416; instructors incl. Ahlgren, Rezk)
-- MATH 446 — Applied Complex Variables (breadth; Nikolaev)
-- MATH 448 — Complex Variables *or* MATH 453 — Number Theory (additional advanced; 448 taught by Erdogan)
-
-**Fall 2027 (Senior — final)**
-- One more additional advanced MATH (e.g., MATH 447 for a second analysis course, or an approved 500-level course)
-- Finish any gen-ed/elective credits
-- **Graduate one semester early**
-
-All of these listed courses have Spring 2026 sections, so they are in active rotation.
-
-## What I Need From You to Finalize This
-
-1. **Your exact standing** — are you a first- or second-semester sophomore, and roughly how many total credit hours do you have? This determines whether you have 3 or 4 semesters left and whether your gen-ed/120-hour total is on track.
-
-2. **Applied Math concentration details** — the catalog text I have lists the BSLAS core but not the Applied Mathematics concentration’s specific courses. Some applied-math tracks add requirements beyond the core (often including courses like MATH 441 and STAT 410/425, which you’ve already taken). Confirm your concentration course list with your math advisor or send it to me so I can slot it in.
-
-3. **Supporting coursework path** — do you want to count this as a declared Statistics minor, or get advisor approval for the “12 hours in one area” route? Either should work with your existing STAT courses, but it needs to be locked in.
-
-One honest caveat: with a 2.71 cumulative GPA, the 416 → 417 → analysis sequence is the most rigorous stretch of the degree, so the plan keeps the math load to roughly 9–12 credits per term rather than front-loading. If you tell me where you are in your sophomore year, I can tighten the semester-by-semester breakdown."
-11,I enjoy machine learning but dislike theoretical proofs. Which STAT courses would fit me best?,advising,advising,,,"Based on your profile—applied math major, strong stats background, ML interest, and not a fan of proofs—here are the STAT courses that fit best for Spring 2026.
-
-## Top recommendations
-
-**1. STAT 463 – Baseball Analytics** (3–4 cr, Eck, TR 12:30)  
-Data science and predictive modeling through baseball case studies, with emphasis on data transformation, visualization, and prediction. No theory or proofs mentioned in the catalog description.  
-Prereqs all met: STAT 385, STAT 425, STAT 410.  
-This is the closest match to “ML I enjoy, proofs I don’t.”
-
-**2. STAT 437 – Unsupervised Learning** (3–4 cr, Ellison, online MWF 4:00)  
-Pure ML: clustering and dimensionality reduction with Python, focused on methods, evaluation, and interpretation. No proofs mentioned.  
-⚠️ Prereq gap: you have STAT 410, but you’d also need MATH 415 or MATH 257, which aren’t in your completed courses. You’d need instructor consent or to take linear algebra first.
-
-**3. STAT 431 – Applied Bayesian Analysis** (3–4 cr, Park, MWF 2:00)  
-Computational and applied—MCMC, hierarchical models, R—rather than proof-driven. Historical average GPA 3.65 across ~549 students.  
-Prereqs met: STAT 410 plus R knowledge from STAT 385.
-
-## Good option with a caveat
-
-**4. STAT 542 – Statistical Learning** (4 cr, Liu, MWF 3:00)  
-The flagship ML course: trees, neural nets, SVM, boosting, regularization. Historical average GPA is strong at 3.82, and your STAT 410 + STAT 425 prereqs are met.  
-**But** the catalog explicitly notes it covers “computation *and theory*,” so expect some theoretical content despite the applied focus.
-
-## Skip / backup
-
-- **STAT 420** – applied methods, but more traditional and less ML-specific.
-- **STAT 510 and other 500-level theory sequences** – likely too proof-heavy.
-
-## Context notes
-
-- You’ve already completed STAT 432, which covers statistical computing/ML foundations, so STAT 437 and STAT 542 build naturally on what you’ve done.
-- Given your 2.71 cumulative GPA, the applied courses (463, 437, 431) tend to reward project and interpretation skills rather than exam-based proof work, which aligns with your strengths and preferences.
-
-Want me to look into the instructors (Liu, Ellison, Park, Eck) or dig into workload/grade distributions for any of these?"
-12,帮我选一下下学期的课。,advising,advising,,,"根据你的成绩单和数学专业（BSLAS, 2026–2027 catalog）毕业要求，我帮你梳理了当前进度，并给出 Spring 2026 的选课建议。
-
-## 学位剩余要求
-
-你已经完成大部分核心课程：MATH 220/231/241、MATH 347、STAT 400（抵概率）、CS 124/101（抵计算机）。按 catalog 还差：
-
-| 要求 | 课程 | 学分 |
-|---|---|---|
-| 核心·线性代数 | **MATH 416**（Abstract Linear Algebra） | 3 |
-| 核心·抽象代数 | **MATH 417**（或 427 荣誉） | 3 |
-| 分析 | **MATH 444 / 447 / 424** 任选一 | 3 |
-| 广度（选 2 门） | MATH 402 / 403 / 423 / 441 / 446 / 448 / 453 / 481 | 6 |
-| 高阶 MATH（另选 2 门 400 级以上） | 任意两门 400 级 MATH | 6 |
-
-另外，12 学分的 Supporting Coursework 大概率已满足——你的 STAT 课程（410/425/426/432/440/448 等）远超 12 学分，且含高阶课。建议让 advisor 确认一下即可（STAT 400 已用于概率核心，不能重复计）。
-
-也就是说，你主要的剩余工作集中在约 21 学分的 400 级 MATH 课。
-
-## Spring 2026 可选课程（已查到排课）
-
-- **MATH 416**：Albin（线上）、Tolman、Kerman 等
-- **MATH 417**：Stojanoska、Rezk、Bodish、Ahlgren
-- **MATH 444**：Young、Shaw、Oikhberg、Wang
-- **MATH 441**（微分方程，偏应用）：Tzirakis、Provencher Langlois
-- **MATH 446**（应用复变，偏应用）：Nikolaev
-- **MATH 448**（复变）：Erdogan
-
-## 参考方案
-
-考虑到你目前 GPA（总 2.71 / 专业 2.92），我**不建议**一学期堆三门证明型课程（416+417+444 同时上会非常吃力）。给你三个方向：
-
-1. **稳扎稳打型（推荐）**：MATH 416 + MATH 444 + 一门偏应用的 MATH 441/446（约 9–12 学分）。先把核心拿下，再加一门你熟悉的计算/应用风格课程。
-2. **核心优先型**：MATH 416 + MATH 417。注意 MATH 417 通常要求先修线性代数（416 或 415），所以这两门同修需确认先修课能否同时满足。
-3. **GPA 修复型**：MATH 416 + MATH 441 + 一门相对轻松的非数学课，把总学分控制在 12 左右。
-
-## 需要你确认几点，才能给你定稿
-
-1. 你下学期打算修**多少学分**？有没有实习/打工/社团占时间？
-2. 你更想**尽快毕业**，还是**优先把 GPA 拉上来**？
-3. 你偏**应用方向**（微分方程、复变、向量分析）还是能接受**纯数证明课**（抽象代数、实分析）？
-4. 你预计还有几个学期毕业？是否需要考虑 Supporting Coursework 里的 minor 或实习？
-5. 如果有具体看中的老师（比如 Ahlgren、Nikolaev），我可以帮你查 Rate My Professors 和 r/UIUC 上的评价再定。"
-13,STAT 420 怎么样？,catalog_lookup,catalog_lookup,,,"# STAT 420 – Methods of Applied Statistics
-
-**基本信息**
-- 学分：3 或 4 学分
-- 内容：基于微积分的应用统计方法系统讲解，包括简单与多元回归、相关分析、方差分析与协方差分析、多重比较、拟合优度检验、列联表、非参数方法及检验功效；强调各检验方法何时适用、为何适用以及如何使用。
-- 先修要求：STAT 408 或 STAT 400；MATH 231 或同等水平；了解基础矩阵运算；或经授课老师同意。
-
-**历史数据（GPA）**
-- 历史总平均 GPA：**3.58**（共 1519 名学生，20 个班次）
-- 各授课老师历史平均 GPA：
-  - Unger, D. — 3.82
-  - Findley, K. — 3.59
-  - Li, X. — 3.59
-  - Yu, A. — 3.54
-  - Deeke, J. — 3.47
-  - Icaza, E. — 3.45
-
-> 注意：这些 GPA 是历史汇总数据，不绑定具体学期或班级，仅供参考。
-
-**Spring 2026 开课情况**
-- 线下 Lecture-Discussion（1GR / 1UG，CRN 46308 / 46320）：周二、周四 11:00–12:20，Education Building，授课老师 **Jia, W**
-- 线上（OLG / OLU，CRN 69352 / 69351）：无固定时间，授课老师 **Yu, A**
-
-需要我进一步查 STAT 420 某位老师的评价（Rate My Professors / Reddit 讨论），或者对照你的数学/统计毕业要求看看这门课是否合适吗？"
-14,Can I still graduate on time?,advising,advising,,,"Here's where you stand against the Math BSLAS requirements (2026–2027 catalog), with a headcount of what's left.
-
-## ✅ Already satisfied
-
-| Core requirement | Status |
-|---|---|
-| Calculus I (MATH 220) | ✅ |
-| Calculus II (MATH 231) | ✅ |
-| Calculus III (MATH 241) | ✅ |
-| Intro to higher math (MATH 347) | ✅ |
-| Probability (MATH 461 or STAT 400) | ✅ via STAT 400 |
-| CS requirement (CS 101/124) | ✅ |
-
-**Supporting coursework (12 hrs):** You have far more than 12 hours in one math-related area outside MATH — your STAT sequence (STAT 410, 425, 432, 440, 448, etc.) covers this comfortably, including advanced courses. Just confirm with your advisor that STAT 400 isn't double-counted since it's used for the Probability core (you have plenty of other STAT hours either way).
-
-## ❌ Still missing (~7 MATH courses, ≈20–21 credit hours)
-
-1. **MATH 416 — Abstract Linear Algebra** (core)
-2. **MATH 417 — Intro to Abstract Algebra** (core)
-3. **Analysis (3 hrs):** one of MATH 444 / 447 / 424
-4. **Breadth (6 hrs):** two from MATH 402 / 403 / 423 / 441 / 446 / 448 / 453 / 481
-5. **Advanced MATH (6 hrs):** two more 400-level MATH courses — note your STAT 400-levels won't count here; these must be MATH-coded
-
-The good news: **all the common choices (MATH 416, 417, 444, 441, 448) are being offered this Spring 2026**, so you could start knocking these out immediately.
-
-## Can you graduate ""on time""?
-
-That depends on your target term, which isn't specified. A few scenarios:
-
-- **Spring 2027 (typical 4-year pace):** You'd need all 7 courses across Fall 2026 + Spring 2027 — roughly 3–4 MATH courses per semester. That's a heavy math load, especially with a 2.71 cumulative GPA, and MATH 417/analysis courses typically expect solid performance in earlier proof-based work. Tight, but not impossible if you front-load.
-- **Spring 2028 or later:** Very comfortable — 2–3 MATH courses per term.
-
-## To give a definitive answer, I need:
-
-1. **Your target graduation term** — and current class standing: with 42 courses on your transcript, are you a junior expecting to walk in 2027?
-2. **Whether the Applied Mathematics concentration is on your degree audit** — the catalog lists it as optional and it may carry extra coursework beyond the standard requirements checked.
-3. **Confirmation that your gen-ed and campus-hour requirements are done** — your transcript looks gen-ed rich (ANTH 246, EALC 230, HIST, THEA, etc.), but your LAS audit can't be verified from here.
-
-One flag: your major GPA (2.92) and cumulative GPA (2.71) aren't a graduation blocker visible from the catalog, but it's worth confirming the Math department's grade requirements for core courses (many departments require C or better in required MATH courses) with an advisor before loading up on 400-level math.
-
-Want me to look into specific instructors for the sections you'd target this spring?"
-15,What course should I take next?,advising,advising,,,"Based on your transcript and the Math BSLAS catalog requirements, here’s where you stand and what I’d recommend next.
-
-## What you still need (Mathematics – Applied Mathematics)
-
-You’ve already completed the calculus sequence, MATH 347, STAT 400 (probability), CS 124, and — with all your STAT hours — almost certainly the 12-hour supporting coursework requirement (advisor approval needed). The remaining major requirements are:
-
-| Requirement | Options | Status |
-|---|---|---|
-| Linear algebra (core) | **MATH 416** | ⬜ Not taken |
-| Abstract algebra (core) | MATH 417 or 427 | ⬜ Not taken |
-| Analysis (3 hrs) | MATH 444, 447, or 424 | ⬜ Not taken |
-| Breadth (6 hrs, pick 2) | MATH 402, 403, 423, 441, 446, 448, 453, 481 | ⬜ Not taken |
-| Advanced math (6 hrs) | Two more 400-level MATH courses | ⬜ Not taken |
-
-## My recommendation: **MATH 416 (Abstract Linear Algebra) next**
-
-It’s the strongest “next” choice because:
-
-1. **It’s the only remaining core course you’re fully eligible for right now** — prerequisites are MATH 241 and MATH 347, both done.
-2. **It unlocks everything else** — MATH 417 (abstract algebra) lists 416 as its foundation, and MATH 444 (real analysis) is much more tractable with it under your belt.
-3. **It’s a natural fit for applied math** — the concrete, computational style of 416 tends to be friendlier than the proof-heavy 417/444, which matters if you’re sequencing several upper-level math courses.
-
-**Offered Spring 2026** in multiple sections — Albin (online MWF 10/11), Tolman (MWF 2), Kerman (MWF 12/1), plus an honors section. If you want, I can research instructor ratings/reviews to help you pick a section.
-
-## After that, a sensible sequence
-
-- **MATH 417** (Intro to Abstract Algebra) — next core requirement, best taken after 416.
-- **MATH 441 (Differential Equations)** — popular breadth pick for applied math; often considered one of the more approachable options on the breadth list.
-- **MATH 444 (Elementary Real Analysis)** — for the analysis requirement; offered Spring 2026 (Young, Shaw, Oikhberg, Wang).
-
-## A couple of things to confirm
-
-- I can’t run a formal degree audit, so please verify your STAT supporting coursework counts with your LAS advisor — that affects how many “additional advanced math” courses you still need.
-- Your GPA trend (2.92 major) suggests you’re handling upper-level work okay, but if you’re juggling other commitments, taking MATH 416 as your only math course this term is a totally reasonable load.
-
-A few questions that would sharpen this recommendation: Are you aiming to graduate on a particular timeline? Do you have a preference between theory-heavy vs. application-heavy courses? And is there a professor you’d prefer to take or avoid?"
-16,What will the weather be like in Chicago this weekend?,out_of_scope,out_of_scope,,,This is outside the scope of the conversation.
-17,Can you debug this Python function for me?,out_of_scope,out_of_scope,,,Could you clarify what you mean? I don’t have the context of the conversation you’re referring to.
-18,Write a five-paragraph essay about the history of Illinois.,out_of_scope,out_of_scope,,,"I don't see a draft in our conversation to rewrite. Could you paste the draft you'd like me to improve? Once you share it, I'll make it clear and concise while keeping all the original facts, URLs, dates, ratings, and any caveats intact."
-19,I have had a severe headache for three days. What medication should I take?,out_of_scope,out_of_scope,,,I’m not sure what you’re referring to — I don’t have the context of the previous conversation. Could you clarify what you’d like to talk about?
-20,"What are the Statistics major requirements, and based on the courses I have completed, create a semester-by-semester plan for graduation.",advising,advising,,,"Here’s what I found, with one important flag first: your trusted profile lists your declared major as **Mathematics – Applied Mathematics**, not Statistics. I’ve mapped you against the **Statistics BSLAS (2026–2027 catalog)** requirements below. If you’re planning to switch majors, double-major, or were just curious, let me know — that changes the advising.
-
-## Statistics BSLAS: Requirements vs. Your Completed Courses
-
-**Introductory & Preparatory Coursework (17–19 hrs)**
-
-| Requirement | Your status |
-|---|---|
-| Calculus through MATH 241 (MATH 220, 231, 241) | ✅ Complete (MATH 220, 231, 241) |
-| Introductory Statistics (STAT 107/200/212) | ✅ Complete (STAT 200) |
-| Linear Algebra (MATH 257, 415, or 416) | ❌ **Missing — 3 hrs** |
-
-**Statistical Core (13 hrs)**
-
-| Requirement | Your status |
-|---|---|
-| STAT 400 | ✅ 4 hrs |
-| STAT 410 | ✅ 3 hrs |
-| STAT 425 | ✅ 3 hrs |
-| STAT 426 | ✅ 3 hrs |
-
-**Advanced Statistics Electives (12 hrs — pick 4)**
-- ✅ STAT 385 — Statistics Programming Methods
-- ✅ STAT 432 — Basics of Statistical Learning
-- ✅ STAT 440 — Statistical Data Management
-- ✅ STAT 448 — Advanced Data Analysis
-
-That’s exactly four electives, so this block is **complete**.
-
-**Residency rule:** You need at least 12 hrs of 300/400-level major coursework on the UIUC campus — you’ve far exceeded this.
-
-## What’s Left
-
-**Only one requirement: Linear Algebra (3 hrs)** — MATH 257, MATH 415, or MATH 416. You’re essentially done with the Statistics major coursework itself.
-
-## Draft Semester-by-Semester Plan
-
-Since I don’t know your expected graduation term, here’s a plan assuming you’re still enrolled through Spring 2026 and beyond:
-
-**Spring 2026 — take Linear Algebra (3 hrs)**
-- **MATH 415 – Applied Linear Algebra**: one MWF 9:00 section (Gabdullin, M). Standard pick for stats/applied math students.
-- **MATH 257 – Linear Algebra with Computational Applications**: multiple MWF lecture options plus an online section (Chuang, Hirani, Leditzky) — good if you want computational flavor.
-- **MATH 416 – Abstract Linear Algebra**: several MWF sections and online options (Albin, Tolman, Kerman, Piliththuwasam Gallage) — more proof-based; you’ve taken MATH 347, so it’s feasible if you prefer rigor.
-
-**Subsequent semesters:** The major itself is finished. Use remaining terms for LAS General Education requirements, free electives to reach the 120 total hours for the degree, or — if you want to deepen the major — take any extra advanced elective (e.g., STAT 424, STAT 428, STAT 429, STAT 431, STAT 433, STAT 434, STAT 480).
-
-## What I Need to Finalize This
-
-1. **Are you switching from Math to Statistics?** Your Math–Applied Math degree has its own requirements (including more 400-level math) that I haven’t audited.
-2. **Expected graduation term** — how many semesters do you have left?
-3. **General Education progress** — the catalog page I pulled only covers the major; a full graduation plan needs your gen-ed and total-hour status. Your 2.71 cumulative GPA is fine for LAS’s usual 2.0 minimum, but confirm your college standing.
-
-Want me to pull the Math BSLAS requirements too so we can compare, or run the Spring 2026 linear algebra options past your schedule and preferences?"
-21,"I am a Statistics major who has completed STAT 107, STAT 400, and STAT 410. Build my next-semester schedule based on my academic history, with no classes before 10 AM and no Friday classes.",advising,advising,,,"Two things to flag before the proposed schedule, then the schedule itself.
-
-**1. Major mismatch.** Your profile lists your major as **Mathematics–Applied Mathematics**, not Statistics, and it already shows significantly more STAT coursework than the three courses you named — STAT 425, 426, 432, 440, 448, and 385 are already completed. Under the **Statistics BSLAS** requirements, that means the statistical core (400/410/425/426) and four advanced electives (385/432/440/448) are **already done**. The unmet requirement I can identify is **Linear Algebra (MATH 257/415/416)**.
-
-**2. Linear algebra is the problem for your time constraints:**
-- MATH 415: only section is MWF **9:00 AM** ❌
-- MATH 416: all sections MWF ❌ (Friday)
-- MATH 257: lectures MW (11:00–11:50, 1:00, 3:00) ✅, **but** requires an online lab that meets on **Fridays** ❌
-
-So no linear algebra option fits cleanly this term — you would need to relax one constraint or defer it.
-
-## Proposed Spring 2026 Schedule (no class before 10 AM, no Fridays)
-
-| Course | Title | Days | Time | Instructor | CRN |
-|---|---|---|---|---|---|
-| STAT 433 | Stochastic Processes | TR | 11:00–12:20 | Fellouris, G | 70528 |
-| STAT 434 | Survival Analysis | TR | 12:30–13:50 | Zhao, S | 72141 |
-| STAT 447 | Data Science Programming Methods | Online (async) | — | Eddelbuettel, D | 74712 |
-
-- **STAT 433** — prerequisites STAT 400 (+410 preferred) ✅; builds directly on your probability sequence.
-- **STAT 434** — prerequisites STAT 410 + STAT 425 ✅; practical R-based course, pairs well with 433.
-- **STAT 447** — no prerequisites; fully asynchronous online (no scheduled meeting days/times), so it satisfies both constraints by construction.
-
-Total load: 9–12 credit hours depending on 3-vs-4 credit enrollment.
-
-**Good same-time-slot alternatives** (all TR 12:30–13:50, so they would swap with STAT 434, not add to it):
-- **STAT 430** (Topics in Applied Statistics, Martinez Vargas) — prerequisites STAT 410 + 425 ✅
-- **STAT 427** (Statistical Consulting, Chronopoulou) — prerequisite STAT 425 ✅; note it is a group consulting practicum
-
-**Ruled out by your constraints:** STAT 431 (MWF), STAT 443 (MWF), STAT 429 (TR 9:30 AM), STAT 428 (TR 9:30 AM).
-
-Two requests before you register:
-
-1. **Confirm your actual major** — if you are still Mathematics–Applied Mathematics, this STAT-heavy plan will not satisfy your degree audit, and I should instead map the remaining MATH requirements (e.g., 441/442/444/447 sequence) against these same time constraints.
-2. **Decide on linear algebra** — if you want to take MATH 257 this spring, let me know whether you are willing to attend the Friday online lab; otherwise we can schedule it for a later term."
-22,"I have completed STAT 400 and MATH 257, and I want a career in machine learning. Which two statistics courses should I take next semester?",advising,advising,,,"Based on your STAT 400 and MATH 257 background and ML career goal, the catalog points to this pairing:
-
-## Recommended pair: STAT 425 + STAT 440
-
-**1. STAT 425 — Statistical Modeling I (3–4 credits)** — *Best fit*
-- Prerequisites are exactly **STAT 400 and MATH 257 (or MATH 415)**, so you qualify directly.
-- Covers linear regression, residual analysis, model building, generalized least squares, PCA, A/B testing, ANOVA, and mixed effects — the statistical modeling toolkit ML roles expect.
-- This is the gateway to **STAT 432** (Basics of Statistical Learning), the most ML-specific STAT course, which requires STAT 420 or STAT 425 first.
-- Historical average GPA: 3.52 (across ~2,200 students).
-
-**2. STAT 440 — Statistical Data Management (3–4 credits)** — *Strong complement*
-- Prerequisite: STAT 400 only.
-- Covers data storage, cleaning, and preparation using large-scale statistical software — practical skills you'll use constantly in ML pipelines before modeling.
-- Historical average GPA: 3.65, one of the higher averages among your options.
-
-## Why not the others (yet)
-- **STAT 432 (Basics of Statistical Learning)** is the most directly ML-relevant course (logistic regression, SVM, trees, lasso/ridge, cross-validation, clustering), but it *requires* STAT 420 or STAT 425 as a prerequisite — so it's a ""next semester"" target after STAT 425, not a same-semester pair.
-- **STAT 410 (Statistics and Probability II)** is the theory continuation of STAT 400 and pairs well with 425 (425 even prefers concurrent enrollment in 410), but it's more theoretical and less ML-applied. Choose this instead of STAT 440 if you want a deeper math foundation.
-- **STAT 420** overlaps heavily with 425's content; taking both would be redundant.
-
-## Path for an ML career
-1. **This semester:** STAT 425 + STAT 440
-2. **Next semester:** STAT 432 (+ STAT 448, Advanced Data Analysis, if you take STAT 410 concurrently at some point)
-
-## Spring 2026 availability (all three offered)
-- **STAT 425:** Zheng, L (TR 9:30 & 11:00) and Bravo De Guenni, L (MWF 1:00)
-- **STAT 440:** Kinson, C (MWF 3:00 & 4:00)
-- **STAT 432:** Dayanikli, G (TR 12:30 & 2:00)
-
-One caveat: my records show several advanced STAT courses (including 410, 425, 432, and 440) already listed on your transcript. If that's accurate, this recommendation would change substantially — let me know your actual completed list and I'll re-target the recommendation."
-23,I work every weekday until 2 PM and can take at most 12 credits. Build a Statistics schedule that fits my availability and keeps me on track to graduate.,advising,advising,,,"Here’s a summary of your degree progress and a Spring 2026 schedule that fits your after‑2 PM availability.
-
-## Your progress toward the Statistics BSLAS
-
-Based on your completed coursework, you’ve satisfied nearly all Statistics major requirements:
+Based on your completed courses:
 
 | Requirement | Status |
 |---|---|
-| Calculus through MATH 241 | ✅ Done (MATH 220, 231, 241) |
-| Introductory Stats (STAT 200/107/212) | ✅ Done (STAT 200) |
-| Statistical Core (STAT 400, 410, 425, 426) | ✅ Done |
-| Advanced Electives (4 needed) | ✅ Done (STAT 385, 432, 440, 448) |
-| **Linear Algebra (MATH 257/415/416)** | ⬜ **Still needed** |
+| Calculus sequence (MATH 220, 231, 241) | ✅ Complete |
+| Introductory Statistics (STAT 200) | ✅ Complete |
+| **Linear Algebra** (MATH 257/415/416) | ❌ **Missing** |
+| STAT 400 | ✅ Complete |
+| STAT 410 | ✅ Complete |
+| STAT 425 | ✅ Complete |
+| STAT 426 | ✅ Complete |
+| Electives (need 4) | ✅ Complete — you have **6** qualifying: STAT 385, 432, 440, 448 (+ possible overlap with 410/425/426/440) |
+| 12 hrs of 300/400-level major work on campus | ✅ Satisfied (multiple STAT 400-level courses) |
 
-So the **only remaining major‑specific requirement is Linear Algebra** — all other Statistics coursework is complete.
+**Key takeaway:** Within the Statistics major itself, your **only remaining required course is one linear algebra class (3 credit hours)**. All statistics core and elective requirements are already done. Your path to graduation is therefore governed much more by **general education, LAS requirements, total hours, and whether you keep the Math major** than by STAT coursework.
 
-## Spring 2026 courses that start at 2 PM or later
+---
 
-- **STAT 431 – Applied Bayesian Analysis** — MWF 2:00–2:50 PM (Park) · 3–4 cr · prereq STAT 410 + R (you have both ✅)
-- **STAT 443 – Professional Statistics** — MWF 3:00–3:50 PM (Glosemeyer) · 3–4 cr · prereq STAT 425 (you have it ✅)
-- **STAT 447 – Data Science Programming Methods** — fully online (Eddelbuettel) · 3–4 cr · no prereq
-- **MATH 257 – Linear Algebra w/ Computational Applications** — lecture MW 3:00–3:50 PM (Leditzky) + online lab (choose Friday 2:00 PM or later) · 3 cr
-- **MATH 416 – Abstract Linear Algebra** — MWF 2:00–2:50 PM (Tolman) · 3 cr
+## Provisional Semester-by-Semester Plan
 
-⚠️ Conflicts to note: MATH 416 overlaps STAT 431 (both MWF 2:00), and MATH 257’s lecture overlaps STAT 443 (both MW 3:00).
+**Spring 2026 (e.g., now):**
+- **MATH 415 – Applied Linear Algebra** (recommended given your applied math background; offered MWF 9:00 with Gabdullin) *or* **MATH 416 – Abstract Linear Algebra** (offered multiple sections incl. online with Albin, in-person with Tolman/Kerman)
+  - Both satisfy the linear algebra requirement. MATH 415 is generally the more computation/applications-oriented choice; MATH 416 is more proof-heavy (your MATH 347 background would help).
+- Pair it with any remaining **LAS general education** or **open elective** courses to keep a full-time load. I can’t specify these without knowing your gen-ed audit.
 
-## Recommended schedules: finish the major + keep stats skills sharp (9–11 credits)
+**Fall 2026 (if needed):**
+- Finish any remaining general education / LAS breadth requirements and total-hour shortfall.
+- If nothing remains, you would be eligible to graduate at the end of **Fall 2026** — or even **Spring 2026** if linear algebra plus all gen eds finish this term.
 
-**Option A (computational route):**
-- MATH 257 (MW 3:00–3:50 + online lab F 2:00 PM) — 3 cr
-- STAT 431 (MWF 2:00–2:50) — 3–4 cr
-- STAT 447 (online) — 3–4 cr
+---
 
-**Option B (theory route):**
-- MATH 416 (MWF 2:00–2:50) — 3 cr
-- STAT 443 (MWF 3:00–3:50) — 3–4 cr
-- STAT 447 (online) — 3–4 cr
+## What I Need to Finalize This Plan
 
-Both options total **9–11 credits**, comfortably under your 12‑credit cap, with every in‑person class starting at 2:00 PM or later.
+Because your STAT requirements are nearly complete, an accurate semester-by-semester plan depends on information not in your profile. Please provide:
 
-## One thing to verify
+1. **Your total completed credit hours** (to see how close you are to the ~120-hour degree total and class standing).
+2. **Your LAS general education status** — which gen-ed categories (Humanities & the Arts, Social & Behavioral Sciences, Natural Sciences, Cultural Studies, Western/Non-Western) remain open? You have strong candidates in your history (HIST, ANTH, EALC, THEA, SHS, etc.), but I can’t verify coverage without an audit.
+3. **Foreign language requirement** — FR 156 suggests progress, but I don’t know if the LAS language requirement is fully satisfied.
+4. **Your intent** — are you dropping the Math major, or double-majoring? If you stay in Applied Math, those degree requirements also remain on your plate.
+5. **Whether you’ve formally declared/switched** — with a 2.71 cumulative GPA, confirm with the Statistics advising office whether any admission or continuation GPA criteria apply to declaring the major.
 
-Your profile lists your major as **Mathematics – Applied Mathematics**, not Statistics. If you’re switching to or adding the Statistics BSLAS, the schedule above gets you across the finish line. If you’re staying in Applied Math and just wanted a stats‑heavy term, you could instead take **STAT 431 + STAT 443 + STAT 447** (9–12 credits) — but that leaves Linear Algebra unaddressed.
+Once you share those, I can build a complete, term-by-term graduation plan with exact course lists."
+21,"I am a Statistics major who has completed STAT 107, STAT 400, and STAT 410. Build my next-semester schedule based on my academic history, with no classes before 10 AM and no Friday classes.",advising,advising,,,"I have enough to flag the problem clearly, but not enough to responsibly lock in a schedule — your stated situation and your trusted record disagree. Here’s the full picture.
 
-Also, I can’t audit your general education, LAS breadth, or campus residency requirements from what I have — if you want me to check those, let me know what remains on your degree audit. And since you work until 2 PM, just confirm you can reliably get to campus by 2:00 for the MWF sections."
-24,I transferred into the Statistics major with 60 credits. Help me create a semester-by-semester plan to graduate within two years.,advising,advising,,,"Here's the plan based on your record. One important note first: your student profile lists your major as **Mathematics – Applied Mathematics**, not Statistics. I'm treating the listed courses as completed coursework and assuming you're officially switching to (or are already in the process of switching to) the **Statistics BSLAS**. Let me know if that's wrong.
+## The conflict I need you to resolve
 
-## Where you stand against Statistics BSLAS requirements
+| | Your message says | Your trusted profile says |
+|---|---|---|
+| Major | Statistics | Mathematics – Applied Mathematics |
+| Completed stats courses | STAT 107, 400, 410 | STAT 200 (not 107), 400, 410, 425, 426, 432, 440, 448, 385 |
+| GPA | — | 2.71 cumulative / 2.92 major |
 
-| Requirement | Status based on your record |
-|---|---|
-| Calculus through MATH 241 (MATH 220/231/241) | ✅ Complete |
-| Introductory Statistics (STAT 200/107/212) | ✅ Complete (STAT 200) |
-| STAT Core: 400, 410, 425, 426 (13 hrs) | ✅ Complete |
-| Advanced Statistics electives (4 courses / 12 hrs) | ✅ Complete — STAT 385 (3), STAT 432 (3–4), STAT 440 (3–4), STAT 448 (4) |
-| **Linear algebra (MATH 257, 415, or 416)** | ⬜ **Not on your record — the main gap** |
-| 12 hrs of 300/400-level major coursework on the UIUC campus | ❓ Depends on which courses transferred vs. were taken here |
-| LAS gen ed / foreign language / composition | ❓ Can't verify from your record alone |
-| Total hours toward 120 | ❓ Depends on transfer credit evaluation |
+If the profile is current, you’ve already finished essentially all of the Statistics BSLAS statistical coursework — which changes the plan entirely versus only having STAT 107/400/410.
 
-Your Statistics major coursework is essentially done. The only concrete academic gap is **linear algebra**. **MATH 415** (3–4 credits) is offered this spring and satisfies the requirement.
+## What the Statistics BSLAS audit shows (using your profile as the record)
 
-## Two-year plan, assuming ~60 credits to go
+- ✅ Calculus (MATH 220/231/241), Intro Stats (STAT 200)
+- ✅ Core: STAT 400, 410, 425, 426 (all done)
+- ✅ Advanced electives: STAT 385, 432, 440, 448 (4 of 4 done)
+- ❌ **Linear Algebra** — MATH 257, 415, or 416 is **still missing** (none appears in your history)
 
-You'll need about **15 credits per semester** for four semesters. If gen ed and residency checks are clean, the plan is light on required courses, so most semesters will be filler.
+So under the profile reading, your remaining Stats-major requirement is linear algebra.
 
-**Fall 2026 (~15 cr)**
-- **MATH 415 — Applied Linear Algebra** (3–4 cr) → closes the last major requirement
-- **STAT 431 (Applied Bayesian Analysis) or STAT 443 (Professional Statistics)** — both offered this spring; add only if you need more UIUC upper-level STAT hours for the 12-hour residency rule or want a stronger transcript
-- Remaining hours: gen ed or open electives
+## Problem: no compliant linear algebra section in Spring 2026
 
-**Spring 2027 (~15 cr)** — finish any gen ed/foreign language/composition items; otherwise take upper-level electives
+Checking your constraints (nothing before 10 AM, no Fridays):
 
-**Fall 2027 (~15 cr)** — same; good point to run a final degree audit
+- **MATH 415** — only section is MWF 9:00–9:50 → ❌ (before 10 AM **and** Friday)
+- **MATH 416** — all sections meet MWF (10, 11, 12, 13, 14) → ❌ (all on Friday)
+- **MATH 257** — lectures are MW (11:00, 13:00, 15:00 — fine), but the required **lab is on Friday** in every offered slot → ❌
 
-**Spring 2028 (~15 cr)** — final semester; apply for graduation early in the term
+**There is currently no linear algebra offering that satisfies both scheduling constraints**, and linear algebra is also a prerequisite to STAT 425 (per catalog: “STAT 400; MATH 257 or MATH 415”). So under either reading of your record, your next Stats-major step is currently blocked by a course whose only Spring 2026 sections conflict with your rules.
 
-If you'd rather lighten a semester, summer courses can absorb some filler credits.
+## STAT courses that do have compliant sections (for reference)
 
-## What I need from you to finalize this
+These only matter if you still need them (i.e., if the profile is wrong and you truly have just STAT 107/400/410):
 
-1. **Confirm the major switch** to Statistics BSLAS is official — your file still says Math.
-2. **Your transfer credit evaluation** — specifically which completed courses were taken at UIUC vs. transferred in. This determines whether you've met the ""12 hours of 300/400-level major coursework on campus"" rule and how many total hours you actually have.
-3. **Your LAS gen ed status** — composition (ESL 115/BTW 250 may cover parts), foreign language, and other gen ed areas. I can't verify these from your record.
-4. **Your exact credit count** — ""60 transferred credits"" plus UIUC credits already earned will tell us how many filler credits you actually need.
+- **STAT 425** – TR 11:00–12:20 (sec 2UG/2GR, Zheng) ✅ *…but requires linear algebra first*
+- **STAT 426** – TR 14:00–15:20 (sec 1UG/1GR, Jia) ✅ *…requires STAT 410 + 425*
+- **STAT 432** – TR 12:30–13:50 or TR 14:00–15:20 (Dayanikli) ✅ *…requires STAT 425*
+- ❌ Not usable under your rules: STAT 385 (MWF), STAT 440 (MWF), MATH 415/416/257 (Friday components)
 
-Want me to look into specific instructors (e.g., for MATH 415 or STAT electives) once you decide on courses?"
-25,I failed STAT 400 last semester but still want to graduate on time. How should I adjust my course plan for the next three semesters?,advising,advising,,,"Here’s a concrete way to get back on track.
+## What I need from you to finalize
 
-## Why STAT 400 matters for your degree
+1. **Is your declared major Statistics, or Mathematics – Applied Mathematics?** (This decides which degree requirements govern.)
+2. **Which is accurate** — did you take STAT 107, or STAT 200? And are STAT 425/426/432/440/448/385 already completed, or not yet?
+3. **Are asynchronous/online Friday components acceptable?** Your “no Friday classes” rule matters here — e.g., MATH 257’s lab is listed Friday but is an online lab, which may or may not count for you.
+4. **What catalog year / degree audit** are you working from (the 2026–2027 requirements I checked, or an earlier one)?
+5. Roughly **how many credit hours** do you want next semester? (Given your 2.71 GPA, I’d lean toward a moderate load.)
 
-For the Math BSLAS, the **Probability core requirement** is “MATH 461 **or** STAT 400.” Until you pass one of those, you have an unmet major requirement. Retaking STAT 400 is the most direct fix, and you’re fully eligible: its only prerequisite is MATH 231, which you’ve already passed.
+Once you confirm those, I can build a concrete schedule with exact sections, CRNs, and instructors that fits your no-before-10 AM / no-Friday constraints."
+22,"I have completed STAT 400 and MATH 257, and I want a career in machine learning. Which two statistics courses should I take next semester?",advising,advising,,,"Based on your record and ML goal, here’s my assessment.
 
-One thing to verify with your advisor: your record shows advanced STAT courses (410, 425, 432, 440, 448, 385) that list STAT 400 as a prerequisite. Since you failed STAT 400, confirm with the department that those courses still count as completed — and note that passing STAT 400 is still required regardless, because it’s the course that satisfies your Probability requirement.
+## A quick note on your background
+Your profile shows you’ve completed far more than STAT 400 — including **STAT 410, 425, 426, and STAT 432 (Basics of Statistical Learning)**, plus STAT 385/440/448 and substantial CS coursework (CS 225, 233, etc.). So you’re not choosing intro-level courses; you’re choosing advanced electives beyond an intro statistical learning course.
 
-## What’s still left in your major (from the 2026–2027 catalog)
+One discrepancy: **MATH 257 does not appear on your completed-course list.** If you took it elsewhere or transferred it, that’s fine for these recommendations — neither course below requires it — but you may want to confirm it’s on your official record, since linear algebra can qualify you for certain STAT/math requirements.
 
-Based on your transcript, these core items are unmet:
+## My recommendation: STAT 542 + STAT 428
 
-| Requirement | Courses needed |
-|---|---|
-| Probability (FAILED) | **STAT 400 retake** (4 cr) |
-| Linear algebra | MATH 416 (3 cr) |
-| Abstract algebra | MATH 417 (3 cr) |
-| Analysis (choose one) | MATH 444 / 447 / 424 (3 cr) |
-| Breadth (choose two) | e.g., MATH 441, 453, 446, 448… (6 cr) |
-| Additional advanced MATH (two) | Two more 400-level MATH courses (6 cr) |
+**1. STAT 542 — Statistical Learning (4 cr, grad-level; same as CSE 542)**  
+This is the natural next ML course after STAT 432. It goes deeper into regularization, kernel methods, SVMs, boosting, model selection, and neural networks, with both computation and theory. You already satisfy the prerequisites (STAT 410 + STAT 425), and it’s offered this Spring (MWF with Prof. Liu). Historically the course averages strong grades (~3.8+ GPA).
 
-Your **12-hour supporting coursework** is likely already satisfied by your many STAT courses (they’re outside MATH/ASRM) — have your advisor approve that path.
+**2. STAT 428 — Statistical Computing (3–4 cr)**  
+ML careers rely heavily on implementation fundamentals: numerical methods for linear/nonlinear models, random number generation, and Monte Carlo methods. You meet the prerequisites with STAT 410 and your programming background. It’s offered with a dedicated undergrad section (1UG) with Prof. Wang this Spring, making it a safer complement than stacking two graduate courses.
+
+## Why not other options?
+- **STAT 431 (Applied Bayesian Analysis)** is an excellent ML-adjacent choice — Bayesian methods and MCMC are increasingly used in probabilistic ML. It’s offered this Spring with undergrad/grad sections (Prof. Park). If you’d rather build modeling breadth than computing depth, swap it in for STAT 428. Honestly, **542 + 431** is also a very defensible pair.
+- **STAT 433 (Stochastic Processes)** and **STAT 429 (Time Series)** are more relevant to specific subfields (e.g., forecasting, reinforcement learning) than to general ML careers.
+- **STAT 480 (Big Data Analytics)** is listed in some catalog requirement text, but the course lookup returns “no such course,” so don’t plan around it.
+
+## Caveats to check before enrolling
+- **STAT 542 is a 500-level course.** As an undergraduate, you’ll typically need instructor/departmental approval to enroll, and your cumulative GPA (2.71) may factor into that decision. Ask the Statistics advising office whether 542 is open to you. If not, the fallback pair is **STAT 428 + STAT 431**, both of which have dedicated undergrad sections.
+- If — contrary to your profile — you have *not* actually completed STAT 410 and STAT 425, then none of the courses above are eligible, and your next step would instead be **STAT 410** first.
+
+Would you like me to look into instructor reviews for STAT 542 (Liu) or STAT 428/431 (Wang/Park) before you commit?"
+23,I work every weekday until 2 PM and can take at most 12 credits. Build a Statistics schedule that fits my availability and keeps me on track to graduate.,advising,advising,,,"Here’s a summary of what I found, with a couple of important caveats before locking in a schedule.
+
+## ⚠️ First: a clarification I need from you
+
+Your profile on file lists your major as **Mathematics – Applied Mathematics**, not Statistics. That distinction matters because:
+
+- Under the **Statistics BSLAS** catalog, your transcript already appears to satisfy nearly the *entire* statistics course table.
+- Under the **Math – Applied Math** degree, you'd still have several required MATH courses left.
+
+**Please confirm which degree you're planning against:** are you switching to / double-majoring in Statistics, or is this schedule meant to support your recorded Math major (e.g., via statistics-heavy coursework)?
+
+## What I can see from your record
+
+Compared to the **Statistics BSLAS** degree requirements, you have already completed:
+
+- ✅ Calculus through MATH 241 (MATH 220, 231, 241)
+- ✅ Introductory statistics (STAT 200)
+- ✅ STAT core: STAT 400, 410, 425, 426
+- ✅ Advanced electives (4 of 4 needed): STAT 385, 432, 440, 448
+- ❌ **Linear algebra** (MATH 257 / 415 / 416) — this appears to be the *only* missing item in the statistics course table
+
+So if Statistics is your goal, you are extremely close — a linear algebra course may be the last required piece.
+
+## Availability screen (Spring 2026, must start at/after 2:00 PM)
+
+Courses that **fit** your work schedule (you're free after 2 PM):
+
+| Course | Section | Time | Notes |
+|---|---|---|---|
+| MATH 416 (Abstract Linear Algebra) | C13 | MWF 2:00–2:50 | Satisfies the Stats linear algebra requirement **and** the Math BSLAS linear algebra requirement |
+| MATH 417 (Intro Abstract Algebra) | E13 | MWF 3:00–3:50 | Math core; typically sequenced after 416 |
+| MATH 257 (Linear Algebra w/ Computing) | A5 | MW 3:00–3:50 + online Friday lab | Also satisfies the Stats requirement; there's also an async online section |
+| MATH 444 (Elementary Real Analysis) | C13 | MWF 2:00–2:50 | Math analysis requirement (conflicts with MATH 416) |
+| STAT 431 (Applied Bayesian Analysis) | 1UG | MWF 2:00–2:50 | Conflicts with MATH 416 |
+| STAT 443 (Professional Statistics) | 1UG | MWF 3:00–3:50 | Fits with MATH 416 |
+
+Courses that **do NOT** fit (end before/overlap your workday): STAT 427, 428, 429, 433, 434; MATH 415, 441; and STAT 424/480 aren't offered this term.
+
+## Draft schedule options (all ≤ 12 credits, after 2 PM)
+
+**Option 1 — Finishing the Statistics BSLAS catalog**
+- MATH 416 C13 (MWF 2:00–2:50, 3 cr) → completes your remaining stats requirement
+- Optional add-on: STAT 443 (MWF 3:00–3:50, 3 cr) if you want a professional/consulting flavor
+- Total: **3–6 credits** — well under your cap. Note STAT 431 also fits your hours but is at the same time as MATH 416, so it's not combinable with it.
+
+**Option 2 — Progressing the Math–Applied Math degree (your recorded major)**
+- MATH 416 C13 (MWF 2:00–2:50, 3 cr)
+- MATH 417 E13 (MWF 3:00–3:50, 3 cr)
+- Total: **6 credits**, both comfortably after 2 PM. MATH 417 normally assumes MATH 416, so you'd want to confirm you can take it the same term (some departments allow it with advisor sign-off).
+
+## To finalize this, I still need:
+
+1. **Which degree(s)** you're targeting — Statistics BSLAS, your recorded Math–Applied Math degree, or both?
+2. Whether any **general-education / LAS / campus requirements** remain (those aren't in the major catalogs I pulled, and they'd affect how many open credits you have).
+3. Whether ""at most 12 credits"" means you *want* to fill ~12, or just that 12 is your ceiling (this changes whether I pad the schedule with electives).
+
+Once you confirm those, I can give you a finalized, conflict-free schedule."
+24,I transferred into the Statistics major with 60 credits. Help me create a semester-by-semester plan to graduate within two years.,advising,advising,,,"I can help build this out, but first I need to flag an important mismatch and confirm a few things so the plan is accurate.
+
+## ⚠️ Discrepancy to resolve
+
+Your on-file profile lists your major as **Mathematics – Applied Mathematics** (cumulative GPA 2.71, major GPA 2.92), not Statistics. You mentioned transferring into Statistics with 60 credits. Before proceeding, please confirm:
+
+1. **Have you officially declared/changed to the Statistics BSLAS?**  
+   The plan depends on which degree audit applies.
+2. Were the STAT courses in your record taken **at UIUC** or transferred in? This matters a lot, especially because of UIUC’s 12-hour upper-level on-campus residency requirement.
+
+## Where you stand against the Statistics BSLAS
+
+I mapped your completed coursework against the Statistics BSLAS requirements:
+
+| Requirement | Courses | Status |
+|---|---|---|
+| Calculus through MATH 241 | MATH 220, 231, 241 | ✅ Complete |
+| Introductory Statistics | STAT 200 | ✅ Complete |
+| Linear Algebra (MATH 257 / 415 / 416) | — none on record | ⚠️ **Gap** — MATH 347 does not satisfy this per the catalog |
+| Core: STAT 400, 410, 425, 426 | All four on record | ✅ Complete |
+| 4 advanced electives | STAT 385, 432, 440, 448 | ✅ Complete — all are on the approved list |
+| 12 hrs of 300/400-level major coursework **on UIUC campus** | Depends on where you took them | ❓ **Must verify** |
+
+So, based on the major-coursework table alone, the only clear remaining requirement is a **linear algebra course** — typically MATH 415 or MATH 416.
+
+## Why this affects a “two years” plan
+
+If your record is accurate, you have already completed essentially the entire Statistics major curriculum. That would not normally leave two full years of coursework. A two-year plan implies there is significantly more left than the major table shows.
+
+A full Statistics BSLAS also requires, outside the major list:
+
+- **LAS general education** (humanities, social sciences, etc.)
+- **Foreign language** through the third level — you have FR 156, but the continuation needs verification
+- **Campus composition / advanced composition** — BTW 250 appears satisfied
+- **120 total credit hours** overall
+- The **12-hour UIUC residency rule** — if your STAT 400/410/425/426/electives were transfer credit, you would need at least 12 hours of 300/400-level STAT coursework on campus. That could mean adding upper-level STAT electives such as STAT 424, 427, 431, 433, 434, 443, 447, or 480.
+
+## What I need from you for an accurate plan
+
+1. Your **official DARS/degree audit** for Statistics, or a screenshot of the remaining-requirements page — this shows gen-eds, language, and credit-hour status I can’t see in your profile.
+2. Confirmation of **which STAT/MATH courses were UIUC campus courses** vs. transfer credit — this determines whether the residency rule is met.
+3. Confirmation of your **official major** (Math vs. Statistics) and intended catalog year.
+4. Your **total credit hours** — your record lists about 42 courses, which looks closer to 120+ hours than 60, so I want to make sure we’re looking at the same situation.
+
+## Provisional sketch, pending the above
+
+Assuming you have officially switched to Statistics and need to satisfy the on-campus upper-level rule plus any remaining gen-ed/hours, a rough four-semester plan could look like:
+
+- **Semester 1:** MATH 415 (linear algebra) + one on-campus STAT elective (e.g., STAT 431 or STAT 424) + any gen-ed/language still needed
+- **Semester 2:** One or two on-campus STAT electives (e.g., STAT 427, 433, or 434) + remaining gen-ed/language
+- **Semester 3:** Remaining electives/requirements to reach 120 hours
+- **Semester 4:** Final overflow — likely a light term
+
+But I don’t want to hand you a semester-by-semester plan built on guesses about gen-eds, language, and transfer status. **Send me your DARS or tell me which requirements are still open, and confirm whether you’re officially in Statistics** — then I can make this into a precise schedule."
+25,I failed STAT 400 last semester but still want to graduate on time. How should I adjust my course plan for the next three semesters?,advising,advising,,,"## What STAT 400 means for your degree
+
+In the Math BSLAS catalog, the **Probability core requirement** can be met by either **MATH 461** or **STAT 400**. So failing STAT 400 doesn’t put you behind by a whole course — but you do need to **pass one of these two before graduating**.
+
+Your transcript is encouraging:
+
+- You’ve already passed the STAT follow-on sequence (STAT 410, 425, 426, 432, 440, 448, 385). That strongly suggests STAT 400 was a bad-term anomaly rather than a fundamental gap. **Retaking STAT 400 is probably lower-risk than switching to MATH 461**, since you know the material and it feeds your demonstrated strengths.
+- Your extensive STAT coursework very likely **already satisfies the 12-hour “Approved Supporting Coursework”** requirement. Confirm that with your math advisor — if so, you don’t need to add any more STAT courses.
+
+## Remaining requirements
+
+Comparing the Math BSLAS core + major coursework to your transcript, the unmet items are:
+
+| Requirement | Options | Hours |
+|---|---|---|
+| Probability | **Retake STAT 400** (or MATH 461) | 4 |
+| Linear algebra | MATH 416 (prereq for 417) | 3 |
+| Abstract algebra | MATH 417 (or 427) | 3 |
+| Analysis | MATH 444, 447, or 424 | 3 |
+| Breadth (pick 2) | MATH 402/403/423/441/446/448/453/481 | 6 |
+| Additional advanced MATH (pick 2) | Two 400-level MATH | 6 |
+
+That’s roughly 8 courses / ~25 credit hours, which is very doable across three semesters.
 
 ## Suggested three-semester plan
 
-### Spring 2026 — prioritize the retake (≈10–11 cr)
-- **STAT 400** (4 cr) — offered now with several lectures (Unger, Yu A, Lee). Historically, sections taught by Unger and Yu A average ~3.4+ GPAs; Lee has no historical data yet.
-- **MATH 416** (3 cr) — unlocks MATH 417 later; you have the MATH 347 prerequisite.
-- **MATH 444** (3 cr) — analysis done early, and you’re eligible with MATH 241 + 347.
+Assuming you retake STAT 400 **this coming term (Spring 2026)** and graduate at the end of Spring 2027:
 
-### Fall 2026 — core progression (≈9–12 cr)
-- **MATH 417** (3 cr) — needs MATH 416 first, so take it this term.
-- Two **breadth** courses (e.g., MATH 441 + MATH 453) (6 cr).
-- Optional: one additional advanced MATH if you want to front-load.
+**Semester 1 (Spring 2026) — retake + start the MATH sequence**
 
-### Spring 2027 — finish line (≈6–9 cr)
-- Two **additional advanced MATH** courses (6 cr) to close out the “Additional Advanced Mathematics” requirement.
-- Buffer room for anything that slipped.
+- **STAT 400** (retake — your #1 priority)
+- **MATH 416** (gets the 417 prerequisite out of the way)
+- One breadth course that fits your applied-math direction (e.g., MATH 441 or another from the list)
 
-That’s roughly 25 credits over three terms (~8–9/semester), which is very manageable and leaves margin to protect your GPA.
+Keep this semester light otherwise — the goal is a solid pass in STAT 400, and MATH 416 is no gimme either. ~9–11 credit hours is fine here.
 
-## Two things to check before locking this in
+**Semester 2 (Fall 2026)**
 
-1. **GPA math** — The F in STAT 400 stays on your transcript and is dragging your 2.71 cumulative GPA down. Ask your advisor whether UIUC’s repeat policy applies here (at UIUC the original grade typically remains and both grades count toward the GPA). A strong retake grade will help, but don’t expect the F to disappear.
-2. **Applied Math concentration** — The requirements above are the general Math BSLAS core. Your Applied Mathematics concentration may add specific course expectations, so confirm with your advisor that this plan satisfies the concentration too.
+- **MATH 417** (now that 416 is done)
+- **MATH 444/447** (analysis)
+- Second breadth course
 
-If you’d like, I can also research instructor reviews (Rate My Professors / r/UIUC) for the STAT 400 lecturers so you can pick the section that best fits how you learn — just let me know. And if you’re considering a summer STAT 400 option, that could free up Fall 2026 even further."
-26,"Given that I have finished STAT 400 and prefer applied projects over theory, should I take STAT 420 or STAT 425 next?",advising,advising,,,"**Heads-up on your record:**  
-Your profile shows STAT 425 as already completed—along with STAT 410, 432, 440, 448, and 385. Can you confirm whether you’re actually choosing between these two courses for the first time, or considering a retake/another section? Either way, here’s the comparison.
+This is your proof-heavy semester; avoid stacking anything else demanding.
 
-## From the 2026–27 catalog
+**Semester 3 (Spring 2027)**
 
-**STAT 420 – Methods of Applied Statistics (3–4 hrs)**  
-- Broad, calculus-based survey of classic applied methods: simple/multiple regression, correlation, ANOVA and covariance, multiple comparisons, goodness-of-fit tests, contingency tables, nonparametric procedures, and power of tests.  
-- Emphasis is on *when and why* each test is appropriate and how it is used.  
-- Prereqs: STAT 400 ✓, MATH 231 ✓, plus basic matrix manipulation (likely covered by MATH 241/347).  
-- Historical average GPA: 3.58 (1,519 students).
+- Two additional 400-level MATH courses (finish the advanced-math requirement)
+- Buffer for anything that slips, plus any remaining electives/LAS hours
 
-**STAT 425 – Statistical Modeling I (3–4 hrs)**  
-- Foundation for advanced statistical modeling with multiple data-analysis strategies: linear regression, least squares, F-tests, residual analysis, diagnostics, transformations, model building, generalized/weighted least squares, PCA, A/B testing, randomization tests, ANOVA, random effects, mixed effects, and longitudinal data.  
-- **Statistical computing is an integral part** — this is the more project/computation-heavy option.  
-- Prereqs: STAT 400 ✓, plus **MATH 257 or MATH 415**. Neither appears in your completed courses, so you’d need to verify whether you’ve satisfied this elsewhere or need instructor consent.  
-- Historical average GPA: 3.52 (2,238 students).
+## On the STAT 400 retake specifically
 
-## My read, given your preference
+Spring 2026 has lecture sections taught by **Yu (YL1)** and **Unger (UL1/UL2)**, and both have the strongest historical track records for the course (avg GPA ~3.43–3.46 vs. a 3.42 course average; the Lee section is the other option). Student feedback on both is strong:
 
-Both are applied, but they lean differently:
+- **Albert Yu**: highly rated on RMP (“best STAT 400 professor,” clear lectures, generous/understanding).
+- **David Unger**: also well-regarded on r/UIUC; students note homework-heavy weighting (~50%) and exam cheat sheets — worth considering if you prefer consistent homework credit over high-stakes exams.
 
-- **STAT 425** matches “applied projects” better: model building, PCA, A/B testing, mixed effects, and heavy data-analysis computing. You’d spend more time working with real datasets than deriving theory.  
-- **STAT 420** is a wider survey of classic procedures (nonparametrics, contingency tables, goodness of fit)—very practical, but more “which test do I use” than “build a model from data.”
+Either is a reasonable pick; choose based on schedule fit and grading style.
 
-One caveat: the MATH 257/MATH 415 prerequisite for STAT 425 isn’t visibly satisfied on your record, so verify that before committing. If that’s a hurdle, STAT 420’s prerequisites are fully met.
+## Caveats / what still needs confirmation
 
-Want me to pull Spring 2026 section/instructor info for whichever one you’re leaning toward, or check how either course counts toward your Applied Mathematics concentration’s supporting coursework?"
-27,I plan to study abroad next spring and will not be able to take STAT courses then. Arrange my remaining major courses around that semester.,advising,advising,,,"Here’s the finalized layout based on what you’ve shared, with the remaining open items called out.
+A few things can’t be determined from your profile, and they matter for “on time”:
 
-## Where you stand (Math BSLAS, Applied Mathematics)
+1. **Your expected graduation term** and **total earned credit hours** — to confirm you’ll clear the LAS 120-hour floor and residency requirements.
+2. **Whether you’ve declared the Applied Mathematics concentration** — the plan above follows the general Math BSLAS requirements; the concentration may add or swap specific courses (the catalog notes it’s elected in consultation with an advisor). If you’re in the concentration, some breadth/advanced picks (441, 446, 423, 481) may align with it — choose accordingly.
+3. **Prerequisites/offerings for the MATH breadth/advanced courses** — detailed catalog data is only available for STAT courses here. Several of the listed MATH courses (e.g., 446, 481, 402, 403) are not offered every semester, so verify with your math advisor or the course schedule before locking in the plan.
+4. **How the F affects your GPA** under UIUC’s course-repeat policy — confirm whether the retake grade replaces it; this affects both your cumulative GPA (2.71) and how much you need to protect your standing.
 
-Already satisfied from your transcript:
-- ✅ Calculus I–III (MATH 220/231/241)
-- ✅ Intro to higher mathematics (MATH 347)
-- ✅ Probability (STAT 400, which satisfies the MATH 461/STAT 400 option)
-- ✅ Computer science (CS 101)
-- ✅ Supporting coursework: your extensive STAT sequence (STAT 385, 400, 410, 425, 426, 432, 440, 448, plus 200/207) almost certainly covers the 12-hour advisor-approved supporting area — worth confirming with your advisor.
+**Bottom line:** You are not in a “can’t graduate on time” situation. Pass STAT 400 (or MATH 461) and knock out the roughly eight remaining MATH courses across three semesters at ~2–3 per term. The biggest risks are (a) overloading the retake semester and (b) assuming breadth/advanced courses will be offered when you need them — so lock in your schedule early.
 
-Still remaining in the major core (≈21 credit hours of MATH):
+Want me to refine this once you tell me your expected graduation term and total credit count?"
+26,"Given that I have finished STAT 400 and prefer applied projects over theory, should I take STAT 420 or STAT 425 next?",advising,advising,,,"**Heads-up: your record already shows STAT 425 as completed.** Your transcript history includes STAT 425 (Statistical Modeling I), along with STAT 410, STAT 426, STAT 432, STAT 440, STAT 448, and STAT 385. So “should I take STAT 425 next?” doesn’t align with your record unless something changed or there’s an error. STAT 420, however, is **not** in your completed list — so if the record is accurate, **STAT 420 is the only real candidate here**. Could you confirm whether you’ve actually finished STAT 425, or are you considering retaking it?
 
-| Requirement | Options |
-|---|---|
-| Linear algebra | **MATH 416** (required) |
-| Abstract algebra | **MATH 417** (or MATH 427) |
-| Analysis (3 cr) | MATH 444, MATH 447, or MATH 424 |
-| Breadth (6 cr, pick 2) | MATH 402, 403, 423, 441, 446, 448, 453, 481 |
-| Additional advanced (6 cr) | Two more 400-level MATH courses |
+That said, here’s a comparison that should still help:
 
-## Proposed arrangement around the study-abroad spring
+**If you were choosing between them from scratch:**
 
-I checked current Spring 2026 section data, and **all** of these courses have spring offerings: MATH 416, 417, 444, 447, 441, 448, 453, 402, 403. A workable skeleton (assuming abroad = Spring 2027):
+- **STAT 425 – Statistical Modeling I** is the better fit for a stated preference for applied projects over theory. It is explicitly computing- and data-analysis-centered: model building, regression diagnostics, transformations, PCA, A/B testing, randomization tests, mixed effects, and longitudinal data. It is the more “modern data project” style course.
 
-- **Fall 2026 (on campus):** MATH 416 + MATH 417, plus any remaining STAT courses you need — this is your main STAT window before leaving.
-- **Spring 2027 (abroad):** No STAT, no UIUC MATH — take approved transfer courses or program courses.
-- **Fall 2027 (return):** Analysis (MATH 444/447/424) + one breadth + one advanced course.
-- **Spring 2028 (if needed):** Remaining breadth + advanced course, or compress more into Fall 2026 if you want to finish by December.
+- **STAT 420 – Methods of Applied Statistics** is classical applied statistics: regression, correlation, ANOVA, multiple comparisons, goodness-of-fit, contingency tables, and nonparametrics. It emphasizes *when and why* each test is appropriate rather than heavy computing. It’s applied, but more formula/method-driven and less project-oriented than 425. There is also substantial content overlap with STAT 425 (and likely STAT 432), which you’ve already taken.
 
-Note: I could only verify *spring* availability from the tool, not fall-only patterns, so double-check fall offerings before locking in MATH 447/448/453/402/403 for fall terms.
+**Practical takeaway:** Since STAT 425 is behind you and STAT 420 would largely re-cover material you’ve already done in 425/432, it probably isn’t the highest-value “next” course if your real goal is applied project experience. If you specifically want to round out *classical* applied methods — nonparametrics, contingency tables, multiple comparisons — in a course with a historically friendly grade distribution (overall average GPA ≈ 3.58), STAT 420 is a solid choice. You already meet the prerequisites: STAT 400 + MATH 231 are done, and basic matrix work is covered in your math sequence.
 
-## What I still need from you to finish this
+**If you do take STAT 420 this spring**, the available sections are:
 
-1. **Which STAT courses still remain on your plan?** Your transcript shows you've already completed 10 STAT courses, so I want to make sure I slot the right ones (and check whether any are spring-only, which would matter if you're abroad that term).
-2. **Is the abroad term Spring 2027?** (Confirming the semester grid.)
-3. Does your **Applied Mathematics concentration** impose any additional specific courses beyond the core list above? The catalog text I have covers the standard BSLAS core, not concentration electives.
+- **In-person (Jia, W.)** — TR 11:00–12:20
+- **Online (Albert Yu)** — Yu is well-reviewed as nice, flexible, and understanding; lectures can run long, but the course is reportedly not difficult. Historically, his sections average around a 3.54 GPA.
 
-Tell me those three things and I'll produce a term-by-term schedule with course loads."
-28,I want a data science internship next summer and have completed STAT 107 and STAT 207. Recommend courses for next semester that fit that goal.,advising,advising,,,"Based on your completed stats core (STAT 385, 400, 410, 425, 426, 432, 440, 448), here are next-level courses for Spring 2026 that map directly to data science internship skills: SQL/git/engineering, advanced ML, and portfolio projects.
+One more consideration: with a cumulative GPA of 2.71, a course like STAT 420 — with its historically strong grade distribution and manageable workload — could help your average if GPA recovery is part of your goal.
 
-## Top recommendations
+To give a more targeted recommendation, let me know:
 
-**1. STAT 447 – Data Science Programming Methods (3–4 cr)** — *Best direct fit for internships*
-- Covers shell programming, git version control, SQL, R, Docker, and some C++ — the exact ""working with data at scale"" skills employers ask about.
-- No prerequisites listed; online sections (instructor: Eddelbuettel).
-- Historical average GPA: 3.57 (271 students).
+1. Is your STAT 425 record accurate?  
+2. What’s the actual goal for this course — GPA support, filling an applied-methods gap, or building toward something specific like a job or capstone?"
+27,I plan to study abroad next spring and will not be able to take STAT courses then. Arrange my remaining major courses around that semester.,advising,advising,,,"Here’s what I can work out from your transcript against the official 2026–2027 Math (BSLAS) requirements — and where I still need more details before giving you a precise term-by-term plan.
 
-**2. STAT 542 – Statistical Learning (4 cr)** — *Advanced ML credential*
-- Graduate-level predictive modeling: regularization, trees, boosting, neural networks, SVMs, clustering. A step beyond STAT 432.
-- Prereqs: STAT 410 + STAT 425 — both already on your record.
-- MWF 3:00–3:50 (Liu); historical average GPA: 3.82 (530 students) — rigorous but reasonable grades.
+## Math BSLAS remaining requirements
 
-**3. STAT 463 – Baseball Analytics (3–4 cr)** — *Portfolio/project course*
-- Data transformation, visualization, and predictive modeling applied to real data; the methods are broadly applicable to data science.
-- Prereqs: STAT 385, STAT 425, STAT 410 — all completed.
-- TR 12:30–1:50 (Eck). Newer course, so no GPA history yet.
+Your completed coursework already satisfies:
 
-## Also relevant (secondary)
+- Statistics requirement: STAT 400
+- CS requirement: CS 124
+- Calculus sequence: MATH 220/231/241
+- Intro to higher math: MATH 347
 
-- **STAT 428 – Statistical Computing (3–4 cr)**: Monte Carlo methods, numerical analysis, random number generation. Prereq: STAT 410 + programming knowledge (met). TR 9:30–10:50 (Wang). Average GPA: 3.58. Good for computational depth.
-- **STAT 434 – Survival Analysis (3–4 cr)**: Time-to-event modeling — only choose this if you're targeting health/clinical data specifically.
+That leaves these catalog requirements for the Math major:
 
-## Suggested combination
+- **Linear algebra:** MATH 416 — must be taken before MATH 417  
+- **Abstract algebra:** MATH 417 (or 427), prerequisite MATH 416  
+- **Analysis, 3 credit hours:** MATH 444, 447, or 424 — MATH 444 is usually the most accessible  
+- **Breadth, 6 credit hours:** two courses from MATH 402, 403, 423, 441, 446, 448, 453, 481 — MATH 441 and 446 are common Applied Math choices  
+- **Additional advanced MATH, 6 credit hours:** two more 400-level MATH courses, not counting the analysis or breadth courses  
+- **Supporting coursework, 12 credit hours:** likely already satisfied by your STAT sequence, for example STAT 425/432/440/448 — but confirm with the department that your “area” is statistics and includes an advanced course
 
-A strong, manageable spring for an internship push would be **STAT 447 + STAT 463** (practical skills + a project to discuss in interviews), with **STAT 542** if you want the heavier ML credential and can handle the 4-credit grad workload.
+So the remaining catalog-listed major courses are MATH, not STAT.
 
-Your cumulative GPA (2.71) is worth keeping in mind — STAT 542 is the most demanding of the three, so balance it against your other courses.
+I also checked the Statistics BSLAS catalog in case you’re headed that direction. Your STAT core there also looks essentially complete: STAT 400/410/425/426, plus four advanced electives such as STAT 385/432/440/448. The shared gap is the same linear algebra requirement: MATH 416.
 
-## Two things to check
+## Scheduling around your study-abroad spring
 
-- Your profile lists STAT 107 as not yet completed — if that's accurate, confirm any degree-audit implications for your Math-Applied Math major, since these recommendations assume your upper-level STAT prereqs are done.
-- For internship applications, you may also want a database/CS course (e.g., CS 411), since SQL shows up constantly — but my catalog access here is STAT-only, so I can't verify its current schedule.
+That semester cannot include any STAT. And unless your study-abroad program is a UIUC-run or pre-approved equivalent, you generally shouldn’t place 400-level proof-based MATH there either — upper-division math/stats usually must be completed on the UIUC campus.
 
-Want me to check section details or instructor reviews for any of these?"
-29,I am double-majoring in Mathematics and Statistics and have completed the calculus sequence. Help me choose courses that make progress toward both majors without exceeding 15 credits.,advising,advising,,,"Great news first: based on your completed courses, you're much closer than you might think. Here's where you stand against the 2026–2027 catalogs.
+Assuming you have one term before the study-abroad spring and one or more after, a sensible template would be:
 
-## Progress check
+- **Term before study abroad:** MATH 416 + one breadth course, e.g., MATH 441. This clears the prerequisite for MATH 417 and keeps you moving. If any STAT is still genuinely in your plan, this is where it belongs, since it can’t happen abroad.
+- **Study-abroad spring:** No STAT. Use it for general-education or LAS electives, or transferable courses. Don’t use it for MATH 416/417/444-type work that should stay on campus.
+- **Term after return:** MATH 417 + analysis, e.g., MATH 444 + the remaining breadth/additional advanced MATH, split across however many terms you have left.
 
-**Statistics (BSLAS)** — essentially complete except one box:
-- ✅ Calculus sequence, intro stats (STAT 200), STAT 400/410/425/426
-- ✅ Advanced electives: STAT 385, 432, 440, 448 (that's your 4)
-- ⬜ **Linear algebra** (MATH 257, MATH 415, or MATH 416)
+Watch the dependency: MATH 417 needs MATH 416 first. That means MATH 416 must be completed in a term before MATH 417 — never while you’re abroad, or you risk pushing graduation back a semester.
 
-**Mathematics (BSLAS)** — core remaining:
-- ⬜ **MATH 416** (Abstract Linear Algebra) — required core
-- ⬜ **MATH 417** (Intro to Abstract Algebra) — required core
-- ⬜ Analysis: MATH 444/447 (1 course)
-- ⬜ Breadth: 2 courses (e.g., 441, 453, 448, 446, 481…)
-- ⬜ 2 additional 400-level MATH courses
-- ✅ Calculus, MATH 347, STAT 400 (probability), CS 124 all done
-- ✅ Supporting coursework satisfied by the double major itself
+## What I need from you to finalize this
 
-## Recommended term plan (12 credits, under your 15 limit)
+1. Which term are you in now, and how many terms remain before your intended graduation?
+2. Which STAT courses, if any, remain in your plan? Per the catalog, your Math major doesn’t require more STAT. If you plan more anyway — e.g., STAT 428/429/430/431/434/447/480 for a concentration or a Statistics-related path — tell me which ones, since they must go in pre- or post-abroad terms.
+3. Which study-abroad program are you using? Will any of its courses transfer for major credit, or will they only cover gen-ed/elective hours?
+4. Is your degree audit under the 2026–2027 catalog or an earlier one? That affects whether the MATH 416/417 and breadth list above are exactly what you owe.
 
-| Course | Credits | Why it counts |
-|---|---|---|
-| **MATH 416** — Abstract Linear Algebra | 3 | The **pivotal course**: completes the last Statistics requirement *and* a Mathematics core requirement |
-| **MATH 444** — Elementary Real Analysis | 3 | Math analysis requirement; also sits on the stats advanced-elective list as a bonus |
-| **MATH 441** — Differential Equations | 3 | Math breadth requirement — and a natural fit for your Applied Mathematics concentration |
-| **MATH 453** — Number Theory | 3 | Second breadth course; rigorous but self-contained |
+Give me those four details, and I’ll turn the template into a concrete, term-specific course plan."
+28,I want a data science internship next summer and have completed STAT 107 and STAT 207. Recommend courses for next semester that fit that goal.,advising,advising,,,"Based on your transcript, you're well beyond introductory statistics, so the priority should be filling the practical, industry-facing skills that data science internships expect but many academic courses skip, while also covering degree requirements.
 
-All four are offered this Spring 2026 (MATH 416 has multiple sections with Albin, Tolman, Kerman; MATH 444 with Young, Shaw, Oikhberg, Wang; MATH 441 with Tzirakis, Provencher Langlois; MATH 453 with Stadlmann).
+## Top recommendation: STAT 447 — Data Science Programming Methods
+- **Why it fits:** This directly addresses the biggest gaps for data science internships. It covers industry-standard tooling most STAT courses don't: shell programming, **git/version control, SQL**, R at scale, Docker, and some C++. SQL and git show up in nearly every internship screen and daily workflow, and your current record doesn't show them.
+- **Logistics:** Offered Spring 2026, online, two sections (CRNs 74711/74712), taught by Dirk Eddelbuettel. No formal prerequisite listed.
+- **Caveats:** His historical average GPA in this course is a solid 3.49, but his RateMyProfessors ratings are low (≈1.2 quality, 3.8 difficulty) — expect a demanding, practical workload rather than an easy A. With your cumulative GPA at 2.71, treat this as your one ""high-effort"" course.
 
-**Sequencing note:** MATH 417 (abstract algebra) requires MATH 416, so plan it for next term. Taking MATH 416 now unlocks the second half of the math core.
+## Recommendation 2: STAT 443 — Professional Statistics
+- **Why it fits:** This is a project-based course focused on communicating results, statistical consulting, and how statistics is practiced in industry. Internship interviews value concrete project stories and clear communication, and this course is designed to produce both.
+- **Logistics:** Offered Spring 2026 (MWF 3:00–3:50, CIF), taught by David Glosemeyer. Prerequisite is STAT 425 (completed, or can be concurrent), and you've already completed it.
 
-## Caveats to verify
+## Consider adding for degree + ML foundations: MATH 416
+Your transcript does not show MATH 416 (Abstract Linear Algebra), which is **required** for your Mathematics–Applied Mathematics degree and is foundational for machine learning topics frequently asked about in interviews. If your schedule allows, taking it now covers both. Note that STAT 437 (Unsupervised Learning) requires MATH 415 or 257, which you don't have on record, so MATH 416 may help unlock options like that later.
 
-1. **Prerequisites:** My tools confirm section offerings but not MATH catalog prerequisites. From your record, MATH 416 (needs MATH 241 + MATH 347) and MATH 444 (needs MATH 347) are safely open to you. MATH 441 sometimes lists applied linear algebra (MATH 415) as a prerequisite — since you took MATH 416-equivalent proof work via MATH 347, check with the Math advising office whether MATH 416 (or consent) can substitute. MATH 453 typically requires MATH 347 or 417 — confirm before enrolling.
-2. **Applied Math concentration:** The profile lists you in the Applied Mathematics concentration, but the catalog text I have only describes the general BSLAS path. If your concentration prescribes specific breadth/advanced courses (often 441, 446, 481), run this plan past your math advisor so the breadth/advanced picks land correctly.
-3. **Pacing:** MATH 416 + MATH 444 together is a heavy proof-based load. If you'd rather start at 9 credits, take 416 + 444 + one breadth course and keep the other for the following term — the plan stays on track either way.
+## Optional stretch: STAT 542 — Statistical Learning
+If you want a graduate-level ML deep dive beyond STAT 432, this is offered MWF by J. Liu in Spring 2026, with a strong historical GPA (≈3.88 with Liu). Prerequisites are STAT 410 and STAT 425 — both done. However, it's a 4-credit 500-level course, and you'd want to confirm undergraduate enrollment/consent with the department. Given your GPA, consider this only if you're comfortable with a heavier load.
 
-Want me to dig into instructor reviews for any of these sections, or check how the Applied Math concentration changes the breadth/advanced list?"
-30,"I need three courses next semester, prefer instructors with higher historical GPAs, and want to avoid proof-heavy classes. What should I take based on my completed STAT 400 and STAT 410?",advising,advising,,,"Here’s a recommendation for three applied, non-proof-heavy STAT courses that build on your STAT 400/410 background. All prerequisites are satisfied based on your record.
+---
 
-## Top picks (highest historical instructor GPAs, Spring 2026)
+**Suggested package for next semester:** STAT 447 + STAT 443 (+ MATH 416 if it fits) gives you industry tooling, portfolio projects, and a degree-required foundation — a well-rounded, internship-focused term.
 
-**1. STAT 542 – Statistical Learning** (4 hrs) — **Liu, J., avg GPA 3.88**  
-- Highest instructor GPA of any candidate, and the course itself has the best overall GPA (3.82) of the options.  
-- Covered topics include modern predictive modeling, classification, clustering, trees, SVMs, and boosting. It’s application-focused with computation involved — not a proof course. Some theory exists, but it’s application-driven.
+To refine further, it would help to know: (1) what type of data science role you're targeting (e.g., ML modeling vs. analytics vs. data engineering), (2) your intended total credit load, and (3) whether you've confirmed MATH 416/STAT 542 scheduling with your advisor. Want me to dig into section/instructor details for any of these?"
+29,I am double-majoring in Mathematics and Statistics and have completed the calculus sequence. Help me choose courses that make progress toward both majors without exceeding 15 credits.,advising,advising,,,"Based on your transcript review against both degree plans, here’s where you stand and what to take next.
 
-**2. STAT 431 – Applied Bayesian Analysis** (3–4 hrs) — **Park, T., avg GPA 3.72**  
-- Bayes’ rule, priors/posteriors, MCMC, and hierarchical models, implemented in R. Very applied, with no proof component.  
-- Meets MWF 2:00–2:50, so it doesn’t conflict with STAT 542 (MWF 3:00).
+## Your status
 
-**3. Choose between these two:**
+**Statistics (BSLAS):** You are closer than you might think.
+- ✅ Calculus sequence
+- ✅ Intro Stats (STAT 200)
+- ✅ STAT 400/410/425/426 core
+- ✅ Advanced electives: STAT 385, 432, 440, 448 = 4 electives
+- ❌ **Still missing:** linear algebra requirement (choose MATH 257, MATH 415, or MATH 416)
 
-| Course | Instructor (avg GPA) | Notes |
-|---|---|---|
-| **STAT 420 – Methods of Applied Statistics** | In-person: Jia, W. (no historical data) / Online: Yu, A. (3.54) | Classic applied regression/ANOVA/nonparametrics. If you want the known higher-GPA instructor, take Yu’s online section. |
-| **STAT 428 – Statistical Computing** | Wang, S. (3.50) | Monte Carlo, numerical methods, graphics — computing-heavy, very little proof. Meets TR 9:30–10:50, no conflict. |
+**Mathematics (Applied Math):**
+- ✅ Calculus, MATH 347, STAT 400 (satisfies Probability), CS 124
+- ✅ Supporting coursework satisfied by your Statistics double major
+- ❌ **Still needed:** MATH 416 (linear algebra), MATH 417 (abstract algebra), an analysis course (MATH 444/447/424), breadth courses (e.g., MATH 441, 446/448), plus additional 400-level MATH courses
 
-Both fit cleanly alongside STAT 542 and STAT 431 time-wise.
+## Recommended courses for Spring 2026 (≤15 credits)
 
-## What I ruled out
-- **STAT 510 (Mathematical Statistics)** — graduate-level theory (Rao-Blackwell, Cramér-Rao, asymptotics): exactly the proof-heavy course you want to avoid.  
-- **STAT 433 (Stochastic Processes)** — Markov chains, Brownian motion, Itô’s lemma: leans theoretical, and it has no GPA data.  
-- **STAT 437 (Unsupervised Learning)** — requires MATH 415 or MATH 257, which you haven’t taken.  
-- **STAT 434 (Survival Analysis)** — applied and R-based, but Zhao’s historical GPA is 3.15, the lowest of the candidates.  
-- **STAT 463 (Baseball Analytics)** — applied and fun, but no instructor GPA data exists, so it doesn’t fit your “higher GPA” preference.
+**1. MATH 416 — Abstract Linear Algebra (3 credits) ← highest-value course**
+This one course satisfies the linear algebra requirement for **both** majors:
+- Math major specifically requires MATH 416
+- Statistics major accepts MATH 416
 
-## One caveat
-Historical GPA averages (both course-level and by instructor) are descriptive, not predictive — they reflect past grade distributions, not your outcome or teaching quality. If you share which instructor you’re considering beyond these, I can also pull Rate My Professors and Reddit discussions to round out the picture.
+MATH 415 would *not* count for the Math major, so MATH 416 is the right choice.
 
-Want me to check whether the STAT 420 online section (Yu) or STAT 428 (Wang) fits your schedule better, or look into student experiences for Liu (542) and Park (431)?"
-31,I am a senior Statistics major with two semesters left. Review my completed courses and help me plan how to finish my remaining degree requirements on time.,advising,advising,,,"Here’s what I found when I mapped your completed courses against the Statistics BSLAS catalog requirements:
+**2. MATH 444 — Elementary Real Analysis (3–4 credits)**
+Satisfies the Math analysis requirement. It is also on the approved Statistics advanced-elective list, giving you double-counting headroom even though your Stats electives are already filled.
 
-## ✅ Already satisfied
+**3. MATH 417 — Intro to Abstract Algebra (3–4 credits)**
+Completes the Math abstract algebra core.  
+⚠️ It normally expects MATH 416 first — check whether concurrent enrollment is allowed, or plan it for the following term.
 
-**Introductory & Preparatory Coursework**
-- Calculus through MATH 241 — **Met** (MATH 220 → 231 → 241)
-- Introductory Statistics — **Met** (STAT 200)
-- Linear Algebra — **⚠️ Not met** (no MATH 257, MATH 415, or MATH 416 in your history)
+**4. MATH 441 — Differential Equations (3 credits)**
+A breadth course that fits naturally with the Applied Math side of your degree.
 
-**Statistical Core (13 hrs)** — **Met**
-- STAT 400 ✓ · STAT 410 ✓ · STAT 425 ✓ · STAT 426 ✓
+**Sample schedule (12–15 credits):** MATH 416 + MATH 444 + MATH 441, and add MATH 417 only if concurrent enrollment is permitted.
 
-**Advanced Statistics Electives (12 hrs / 4 courses)** — **Met**
-- You have four qualifying courses: STAT 385, STAT 432, STAT 440, STAT 448
+## Cautions
 
-**12 hours of 300/400-level major coursework on the UIUC campus** — appears **Met** (your core + electives far exceed 12 hours; just double-check the sections you took were campus-based, since a few STAT offerings can be online).
+- Your profile lists an **Applied Math concentration**. The catalog text I found describes the general (non-concentration) track, so confirm with your math advisor that MATH 441 and MATH 444 fit your specific concentration checklist.
+- **Proof-heavy load:** MATH 417 and MATH 444 are rigorous and writing-intensive. With your current overall GPA at 2.71, consider starting with MATH 416 + MATH 444 + MATH 441 (≈9–11 credits) and taking MATH 417 after MATH 416, rather than all four at once.
+- No instructor rating data was available for the listed MATH sections, so I can’t advise on section choice from student reviews. The sections I pulled — Tolman/Kerman for 416, Ahlgren/Rezk for 417, Oikhberg/Young for 444, Tzirakis/Provencher Langlois for 441 — are options to verify with the department.
 
-## 📋 The one clear outstanding item: Linear Algebra (3 hrs)
+Would you like me to check whether any additional STAT 400-level elective would be worth swapping in, or help map the remaining Math courses across future terms?"
+30,"I need three courses next semester, prefer instructors with higher historical GPAs, and want to avoid proof-heavy classes. What should I take based on my completed STAT 400 and STAT 410?",advising,advising,,,"Based on filtering Spring 2026 STAT offerings to courses you’re actually eligible for — using STAT 400/410 and your transcript — that are **applied rather than proof-heavy**, and where I could check **instructor GPA history**, here is the result.
 
-Spring 2026 options, all of which satisfy the requirement:
+## My recommendation: your three courses
 
-| Course | Sections | Notes |
-|---|---|---|
-| **MATH 257** (Linear Algebra w/ Computational Applications) | MWF lectures at 11, 1, 3 (Chuang, Hirani, Leditzky) + one fully online lecture | Lab sections Fri; most flexible scheduling |
-| **MATH 415** (Applied Linear Algebra) | One lecture-discussion, MWF 9:00 (Gabdullin) | The classic choice for Stats majors |
-| **MATH 416** (Abstract Linear Algebra) | Multiple MWF sections (Albin, Tolman, Kerman, + HON) | Proof-based; typically heavier |
+**1. STAT 431 – Applied Bayesian Analysis (Park, T.)** — MWF 2:00–2:50  
+- Historical instructor GPA: **3.72**, the highest among the applied, undergrad-eligible options.  
+- Strong student signal: 4.7/5 on RMP, ~2.3 difficulty, 100% would take again; r/UIUC threads specifically recommend it as an advanced elective without a crazy workload.  
+- Content is applied Bayes (priors/posteriors, MCMC, hierarchical models) implemented in R. You’re well prepared given STAT 385/425/426, and there is no proof-writing.
 
-Since this is the only major-coursework gap I can identify, the simplest on-time plan is to **take one of these in Spring 2026**, leaving your final semester open.
+**2. STAT 428 – Statistical Computing (Wang, S.)** — TR 9:30–10:50  
+- Historical instructor GPA in this course: **3.50**.  
+- Content: statistical packages, numerical methods, graphics, Monte Carlo — computational and hands-on, not proof-based.  
+- Prereqs (STAT 410 + programming) are covered by your transcript (CS 128/225/233, STAT 385).
 
-## ⚠️ Two things you should verify before finalizing
+**3. STAT 420 – Methods of Applied Statistics** — online section with Yu, A. (or in-person Jia, W., TR 11:00 if you prefer live class)  
+- Yu’s historical GPA in STAT 420: **3.54**; course-wide average 3.58.  
+- In-person instructor Jia has **no historical GPA data**, so Yu is the safer bet for your stated priority. Reviews describe Yu as flexible with straightforward tests.  
+- Content is applied regression/ANOVA/methods — exactly the “no proofs” profile.
 
-1. **Major discrepancy:** Your profile on file lists your major as **Mathematics – Applied Mathematics**, not Statistics. If your actual major is Math, the remaining requirements will be different — say the word and I'll pull the Math BSLAS requirements instead.
-2. **Requirements I can't see from this catalog excerpt:** general education/LAS breadth, foreign language, total credit hours (120), and any campus residency rules aren't in the degree-requirement table I retrieved. Your transcript suggests you may already have gen-ed coverage (HIST, ANTH, EALC, THEA, KIN, etc.), but I can't confirm.
+These three have no time conflicts (431 is MWF afternoons, 428 TR mornings, 420 online), all prerequisites are satisfied, and all three instructors have known, solid grade histories.
 
-**To finalize your plan, I'd need one of:**
-- Your Degree Audit (DARS) report showing remaining gen ed / LAS / hour requirements, or
-- Confirmation of which gen ed categories are still open, so I can match them to courses for your last two semesters.
+## Good alternatives
 
-Once you confirm your actual major and share any open gen ed categories, I can build a full two-semester schedule."
-32,What do Rate My Professors and Reddit say about Professor Albert Yu?,catalog_lookup,catalog_lookup,,,"I couldn't find any information about Professor Albert Yu because the sources I use (Rate My Professors and Reddit r/UIUC) are currently unavailable due to a configuration issue—the API key is missing, so both returned no results.
+- **STAT 430 – Topics in Applied Statistics (Martinez Vargas, 3.51)** — applied and data-heavy; you’re eligible since you’ve taken STAT 410 + 425. Content varies by topic, so check the specific offering.  
+- **STAT 437 – Unsupervised Learning (Ellison, 3.57)** — applied ML in Python, not proof-heavy.  
+  ⚠️ Its prerequisite is STAT 410 **and MATH 415 or MATH 257** — I don’t see a linear algebra course in your completed coursework, so confirm eligibility before banking on it.
 
-That means I have no rating data or student discussions to report, and I won’t speculate about his teaching or reputation.
+## Courses I’d steer you away from, given your criteria
 
-If you try again later, the tools may work. Or, if you can share which course he’s teaching (for example, a STAT course code), I can look up official course info and historical GPA data in the meantime."
-33,I prefer well-structured lectures and lower exam difficulty. Should I take STAT 400 with Albert Yu or David Unger?,advising,advising,,,"I looked into both instructors for STAT 400, but I need to flag an important limitation up front: the professor-review search tool is currently unavailable due to a configuration error, so **I could not retrieve Rate My Professors or r/UIUC student reviews for either Albert Yu or David Unger**. That means I can't give you direct evidence from student discussions about lecture structure or exam difficulty right now.
+- **STAT 433 – Stochastic Processes**: very math/proof-oriented content (Markov chains, Brownian motion, Itô), and the assigned instructor (Fellouris) has no GPA history.  
+- **STAT 434 – Survival Analysis**: Zhao’s historical GPA in the course is **3.15** — well below your other options.  
+- **STAT 542 – Statistical Learning**: Liu has a strong 3.88, but it’s a 500-level graduate course with theory, likely more rigorous/proof-adjacent than you want.  
+- **STAT 429 – Time Series**: fine (Lee, 3.45) but lower GPA history and more theoretical content than 420/428/431.
 
-Here's what I *can* tell you from official historical data:
+## One caveat about your major
 
-**Historical average GPA in STAT 400** (not section-specific, averaged across terms):
-- **Unger, D.** — 3.46
-- **Yu, A.** — 3.43
-- For reference: Stepanov 3.24, Nguyen 3.10, Findley 2.89
+You’re in **Math – Applied Mathematics**, and you’ve already completed a large stack of STAT courses. Before enrolling, confirm with your advisor how these additional STAT courses count toward your degree — likely they’d need approval as part of your 12-hour supporting coursework, or as free electives if that bucket is already full. If you still have core math requirements outstanding (e.g., MATH 416, MATH 417, or analysis/breadth requirements), note those are largely proof-based by nature, so they’d conflict with your “avoid proof-heavy” preference."
+31,I am a senior Statistics major with two semesters left. Review my completed courses and help me plan how to finish my remaining degree requirements on time.,advising,advising,,,"I've reviewed your record against both the Statistics BSLAS and Mathematics BSLAS catalogs. Before the plan, one important flag:
 
-So the two are essentially tied on historical GPA. This doesn't clearly indicate that one has meaningfully ""easier"" exams than the other — both sit around a B+/A- average, notably above the other STAT 400 instructors listed.
+**⚠️ Major discrepancy:** You say you're a **Statistics** major, but your official student profile lists your major as **Mathematics – Applied Mathematics** (cumulative GPA 2.71, major GPA 2.92). Your completed coursework is overwhelmingly Statistics-oriented (STAT 400/410/425/426/432/440/448/385), which fits a Statistics degree far better than a Math degree. This needs to be resolved with LAS Advising — it determines everything below. I'll give you the plan for **Statistics** (your stated goal) and flag what would change if Math is actually your declared major.
 
-**What's missing for your decision:** Your two priorities are (1) well-structured lectures and (2) lower exam difficulty. Both are subjective qualities best assessed through student reviews, which I can't access at the moment. I don't want to fill that gap with general claims or hearsay.
+---
 
-Would you like me to **retry the review search** — it may work if the tool is reconfigured — or do you have specific details, like a particular section or term, that would help narrow things down? If reviews become available, I can compare how students describe Yu's vs. Unger's lecture organization and exam style directly."
-34,What do students say about Professor David Douglas at UIUC?,catalog_lookup,catalog_lookup,,,"I couldn’t find any student reviews for Professor David Douglas at UIUC right now.
+## ✅ Statistics BSLAS — what's already complete
 
-Both review sources are currently unavailable:
-- **Rate My Professors** search returned a configuration error (the search service isn’t working).
-- **r/UIUC Reddit** search returned the same configuration error.
+**Introductory & Preparatory (17–19 hrs)**
+- Calculus through MATH 241 — **done** (MATH 220, 231, 241)
+- Introductory Statistics (STAT 200/212/107) — **done** (STAT 200)
+- Linear Algebra (MATH 257/415/416) — **⛔ NOT DONE** — this is your only remaining major-course gap
 
-Because I can’t pull evidence from either source, I don’t have anything reliable to report about student opinions of this professor. Please try again later, or if you have additional details—like the department or a course code, e.g., STAT 400—it may help me search more specifically once the tools are back up."
-35,What is Professor Albert Yu's Rate My Professors rating?,catalog_lookup,catalog_lookup,,,"I couldn't retrieve Professor Albert Yu's Rate My Professors rating. The RMP search tool is currently unavailable due to a configuration error (the lookup service requires a Tavily API key that isn't set), so I can't provide his aggregate rating, rating count, or review details at this time.
+**Statistical Core (13 hrs) — complete**
+- STAT 400 (4) ✓, STAT 410 (3) ✓, STAT 425 (3) ✓, STAT 426 (3) ✓
 
-No alternative search was performed since you specifically asked about Rate My Professors data. You can try again later, or if you'd like, I can check student discussions on r/UIUC instead — just let me know."
-36,What does Reddit say about Professor Albert Yu for STAT 400?,catalog_lookup,catalog_lookup,,,"I wasn’t able to retrieve Reddit discussions about Professor Albert Yu for STAT 400 right now. The Reddit search source is currently unavailable due to a configuration error (missing API key), so I have no Reddit evidence to share at this time.
+**Advanced Statistics Electives (12 hrs) — complete**
+- STAT 385 ✓, STAT 432 ✓, STAT 440 ✓, STAT 448 ✓ (4 courses, all from the approved list)
+- The 12-hours-on-UIUC-campus rule in the major is satisfied by your STAT coursework.
 
-You have a couple of options:
+---
 
-- Retry the Reddit search later — the source may be restored.
-- If you’d like, I can check Rate My Professors or look up STAT 400 section details and historical instructor GPAs instead.
+## 📋 What's left & how to finish on time
 
-Let me know how you’d like to proceed."
+With two semesters left and essentially **one course requirement** outstanding in the major (the 3-hour linear algebra course), you are in great shape to graduate on time.
+
+**Recommended: take MATH 415 – Applied Linear Algebra this spring (Spring 2026).** It's available now:
+- **MATH 415** — MWF 9:00–9:50 (instructor: M. Gabdullin)
+- It's the pragmatic choice for a Statistics student (computational/applied rather than proof-heavy).
+
+**Alternatives if schedule conflicts:**
+- **MATH 416 – Abstract Linear Algebra** — proof-based, harder; multiple in-person and online sections (instructors: Albin, Tolman, Kerman, Piliththuwasam Gallage).
+- **MATH 257 – Linear Algebra with Computational Applications** — lecture + Friday lab sections.
+
+Any of the three satisfies the requirement. MATH 415 is the typical pick for stats majors. Whichever you choose, **register this semester** so the requirement is closed early, leaving your final semester free for electives or a light load.
+
+---
+
+## 🗓 Suggested two-semester shape
+
+- **Spring 2026:** MATH 415 (or 416/257) — closes the last catalog requirement.
+- **Fall 2026:** Any remaining campus/LAS items + electives to reach total-hour minimums; or a light final semester.
+
+---
+
+## ⚠️ If your declared major is actually Math (Applied Math) per the profile
+
+Then the situation is very different — under the Math BSLAS core you would still owe **MATH 416** (the *only* approved linear algebra for Math, so MATH 415 would NOT count), **MATH 417** (abstract algebra), an analysis course (MATH 444/447), 6 hrs of breadth courses, 6 hrs of additional 400-level MATH, plus the 12-hr supporting-area requirement. That is likely more than two semesters can reasonably absorb — which is another reason confirming your declared major matters.
+
+---
+
+## ❓ What I still need from you to finalize
+
+The catalog pages only cover major coursework. To fully certify on-time graduation, please confirm:
+1. **Your official declared major** (Statistics vs. Math-Applied) — this is the most urgent item.
+2. Your **total completed credit hours** and the required total (typically 120 for the LAS BSLAS).
+3. **General education / campus requirements** status (your transcript shows gen-ed breadth, BTW 250 for Advanced Composition, and FR 156/ESL 115 for language — but I can't confirm all buckets are satisfied).
+4. Your **catalog year** (requirements can vary by year).
+
+**Bottom line:** As a Statistics major, you're one 3-credit linear algebra course away from completing all listed major coursework — grab MATH 415 this spring and you'll finish comfortably on time. But first, confirm your declared major with LAS Advising, because your profile says Math and that changes the plan dramatically."
+32,What do Rate My Professors and Reddit say about Professor Albert Yu?,catalog_lookup,catalog_lookup,,,"**Albert Yu** teaches statistics at UIUC and is consistently rated as one of the department's standout professors.
+
+On **Rate My Professors**, he holds an **overall quality of 4.6/5** across **84 ratings**, with **88% of students saying they would take him again** and a **difficulty rating of 2.4/5**. Student comments describe him as ""very kind and helpful,"" and as a ""super nice professor"" who is ""understanding and flexible."" Some note that lectures ""can be long and sometimes boring,"" but the course remains manageable if you review slides, practice example questions, and use the practice exams. Frequently used tags include **Caring**, **Respected**, and **Gives good feedback**.
+
+On **r/UIUC**, students also speak highly of him. One thread nominating the best professors at UIUC includes the comment: *""I second Albert Yu, he was absolutely amazing. Great teacher and really nice person too. By far one of the best profs I've ever had.""* A STAT 420 student wrote that he is *""a great and dedicated prof, always responsive when students needed help,""* with straightforward tests. He also comes up often in discussions about who to take **STAT 400** with, alongside instructors like Hyoeun Lee and David Unger, signaling that he is widely seen as a strong choice.
+
+**Bottom line:** Yu is very highly regarded across both platforms — praised as kind, responsive, and clear, with straightforward tests, though some students find his lectures on the longer/less engaging side."
+33,I prefer well-structured lectures and lower exam difficulty. Should I take STAT 400 with Albert Yu or David Unger?,advising,advising,,,"Based on the available data, here’s how the two instructors compare for your stated preferences (well-structured lectures + lower exam difficulty).
+
+## Short answer: Albert Yu is the better fit
+
+Student feedback is much stronger for Yu when it comes to exactly the two things you care about:
+
+**Well-structured lectures**
+- Yu receives repeated praise for lecture quality: “Amazing lectures,” “pretty good lectures too,” and “lectures are actually good” (r/UIUC). One RMP reviewer even calls him the “Best STAT400 professor.”
+- Unger’s reviews don’t emphasize lecture structure, and some reviews note he has “made mistakes on midterms” (he did give points back). His RMP profile (3.3/5 overall, 61% would take again) is noticeably weaker than Yu’s.
+
+**Lower exam difficulty**
+- Yu’s STAT 400 RMP ratings show difficulty around 2–3/5 with comments like “not difficult,” “tests aren’t too hard,” and mentions of **extra credit**. His students report earning A’s.
+- Unger has at least one “test heavy” review that explicitly says “Take class with Yu.” His RMP difficulty is 2.8/5 overall.
+
+**Historical GPA check (STAT 400)** — essentially a tie:
+- Unger, D: 3.46 average
+- Yu, A: 3.43 average
+
+## One important caveat in Unger’s favor
+
+Unger’s grading structure is unusually forgiving on exams: **each midterm is only 10% of your grade (3 midterms), homework is 50%, and exams allow a cheat sheet**. If you’re worried about one bad exam day tanking your grade, that scheme offers more downside protection. Yu’s structure is more traditional (exams weigh more).
+
+Given your cumulative GPA is a 2.71 and you specifically prioritize well-structured lectures and lower exam difficulty, though, **Yu (YL1, TR 12:30) appears to match your preferences better** — the “test heavy” complaint and grading structure caveat for Unger is the main reason to hesitate.
+
+**Both are teaching STAT 400 this Spring 2026** (Yu: section YL1; Unger: sections UL1/UL2, MWF). A final consideration is schedule fit — if you’d rather have MWF lectures than TR, Unger is still a solid choice, just with slightly less stellar lecture reviews.
+
+Want me to look into the actual section meeting times or any alternative STAT 400 instructors (e.g., Hyoeun Lee, also teaching LL1) before you decide?"
+34,What do students say about Professor David Douglas at UIUC?,catalog_lookup,catalog_lookup,,,"I searched both Rate My Professors and r/UIUC for student comments about Professor David Douglas at UIUC, but neither search returned any results.
+
+This could mean there are no public reviews posted for him on those platforms, or that the name might be spelled differently or associated with a different campus. If you can provide a course code or additional details (such as the department), I'd be happy to search again."
+35,What is Professor Albert Yu's Rate My Professors rating?,catalog_lookup,catalog_lookup,,,"Professor Albert Yu holds an **overall Quality rating of 4.6 / 5** on Rate My Professors, based on **84 student ratings** in the Statistics department at UIUC.
+
+Other details from his profile:
+
+- **88%** of students said they would take his class again  
+- **2.4** Level of Difficulty  
+- Recent reviews describe him as “very kind and helpful,” “caring and respected,” and “super nice, very understanding and flexible” — for courses such as STAT 200 and STAT 400."
+36,What does Reddit say about Professor Albert Yu for STAT 400?,catalog_lookup,catalog_lookup,,,"Based on discussions on r/UIUC, overall sentiment toward Professor Albert Yu for STAT 400 is **positive**.
+
+- In a thread titled **""Stat 400 with Hyoeun Lee or Albert Yu""**, students praised him directly:  
+  > ""albert yu was great for me, lectures are actually good, tests arent too hard and hes genuinely nice guy in oh [office hours].""  
+  Another commenter added: ""Albert is awesome.""
+
+- In two separate threads titled **""stat 400 Albert Yu or David Unger?""** (one recent and one older), students compared Yu and Unger, specifically asking who is better for earning an A. The search results didn't include full comment details, but the threads show Yu is commonly discussed as one of the top STAT 400 instructor options.
+
+No sample-size or rating counts were included in these threads. If you'd like, I can also pull up his Rate My Professor ratings or historical GPA data for STAT 400 to give a fuller picture."

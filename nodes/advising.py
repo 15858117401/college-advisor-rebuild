@@ -2,7 +2,6 @@ from langgraph.runtime import Runtime
 
 from nodes.catalog_lookup import CATALOG_TOOLS
 from react_agent import build_react_agent
-from skills import load_skill
 from state import (
     AdvisorContext,
     AdvisorState,
@@ -13,14 +12,15 @@ from state import (
 
 ADVISING_SYSTEM_PROMPT = """You are a personalized college advising agent.
 
-Use the supplied skills and tools when they are relevant to the student's
+Use the available tools when they are relevant to the student's
 academic history, preferences, and goals. Do not invent missing student or
 course information. If the available information is insufficient, explain
 what information is needed.
 """
 
-ADVISING_SKILLS: list[str] = [load_skill("professor_research")]
+ADVISING_SKILLS: list[str] = []
 ADVISING_TOOLS = CATALOG_TOOLS
+ADVISING_RECURSION_LIMIT = 24
 
 advising_agent = build_react_agent(
     ADVISING_SYSTEM_PROMPT,
@@ -37,13 +37,14 @@ def advising(
     profile = profile_from_runtime(runtime)
     result = advising_agent.invoke(
         {"messages": messages_with_current_input(state, profile=profile)},
-        config={"recursion_limit": 12},
+        config={"recursion_limit": ADVISING_RECURSION_LIMIT},
     )
     return {"response": result["messages"][-1].content}
 
 
 __all__ = [
     "ADVISING_SKILLS",
+    "ADVISING_RECURSION_LIMIT",
     "ADVISING_SYSTEM_PROMPT",
     "ADVISING_TOOLS",
     "advising",
