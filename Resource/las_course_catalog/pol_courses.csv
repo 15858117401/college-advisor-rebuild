@@ -1,44 +1,17 @@
-course_code,subject,course_number,course_name,credits,description,prerequisites,credit_restrictions,gen_ed,total_students,total_sections,overall_gpa,catalog_text,source_url,catalog_year
-POL 101,POL,101,Elementary Polish I,4 Hours,"Oral and written work on basic pronunciation, grammar, and vocabulary. For students with no prior work in Polish.",,,,,,,"[POL 101 Elementary Polish I credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/POL/101>)
-
-Oral and written work on basic pronunciation, grammar, and vocabulary. For students with no prior work in Polish.",https://catalog.illinois.edu/courses-of-instruction/pol/,2026–2027
-POL 102,POL,102,Elementary Polish II,4 Hours,Continuation of POL 101 Prerequisite: POL 101.,Continuation of POL 101 Prerequisite: POL 101.,,,,,,"[POL 102 Elementary Polish II credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/POL/102>)
-
-Continuation of [POL 101](<https://catalog.illinois.edu/search/?P=POL%20101>) Prerequisite: [POL 101](<https://catalog.illinois.edu/search/?P=POL%20101>).",https://catalog.illinois.edu/courses-of-instruction/pol/,2026–2027
+course_code,subject,course_number,course_name,credits,description,prerequisites,credit_restrictions,gen_ed,total_students,total_sections,overall_gpa
+POL 101,POL,101,Elementary Polish I,4 Hours,"Oral and written work on basic pronunciation, grammar, and vocabulary. For students with no prior work in Polish.",,,,,,
+POL 102,POL,102,Elementary Polish II,4 Hours,Continuation of POL 101 Prerequisite: POL 101.,Continuation of POL 101 Prerequisite: POL 101.,,,,,
 POL 115,POL,115,Intro to Polish Culture,3 Hours,"Introduction to Polish culture and literature from a broad historical perspective. Drawing on novels and plays, film, the visual arts, and works of historical research, the course provides students with the basic concepts, methodologies and theories of literary and cultural interpretation, with an emphasis on modern Polish culture (1800-2010) within a broader European context. Same as REES 115.",,,"Humanities - Lit & Arts
-Cultural Studies - Western",,,,"[POL 115 Intro to Polish Culture credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/POL/115>)
-
-Introduction to Polish culture and literature from a broad historical perspective. Drawing on novels and plays, film, the visual arts, and works of historical research, the course provides students with the basic concepts, methodologies and theories of literary and cultural interpretation, with an emphasis on modern Polish culture (1800-2010) within a broader European context. Same as [REES 115](<https://catalog.illinois.edu/search/?P=REES%20115>).
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts
-Cultural Studies - Western",https://catalog.illinois.edu/courses-of-instruction/pol/,2026–2027
-POL 199,POL,199,Undergraduate Open Seminar,1 to 5 Hours,May be repeated.,,,,,,,"[POL 199 Undergraduate Open Seminar credit: 1 to 5 Hours.](<https://courses.illinois.edu/schedule/terms/POL/199>)
-
-May be repeated.",https://catalog.illinois.edu/courses-of-instruction/pol/,2026–2027
-POL 201,POL,201,Second Yr Polish I,4 Hours,"Grammar review, conversation practice, written exercises, and selected readings. Prerequisite: POL 102 or equivalent.",Prerequisite: POL 102 or equivalent.,,,,,,"[POL 201 Second Yr Polish I credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/POL/201>)
-
-Grammar review, conversation practice, written exercises, and selected readings. Prerequisite: [POL 102](<https://catalog.illinois.edu/search/?P=POL%20102>) or equivalent.",https://catalog.illinois.edu/courses-of-instruction/pol/,2026–2027
-POL 202,POL,202,Second Yr Polish II,4 Hours,Continuation of POL 201. Prerequisite: POL 201.,Prerequisite: POL 201.,,,,,,"[POL 202 Second Yr Polish II credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/POL/202>)
-
-Continuation of [POL 201](<https://catalog.illinois.edu/search/?P=POL%20201>). Prerequisite: [POL 201](<https://catalog.illinois.edu/search/?P=POL%20201>).",https://catalog.illinois.edu/courses-of-instruction/pol/,2026–2027
-POL 245,POL,245,Survey of Polish Literature,3 Hours,"Critical survey, in translation, of Polish literature from the Middle Ages to the end of the nineteenth century; special attention given to the works in their cultural context. Same as CWL 245.",,,,,,,"[POL 245 Survey of Polish Literature credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/POL/245>)
-
-Critical survey, in translation, of Polish literature from the Middle Ages to the end of the nineteenth century; special attention given to the works in their cultural context. Same as [CWL 245](<https://catalog.illinois.edu/search/?P=CWL%20245>).",https://catalog.illinois.edu/courses-of-instruction/pol/,2026–2027
-POL 301,POL,301,Third-Year Polish I,3 Hours,Reading and discussion of representative prose and poetry works of Polish authors since 1863. All readings are in the original language; the course emphasis is in the development of language skills. Prerequisite: POL 202 or consent of instructor.,Prerequisite: POL 202 or consent of instructor.,,,,,,"[POL 301 Third-Year Polish I credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/POL/301>)
-
-Reading and discussion of representative prose and poetry works of Polish authors since 1863. All readings are in the original language; the course emphasis is in the development of language skills. Prerequisite: [POL 202](<https://catalog.illinois.edu/search/?P=POL%20202>) or consent of instructor.",https://catalog.illinois.edu/courses-of-instruction/pol/,2026–2027
-POL 302,POL,302,Third-Year Polish II,3 Hours,Reading and discussion of representative prose and poetry works of Polish authors to 1863. All readings are in the original language; the course emphasis is in the development of language skills. Prerequisite: POL 301 or consent of instructor.,Prerequisite: POL 301 or consent of instructor.,,,,,,"[POL 302 Third-Year Polish II credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/POL/302>)
-
-Reading and discussion of representative prose and poetry works of Polish authors to 1863. All readings are in the original language; the course emphasis is in the development of language skills. Prerequisite: [POL 301](<https://catalog.illinois.edu/search/?P=POL%20301>) or consent of instructor.",https://catalog.illinois.edu/courses-of-instruction/pol/,2026–2027
+Cultural Studies - Western",,,
+POL 199,POL,199,Undergraduate Open Seminar,1 to 5 Hours,May be repeated.,,,,,,
+POL 201,POL,201,Second Yr Polish I,4 Hours,"Grammar review, conversation practice, written exercises, and selected readings. Prerequisite: POL 102 or equivalent.",Prerequisite: POL 102 or equivalent.,,,,,
+POL 202,POL,202,Second Yr Polish II,4 Hours,Continuation of POL 201. Prerequisite: POL 201.,Prerequisite: POL 201.,,,,,
+POL 245,POL,245,Survey of Polish Literature,3 Hours,"Critical survey, in translation, of Polish literature from the Middle Ages to the end of the nineteenth century; special attention given to the works in their cultural context. Same as CWL 245.",,,,,,
+POL 301,POL,301,Third-Year Polish I,3 Hours,Reading and discussion of representative prose and poetry works of Polish authors since 1863. All readings are in the original language; the course emphasis is in the development of language skills. Prerequisite: POL 202 or consent of instructor.,Prerequisite: POL 202 or consent of instructor.,,,,,
+POL 302,POL,302,Third-Year Polish II,3 Hours,Reading and discussion of representative prose and poetry works of Polish authors to 1863. All readings are in the original language; the course emphasis is in the development of language skills. Prerequisite: POL 301 or consent of instructor.,Prerequisite: POL 301 or consent of instructor.,,,,,
 POL 401,POL,401,Fourth-Year Polish I,"3 Hours
-3 undergraduate hours. 3 graduate hours.",Analysis of the sound system and grammar of the contemporary Polish language. 3 undergraduate hours. 3 graduate hours. Prerequisite: Knowledge of another Slavic language or consent of instructor.,Prerequisite: Knowledge of another Slavic language or consent of instructor.,,,,,,"[POL 401 Fourth-Year Polish I credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/POL/401>)
-
-Analysis of the sound system and grammar of the contemporary Polish language. 3 undergraduate hours. 3 graduate hours. Prerequisite: Knowledge of another Slavic language or consent of instructor.",https://catalog.illinois.edu/courses-of-instruction/pol/,2026–2027
+3 undergraduate hours. 3 graduate hours.",Analysis of the sound system and grammar of the contemporary Polish language. 3 undergraduate hours. 3 graduate hours. Prerequisite: Knowledge of another Slavic language or consent of instructor.,Prerequisite: Knowledge of another Slavic language or consent of instructor.,,,,,
 POL 402,POL,402,Fourth-Year Polish II,"3 Hours
-3 undergraduate hours. 3 graduate hours.",Reading and analysis of selected texts. 3 undergraduate hours. 3 graduate hours. Prerequisite: POL 401 or consent of instructor.,Prerequisite: POL 401 or consent of instructor.,,,,,,"[POL 402 Fourth-Year Polish II credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/POL/402>)
-
-Reading and analysis of selected texts. 3 undergraduate hours. 3 graduate hours. Prerequisite: [POL 401](<https://catalog.illinois.edu/search/?P=POL%20401>) or consent of instructor.",https://catalog.illinois.edu/courses-of-instruction/pol/,2026–2027
+3 undergraduate hours. 3 graduate hours.",Reading and analysis of selected texts. 3 undergraduate hours. 3 graduate hours. Prerequisite: POL 401 or consent of instructor.,Prerequisite: POL 401 or consent of instructor.,,,,,
 POL 446,POL,446,Problems of Polish Literature,"3 or 4 Hours
-3 undergraduate hours. 4 graduate hours.","Critical study, in translation, of modern Polish fiction, drama, poetry, and essay, from Young Poland to the ""New Wave""; their contribution to literary styles and genres in Poland and abroad; special emphasis on Wyspianski, Witkiewicz, and Gombrowicz. Same as CWL 436. 3 undergraduate hours. 4 graduate hours.",,,,,,,"[POL 446 Problems of Polish Literature credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/POL/446>)
-
-Critical study, in translation, of modern Polish fiction, drama, poetry, and essay, from Young Poland to the ""New Wave""; their contribution to literary styles and genres in Poland and abroad; special emphasis on Wyspianski, Witkiewicz, and Gombrowicz. Same as [CWL 436](<https://catalog.illinois.edu/search/?P=CWL%20436>). 3 undergraduate hours. 4 graduate hours.",https://catalog.illinois.edu/courses-of-instruction/pol/,2026–2027
+3 undergraduate hours. 4 graduate hours.","Critical study, in translation, of modern Polish fiction, drama, poetry, and essay, from Young Poland to the ""New Wave""; their contribution to literary styles and genres in Poland and abroad; special emphasis on Wyspianski, Witkiewicz, and Gombrowicz. Same as CWL 436. 3 undergraduate hours. 4 graduate hours.",,,,,,

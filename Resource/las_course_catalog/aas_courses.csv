@@ -1,239 +1,72 @@
-course_code,subject,course_number,course_name,credits,description,prerequisites,credit_restrictions,gen_ed,total_students,total_sections,overall_gpa,catalog_text,source_url,catalog_year
+course_code,subject,course_number,course_name,credits,description,prerequisites,credit_restrictions,gen_ed,total_students,total_sections,overall_gpa
 AAS 100,AAS,100,Intro Asian American Studies,3 Hours,"Interdisciplinary introduction to the basic concepts and approaches in Asian American Studies. Surveys the various dimensions of Asian American experiences including history, social organization, literature, arts, and politics.",,,"Social & Beh Sci - Soc Sci
-Cultural Studies - US Minority",,,,"[AAS 100 Intro Asian American Studies credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/100>)
-
-Interdisciplinary introduction to the basic concepts and approaches in Asian American Studies. Surveys the various dimensions of Asian American experiences including history, social organization, literature, arts, and politics.
-This course satisfies the General Education Criteria for:
-Social & Beh Sci - Soc Sci
-Cultural Studies - US Minority",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
-AAS 105,AAS,105,Introduction to Arab American Studies,3 Hours,"Interdisciplinary introduction to the basic concepts and approaches in Arab American Studies. Addresses the issues of history, race, social organization, politics, literature, and art related to Arab American experiences.",,,,,,,"[AAS 105 Introduction to Arab American Studies credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/105>)
-
-Interdisciplinary introduction to the basic concepts and approaches in Arab American Studies. Addresses the issues of history, race, social organization, politics, literature, and art related to Arab American experiences.",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
-AAS 120,AAS,120,Intro to Asian Am Pop Culture,3 Hours,Introductory understanding of the way U.S. popular culture has affected Asian Americans and the contributions Asian Americans have made to U.S. media and popular culture since the mid 1880's.,,,Cultural Studies - US Minority,,,,"[AAS 120 Intro to Asian Am Pop Culture credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/120>)
-
-Introductory understanding of the way U.S. popular culture has affected Asian Americans and the contributions Asian Americans have made to U.S. media and popular culture since the mid 1880's.
-This course satisfies the General Education Criteria for:
-Cultural Studies - US Minority",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
-AAS 199,AAS,199,Undergraduate Open Seminar,1 to 5 Hours,May be repeated to a maximum of 6 hours.,,,,,,,"[AAS 199 Undergraduate Open Seminar credit: 1 to 5 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/199>)
-
-May be repeated to a maximum of 6 hours.",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
+Cultural Studies - US Minority",,,
+AAS 105,AAS,105,Introduction to Arab American Studies,3 Hours,"Interdisciplinary introduction to the basic concepts and approaches in Arab American Studies. Addresses the issues of history, race, social organization, politics, literature, and art related to Arab American experiences.",,,,,,
+AAS 120,AAS,120,Intro to Asian Am Pop Culture,3 Hours,Introductory understanding of the way U.S. popular culture has affected Asian Americans and the contributions Asian Americans have made to U.S. media and popular culture since the mid 1880's.,,,Cultural Studies - US Minority,,,
+AAS 199,AAS,199,Undergraduate Open Seminar,1 to 5 Hours,May be repeated to a maximum of 6 hours.,,,,,,
 AAS 200,AAS,200,U.S. Race and Empire,3 Hours,"Invites students to examine histories and narratives of U.S. race and empire, drawing upon multiple theoretical and methodological works in Asian American studies and related fields. Same as LLS 200.",,,"Humanities - Hist & Phil
-Cultural Studies - US Minority",,,,"[AAS 200 U.S. Race and Empire credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/200>)
-
-Invites students to examine histories and narratives of U.S. race and empire, drawing upon multiple theoretical and methodological works in Asian American studies and related fields. Same as [LLS 200](<https://catalog.illinois.edu/search/?P=LLS%20200>).
-This course satisfies the General Education Criteria for:
-Humanities - Hist & Phil
-Cultural Studies - US Minority",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
+Cultural Studies - US Minority",,,
 AAS 201,AAS,201,US Racial & Ethnic Politics,3 Hours,"Same as AFRO 201, LLS 201, and PS 201. See PS 201.",,,"Social & Beh Sci - Soc Sci
-Cultural Studies - US Minority",,,,"[AAS 201 US Racial & Ethnic Politics credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/201>)
-
-Same as [AFRO 201](<https://catalog.illinois.edu/search/?P=AFRO%20201>), [LLS 201](<https://catalog.illinois.edu/search/?P=LLS%20201>), and [PS 201](<https://catalog.illinois.edu/search/?P=PS%20201>). See [PS 201](<https://catalog.illinois.edu/search/?P=PS%20201>).
-This course satisfies the General Education Criteria for:
-Social & Beh Sci - Soc Sci
-Cultural Studies - US Minority",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
+Cultural Studies - US Minority",,,
 AAS 203,AAS,203,"Race, Science, and Technology",3 Hours,"Examines the intersection of racism with science and technology in the United States. The class investigates how racism has persisted across fields of scientific knowledge production and how technology has been used to advance systems of discrimination and inequality. It studies how science has been shaped by historical and contemporary structures of racism, including slavery, settler colonialism, immigration, and policing. It also explores justice-oriented approaches to science and technology.",,,"Social & Beh Sci - Soc Sci
-Cultural Studies - US Minority",,,,"[AAS 203 Race, Science, and Technology credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/203>)
-
-Examines the intersection of racism with science and technology in the United States. The class investigates how racism has persisted across fields of scientific knowledge production and how technology has been used to advance systems of discrimination and inequality. It studies how science has been shaped by historical and contemporary structures of racism, including slavery, settler colonialism, immigration, and policing. It also explores justice-oriented approaches to science and technology.
-This course satisfies the General Education Criteria for:
-Social & Beh Sci - Soc Sci
-Cultural Studies - US Minority",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
+Cultural Studies - US Minority",,,
 AAS 211,AAS,211,Asian Americans and the Arts,3 Hours,"Examination of Asian American artistic expressions in the visual and the performing arts providing historical, theoretical, and conceptual foundations of understanding the history of various art genres in Asian American communities. Prerequisite: AAS 100 or AAS 120, or consent of instructor.","Prerequisite: AAS 100 or AAS 120, or consent of instructor.",,"Humanities - Lit & Arts
-Cultural Studies - US Minority",,,,"[AAS 211 Asian Americans and the Arts credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/211>)
-
-Examination of Asian American artistic expressions in the visual and the performing arts providing historical, theoretical, and conceptual foundations of understanding the history of various art genres in Asian American communities. Prerequisite: [AAS 100](<https://catalog.illinois.edu/search/?P=AAS%20100>) or [AAS 120](<https://catalog.illinois.edu/search/?P=AAS%20120>), or consent of instructor.
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts
-Cultural Studies - US Minority",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
+Cultural Studies - US Minority",,,
 AAS 215,AAS,215,US Citizenship Comparatively,3 Hours,"Examines the racial, gendered, and sexualized aspects of US citizenship historically and comparatively. Interdisciplinary course taught from a humanities perspective. Readings draw from critical legal studies, history, literature, literary criticism, and ethnography. Same as AFRO 215, AIS 295, GWS 215, and LLS 215.",,,"Humanities - Hist & Phil
-Cultural Studies - US Minority",,,,"[AAS 215 US Citizenship Comparatively credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/215>)
-
-Examines the racial, gendered, and sexualized aspects of US citizenship historically and comparatively. Interdisciplinary course taught from a humanities perspective. Readings draw from critical legal studies, history, literature, literary criticism, and ethnography. Same as [AFRO 215](<https://catalog.illinois.edu/search/?P=AFRO%20215>), [AIS 295](<https://catalog.illinois.edu/search/?P=AIS%20295>), [GWS 215](<https://catalog.illinois.edu/search/?P=GWS%20215>), and [LLS 215](<https://catalog.illinois.edu/search/?P=LLS%20215>).
-This course satisfies the General Education Criteria for:
-Humanities - Hist & Phil
-Cultural Studies - US Minority",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
-AAS 232,AAS,232,Asian American Ethnography,3 Hours,"Introduction to the methodologies of Asian American ethnography. Students will become familiar with the literature of the field and perform ethnographic research. The field itself has sensitively explored the experiences of Asian American communities and generated new theories of how to study them, which are always in flux and heterogeneous. The course will consider the long history and contemporary methods in researching race, gender, ethnicity, sexuality, migration, law, and cultural expression.",,,,,,,"[AAS 232 Asian American Ethnography credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/232>)
-
-Introduction to the methodologies of Asian American ethnography. Students will become familiar with the literature of the field and perform ethnographic research. The field itself has sensitively explored the experiences of Asian American communities and generated new theories of how to study them, which are always in flux and heterogeneous. The course will consider the long history and contemporary methods in researching race, gender, ethnicity, sexuality, migration, law, and cultural expression.",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
+Cultural Studies - US Minority",,,
+AAS 232,AAS,232,Asian American Ethnography,3 Hours,"Introduction to the methodologies of Asian American ethnography. Students will become familiar with the literature of the field and perform ethnographic research. The field itself has sensitively explored the experiences of Asian American communities and generated new theories of how to study them, which are always in flux and heterogeneous. The course will consider the long history and contemporary methods in researching race, gender, ethnicity, sexuality, migration, law, and cultural expression.",,,,,,
 AAS 246,AAS,246,Asian American Youth in Film,3 Hours,Examines both mainstream and independent films and documentaries representing and/or produced by Asian American youth. Explores the role of multiculturalism and diversity issues in informing young people's experiences.,,,"Social & Beh Sci - Soc Sci
-Cultural Studies - US Minority",,,,"[AAS 246 Asian American Youth in Film credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/246>)
-
-Examines both mainstream and independent films and documentaries representing and/or produced by Asian American youth. Explores the role of multiculturalism and diversity issues in informing young people's experiences.
-This course satisfies the General Education Criteria for:
-Social & Beh Sci - Soc Sci
-Cultural Studies - US Minority",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
+Cultural Studies - US Minority",,,
 AAS 258,AAS,258,Muslims in America,3 Hours,"Introduction to the study of Muslims in the United States and broadly the history of Islam in the Americas. Using a comparative approach, we study how the historical narrative of African American and Latino Muslims relates to newer immigrant populations, primarily Arab American and South Asian American Muslim communities. Same as LLS 258 and REL 258.",,,"Social & Beh Sci - Soc Sci
-Cultural Studies - US Minority",,,,"[AAS 258 Muslims in America credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/258>)
-
-Introduction to the study of Muslims in the United States and broadly the history of Islam in the Americas. Using a comparative approach, we study how the historical narrative of African American and Latino Muslims relates to newer immigrant populations, primarily Arab American and South Asian American Muslim communities. Same as [LLS 258](<https://catalog.illinois.edu/search/?P=LLS%20258>) and [REL 258](<https://catalog.illinois.edu/search/?P=REL%20258>).
-This course satisfies the General Education Criteria for:
-Social & Beh Sci - Soc Sci
-Cultural Studies - US Minority",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
-AAS 260,AAS,260,Intro Asian American Theatre,3 Hours,Same as THEA 260. See THEA 260.,,,Cultural Studies - US Minority,,,,"[AAS 260 Intro Asian American Theatre credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/260>)
-
-Same as [THEA 260](<https://catalog.illinois.edu/search/?P=THEA%20260>). See [THEA 260](<https://catalog.illinois.edu/search/?P=THEA%20260>).
-This course satisfies the General Education Criteria for:
-Cultural Studies - US Minority",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
-AAS 275,AAS,275,The Politics of Fashion,3 Hours,Same as GWS 275. See GWS 275.,,,Cultural Studies - US Minority,,,,"[AAS 275 The Politics of Fashion credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/275>)
-
-Same as [GWS 275](<https://catalog.illinois.edu/search/?P=GWS%20275>). See [GWS 275](<https://catalog.illinois.edu/search/?P=GWS%20275>).
-This course satisfies the General Education Criteria for:
-Cultural Studies - US Minority",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
+Cultural Studies - US Minority",,,
+AAS 260,AAS,260,Intro Asian American Theatre,3 Hours,Same as THEA 260. See THEA 260.,,,Cultural Studies - US Minority,,,
+AAS 275,AAS,275,The Politics of Fashion,3 Hours,Same as GWS 275. See GWS 275.,,,Cultural Studies - US Minority,,,
 AAS 281,AAS,281,Constructing Race in America,3 Hours,"Same as AFRO 281, HIST 281, and LLS 281. See HIST 281.",,,"Humanities - Hist & Phil
-Cultural Studies - US Minority",,,,"[AAS 281 Constructing Race in America credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/281>)
-
-Same as [AFRO 281](<https://catalog.illinois.edu/search/?P=AFRO%20281>), [HIST 281](<https://catalog.illinois.edu/search/?P=HIST%20281>), and [LLS 281](<https://catalog.illinois.edu/search/?P=LLS%20281>). See [HIST 281](<https://catalog.illinois.edu/search/?P=HIST%20281>).
-This course satisfies the General Education Criteria for:
-Humanities - Hist & Phil
-Cultural Studies - US Minority",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
-AAS 282,AAS,282,Feminist and Queer Activisms,3 Hours,Same as GWS 282 and LLS 282. See GWS 282.,,,Cultural Studies - US Minority,,,,"[AAS 282 Feminist and Queer Activisms credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/282>)
-
-Same as [GWS 282](<https://catalog.illinois.edu/search/?P=GWS%20282>) and [LLS 282](<https://catalog.illinois.edu/search/?P=LLS%20282>). See [GWS 282](<https://catalog.illinois.edu/search/?P=GWS%20282>).
-This course satisfies the General Education Criteria for:
-Cultural Studies - US Minority",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
+Cultural Studies - US Minority",,,
+AAS 282,AAS,282,Feminist and Queer Activisms,3 Hours,Same as GWS 282 and LLS 282. See GWS 282.,,,Cultural Studies - US Minority,,,
 AAS 283,AAS,283,Asian American History,3 Hours,Same as HIST 283. See HIST 283.,,,"Humanities - Hist & Phil
-Cultural Studies - US Minority",,,,"[AAS 283 Asian American History credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/283>)
-
-Same as [HIST 283](<https://catalog.illinois.edu/search/?P=HIST%20283>). See [HIST 283](<https://catalog.illinois.edu/search/?P=HIST%20283>).
-This course satisfies the General Education Criteria for:
-Humanities - Hist & Phil
-Cultural Studies - US Minority",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
+Cultural Studies - US Minority",,,
 AAS 286,AAS,286,Asian American Literature,3 Hours,Same as ENGL 286. See ENGL 286.,,,"Humanities - Lit & Arts
-Cultural Studies - US Minority",,,,"[AAS 286 Asian American Literature credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/286>)
-
-Same as [ENGL 286](<https://catalog.illinois.edu/search/?P=ENGL%20286>). See [ENGL 286](<https://catalog.illinois.edu/search/?P=ENGL%20286>).
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts
-Cultural Studies - US Minority",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
+Cultural Studies - US Minority",,,
 AAS 287,AAS,287,Food and Asian Americans,3 Hours,"Introduction to the interdisciplinary study of food to better understand the historical, social, and cultural aspects of Asian American food preparation, distribution and consumption. Students will investigate the politics and poetics of Asian American foodways by examining social habits, and rituals around food in restaurants, ethnic cookbooks, fictional works, memoirs, magazines, and television shows. Prerequisite: AAS 100 or AAS 120, or consent of instructor.","Prerequisite: AAS 100 or AAS 120, or consent of instructor.",,"Social & Beh Sci - Soc Sci
-Cultural Studies - US Minority",,,,"[AAS 287 Food and Asian Americans credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/287>)
-
-Introduction to the interdisciplinary study of food to better understand the historical, social, and cultural aspects of Asian American food preparation, distribution and consumption. Students will investigate the politics and poetics of Asian American foodways by examining social habits, and rituals around food in restaurants, ethnic cookbooks, fictional works, memoirs, magazines, and television shows. Prerequisite: [AAS 100](<https://catalog.illinois.edu/search/?P=AAS%20100>) or [AAS 120](<https://catalog.illinois.edu/search/?P=AAS%20120>), or consent of instructor.
-This course satisfies the General Education Criteria for:
-Social & Beh Sci - Soc Sci
-Cultural Studies - US Minority",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
-AAS 288,AAS,288,Global Islam and Feminisms,3 Hours,Same as GWS 288. See GWS 288.,,,Cultural Studies - Non-West,,,,"[AAS 288 Global Islam and Feminisms credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/288>)
-
-Same as [GWS 288](<https://catalog.illinois.edu/search/?P=GWS%20288>). See [GWS 288](<https://catalog.illinois.edu/search/?P=GWS%20288>).
-This course satisfies the General Education Criteria for:
-Cultural Studies - Non-West",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
-AAS 290,AAS,290,Individual Study,2 to 3 Hours,Supervised reading and research in Asian American Studies chosen by the student with instructor approval. May be repeated to a maximum of 6 hours. Prerequisite: AAS 100.,Prerequisite: AAS 100.,,,,,,"[AAS 290 Individual Study credit: 2 to 3 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/290>)
-
-Supervised reading and research in Asian American Studies chosen by the student with instructor approval. May be repeated to a maximum of 6 hours. Prerequisite: [AAS 100](<https://catalog.illinois.edu/search/?P=AAS%20100>).",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
-AAS 291,AAS,291,Hinduism in the United States,3 Hours,Same as REL 291. See REL 291.,,,,,,,"[AAS 291 Hinduism in the United States credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/291>)
-
-Same as [REL 291](<https://catalog.illinois.edu/search/?P=REL%20291>). See [REL 291](<https://catalog.illinois.edu/search/?P=REL%20291>).",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
+Cultural Studies - US Minority",,,
+AAS 288,AAS,288,Global Islam and Feminisms,3 Hours,Same as GWS 288. See GWS 288.,,,Cultural Studies - Non-West,,,
+AAS 290,AAS,290,Individual Study,2 to 3 Hours,Supervised reading and research in Asian American Studies chosen by the student with instructor approval. May be repeated to a maximum of 6 hours. Prerequisite: AAS 100.,Prerequisite: AAS 100.,,,,,
+AAS 291,AAS,291,Hinduism in the United States,3 Hours,Same as REL 291. See REL 291.,,,,,,
 AAS 297,AAS,297,Asian Families in America,3 Hours,Same as HDFS 221 and SOCW 297. See SOCW 297.,,,"Social & Beh Sci - Soc Sci
-Cultural Studies - US Minority",,,,"[AAS 297 Asian Families in America credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/297>)
-
-Same as [HDFS 221](<https://catalog.illinois.edu/search/?P=HDFS%20221>) and [SOCW 297](<https://catalog.illinois.edu/search/?P=SOCW%20297>). See [SOCW 297](<https://catalog.illinois.edu/search/?P=SOCW%20297>).
-This course satisfies the General Education Criteria for:
-Social & Beh Sci - Soc Sci
-Cultural Studies - US Minority",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
-AAS 299,AAS,299,Begin Topics Asian Am Studies,3 Hours,May be repeated in the same or subsequent terms to a maximum of 6 hours.,,,,,,,"[AAS 299 Begin Topics Asian Am Studies credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/299>)
-
-May be repeated in the same or subsequent terms to a maximum of 6 hours.",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
-AAS 300,AAS,300,"Theories of Race, Gender, and Sexuality",3 Hours,"Explores theories for performing interdisciplinary, intersectional and comparative studies within the field of Asian American studies. Follows multiple genealogies of critical work in ethnic and American studies. Same as GWS 305 and LLS 305.",,,Advanced Composition,,,,"[AAS 300 Theories of Race, Gender, and Sexuality credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/300>)
-
-Explores theories for performing interdisciplinary, intersectional and comparative studies within the field of Asian American studies. Follows multiple genealogies of critical work in ethnic and American studies. Same as [GWS 305](<https://catalog.illinois.edu/search/?P=GWS%20305>) and [LLS 305](<https://catalog.illinois.edu/search/?P=LLS%20305>).
-This course satisfies the General Education Criteria for:
-Advanced Composition",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
+Cultural Studies - US Minority",,,
+AAS 299,AAS,299,Begin Topics Asian Am Studies,3 Hours,May be repeated in the same or subsequent terms to a maximum of 6 hours.,,,,,,
+AAS 300,AAS,300,"Theories of Race, Gender, and Sexuality",3 Hours,"Explores theories for performing interdisciplinary, intersectional and comparative studies within the field of Asian American studies. Follows multiple genealogies of critical work in ethnic and American studies. Same as GWS 305 and LLS 305.",,,Advanced Composition,,,
 AAS 310,AAS,310,Race and Cultural Diversity,4 Hours,"Same as AFRO 310, EPOL 310, and LLS 310. See EPOL 310.",,,"Advanced Composition
-Cultural Studies - US Minority",,,,"[AAS 310 Race and Cultural Diversity credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/310>)
-
-Same as [AFRO 310](<https://catalog.illinois.edu/search/?P=AFRO%20310>), [EPOL 310](<https://catalog.illinois.edu/search/?P=EPOL%20310>), and [LLS 310](<https://catalog.illinois.edu/search/?P=LLS%20310>). See [EPOL 310](<https://catalog.illinois.edu/search/?P=EPOL%20310>).
-This course satisfies the General Education Criteria for:
-Advanced Composition
-Cultural Studies - US Minority",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
-AAS 315,AAS,315,"War, Memory, and Cinema",3 Hours,"Interdisciplinary examination of the ways that memories of war, trauma, and immigration are produced through the medium of film. Because war has been key to discourses and practices of imperialism and globalization, some questions addressed will include how these wars have impacted the nation and the global order, as well as how images about these wars produced important constructions of race, gender, and sexuality for national and cultural identities. Also examines the aftereffects of war by analyzing connections between war's trauma, race, immigration, and incarceration. Students will read critical texts, film theory, screenplays, and view films. Same as GWS 315. Prerequisite: AAS 100 or AAS 120, or consent of the instructor.","Prerequisite: AAS 100 or AAS 120, or consent of the instructor.",,,,,,"[AAS 315 War, Memory, and Cinema credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/315>)
-
-Interdisciplinary examination of the ways that memories of war, trauma, and immigration are produced through the medium of film. Because war has been key to discourses and practices of imperialism and globalization, some questions addressed will include how these wars have impacted the nation and the global order, as well as how images about these wars produced important constructions of race, gender, and sexuality for national and cultural identities. Also examines the aftereffects of war by analyzing connections between war's trauma, race, immigration, and incarceration. Students will read critical texts, film theory, screenplays, and view films. Same as [GWS 315](<https://catalog.illinois.edu/search/?P=GWS%20315>). Prerequisite: [AAS 100](<https://catalog.illinois.edu/search/?P=AAS%20100>) or [AAS 120](<https://catalog.illinois.edu/search/?P=AAS%20120>), or consent of the instructor.",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
-AAS 317,AAS,317,Asian American Politics,3 Hours,Same as PS 317. See PS 317.,,,,,,,"[AAS 317 Asian American Politics credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/317>)
-
-Same as [PS 317](<https://catalog.illinois.edu/search/?P=PS%20317>). See [PS 317](<https://catalog.illinois.edu/search/?P=PS%20317>).",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
-AAS 343,AAS,343,Criminalization and Punishment,3 Hours,"Same as AFRO 343, AIS 343, GWS 343, and LLS 343. See LLS 343.",,,,,,,"[AAS 343 Criminalization and Punishment credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/343>)
-
-Same as [AFRO 343](<https://catalog.illinois.edu/search/?P=AFRO%20343>), [AIS 343](<https://catalog.illinois.edu/search/?P=AIS%20343>), [GWS 343](<https://catalog.illinois.edu/search/?P=GWS%20343>), and [LLS 343](<https://catalog.illinois.edu/search/?P=LLS%20343>). See [LLS 343](<https://catalog.illinois.edu/search/?P=LLS%20343>).",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
-AAS 346,AAS,346,Asian American Youth,3 Hours,"Explores cultural production of second-generation Asian American youth as a historical and social formation. Course examines how youth are actively shaping the U.S. landscape in terms of identity formation, youth, culture, education, juvenile justice, politics and activism, and community formations. These experiences are examined in backdrop of larger historical, economic, racial, social and political forces in the United States. Same as HDFS 341.",,,,,,,"[AAS 346 Asian American Youth credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/346>)
-
-Explores cultural production of second-generation Asian American youth as a historical and social formation. Course examines how youth are actively shaping the U.S. landscape in terms of identity formation, youth, culture, education, juvenile justice, politics and activism, and community formations. These experiences are examined in backdrop of larger historical, economic, racial, social and political forces in the United States. Same as [HDFS 341](<https://catalog.illinois.edu/search/?P=HDFS%20341>).",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
-AAS 355,AAS,355,Race and Mixed Race,3 Hours,Same as LLS 355 and SOC 355. See LLS 355.,,,,,,,"[AAS 355 Race and Mixed Race credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/355>)
-
-Same as [LLS 355](<https://catalog.illinois.edu/search/?P=LLS%20355>) and [SOC 355](<https://catalog.illinois.edu/search/?P=SOC%20355>). See [LLS 355](<https://catalog.illinois.edu/search/?P=LLS%20355>).",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
-AAS 357,AAS,357,Literatures of the Displaced,3 Hours,"Same as AIS 357, ENGL 357, GWS 357, and LLS 357. See LLS 357.",,,,,,,"[AAS 357 Literatures of the Displaced credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/357>)
-
-Same as [AIS 357](<https://catalog.illinois.edu/search/?P=AIS%20357>), [ENGL 357](<https://catalog.illinois.edu/search/?P=ENGL%20357>), [GWS 357](<https://catalog.illinois.edu/search/?P=GWS%20357>), and [LLS 357](<https://catalog.illinois.edu/search/?P=LLS%20357>). See [LLS 357](<https://catalog.illinois.edu/search/?P=LLS%20357>).",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
-AAS 365,AAS,365,Asian American Media and Film,3 Hours,"An examination of media generally and films and videos more specifically (experimental, documentary, independent, and Hollywood features) by, for, and about Asian Americans. Same as MACS 365. Prerequisite: Any AAS course at the 100- or 200-level, or consent of instructor.","Prerequisite: Any AAS course at the 100- or 200-level, or consent of instructor.",,,,,,"[AAS 365 Asian American Media and Film credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/365>)
-
-An examination of media generally and films and videos more specifically (experimental, documentary, independent, and Hollywood features) by, for, and about Asian Americans. Same as [MACS 365](<https://catalog.illinois.edu/search/?P=MACS%20365>). Prerequisite: Any AAS course at the 100- or 200-level, or consent of instructor.",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
-AAS 370,AAS,370,"Immigration, Law, and Rights",3 Hours,"Exploration of the histories, cultures, and experiences of immigration to the United States by examining cultural production (literary and visual narratives and texts) alongside legal discourses (legislation, federal court cases). Same as LLS 372.",,,Advanced Composition,,,,"[AAS 370 Immigration, Law, and Rights credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/370>)
-
-Exploration of the histories, cultures, and experiences of immigration to the United States by examining cultural production (literary and visual narratives and texts) alongside legal discourses (legislation, federal court cases). Same as [LLS 372](<https://catalog.illinois.edu/search/?P=LLS%20372>).
-This course satisfies the General Education Criteria for:
-Advanced Composition",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
-AAS 375,AAS,375,"Prisons, Race, and Terror",3 Hours,"Examination of the U.S. prison regime, focusing on three dimensions of U.S. imprisonment -- criminal justice, immigrant detention, and martial imprisonment, particularly under the War on Terror. Same as LLS 377.",,,,,,,"[AAS 375 Prisons, Race, and Terror credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/375>)
-
-Examination of the U.S. prison regime, focusing on three dimensions of U.S. imprisonment -- criminal justice, immigrant detention, and martial imprisonment, particularly under the War on Terror. Same as [LLS 377](<https://catalog.illinois.edu/search/?P=LLS%20377>).",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
-AAS 390,AAS,390,Intermed Topics Asian Am St,3 Hours,May be repeated in the same or subsequent terms to a maximum of 6 hours.,,,,,,,"[AAS 390 Intermed Topics Asian Am St credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/390>)
-
-May be repeated in the same or subsequent terms to a maximum of 6 hours.",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
-AAS 395,AAS,395,Adv Asian Am Undergrad Reading,2 or 3 Hours,Supervised reading and research in upper level Asian American Studies topics chosen by the student with instructor approval. May be repeated to a maximum of 6 hours. Prerequisite: AAS 100.,Prerequisite: AAS 100.,,,,,,"[AAS 395 Adv Asian Am Undergrad Reading credit: 2 or 3 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/395>)
-
-Supervised reading and research in upper level Asian American Studies topics chosen by the student with instructor approval. May be repeated to a maximum of 6 hours. Prerequisite: [AAS 100](<https://catalog.illinois.edu/search/?P=AAS%20100>).",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
+Cultural Studies - US Minority",,,
+AAS 315,AAS,315,"War, Memory, and Cinema",3 Hours,"Interdisciplinary examination of the ways that memories of war, trauma, and immigration are produced through the medium of film. Because war has been key to discourses and practices of imperialism and globalization, some questions addressed will include how these wars have impacted the nation and the global order, as well as how images about these wars produced important constructions of race, gender, and sexuality for national and cultural identities. Also examines the aftereffects of war by analyzing connections between war's trauma, race, immigration, and incarceration. Students will read critical texts, film theory, screenplays, and view films. Same as GWS 315. Prerequisite: AAS 100 or AAS 120, or consent of the instructor.","Prerequisite: AAS 100 or AAS 120, or consent of the instructor.",,,,,
+AAS 317,AAS,317,Asian American Politics,3 Hours,Same as PS 317. See PS 317.,,,,,,
+AAS 343,AAS,343,Criminalization and Punishment,3 Hours,"Same as AFRO 343, AIS 343, GWS 343, and LLS 343. See LLS 343.",,,,,,
+AAS 346,AAS,346,Asian American Youth,3 Hours,"Explores cultural production of second-generation Asian American youth as a historical and social formation. Course examines how youth are actively shaping the U.S. landscape in terms of identity formation, youth, culture, education, juvenile justice, politics and activism, and community formations. These experiences are examined in backdrop of larger historical, economic, racial, social and political forces in the United States. Same as HDFS 341.",,,,,,
+AAS 355,AAS,355,Race and Mixed Race,3 Hours,Same as LLS 355 and SOC 355. See LLS 355.,,,,,,
+AAS 357,AAS,357,Literatures of the Displaced,3 Hours,"Same as AIS 357, ENGL 357, GWS 357, and LLS 357. See LLS 357.",,,,,,
+AAS 365,AAS,365,Asian American Media and Film,3 Hours,"An examination of media generally and films and videos more specifically (experimental, documentary, independent, and Hollywood features) by, for, and about Asian Americans. Same as MACS 365. Prerequisite: Any AAS course at the 100- or 200-level, or consent of instructor.","Prerequisite: Any AAS course at the 100- or 200-level, or consent of instructor.",,,,,
+AAS 370,AAS,370,"Immigration, Law, and Rights",3 Hours,"Exploration of the histories, cultures, and experiences of immigration to the United States by examining cultural production (literary and visual narratives and texts) alongside legal discourses (legislation, federal court cases). Same as LLS 372.",,,Advanced Composition,,,
+AAS 375,AAS,375,"Prisons, Race, and Terror",3 Hours,"Examination of the U.S. prison regime, focusing on three dimensions of U.S. imprisonment -- criminal justice, immigrant detention, and martial imprisonment, particularly under the War on Terror. Same as LLS 377.",,,,,,
+AAS 390,AAS,390,Intermed Topics Asian Am St,3 Hours,May be repeated in the same or subsequent terms to a maximum of 6 hours.,,,,,,
+AAS 395,AAS,395,Adv Asian Am Undergrad Reading,2 or 3 Hours,Supervised reading and research in upper level Asian American Studies topics chosen by the student with instructor approval. May be repeated to a maximum of 6 hours. Prerequisite: AAS 100.,Prerequisite: AAS 100.,,,,,
 AAS 400,AAS,400,Critical Ethnic Studies,"3 or 4 Hours
-3 undergraduate hours. 4 graduate hours.","Examines the formation of the field of Critical Ethnic Studies and elaborates its key concepts, such as settler colonialism, indigeneity, heteropatriarchy, decolonization, and liberation. Same as LLS 460. 3 undergraduate hours. 4 graduate hours.",,,,,,,"[AAS 400 Critical Ethnic Studies credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/400>)
-
-Examines the formation of the field of Critical Ethnic Studies and elaborates its key concepts, such as settler colonialism, indigeneity, heteropatriarchy, decolonization, and liberation. Same as [LLS 460](<https://catalog.illinois.edu/search/?P=LLS%20460>). 3 undergraduate hours. 4 graduate hours.",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
+3 undergraduate hours. 4 graduate hours.","Examines the formation of the field of Critical Ethnic Studies and elaborates its key concepts, such as settler colonialism, indigeneity, heteropatriarchy, decolonization, and liberation. Same as LLS 460. 3 undergraduate hours. 4 graduate hours.",,,,,,
 AAS 402,AAS,402,Asian American Education,4 Hours,Same as EPOL 402. See EPOL 402.,,,"Advanced Composition
-Cultural Studies - US Minority",,,,"[AAS 402 Asian American Education credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/402>)
-
-Same as [EPOL 402](<https://catalog.illinois.edu/search/?P=EPOL%20402>). See [EPOL 402](<https://catalog.illinois.edu/search/?P=EPOL%20402>).
-This course satisfies the General Education Criteria for:
-Advanced Composition
-Cultural Studies - US Minority",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
-AAS 435,AAS,435,Commodifying Difference,3 or 4 Hours,"Same as AFRO 435, GWS 435, LLS 435, and MACS 432. See LLS 435.",,,,,,,"[AAS 435 Commodifying Difference credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/435>)
-
-Same as [AFRO 435](<https://catalog.illinois.edu/search/?P=AFRO%20435>), [GWS 435](<https://catalog.illinois.edu/search/?P=GWS%20435>), [LLS 435](<https://catalog.illinois.edu/search/?P=LLS%20435>), and [MACS 432](<https://catalog.illinois.edu/search/?P=MACS%20432>). See [LLS 435](<https://catalog.illinois.edu/search/?P=LLS%20435>).",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
-AAS 464,AAS,464,Theories & Theologies of Liberation,3 or 4 Hours,"Same as ANTH 464, GWS 464, and REL 464. See GWS 464.",,,,,,,"[AAS 464 Theories & Theologies of Liberation credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/464>)
-
-Same as [ANTH 464](<https://catalog.illinois.edu/search/?P=ANTH%20464>), [GWS 464](<https://catalog.illinois.edu/search/?P=GWS%20464>), and [REL 464](<https://catalog.illinois.edu/search/?P=REL%20464>). See [GWS 464](<https://catalog.illinois.edu/search/?P=GWS%20464>).",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
-AAS 465,AAS,465,"Race, Sex, and Deviance",3 or 4 Hours,"Same as AFRO 465, GWS 465, and LLS 465. See LLS 465.",,,,,,,"[AAS 465 Race, Sex, and Deviance credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/465>)
-
-Same as [AFRO 465](<https://catalog.illinois.edu/search/?P=AFRO%20465>), [GWS 465](<https://catalog.illinois.edu/search/?P=GWS%20465>), and [LLS 465](<https://catalog.illinois.edu/search/?P=LLS%20465>). See [LLS 465](<https://catalog.illinois.edu/search/?P=LLS%20465>).",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
-AAS 479,AAS,479,"Race, Medicine, and Society",3 or 4 Hours,Same as ANTH 479 and LLS 479. See LLS 479.,,,,,,,"[AAS 479 Race, Medicine, and Society credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/479>)
-
-Same as [ANTH 479](<https://catalog.illinois.edu/search/?P=ANTH%20479>) and [LLS 479](<https://catalog.illinois.edu/search/?P=LLS%20479>). See [LLS 479](<https://catalog.illinois.edu/search/?P=LLS%20479>).",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
+Cultural Studies - US Minority",,,
+AAS 435,AAS,435,Commodifying Difference,3 or 4 Hours,"Same as AFRO 435, GWS 435, LLS 435, and MACS 432. See LLS 435.",,,,,,
+AAS 464,AAS,464,Theories & Theologies of Liberation,3 or 4 Hours,"Same as ANTH 464, GWS 464, and REL 464. See GWS 464.",,,,,,
+AAS 465,AAS,465,"Race, Sex, and Deviance",3 or 4 Hours,"Same as AFRO 465, GWS 465, and LLS 465. See LLS 465.",,,,,,
+AAS 479,AAS,479,"Race, Medicine, and Society",3 or 4 Hours,Same as ANTH 479 and LLS 479. See LLS 479.,,,,,,
 AAS 490,AAS,490,Adv Topics in Asian Am Studies,"3 or 4 Hours
-3 or 4 undergraduate hours. 3 or 4 graduate hours.","Research seminar on specialized topics in Asian American Studies. 3 or 4 undergraduate hours. 3 or 4 graduate hours. May be repeated if topics vary. Students may register in more than one section per term if topics vary. Prerequisite: AAS 100 or any Asian American Studies course, or consent of instructor.","Prerequisite: AAS 100 or any Asian American Studies course, or consent of instructor.",,,,,,"[AAS 490 Adv Topics in Asian Am Studies credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/490>)
-
-Research seminar on specialized topics in Asian American Studies. 3 or 4 undergraduate hours. 3 or 4 graduate hours. May be repeated if topics vary. Students may register in more than one section per term if topics vary. Prerequisite: [AAS 100](<https://catalog.illinois.edu/search/?P=AAS%20100>) or any Asian American Studies course, or consent of instructor.",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
-AAS 494,AAS,494,Writing with Performance: Politics of Love,3 Hours,"Same as ENGL 494, FAA 494, GWS 494, THEA 484. See FAA 494.",,,,,,,"[AAS 494 Writing with Performance: Politics of Love credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/494>)
-
-Same as [ENGL 494](<https://catalog.illinois.edu/search/?P=ENGL%20494>), [FAA 494](<https://catalog.illinois.edu/search/?P=FAA%20494>), [GWS 494](<https://catalog.illinois.edu/search/?P=GWS%20494>), [THEA 484](<https://catalog.illinois.edu/search/?P=THEA%20484>). See [FAA 494](<https://catalog.illinois.edu/search/?P=FAA%20494>).",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
-AAS 495,AAS,495,Minoritarian Aesthetics Practicum,3 or 4 Hours,"Same as ENGL 495, FAA 495, GWS 425, and THEA 468. See FAA 495.",,,,,,,"[AAS 495 Minoritarian Aesthetics Practicum credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/495>)
-
-Same as [ENGL 495](<https://catalog.illinois.edu/search/?P=ENGL%20495>), [FAA 495](<https://catalog.illinois.edu/search/?P=FAA%20495>), [GWS 425](<https://catalog.illinois.edu/search/?P=GWS%20425>), and [THEA 468](<https://catalog.illinois.edu/search/?P=THEA%20468>). See [FAA 495](<https://catalog.illinois.edu/search/?P=FAA%20495>).",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
-AAS 496,AAS,496,Experiments in Queer of Color Performance,3 Hours,"Same as ENGL 496, FAA 496, GWS 496, and THEA 486. See FAA 496.",,,,,,,"[AAS 496 Experiments in Queer of Color Performance credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/496>)
-
-Same as [ENGL 496](<https://catalog.illinois.edu/search/?P=ENGL%20496>), [FAA 496](<https://catalog.illinois.edu/search/?P=FAA%20496>), [GWS 496](<https://catalog.illinois.edu/search/?P=GWS%20496>), and [THEA 486](<https://catalog.illinois.edu/search/?P=THEA%20486>). See [FAA 496](<https://catalog.illinois.edu/search/?P=FAA%20496>).",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
-AAS 501,AAS,501,Theory and Methods in AAS,4 Hours,"Foundational gateway course for graduate study in Asian American Studies, examining the political, historical, epistemological, and cultural bases of the field through an intensive reading of canonical works and study of core concepts in the field. Also highlights the problems of interdisciplinary research and scholarship and adopts an intersectional and coalitional approach to Asian American Studies as it assumes the necessary linkages between other areas in ethic/racial and gender/sexuality studies.",,,,,,,"[AAS 501 Theory and Methods in AAS credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/501>)
-
-Foundational gateway course for graduate study in Asian American Studies, examining the political, historical, epistemological, and cultural bases of the field through an intensive reading of canonical works and study of core concepts in the field. Also highlights the problems of interdisciplinary research and scholarship and adopts an intersectional and coalitional approach to Asian American Studies as it assumes the necessary linkages between other areas in ethic/racial and gender/sexuality studies.",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
-AAS 539,AAS,539,"Youth, Culture and Society",4 Hours,"Examines youth as a historically and culturally specific social formation; examines discursive and material positioning of youth within broader intersecting racial, cultural, socio-economic, gender and political contexts to situate youth and youth cultural practices within global and local processes. Specific topics include youth cultures, juvenile justice, education, labor, consumerism, politics, sexuality and activism, as well as methodological considerations of conducting research on youth. Same as EPOL 518, and HDFS 539.",,,,,,,"[AAS 539 Youth, Culture and Society credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/539>)
-
-Examines youth as a historically and culturally specific social formation; examines discursive and material positioning of youth within broader intersecting racial, cultural, socio-economic, gender and political contexts to situate youth and youth cultural practices within global and local processes. Specific topics include youth cultures, juvenile justice, education, labor, consumerism, politics, sexuality and activism, as well as methodological considerations of conducting research on youth. Same as [EPOL 518](<https://catalog.illinois.edu/search/?P=EPOL%20518>), and [HDFS 539](<https://catalog.illinois.edu/search/?P=HDFS%20539>).",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
-AAS 561,AAS,561,Race and Cultural Critique,4 Hours,"Introduction to graduate level theoretical and methodological approaches in Comparative Race Studies. As a survey of theories of race and racism and the methodology of critique, this course offers an interdisciplinary approach that draws from anthropology, sociology, history, literature, cultural studies, and gender/sexuality studies. In addition, the study of racial and cultural formation is examined from a comparative perspective in the scholarship of racialized and Gender and Women's Studies. Same as AFRO 531, ANTH 565, GWS 561, and LLS 561.",,,,,,,"[AAS 561 Race and Cultural Critique credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/561>)
-
-Introduction to graduate level theoretical and methodological approaches in Comparative Race Studies. As a survey of theories of race and racism and the methodology of critique, this course offers an interdisciplinary approach that draws from anthropology, sociology, history, literature, cultural studies, and gender/sexuality studies. In addition, the study of racial and cultural formation is examined from a comparative perspective in the scholarship of racialized and Gender and Women's Studies. Same as [AFRO 531](<https://catalog.illinois.edu/search/?P=AFRO%20531>), [ANTH 565](<https://catalog.illinois.edu/search/?P=ANTH%20565>), [GWS 561](<https://catalog.illinois.edu/search/?P=GWS%20561>), and [LLS 561](<https://catalog.illinois.edu/search/?P=LLS%20561>).",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
-AAS 589,AAS,589,Readings in Asian Am Studies,1 to 4 Hours,Individual guidance in intensive readings in the literature of one or more subdivisions of the field of Asian American Studies. May be repeated to a maximum of 8 hours. Students may register in more than one section per term if topics vary. Prerequisite: Graduate standing or consent of instructor.,Prerequisite: Graduate standing or consent of instructor.,,,,,,"[AAS 589 Readings in Asian Am Studies credit: 1 to 4 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/589>)
-
-Individual guidance in intensive readings in the literature of one or more subdivisions of the field of Asian American Studies. May be repeated to a maximum of 8 hours. Students may register in more than one section per term if topics vary. Prerequisite: Graduate standing or consent of instructor.",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
-AAS 590,AAS,590,Asian Am Studies Seminar,2 to 4 Hours,Approved for letter and S/U grading. May be repeated to a maximum of 8 hours. Prerequisite: Graduate standing or consent of instructor.,Prerequisite: Graduate standing or consent of instructor.,,,,,,"[AAS 590 Asian Am Studies Seminar credit: 2 to 4 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/590>)
-
-Approved for letter and S/U grading. May be repeated to a maximum of 8 hours. Prerequisite: Graduate standing or consent of instructor.",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
-AAS 594,AAS,594,Writing the Minor - Minoritarian Aesthetics,4 Hours,"Same as ENGL 594, FAA 594, GWS 594, and THEA 594. See FAA 594.",,,,,,,"[AAS 594 Writing the Minor - Minoritarian Aesthetics credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/594>)
-
-Same as [ENGL 594](<https://catalog.illinois.edu/search/?P=ENGL%20594>), [FAA 594](<https://catalog.illinois.edu/search/?P=FAA%20594>), [GWS 594](<https://catalog.illinois.edu/search/?P=GWS%20594>), and [THEA 594](<https://catalog.illinois.edu/search/?P=THEA%20594>). See [FAA 594](<https://catalog.illinois.edu/search/?P=FAA%20594>).",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
-AAS 596,AAS,596,Experiments in Minoritarian Aesthetics,4 Hours,"Same as ENGL 596, FAA 596, GWS 596, and THEA 596. See FAA 596.",,,,,,,"[AAS 596 Experiments in Minoritarian Aesthetics credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/AAS/596>)
-
-Same as [ENGL 596](<https://catalog.illinois.edu/search/?P=ENGL%20596>), [FAA 596](<https://catalog.illinois.edu/search/?P=FAA%20596>), [GWS 596](<https://catalog.illinois.edu/search/?P=GWS%20596>), and [THEA 596](<https://catalog.illinois.edu/search/?P=THEA%20596>). See [FAA 596](<https://catalog.illinois.edu/search/?P=FAA%20596>).",https://catalog.illinois.edu/courses-of-instruction/aas/,2026–2027
+3 or 4 undergraduate hours. 3 or 4 graduate hours.","Research seminar on specialized topics in Asian American Studies. 3 or 4 undergraduate hours. 3 or 4 graduate hours. May be repeated if topics vary. Students may register in more than one section per term if topics vary. Prerequisite: AAS 100 or any Asian American Studies course, or consent of instructor.","Prerequisite: AAS 100 or any Asian American Studies course, or consent of instructor.",,,,,
+AAS 494,AAS,494,Writing with Performance: Politics of Love,3 Hours,"Same as ENGL 494, FAA 494, GWS 494, THEA 484. See FAA 494.",,,,,,
+AAS 495,AAS,495,Minoritarian Aesthetics Practicum,3 or 4 Hours,"Same as ENGL 495, FAA 495, GWS 425, and THEA 468. See FAA 495.",,,,,,
+AAS 496,AAS,496,Experiments in Queer of Color Performance,3 Hours,"Same as ENGL 496, FAA 496, GWS 496, and THEA 486. See FAA 496.",,,,,,
+AAS 501,AAS,501,Theory and Methods in AAS,4 Hours,"Foundational gateway course for graduate study in Asian American Studies, examining the political, historical, epistemological, and cultural bases of the field through an intensive reading of canonical works and study of core concepts in the field. Also highlights the problems of interdisciplinary research and scholarship and adopts an intersectional and coalitional approach to Asian American Studies as it assumes the necessary linkages between other areas in ethic/racial and gender/sexuality studies.",,,,,,
+AAS 539,AAS,539,"Youth, Culture and Society",4 Hours,"Examines youth as a historically and culturally specific social formation; examines discursive and material positioning of youth within broader intersecting racial, cultural, socio-economic, gender and political contexts to situate youth and youth cultural practices within global and local processes. Specific topics include youth cultures, juvenile justice, education, labor, consumerism, politics, sexuality and activism, as well as methodological considerations of conducting research on youth. Same as EPOL 518, and HDFS 539.",,,,,,
+AAS 561,AAS,561,Race and Cultural Critique,4 Hours,"Introduction to graduate level theoretical and methodological approaches in Comparative Race Studies. As a survey of theories of race and racism and the methodology of critique, this course offers an interdisciplinary approach that draws from anthropology, sociology, history, literature, cultural studies, and gender/sexuality studies. In addition, the study of racial and cultural formation is examined from a comparative perspective in the scholarship of racialized and Gender and Women's Studies. Same as AFRO 531, ANTH 565, GWS 561, and LLS 561.",,,,,,
+AAS 589,AAS,589,Readings in Asian Am Studies,1 to 4 Hours,Individual guidance in intensive readings in the literature of one or more subdivisions of the field of Asian American Studies. May be repeated to a maximum of 8 hours. Students may register in more than one section per term if topics vary. Prerequisite: Graduate standing or consent of instructor.,Prerequisite: Graduate standing or consent of instructor.,,,,,
+AAS 590,AAS,590,Asian Am Studies Seminar,2 to 4 Hours,Approved for letter and S/U grading. May be repeated to a maximum of 8 hours. Prerequisite: Graduate standing or consent of instructor.,Prerequisite: Graduate standing or consent of instructor.,,,,,
+AAS 594,AAS,594,Writing the Minor - Minoritarian Aesthetics,4 Hours,"Same as ENGL 594, FAA 594, GWS 594, and THEA 594. See FAA 594.",,,,,,
+AAS 596,AAS,596,Experiments in Minoritarian Aesthetics,4 Hours,"Same as ENGL 596, FAA 596, GWS 596, and THEA 596. See FAA 596.",,,,,,

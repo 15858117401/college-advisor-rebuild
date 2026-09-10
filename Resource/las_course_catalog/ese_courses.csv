@@ -1,193 +1,59 @@
-course_code,subject,course_number,course_name,credits,description,prerequisites,credit_restrictions,gen_ed,total_students,total_sections,overall_gpa,catalog_text,source_url,catalog_year
+course_code,subject,course_number,course_name,credits,description,prerequisites,credit_restrictions,gen_ed,total_students,total_sections,overall_gpa
 ESE 100,ESE,100,Sustainable Earth,3 Hours,"Provides an introduction to sustainability that explores how today's human societies can endure in the face of global change, ecosystem degradation, and limited resources. Emphasizes the fundamentals of the physical sciences and the scientific method while also exploring the special impact of sustainability challenges on minority cultures in the U.S. Prerequisite: This course is intended for first and second year students.",Prerequisite: This course is intended for first and second year students.,,"Grand Challenge-Sustainability
-Nat Sci & Tech - Phys Sciences",,,,"[ESE 100 Sustainable Earth credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/100>)
-
-Provides an introduction to sustainability that explores how today's human societies can endure in the face of global change, ecosystem degradation, and limited resources. Emphasizes the fundamentals of the physical sciences and the scientific method while also exploring the special impact of sustainability challenges on minority cultures in the U.S. Prerequisite: This course is intended for first and second year students.
-This course satisfies the General Education Criteria for:
-Grand Challenge-Sustainability
-Nat Sci & Tech - Phys Sciences",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
-ESE 103,ESE,103,Earth's Physical Systems,4 Hours,Same as GGIS 103. See GGIS 103.,,,Nat Sci & Tech - Phys Sciences,,,,"[ESE 103 Earth's Physical Systems credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/103>)
-
-Same as [GGIS 103](<https://catalog.illinois.edu/search/?P=GGIS%20103>). See [GGIS 103](<https://catalog.illinois.edu/search/?P=GGIS%20103>).
-This course satisfies the General Education Criteria for:
-Nat Sci & Tech - Phys Sciences",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
-ESE 104,ESE,104,Geology of the National Parks,3 Hours,Same as GEOL 104. See GEOL 104.,,,Nat Sci & Tech - Phys Sciences,,,,"[ESE 104 Geology of the National Parks credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/104>)
-
-Same as [GEOL 104](<https://catalog.illinois.edu/search/?P=GEOL%20104>). See [GEOL 104](<https://catalog.illinois.edu/search/?P=GEOL%20104>).
-This course satisfies the General Education Criteria for:
-Nat Sci & Tech - Phys Sciences",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
+Nat Sci & Tech - Phys Sciences",,,
+ESE 103,ESE,103,Earth's Physical Systems,4 Hours,Same as GGIS 103. See GGIS 103.,,,Nat Sci & Tech - Phys Sciences,,,
+ESE 104,ESE,104,Geology of the National Parks,3 Hours,Same as GEOL 104. See GEOL 104.,,,Nat Sci & Tech - Phys Sciences,,,
 ESE 106,ESE,106,Geographies of Globalization,3 Hours,Same as GGIS 106. See GGIS 106.,,,"Cultural Studies - Non-West
-Social & Beh Sci - Soc Sci",,,,"[ESE 106 Geographies of Globalization credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/106>)
-
-Same as [GGIS 106](<https://catalog.illinois.edu/search/?P=GGIS%20106>). See [GGIS 106](<https://catalog.illinois.edu/search/?P=GGIS%20106>).
-This course satisfies the General Education Criteria for:
-Cultural Studies - Non-West
-Social & Beh Sci - Soc Sci",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
-ESE 111,ESE,111,Emergence of Life,3 Hours,Same as GEOL 111. See GEOL 111.,,,Nat Sci & Tech - Life Sciences,,,,"[ESE 111 Emergence of Life credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/111>)
-
-Same as [GEOL 111](<https://catalog.illinois.edu/search/?P=GEOL%20111>). See [GEOL 111](<https://catalog.illinois.edu/search/?P=GEOL%20111>).
-This course satisfies the General Education Criteria for:
-Nat Sci & Tech - Life Sciences",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
-ESE 117,ESE,117,The Oceans,3 Hours,Same as GEOL 117. See GEOL 117.,,,Nat Sci & Tech - Phys Sciences,,,,"[ESE 117 The Oceans credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/117>)
-
-Same as [GEOL 117](<https://catalog.illinois.edu/search/?P=GEOL%20117>). See [GEOL 117](<https://catalog.illinois.edu/search/?P=GEOL%20117>).
-This course satisfies the General Education Criteria for:
-Nat Sci & Tech - Phys Sciences",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
-ESE 118,ESE,118,Natural Disasters,3 Hours,Same as GEOL 118 and GLBL 118. See GEOL 118.,,,Nat Sci & Tech - Phys Sciences,,,,"[ESE 118 Natural Disasters credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/118>)
-
-Same as [GEOL 118](<https://catalog.illinois.edu/search/?P=GEOL%20118>) and [GLBL 118](<https://catalog.illinois.edu/search/?P=GLBL%20118>). See [GEOL 118](<https://catalog.illinois.edu/search/?P=GEOL%20118>).
-This course satisfies the General Education Criteria for:
-Nat Sci & Tech - Phys Sciences",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
+Social & Beh Sci - Soc Sci",,,
+ESE 111,ESE,111,Emergence of Life,3 Hours,Same as GEOL 111. See GEOL 111.,,,Nat Sci & Tech - Life Sciences,,,
+ESE 117,ESE,117,The Oceans,3 Hours,Same as GEOL 117. See GEOL 117.,,,Nat Sci & Tech - Phys Sciences,,,
+ESE 118,ESE,118,Natural Disasters,3 Hours,Same as GEOL 118 and GLBL 118. See GEOL 118.,,,Nat Sci & Tech - Phys Sciences,,,
 ESE 120,ESE,120,Severe and Hazardous Weather,3 Hours,Same as ATMS 120. See ATMS 120.,,,"Nat Sci & Tech - Phys Sciences
-Quantitative Reasoning II",,,,"[ESE 120 Severe and Hazardous Weather credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/120>)
-
-Same as [ATMS 120](<https://catalog.illinois.edu/search/?P=ATMS%20120>). See [ATMS 120](<https://catalog.illinois.edu/search/?P=ATMS%20120>).
-This course satisfies the General Education Criteria for:
-Nat Sci & Tech - Phys Sciences
-Quantitative Reasoning II",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
-ESE 140,ESE,140,Climate and Global Change,3 Hours,Same as ATMS 140. See ATMS 140.,,,Nat Sci & Tech - Phys Sciences,,,,"[ESE 140 Climate and Global Change credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/140>)
-
-Same as [ATMS 140](<https://catalog.illinois.edu/search/?P=ATMS%20140>). See [ATMS 140](<https://catalog.illinois.edu/search/?P=ATMS%20140>).
-This course satisfies the General Education Criteria for:
-Nat Sci & Tech - Phys Sciences",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
-ESE 143,ESE,143,History of Life,3 Hours,Same as GEOL 143. See GEOL 143.,,,Nat Sci & Tech - Life Sciences,,,,"[ESE 143 History of Life credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/143>)
-
-Same as [GEOL 143](<https://catalog.illinois.edu/search/?P=GEOL%20143>). See [GEOL 143](<https://catalog.illinois.edu/search/?P=GEOL%20143>).
-This course satisfies the General Education Criteria for:
-Nat Sci & Tech - Life Sciences",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
-ESE 170,ESE,170,Nature Religion,3 Hours,Same as REL 170. See REL 170.,,,,,,,"[ESE 170 Nature Religion credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/170>)
-
-Same as [REL 170](<https://catalog.illinois.edu/search/?P=REL%20170>). See [REL 170](<https://catalog.illinois.edu/search/?P=REL%20170>).",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
-ESE 199,ESE,199,Undergraduate Open Seminar,1 to 5 Hours,"Special topics in Earth, Society, and the Environment; content is variable. May be repeated if topics vary.",,,,,,,"[ESE 199 Undergraduate Open Seminar credit: 1 to 5 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/199>)
-
-Special topics in Earth, Society, and the Environment; content is variable. May be repeated if topics vary.",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
-ESE 200,ESE,200,Earth Systems,3 Hours,"Interdisciplinary lecture class intended to introduce Earth Systems studies, which focuses on integrating social and natural science approaches to studying the Earth and its environments.",,,,,,,"[ESE 200 Earth Systems credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/200>)
-
-Interdisciplinary lecture class intended to introduce Earth Systems studies, which focuses on integrating social and natural science approaches to studying the Earth and its environments.",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
+Quantitative Reasoning II",,,
+ESE 140,ESE,140,Climate and Global Change,3 Hours,Same as ATMS 140. See ATMS 140.,,,Nat Sci & Tech - Phys Sciences,,,
+ESE 143,ESE,143,History of Life,3 Hours,Same as GEOL 143. See GEOL 143.,,,Nat Sci & Tech - Life Sciences,,,
+ESE 170,ESE,170,Nature Religion,3 Hours,Same as REL 170. See REL 170.,,,,,,
+ESE 199,ESE,199,Undergraduate Open Seminar,1 to 5 Hours,"Special topics in Earth, Society, and the Environment; content is variable. May be repeated if topics vary.",,,,,,
+ESE 200,ESE,200,Earth Systems,3 Hours,"Interdisciplinary lecture class intended to introduce Earth Systems studies, which focuses on integrating social and natural science approaches to studying the Earth and its environments.",,,,,,
 ESE 202,ESE,202,American Environmental History,3 Hours,Same as HIST 202 and NRES 202. See HIST 202.,,,"Humanities - Hist & Phil
-Cultural Studies - Western",,,,"[ESE 202 American Environmental History credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/202>)
-
-Same as [HIST 202](<https://catalog.illinois.edu/search/?P=HIST%20202>) and [NRES 202](<https://catalog.illinois.edu/search/?P=NRES%20202>). See [HIST 202](<https://catalog.illinois.edu/search/?P=HIST%20202>).
-This course satisfies the General Education Criteria for:
-Humanities - Hist & Phil
-Cultural Studies - Western",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
-ESE 208,ESE,208,History of the Earth System,4 Hours,Same as GEOL 208. See GEOL 208.,,,Nat Sci & Tech - Phys Sciences,,,,"[ESE 208 History of the Earth System credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/208>)
-
-Same as [GEOL 208](<https://catalog.illinois.edu/search/?P=GEOL%20208>). See [GEOL 208](<https://catalog.illinois.edu/search/?P=GEOL%20208>).
-This course satisfies the General Education Criteria for:
-Nat Sci & Tech - Phys Sciences",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
-ESE 210,ESE,210,Social & Environmental Issues,3 Hours,Same as GGIS 210. See GGIS 210.,,,Social & Beh Sci - Soc Sci,,,,"[ESE 210 Social & Environmental Issues credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/210>)
-
-Same as [GGIS 210](<https://catalog.illinois.edu/search/?P=GGIS%20210>). See [GGIS 210](<https://catalog.illinois.edu/search/?P=GGIS%20210>).
-This course satisfies the General Education Criteria for:
-Social & Beh Sci - Soc Sci",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
-ESE 222,ESE,222,Big Rivers of the World,3 Hours,Same as GGIS 222. See GGIS 222.,,,,,,,"[ESE 222 Big Rivers of the World credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/222>)
-
-Same as [GGIS 222](<https://catalog.illinois.edu/search/?P=GGIS%20222>). See [GGIS 222](<https://catalog.illinois.edu/search/?P=GGIS%20222>).",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
+Cultural Studies - Western",,,
+ESE 208,ESE,208,History of the Earth System,4 Hours,Same as GEOL 208. See GEOL 208.,,,Nat Sci & Tech - Phys Sciences,,,
+ESE 210,ESE,210,Social & Environmental Issues,3 Hours,Same as GGIS 210. See GGIS 210.,,,Social & Beh Sci - Soc Sci,,,
+ESE 222,ESE,222,Big Rivers of the World,3 Hours,Same as GGIS 222. See GGIS 222.,,,,,,
 ESE 254,ESE,254,"People, Places, and Environments of the US",3 Hours,Same as GGIS 254. See GGIS 254.,,,"Social & Beh Sci - Soc Sci
-Cultural Studies - US Minority",,,,"[ESE 254 People, Places, and Environments of the US credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/254>)
-
-Same as [GGIS 254](<https://catalog.illinois.edu/search/?P=GGIS%20254>). See [GGIS 254](<https://catalog.illinois.edu/search/?P=GGIS%20254>).
-This course satisfies the General Education Criteria for:
-Social & Beh Sci - Soc Sci
-Cultural Studies - US Minority",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
+Cultural Studies - US Minority",,,
 ESE 287,ESE,287,Environment and Society,3 Hours,"Same as GGIS 287, NRES 287 and PS 273. See NRES 287.",,,"Social & Beh Sci - Soc Sci
-Cultural Studies - Western",,,,"[ESE 287 Environment and Society credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/287>)
-
-Same as [GGIS 287](<https://catalog.illinois.edu/search/?P=GGIS%20287>), [NRES 287](<https://catalog.illinois.edu/search/?P=NRES%20287>) and [PS 273](<https://catalog.illinois.edu/search/?P=PS%20273>). See [NRES 287](<https://catalog.illinois.edu/search/?P=NRES%20287>).
-This course satisfies the General Education Criteria for:
-Social & Beh Sci - Soc Sci
-Cultural Studies - Western",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
-ESE 289,ESE,289,Environment & Sustainability Field Study,1 Hour,"Group expedition to study environment and sustainability issues at a nearby field site. Includes in-class meetings, student-led presentation, and a field trip that may be short as part of a day or as long as several days. Field trip and field trip fee required. Additional fees may apply. See Class Schedule. Approved for letter and S/U grading. May be repeated in separate terms if topics vary. Prerequisite: For ESE majors, minors, and Sustainability Living Learning Community students. Non majors can apply to the waitlist.","Prerequisite: For ESE majors, minors, and Sustainability Living Learning Community students.",,,,,,"[ESE 289 Environment & Sustainability Field Study credit: 1 Hour.](<https://courses.illinois.edu/schedule/terms/ESE/289>)
-
-Group expedition to study environment and sustainability issues at a nearby field site. Includes in-class meetings, student-led presentation, and a field trip that may be short as part of a day or as long as several days. Field trip and field trip fee required. Additional fees may apply. See Class Schedule. Approved for letter and S/U grading. May be repeated in separate terms if topics vary. Prerequisite: For ESE majors, minors, and Sustainability Living Learning Community students. Non majors can apply to the waitlist.",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
-ESE 311,ESE,311,Environmental Issues Today,3 Hours,"Seminar exposing students to different disciplinary perspectives on specific environmental issues, as revealed in the scholarly literature. Specific problems will vary from term to term. This seminar helps students make the transition from disciplinary to interdisciplinary thinking.",,,,,,,"[ESE 311 Environmental Issues Today credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/311>)
-
-Seminar exposing students to different disciplinary perspectives on specific environmental issues, as revealed in the scholarly literature. Specific problems will vary from term to term. This seminar helps students make the transition from disciplinary to interdisciplinary thinking.",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
-ESE 320,ESE,320,"Water Planet, Water Crisis",3 Hours,"Study of the science of water on planet earth, the developing water crisis, and some possible solutions to it. Topics include water's unique physical and chemical properties; how it profoundly shapes the earth/ocean/atmosphere system; dynamics of oceans, atmosphere, lakes, rivers, groundwater, and ice masses; current fresh water supplies and their distribution on earth relative to population; current and future water crises and the compounding effects of droughts, floods, and global change; and prospects for some technological and economic approaches to easing the crisis. Same as GEOL 370 and GGIS 370.",,,,,,,"[ESE 320 Water Planet, Water Crisis credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/320>)
-
-Study of the science of water on planet earth, the developing water crisis, and some possible solutions to it. Topics include water's unique physical and chemical properties; how it profoundly shapes the earth/ocean/atmosphere system; dynamics of oceans, atmosphere, lakes, rivers, groundwater, and ice masses; current fresh water supplies and their distribution on earth relative to population; current and future water crises and the compounding effects of droughts, floods, and global change; and prospects for some technological and economic approaches to easing the crisis. Same as [GEOL 370](<https://catalog.illinois.edu/search/?P=GEOL%20370>) and [GGIS 370](<https://catalog.illinois.edu/search/?P=GGIS%20370>).",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
-ESE 333,ESE,333,Earth Materials and the Env,4 Hours,Same as GEOL 333. See GEOL 333.,,,,,,,"[ESE 333 Earth Materials and the Env credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/333>)
-
-Same as [GEOL 333](<https://catalog.illinois.edu/search/?P=GEOL%20333>). See [GEOL 333](<https://catalog.illinois.edu/search/?P=GEOL%20333>).",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
-ESE 350,ESE,350,Sustainability and the City,3 Hours,Same as GGIS 350. See GGIS 350.,,,,,,,"[ESE 350 Sustainability and the City credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/350>)
-
-Same as [GGIS 350](<https://catalog.illinois.edu/search/?P=GGIS%20350>). See [GGIS 350](<https://catalog.illinois.edu/search/?P=GGIS%20350>).",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
-ESE 360,ESE,360,Environmental Writing,3 Hours,"Equips students to write about the environment for various audiences, with a focus on specific current efforts to promote sustainability on the Urbana-Champaign campus. We will practice effective techniques for each stage of the writing process-from defining topics, to gathering information, to crafting active, engaging prose. Readings will include models of effective environmental writing and ""how to"" pieces by experts. Research will include visits to campus sites and student-conducted interviews with subjects. Same as ENGL 360. Prerequisite: Completion of campus Composition I general education requirement.",Prerequisite: Completion of campus Composition I general education requirement.,,Advanced Composition,,,,"[ESE 360 Environmental Writing credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/360>)
-
-Equips students to write about the environment for various audiences, with a focus on specific current efforts to promote sustainability on the Urbana-Champaign campus. We will practice effective techniques for each stage of the writing process-from defining topics, to gathering information, to crafting active, engaging prose. Readings will include models of effective environmental writing and ""how to"" pieces by experts. Research will include visits to campus sites and student-conducted interviews with subjects. Same as [ENGL 360](<https://catalog.illinois.edu/search/?P=ENGL%20360>). Prerequisite: Completion of campus Composition I general education requirement.
-This course satisfies the General Education Criteria for:
-Advanced Composition",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
-ESE 379,ESE,379,Introduction to Geographic Information Systems,4 Hours,Same as GGIS 379. See GGIS 379.,,,,,,,"[ESE 379 Introduction to Geographic Information Systems credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/379>)
-
-Same as [GGIS 379](<https://catalog.illinois.edu/search/?P=GGIS%20379>). See [GGIS 379](<https://catalog.illinois.edu/search/?P=GGIS%20379>).",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
-ESE 380,ESE,380,Geographic Information Systems II,4 Hours,Same as GGIS 380. See GGIS 380.,,,Quantitative Reasoning II,,,,"[ESE 380 Geographic Information Systems II credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/380>)
-
-Same as [GGIS 380](<https://catalog.illinois.edu/search/?P=GGIS%20380>). See [GGIS 380](<https://catalog.illinois.edu/search/?P=GGIS%20380>).
-This course satisfies the General Education Criteria for:
-Quantitative Reasoning II",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
-ESE 389,ESE,389,Environment and Sustainability Field Expedition,3 Hours,"Group expedition to study environment and sustainability issues at a field site. Includes in-class meetings, student-led presentation, and field trip; expeditions run during spring break, winter break, in mid-May or in intercession; dates depend on location. Field Trip and field trip fee required. Additional fees may apply. See Class Schedule. May be repeated up to 12 hours in separate terms if topics vary.",,,,,,,"[ESE 389 Environment and Sustainability Field Expedition credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/389>)
-
-Group expedition to study environment and sustainability issues at a field site. Includes in-class meetings, student-led presentation, and field trip; expeditions run during spring break, winter break, in mid-May or in intercession; dates depend on location. Field Trip and field trip fee required. Additional fees may apply. See Class Schedule. May be repeated up to 12 hours in separate terms if topics vary.",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
+Cultural Studies - Western",,,
+ESE 289,ESE,289,Environment & Sustainability Field Study,1 Hour,"Group expedition to study environment and sustainability issues at a nearby field site. Includes in-class meetings, student-led presentation, and a field trip that may be short as part of a day or as long as several days. Field trip and field trip fee required. Additional fees may apply. See Class Schedule. Approved for letter and S/U grading. May be repeated in separate terms if topics vary. Prerequisite: For ESE majors, minors, and Sustainability Living Learning Community students. Non majors can apply to the waitlist.","Prerequisite: For ESE majors, minors, and Sustainability Living Learning Community students.",,,,,
+ESE 311,ESE,311,Environmental Issues Today,3 Hours,"Seminar exposing students to different disciplinary perspectives on specific environmental issues, as revealed in the scholarly literature. Specific problems will vary from term to term. This seminar helps students make the transition from disciplinary to interdisciplinary thinking.",,,,,,
+ESE 320,ESE,320,"Water Planet, Water Crisis",3 Hours,"Study of the science of water on planet earth, the developing water crisis, and some possible solutions to it. Topics include water's unique physical and chemical properties; how it profoundly shapes the earth/ocean/atmosphere system; dynamics of oceans, atmosphere, lakes, rivers, groundwater, and ice masses; current fresh water supplies and their distribution on earth relative to population; current and future water crises and the compounding effects of droughts, floods, and global change; and prospects for some technological and economic approaches to easing the crisis. Same as GEOL 370 and GGIS 370.",,,,,,
+ESE 333,ESE,333,Earth Materials and the Env,4 Hours,Same as GEOL 333. See GEOL 333.,,,,,,
+ESE 350,ESE,350,Sustainability and the City,3 Hours,Same as GGIS 350. See GGIS 350.,,,,,,
+ESE 360,ESE,360,Environmental Writing,3 Hours,"Equips students to write about the environment for various audiences, with a focus on specific current efforts to promote sustainability on the Urbana-Champaign campus. We will practice effective techniques for each stage of the writing process-from defining topics, to gathering information, to crafting active, engaging prose. Readings will include models of effective environmental writing and ""how to"" pieces by experts. Research will include visits to campus sites and student-conducted interviews with subjects. Same as ENGL 360. Prerequisite: Completion of campus Composition I general education requirement.",Prerequisite: Completion of campus Composition I general education requirement.,,Advanced Composition,,,
+ESE 379,ESE,379,Introduction to Geographic Information Systems,4 Hours,Same as GGIS 379. See GGIS 379.,,,,,,
+ESE 380,ESE,380,Geographic Information Systems II,4 Hours,Same as GGIS 380. See GGIS 380.,,,Quantitative Reasoning II,,,
+ESE 389,ESE,389,Environment and Sustainability Field Expedition,3 Hours,"Group expedition to study environment and sustainability issues at a field site. Includes in-class meetings, student-led presentation, and field trip; expeditions run during spring break, winter break, in mid-May or in intercession; dates depend on location. Field Trip and field trip fee required. Additional fees may apply. See Class Schedule. May be repeated up to 12 hours in separate terms if topics vary.",,,,,,
 ESE 401,ESE,401,ESE Capstone,"3 Hours
-3 undergraduate hours. No graduate credit.","Capstone experience for majors in Earth, Society, and Environment Sustainability. 3 undergraduate hours. No graduate credit. Approved for Letter and S/U grading. May be repeated once.",,No graduate credit.,,,,,"[ESE 401 ESE Capstone credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/401>)
-
-Capstone experience for majors in Earth, Society, and Environment Sustainability. 3 undergraduate hours. No graduate credit. Approved for Letter and S/U grading. May be repeated once.",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
-ESE 410,ESE,410,Green Development,4 Hours,Same as GGIS 410. See GGIS 410.,,,,,,,"[ESE 410 Green Development credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/410>)
-
-Same as [GGIS 410](<https://catalog.illinois.edu/search/?P=GGIS%20410>). See [GGIS 410](<https://catalog.illinois.edu/search/?P=GGIS%20410>).",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
-ESE 411,ESE,411,Geomorphology,4 Hours,Same as GEOL 401. See GEOL 401.,,,,,,,"[ESE 411 Geomorphology credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/411>)
-
-Same as [GEOL 401](<https://catalog.illinois.edu/search/?P=GEOL%20401>). See [GEOL 401](<https://catalog.illinois.edu/search/?P=GEOL%20401>).",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
-ESE 421,ESE,421,Earth Systems Modeling,4 Hours,"Same as ATMS 421, GEOL 481, GGIS 421 and NRES 422. See ATMS 421.",,,,,,,"[ESE 421 Earth Systems Modeling credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/421>)
-
-Same as [ATMS 421](<https://catalog.illinois.edu/search/?P=ATMS%20421>), [GEOL 481](<https://catalog.illinois.edu/search/?P=GEOL%20481>), [GGIS 421](<https://catalog.illinois.edu/search/?P=GGIS%20421>) and [NRES 422](<https://catalog.illinois.edu/search/?P=NRES%20422>). See [ATMS 421](<https://catalog.illinois.edu/search/?P=ATMS%20421>).",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
-ESE 439,ESE,439,Biogeography,3 Hours,"Same as ANTH 436, GGIS 436, IB 439, and NRES 441. See IB 439.",,,,,,,"[ESE 439 Biogeography credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/439>)
-
-Same as [ANTH 436](<https://catalog.illinois.edu/search/?P=ANTH%20436>), [GGIS 436](<https://catalog.illinois.edu/search/?P=GGIS%20436>), [IB 439](<https://catalog.illinois.edu/search/?P=IB%20439>), and [NRES 441](<https://catalog.illinois.edu/search/?P=NRES%20441>). See [IB 439](<https://catalog.illinois.edu/search/?P=IB%20439>).",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
+3 undergraduate hours. No graduate credit.","Capstone experience for majors in Earth, Society, and Environment Sustainability. 3 undergraduate hours. No graduate credit. Approved for Letter and S/U grading. May be repeated once.",,No graduate credit.,,,,
+ESE 410,ESE,410,Green Development,4 Hours,Same as GGIS 410. See GGIS 410.,,,,,,
+ESE 411,ESE,411,Geomorphology,4 Hours,Same as GEOL 401. See GEOL 401.,,,,,,
+ESE 421,ESE,421,Earth Systems Modeling,4 Hours,"Same as ATMS 421, GEOL 481, GGIS 421 and NRES 422. See ATMS 421.",,,,,,
+ESE 439,ESE,439,Biogeography,3 Hours,"Same as ANTH 436, GGIS 436, IB 439, and NRES 441. See IB 439.",,,,,,
 ESE 445,ESE,445,Earth Resources Sustainability,"3 Hours
-3 undergraduate hours. 3 graduate hours.","Introduces the physical (energy, mineral, and soil) resources of the Earth, the environmental consequences of producing and using resources, the controls on resource supplies, and the alternatives to traditional supplies. Focuses on the geological origin and context of resources, the means of exploration and production, the history of production, and sustainability issues related to consumption and depletion. Provides an understanding of why resources can be scarce and expensive, why many are not renewable, and why their use impacts the Earth System. May include field trips. 3 undergraduate hours. 3 graduate hours. Credit is not given for both ESE 445 and GEOL 380. Prerequisite: Junior standing or higher.",Prerequisite: Junior standing or higher.,Credit is not given for both ESE 445 and GEOL 380.,,,,,"[ESE 445 Earth Resources Sustainability credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/445>)
-
-Introduces the physical (energy, mineral, and soil) resources of the Earth, the environmental consequences of producing and using resources, the controls on resource supplies, and the alternatives to traditional supplies. Focuses on the geological origin and context of resources, the means of exploration and production, the history of production, and sustainability issues related to consumption and depletion. Provides an understanding of why resources can be scarce and expensive, why many are not renewable, and why their use impacts the Earth System. May include field trips. 3 undergraduate hours. 3 graduate hours. Credit is not given for both [ESE 445](<https://catalog.illinois.edu/search/?P=ESE%20445>) and [GEOL 380](<https://catalog.illinois.edu/search/?P=GEOL%20380>). Prerequisite: Junior standing or higher.",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
-ESE 452,ESE,452,Ecosystem Ecology,3 Hours,Same as IB 452 and NRES 462. See IB 452.,,,,,,,"[ESE 452 Ecosystem Ecology credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/452>)
-
-Same as [IB 452](<https://catalog.illinois.edu/search/?P=IB%20452>) and [NRES 462](<https://catalog.illinois.edu/search/?P=NRES%20462>). See [IB 452](<https://catalog.illinois.edu/search/?P=IB%20452>).",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
-ESE 465,ESE,465,Transportation &Sustainability,3 or 4 Hours,Same as GGIS 465. See GGIS 465.,,,Advanced Composition,,,,"[ESE 465 Transportation &Sustainability credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/465>)
-
-Same as [GGIS 465](<https://catalog.illinois.edu/search/?P=GGIS%20465>). See [GGIS 465](<https://catalog.illinois.edu/search/?P=GGIS%20465>).
-This course satisfies the General Education Criteria for:
-Advanced Composition",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
-ESE 466,ESE,466,Environmental Policy,3 or 4 Hours,Same as GGIS 466. See GGIS 466.,,,,,,,"[ESE 466 Environmental Policy credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/466>)
-
-Same as [GGIS 466](<https://catalog.illinois.edu/search/?P=GGIS%20466>). See [GGIS 466](<https://catalog.illinois.edu/search/?P=GGIS%20466>).",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
+3 undergraduate hours. 3 graduate hours.","Introduces the physical (energy, mineral, and soil) resources of the Earth, the environmental consequences of producing and using resources, the controls on resource supplies, and the alternatives to traditional supplies. Focuses on the geological origin and context of resources, the means of exploration and production, the history of production, and sustainability issues related to consumption and depletion. Provides an understanding of why resources can be scarce and expensive, why many are not renewable, and why their use impacts the Earth System. May include field trips. 3 undergraduate hours. 3 graduate hours. Credit is not given for both ESE 445 and GEOL 380. Prerequisite: Junior standing or higher.",Prerequisite: Junior standing or higher.,Credit is not given for both ESE 445 and GEOL 380.,,,,
+ESE 452,ESE,452,Ecosystem Ecology,3 Hours,Same as IB 452 and NRES 462. See IB 452.,,,,,,
+ESE 465,ESE,465,Transportation &Sustainability,3 or 4 Hours,Same as GGIS 465. See GGIS 465.,,,Advanced Composition,,,
+ESE 466,ESE,466,Environmental Policy,3 or 4 Hours,Same as GGIS 466. See GGIS 466.,,,,,,
 ESE 467,ESE,467,Multimedia Environmental Communications,"3 or 4 Hours
-3 undergraduate hours. 4 graduate hours.","Develops capacities to communicate about sustainability and other environmental topics. Storytelling and clear exposition across multiple types of media will be emphasized. Students will be exposed to the application of blogs, audio podcasts, short videos, infographics and social media applications to communicate effectively about environmental science and allied fields. Skills in photography, videography, audio capture, developing scripts, interviewing, and social media best practices will be learned. Same as ENGL 467. 3 undergraduate hours. 4 graduate hours.",,,,,,,"[ESE 467 Multimedia Environmental Communications credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/467>)
-
-Develops capacities to communicate about sustainability and other environmental topics. Storytelling and clear exposition across multiple types of media will be emphasized. Students will be exposed to the application of blogs, audio podcasts, short videos, infographics and social media applications to communicate effectively about environmental science and allied fields. Skills in photography, videography, audio capture, developing scripts, interviewing, and social media best practices will be learned. Same as [ENGL 467](<https://catalog.illinois.edu/search/?P=ENGL%20467>). 3 undergraduate hours. 4 graduate hours.",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
+3 undergraduate hours. 4 graduate hours.","Develops capacities to communicate about sustainability and other environmental topics. Storytelling and clear exposition across multiple types of media will be emphasized. Students will be exposed to the application of blogs, audio podcasts, short videos, infographics and social media applications to communicate effectively about environmental science and allied fields. Skills in photography, videography, audio capture, developing scripts, interviewing, and social media best practices will be learned. Same as ENGL 467. 3 undergraduate hours. 4 graduate hours.",,,,,,
 ESE 468,ESE,468,Sustainability Consulting,"3 or 4 Hours
-3 undergraduate hours. 4 graduate hours.","Focuses on the techniques of people who aid individuals, companies, governments, and other organizations in their efforts to pursue sustainability goals. This includes being able to describe, critique, and have basic use proficiency with the concepts and tools used by sustainability consultants: Life Cycle Analysis, foot-printing, Environment/Society/Governance (ESG), and other environmental standards. System thinking, quantitative approaches, and the use of primary literature are emphasized. 3 undergraduate hours. 4 graduate hours.",,,,,,,"[ESE 468 Sustainability Consulting credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/468>)
-
-Focuses on the techniques of people who aid individuals, companies, governments, and other organizations in their efforts to pursue sustainability goals. This includes being able to describe, critique, and have basic use proficiency with the concepts and tools used by sustainability consultants: Life Cycle Analysis, foot-printing, Environment/Society/Governance (ESG), and other environmental standards. System thinking, quantitative approaches, and the use of primary literature are emphasized. 3 undergraduate hours. 4 graduate hours.",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
-ESE 470,ESE,470,Introduction to Hydrogeology,4 Hours,Same as GEOL 470. See GEOL 470.,,,,,,,"[ESE 470 Introduction to Hydrogeology credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/470>)
-
-Same as [GEOL 470](<https://catalog.illinois.edu/search/?P=GEOL%20470>). See [GEOL 470](<https://catalog.illinois.edu/search/?P=GEOL%20470>).",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
-ESE 477,ESE,477,Advanced Environmental Writing,3 Hours,Same as ENGL 477. See ENGL 477.,,,Advanced Composition,,,,"[ESE 477 Advanced Environmental Writing credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/477>)
-
-Same as [ENGL 477](<https://catalog.illinois.edu/search/?P=ENGL%20477>). See [ENGL 477](<https://catalog.illinois.edu/search/?P=ENGL%20477>).
-This course satisfies the General Education Criteria for:
-Advanced Composition",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
+3 undergraduate hours. 4 graduate hours.","Focuses on the techniques of people who aid individuals, companies, governments, and other organizations in their efforts to pursue sustainability goals. This includes being able to describe, critique, and have basic use proficiency with the concepts and tools used by sustainability consultants: Life Cycle Analysis, foot-printing, Environment/Society/Governance (ESG), and other environmental standards. System thinking, quantitative approaches, and the use of primary literature are emphasized. 3 undergraduate hours. 4 graduate hours.",,,,,,
+ESE 470,ESE,470,Introduction to Hydrogeology,4 Hours,Same as GEOL 470. See GEOL 470.,,,,,,
+ESE 477,ESE,477,Advanced Environmental Writing,3 Hours,Same as ENGL 477. See ENGL 477.,,,Advanced Composition,,,
 ESE 482,ESE,482,Challenges of Sustainability,"3 Hours
-3 undergraduate hours. 3 graduate hours.","An interdisciplinary approach to investigating the meaning and practice of sustainability in the contemporary Earth system. As a consequence, students explore the sustainability of crucial resources - water, soil, energy, mineral and the biota - in the context of the social and environmental systems in which these resources are used, including the moral, physical, ecological, political and economic. Same as GEOL 483 and GGIS 482. 3 undergraduate hours. 3 graduate hours. Prerequisite: Junior or senior standing, or consent of instructor.","Prerequisite: Junior or senior standing, or consent of instructor.",,,,,,"[ESE 482 Challenges of Sustainability credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/482>)
-
-An interdisciplinary approach to investigating the meaning and practice of sustainability in the contemporary Earth system. As a consequence, students explore the sustainability of crucial resources - water, soil, energy, mineral and the biota - in the context of the social and environmental systems in which these resources are used, including the moral, physical, ecological, political and economic. Same as [GEOL 483](<https://catalog.illinois.edu/search/?P=GEOL%20483>) and [GGIS 482](<https://catalog.illinois.edu/search/?P=GGIS%20482>). 3 undergraduate hours. 3 graduate hours. Prerequisite: Junior or senior standing, or consent of instructor.",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
-ESE 486,ESE,486,Environmental Consulting,3 Hours,Same as GEOL 486. See GEOL 486.,,,,,,,"[ESE 486 Environmental Consulting credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/486>)
-
-Same as [GEOL 486](<https://catalog.illinois.edu/search/?P=GEOL%20486>). See [GEOL 486](<https://catalog.illinois.edu/search/?P=GEOL%20486>).",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
+3 undergraduate hours. 3 graduate hours.","An interdisciplinary approach to investigating the meaning and practice of sustainability in the contemporary Earth system. As a consequence, students explore the sustainability of crucial resources - water, soil, energy, mineral and the biota - in the context of the social and environmental systems in which these resources are used, including the moral, physical, ecological, political and economic. Same as GEOL 483 and GGIS 482. 3 undergraduate hours. 3 graduate hours. Prerequisite: Junior or senior standing, or consent of instructor.","Prerequisite: Junior or senior standing, or consent of instructor.",,,,,
+ESE 486,ESE,486,Environmental Consulting,3 Hours,Same as GEOL 486. See GEOL 486.,,,,,,
 ESE 497,ESE,497,Special Topics in ESE,"1 to 4 Hours
-1 to 4 undergraduate hours. 1 to 4 graduate hours.","Advanced topics course, consisting of seminar or lectures in subjects not covered by regular course offerings; for advanced undergraduates and graduate students. Possible field study in a prominent geological locality; includes in-class meetings, student-led presentations, and field trip; trips run during spring break, winter break, in mid-end May; dates depend on location. Additional fees may apply. See Class Schedule. 1 to 4 undergraduate hours. 1 to 4 graduate hours. Approved for letter and S/U grading. May be repeated in the same or separate terms to a maximum of 12 undergraduate hours or 8 graduate hours. Prerequisite: Consent of instructor.",Prerequisite: Consent of instructor.,,,,,,"[ESE 497 Special Topics in ESE credit: 1 to 4 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/497>)
-
-Advanced topics course, consisting of seminar or lectures in subjects not covered by regular course offerings; for advanced undergraduates and graduate students. Possible field study in a prominent geological locality; includes in-class meetings, student-led presentations, and field trip; trips run during spring break, winter break, in mid-end May; dates depend on location. Additional fees may apply. See Class Schedule. 1 to 4 undergraduate hours. 1 to 4 graduate hours. Approved for letter and S/U grading. May be repeated in the same or separate terms to a maximum of 12 undergraduate hours or 8 graduate hours. Prerequisite: Consent of instructor.",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
+1 to 4 undergraduate hours. 1 to 4 graduate hours.","Advanced topics course, consisting of seminar or lectures in subjects not covered by regular course offerings; for advanced undergraduates and graduate students. Possible field study in a prominent geological locality; includes in-class meetings, student-led presentations, and field trip; trips run during spring break, winter break, in mid-end May; dates depend on location. Additional fees may apply. See Class Schedule. 1 to 4 undergraduate hours. 1 to 4 graduate hours. Approved for letter and S/U grading. May be repeated in the same or separate terms to a maximum of 12 undergraduate hours or 8 graduate hours. Prerequisite: Consent of instructor.",Prerequisite: Consent of instructor.,,,,,
 ESE 498,ESE,498,Environmental Writing for Publication,"3 Hours
-3 undergraduate hours. No graduate credit.",Provides students with both the experience of the real-world editorial process and with a research product (the published essay) that showcases their professional development as well-informed and persuasive writers on environmental issues. Same as ENGL 498. 3 undergraduate hours. No graduate credit. Prerequisite: Consent of instructor.,Prerequisite: Consent of instructor.,No graduate credit.,,,,,"[ESE 498 Environmental Writing for Publication credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/ESE/498>)
-
-Provides students with both the experience of the real-world editorial process and with a research product (the published essay) that showcases their professional development as well-informed and persuasive writers on environmental issues. Same as [ENGL 498](<https://catalog.illinois.edu/search/?P=ENGL%20498>). 3 undergraduate hours. No graduate credit. Prerequisite: Consent of instructor.",https://catalog.illinois.edu/courses-of-instruction/ese/,2026–2027
+3 undergraduate hours. No graduate credit.",Provides students with both the experience of the real-world editorial process and with a research product (the published essay) that showcases their professional development as well-informed and persuasive writers on environmental issues. Same as ENGL 498. 3 undergraduate hours. No graduate credit. Prerequisite: Consent of instructor.,Prerequisite: Consent of instructor.,No graduate credit.,,,,

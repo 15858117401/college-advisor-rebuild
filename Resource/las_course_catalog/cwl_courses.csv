@@ -1,535 +1,164 @@
-course_code,subject,course_number,course_name,credits,description,prerequisites,credit_restrictions,gen_ed,total_students,total_sections,overall_gpa,catalog_text,source_url,catalog_year
-CWL 111,CWL,111,Bible as Literature,3 Hours,Same as ENGL 114 and REL 101. See REL 101.,,,Humanities - Lit & Arts,,,,"[CWL 111 Bible as Literature credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/111>)
-
-Same as [ENGL 114](<https://catalog.illinois.edu/search/?P=ENGL%20114>) and [REL 101](<https://catalog.illinois.edu/search/?P=REL%20101>). See [REL 101](<https://catalog.illinois.edu/search/?P=REL%20101>).
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
+course_code,subject,course_number,course_name,credits,description,prerequisites,credit_restrictions,gen_ed,total_students,total_sections,overall_gpa
+CWL 111,CWL,111,Bible as Literature,3 Hours,Same as ENGL 114 and REL 101. See REL 101.,,,Humanities - Lit & Arts,,,
 CWL 114,CWL,114,Global Consciousness and Lit,3 Hours,"Exploration of the cultural and historical roots of globalization and the development of global consciousness from ancient Greece to the present, as reflected primarily in literature, but also with reference to historiography, cartography, religion, art, politics, economics, and popular culture. Course materials including literary texts, articles, historical accounts, political tracts, films, and paintings focus on the mutual perception of, and historical relationships among Europe, the Arab world, Africa, Asia, and the Americas.",,,"Humanities - Lit & Arts
-Cultural Studies - Non-West",,,,"[CWL 114 Global Consciousness and Lit credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/114>)
-
-Exploration of the cultural and historical roots of globalization and the development of global consciousness from ancient Greece to the present, as reflected primarily in literature, but also with reference to historiography, cartography, religion, art, politics, economics, and popular culture. Course materials including literary texts, articles, historical accounts, political tracts, films, and paintings focus on the mutual perception of, and historical relationships among Europe, the Arab world, Africa, Asia, and the Americas.
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts
-Cultural Studies - Non-West",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 117,CWL,117,Russ & E Euro Science Fiction,3 Hours,Same as SLAV 117. See SLAV 117.,,,Humanities - Lit & Arts,,,,"[CWL 117 Russ & E Euro Science Fiction credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/117>)
-
-Same as [SLAV 117](<https://catalog.illinois.edu/search/?P=SLAV%20117>). See [SLAV 117](<https://catalog.illinois.edu/search/?P=SLAV%20117>).
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 119,CWL,119,Literature of Fantasy,3 Hours,Same as ENGL 119. See ENGL 119.,,,Humanities - Lit & Arts,,,,"[CWL 119 Literature of Fantasy credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/119>)
-
-Same as [ENGL 119](<https://catalog.illinois.edu/search/?P=ENGL%20119>). See [ENGL 119](<https://catalog.illinois.edu/search/?P=ENGL%20119>).
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 122,CWL,122,Russia and Black America,3 Hours,Same as AFRO 122 and RUSS 122. See RUSS 122.,,,Cultural Studies - US Minority,,,,"[CWL 122 Russia and Black America credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/122>)
-
-Same as [AFRO 122](<https://catalog.illinois.edu/search/?P=AFRO%20122>) and [RUSS 122](<https://catalog.illinois.edu/search/?P=RUSS%20122>). See [RUSS 122](<https://catalog.illinois.edu/search/?P=RUSS%20122>).
-This course satisfies the General Education Criteria for:
-Cultural Studies - US Minority",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 151,CWL,151,Cross-Cultural Thematics,3 Hours,"Explores a combination of western and non-western literature through the focus on a shared theme, exploring differences in treatment both within and among different cultures. Several thematic focuses are offered in rotation, including concepts of love and death, environmental justice, catastrophe, gender, and others. All the themes introduce students to a wide array of famous texts from different cultures and also offer some varied perspectives for their own inevitable thoughts on these major topics. May be repeated to a maximum of 6 hours if topics vary. Students may register in more than one section per term.",,,Humanities - Lit & Arts,,,,"[CWL 151 Cross-Cultural Thematics credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/151>)
-
-Explores a combination of western and non-western literature through the focus on a shared theme, exploring differences in treatment both within and among different cultures. Several thematic focuses are offered in rotation, including concepts of love and death, environmental justice, catastrophe, gender, and others. All the themes introduce students to a wide array of famous texts from different cultures and also offer some varied perspectives for their own inevitable thoughts on these major topics. May be repeated to a maximum of 6 hours if topics vary. Students may register in more than one section per term.
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
+Cultural Studies - Non-West",,,
+CWL 117,CWL,117,Russ & E Euro Science Fiction,3 Hours,Same as SLAV 117. See SLAV 117.,,,Humanities - Lit & Arts,,,
+CWL 119,CWL,119,Literature of Fantasy,3 Hours,Same as ENGL 119. See ENGL 119.,,,Humanities - Lit & Arts,,,
+CWL 122,CWL,122,Russia and Black America,3 Hours,Same as AFRO 122 and RUSS 122. See RUSS 122.,,,Cultural Studies - US Minority,,,
+CWL 151,CWL,151,Cross-Cultural Thematics,3 Hours,"Explores a combination of western and non-western literature through the focus on a shared theme, exploring differences in treatment both within and among different cultures. Several thematic focuses are offered in rotation, including concepts of love and death, environmental justice, catastrophe, gender, and others. All the themes introduce students to a wide array of famous texts from different cultures and also offer some varied perspectives for their own inevitable thoughts on these major topics. May be repeated to a maximum of 6 hours if topics vary. Students may register in more than one section per term.",,,Humanities - Lit & Arts,,,
 CWL 189,CWL,189,Literatures of the Islamic World,3 Hours,"[IAI Code: H3908N] Comparative, cross-cultural study of major literary and cultural works from the Islamic world, broadly defined, including pre-Islamic cultures and their interactions with Islamic civilization. All readings in English.",,,"Humanities - Lit & Arts
-Cultural Studies - Non-West",,,,"[CWL 189 Literatures of the Islamic World credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/189>)
-
-[IAI Code: H3908N] Comparative, cross-cultural study of major literary and cultural works from the Islamic world, broadly defined, including pre-Islamic cultures and their interactions with Islamic civilization. All readings in English.
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts
-Cultural Studies - Non-West",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
+Cultural Studies - Non-West",,,
 CWL 190,CWL,190,Modern Asian and African Literatures,3 Hours,"[IAI Code: H3908N] Comparative, cross-cultural study of major works from the postcolonial world. Topics may include pre-colonial cultures, the impact of colonialism, decolonization, modernization, and/or globalization. All readings in English.",,,"Humanities - Lit & Arts
-Cultural Studies - Non-West",,,,"[CWL 190 Modern Asian and African Literatures credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/190>)
-
-[IAI Code: H3908N] Comparative, cross-cultural study of major works from the postcolonial world. Topics may include pre-colonial cultures, the impact of colonialism, decolonization, modernization, and/or globalization. All readings in English.
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts
-Cultural Studies - Non-West",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 191,CWL,191,Freshman Honors Tutorial,1 to 3 Hours,Study of selected topics on an individually arranged basis. Open only to honors students or to Cohn Scholars and Associates. May be repeated one time. Prerequisite: Consent of departmental honors advisor.,Prerequisite: Consent of departmental honors advisor.,,,,,,"[CWL 191 Freshman Honors Tutorial credit: 1 to 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/191>)
-
-Study of selected topics on an individually arranged basis. Open only to honors students or to Cohn Scholars and Associates. May be repeated one time. Prerequisite: Consent of departmental honors advisor.",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 199,CWL,199,Undergraduate Open Seminar,1 to 5 Hours,Credit: 1 to 5 hours. Approved for both letter and S/U grading. May be repeated.,,,,,,,"[CWL 199 Undergraduate Open Seminar credit: 1 to 5 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/199>)
-
-Credit: 1 to 5 hours. Approved for both letter and S/U grading. May be repeated.",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 201,CWL,201,Comparative Lit Studies,3 Hours,"Introduction to various methods in comparative literary study, including genres, thematics, literary relations, literary movements, and interdisciplinary approaches.",,,Humanities - Lit & Arts,,,,"[CWL 201 Comparative Lit Studies credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/201>)
-
-Introduction to various methods in comparative literary study, including genres, thematics, literary relations, literary movements, and interdisciplinary approaches.
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
+Cultural Studies - Non-West",,,
+CWL 191,CWL,191,Freshman Honors Tutorial,1 to 3 Hours,Study of selected topics on an individually arranged basis. Open only to honors students or to Cohn Scholars and Associates. May be repeated one time. Prerequisite: Consent of departmental honors advisor.,Prerequisite: Consent of departmental honors advisor.,,,,,
+CWL 199,CWL,199,Undergraduate Open Seminar,1 to 5 Hours,Credit: 1 to 5 hours. Approved for both letter and S/U grading. May be repeated.,,,,,,
+CWL 201,CWL,201,Comparative Lit Studies,3 Hours,"Introduction to various methods in comparative literary study, including genres, thematics, literary relations, literary movements, and interdisciplinary approaches.",,,Humanities - Lit & Arts,,,
 CWL 202,CWL,202,Literature and Ideas,3 Hours,"Exploration of the relation between literature and ideas through in depth study of modern thinkers, theorists, and philosophers who have greatly impacted the comparative study of literature, such as Marx, Freud, de Beauvoir, Foucault, and Said.",,,"Humanities - Lit & Arts
-Cultural Studies - Western",,,,"[CWL 202 Literature and Ideas credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/202>)
-
-Exploration of the relation between literature and ideas through in depth study of modern thinkers, theorists, and philosophers who have greatly impacted the comparative study of literature, such as Marx, Freud, de Beauvoir, Foucault, and Said.
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts
-Cultural Studies - Western",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 204,CWL,204,US Border Literatures and Cultures,3 Hours,"Exploration of the cultures, experiences, and conditions of people living on and around the borders of the United States. The syllabus will place particular emphasis on the US-Mexico borderlands, a space of interaction, exchange, and confrontation between diverse communities that traverse national, racial, and linguistic borders. We will examine this dynamic space through a varied array of cultural texts, including literature, film, journalism, and scholarship. Through these texts, students will gain a deepened understanding and appreciation of the Latinx and indigenous communities that live along, around, and across today’s US-Mexico border. At the end of the semester, we will turn our attention briefly to the US-Canada border – and, in particular, to the political and cultural life of indigenous peoples living along and across the present-day US-Canada border.",,,,,,,"[CWL 204 US Border Literatures and Cultures credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/204>)
-
-Exploration of the cultures, experiences, and conditions of people living on and around the borders of the United States. The syllabus will place particular emphasis on the US-Mexico borderlands, a space of interaction, exchange, and confrontation between diverse communities that traverse national, racial, and linguistic borders. We will examine this dynamic space through a varied array of cultural texts, including literature, film, journalism, and scholarship. Through these texts, students will gain a deepened understanding and appreciation of the Latinx and indigenous communities that live along, around, and across today’s US-Mexico border. At the end of the semester, we will turn our attention briefly to the US-Canada border – and, in particular, to the political and cultural life of indigenous peoples living along and across the present-day US-Canada border.",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 206,CWL,206,Classical Allusions in Cinema,3 Hours,Same as CLCV 206. See CLCV 206.,,,,,,,"[CWL 206 Classical Allusions in Cinema credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/206>)
-
-Same as [CLCV 206](<https://catalog.illinois.edu/search/?P=CLCV%20206>). See [CLCV 206](<https://catalog.illinois.edu/search/?P=CLCV%20206>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
+Cultural Studies - Western",,,
+CWL 204,CWL,204,US Border Literatures and Cultures,3 Hours,"Exploration of the cultures, experiences, and conditions of people living on and around the borders of the United States. The syllabus will place particular emphasis on the US-Mexico borderlands, a space of interaction, exchange, and confrontation between diverse communities that traverse national, racial, and linguistic borders. We will examine this dynamic space through a varied array of cultural texts, including literature, film, journalism, and scholarship. Through these texts, students will gain a deepened understanding and appreciation of the Latinx and indigenous communities that live along, around, and across today’s US-Mexico border. At the end of the semester, we will turn our attention briefly to the US-Canada border – and, in particular, to the political and cultural life of indigenous peoples living along and across the present-day US-Canada border.",,,,,,
+CWL 206,CWL,206,Classical Allusions in Cinema,3 Hours,Same as CLCV 206. See CLCV 206.,,,,,,
 CWL 207,CWL,207,Indian Cinema in Context,3 Hours,"Introduction to Indian mainstream (mainly Bollywood) cinema and its evolution through the last seven decades. Topics to be explored include, but not limited to, the relation between Indian society/culture and its cinematic representations, cinema's resistance to dominant nationalist and patriarchal ideologies, its interactions with the postcolonial nation-state of India, how globalization has changed the industry. All films will be screened with subtitles. No knowledge of Hindi or any other Indian language is required. Same as MACS 207.",,,"Humanities - Lit & Arts
-Cultural Studies - Non-West",,,,"[CWL 207 Indian Cinema in Context credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/207>)
-
-Introduction to Indian mainstream (mainly Bollywood) cinema and its evolution through the last seven decades. Topics to be explored include, but not limited to, the relation between Indian society/culture and its cinematic representations, cinema's resistance to dominant nationalist and patriarchal ideologies, its interactions with the postcolonial nation-state of India, how globalization has changed the industry. All films will be screened with subtitles. No knowledge of Hindi or any other Indian language is required. Same as [MACS 207](<https://catalog.illinois.edu/search/?P=MACS%20207>).
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts
-Cultural Studies - Non-West",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
+Cultural Studies - Non-West",,,
 CWL 208,CWL,208,Cultures & Literatures of South Asia,3 Hours,"Same as ASST 208, REL 208 and SAME 208. See REL 208.",,,"Humanities - Lit & Arts
-Cultural Studies - Non-West",,,,"[CWL 208 Cultures & Literatures of South Asia credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/208>)
-
-Same as [ASST 208](<https://catalog.illinois.edu/search/?P=ASST%20208>), [REL 208](<https://catalog.illinois.edu/search/?P=REL%20208>) and [SAME 208](<https://catalog.illinois.edu/search/?P=SAME%20208>). See [REL 208](<https://catalog.illinois.edu/search/?P=REL%20208>).
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts
-Cultural Studies - Non-West",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
+Cultural Studies - Non-West",,,
 CWL 209,CWL,209,Jewish American and US Minority Literatures in Dialogue,3 Hours,Same as JS 209 and ENGL 222. See JS 209.,,,"Humanities - Lit & Arts
-Cultural Studies - US Minority",,,,"[CWL 209 Jewish American and US Minority Literatures in Dialogue credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/209>)
-
-Same as [JS 209](<https://catalog.illinois.edu/search/?P=JS%20209>) and [ENGL 222](<https://catalog.illinois.edu/search/?P=ENGL%20222>). See [JS 209](<https://catalog.illinois.edu/search/?P=JS%20209>).
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts
-Cultural Studies - US Minority",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
+Cultural Studies - US Minority",,,
 CWL 210,CWL,210,Introduction to Modern African Literature,3 Hours,Same as AFST 210 and ENGL 211. See AFST 210.,,,"Humanities - Lit & Arts
-Cultural Studies - Non-West",,,,"[CWL 210 Introduction to Modern African Literature credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/210>)
-
-Same as [AFST 210](<https://catalog.illinois.edu/search/?P=AFST%20210>) and [ENGL 211](<https://catalog.illinois.edu/search/?P=ENGL%20211>). See [AFST 210](<https://catalog.illinois.edu/search/?P=AFST%20210>).
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts
-Cultural Studies - Non-West",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 211,CWL,211,The Arab-Israeli Conflict,3 Hours,"War has been a constant shadow over the lives of Israelis and Palestinians. We will examine the history of attitudes to war and peace in the region as presented through historical documents, memoirs, political statements, poetry, film and short stories. The course explores the plurality of voices and experiences of different political groups, genders, ethnicities, religions and communities. Same as JS 211 and SAME 211.",,,,,,,"[CWL 211 The Arab-Israeli Conflict credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/211>)
-
-War has been a constant shadow over the lives of Israelis and Palestinians. We will examine the history of attitudes to war and peace in the region as presented through historical documents, memoirs, political statements, poetry, film and short stories. The course explores the plurality of voices and experiences of different political groups, genders, ethnicities, religions and communities. Same as [JS 211](<https://catalog.illinois.edu/search/?P=JS%20211>) and [SAME 211](<https://catalog.illinois.edu/search/?P=SAME%20211>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
+Cultural Studies - Non-West",,,
+CWL 211,CWL,211,The Arab-Israeli Conflict,3 Hours,"War has been a constant shadow over the lives of Israelis and Palestinians. We will examine the history of attitudes to war and peace in the region as presented through historical documents, memoirs, political statements, poetry, film and short stories. The course explores the plurality of voices and experiences of different political groups, genders, ethnicities, religions and communities. Same as JS 211 and SAME 211.",,,,,,
 CWL 212,CWL,212,Israeli Cinema and Television,3 Hours,Same as JS 212 and SAME 212. See JS 212.,,,"Humanities - Lit & Arts
-Cultural Studies - Western",,,,"[CWL 212 Israeli Cinema and Television credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/212>)
-
-Same as [JS 212](<https://catalog.illinois.edu/search/?P=JS%20212>) and [SAME 212](<https://catalog.illinois.edu/search/?P=SAME%20212>). See [JS 212](<https://catalog.illinois.edu/search/?P=JS%20212>).
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts
-Cultural Studies - Western",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 214,CWL,214,Global Hip Hop,3 Hours,"Presents a historical look at hip hop, the most popular musical genre of the last 50 years. Since its beginnings in New York, hip hop has grown to be a global phenomenon that shapes music, culture, and politics in the Americas, Europe, Africa, the Middle East, and beyond. Our focus will be on linking “the music itself”—the recordings and live performances of hip hop—to the cultures that hip hop emerges from and shapes.",,,,,,,"[CWL 214 Global Hip Hop credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/214>)
-
-Presents a historical look at hip hop, the most popular musical genre of the last 50 years. Since its beginnings in New York, hip hop has grown to be a global phenomenon that shapes music, culture, and politics in the Americas, Europe, Africa, the Middle East, and beyond. Our focus will be on linking “the music itself”—the recordings and live performances of hip hop—to the cultures that hip hop emerges from and shapes.",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 215,CWL,215,"Madness, Myth, and Murder",3 Hours,Same as SCAN 215. See SCAN 215.,,,Humanities - Lit & Arts,,,,"[CWL 215 Madness, Myth, and Murder credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/215>)
-
-Same as [SCAN 215](<https://catalog.illinois.edu/search/?P=SCAN%20215>). See [SCAN 215](<https://catalog.illinois.edu/search/?P=SCAN%20215>).
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
+Cultural Studies - Western",,,
+CWL 214,CWL,214,Global Hip Hop,3 Hours,"Presents a historical look at hip hop, the most popular musical genre of the last 50 years. Since its beginnings in New York, hip hop has grown to be a global phenomenon that shapes music, culture, and politics in the Americas, Europe, Africa, the Middle East, and beyond. Our focus will be on linking “the music itself”—the recordings and live performances of hip hop—to the cultures that hip hop emerges from and shapes.",,,,,,
+CWL 215,CWL,215,"Madness, Myth, and Murder",3 Hours,Same as SCAN 215. See SCAN 215.,,,Humanities - Lit & Arts,,,
 CWL 216,CWL,216,Legends of King Arthur,3 Hours,Same as ENGL 216 and MDVL 216. See ENGL 216.,,,"Humanities - Lit & Arts
-Cultural Studies - Western",,,,"[CWL 216 Legends of King Arthur credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/216>)
-
-Same as [ENGL 216](<https://catalog.illinois.edu/search/?P=ENGL%20216>) and [MDVL 216](<https://catalog.illinois.edu/search/?P=MDVL%20216>). See [ENGL 216](<https://catalog.illinois.edu/search/?P=ENGL%20216>).
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts
-Cultural Studies - Western",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
+Cultural Studies - Western",,,
 CWL 217,CWL,217,Classical Chinese Lit,3 Hours,Same as EALC 207. See EALC 207.,,,"Humanities - Lit & Arts
-Cultural Studies - Non-West",,,,"[CWL 217 Classical Chinese Lit credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/217>)
-
-Same as [EALC 207](<https://catalog.illinois.edu/search/?P=EALC%20207>). See [EALC 207](<https://catalog.illinois.edu/search/?P=EALC%20207>).
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts
-Cultural Studies - Non-West",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 218,CWL,218,Survey of Ukrainian Literature,3 Hours,Same as UKR 218. See UKR 218.,,,,,,,"[CWL 218 Survey of Ukrainian Literature credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/218>)
-
-Same as [UKR 218](<https://catalog.illinois.edu/search/?P=UKR%20218>). See [UKR 218](<https://catalog.illinois.edu/search/?P=UKR%20218>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
+Cultural Studies - Non-West",,,
+CWL 218,CWL,218,Survey of Ukrainian Literature,3 Hours,Same as UKR 218. See UKR 218.,,,,,,
 CWL 220,CWL,220,Exploring the Greek and Roman World,3 Hours,Same as CLCV 220. See CLCV 220.,,,"Humanities - Lit & Arts
-Cultural Studies - Western",,,,"[CWL 220 Exploring the Greek and Roman World credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/220>)
-
-Same as [CLCV 220](<https://catalog.illinois.edu/search/?P=CLCV%20220>). See [CLCV 220](<https://catalog.illinois.edu/search/?P=CLCV%20220>).
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts
-Cultural Studies - Western",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 221,CWL,221,Jewish Storytelling,3 Hours,"Same as ENGL 223, JS 220, REL 220, and YDSH 220. See YDSH 220.",,,,,,,"[CWL 221 Jewish Storytelling credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/221>)
-
-Same as [ENGL 223](<https://catalog.illinois.edu/search/?P=ENGL%20223>), [JS 220](<https://catalog.illinois.edu/search/?P=JS%20220>), [REL 220](<https://catalog.illinois.edu/search/?P=REL%20220>), and [YDSH 220](<https://catalog.illinois.edu/search/?P=YDSH%20220>). See [YDSH 220](<https://catalog.illinois.edu/search/?P=YDSH%20220>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
+Cultural Studies - Western",,,
+CWL 221,CWL,221,Jewish Storytelling,3 Hours,"Same as ENGL 223, JS 220, REL 220, and YDSH 220. See YDSH 220.",,,,,,
 CWL 223,CWL,223,The Qur'an (Koran),3 Hours,"Same as REL 223, SAME 223. See REL 223.",,,"Humanities - Lit & Arts
-Cultural Studies - Non-West",,,,"[CWL 223 The Qur'an (Koran) credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/223>)
-
-Same as [REL 223](<https://catalog.illinois.edu/search/?P=REL%20223>), [SAME 223](<https://catalog.illinois.edu/search/?P=SAME%20223>). See [REL 223](<https://catalog.illinois.edu/search/?P=REL%20223>).
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts
-Cultural Studies - Non-West",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 224,CWL,224,German Literature in Trans,3 Hours,Same as GER 200. See GER 200.,,,,,,,"[CWL 224 German Literature in Trans credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/224>)
-
-Same as [GER 200](<https://catalog.illinois.edu/search/?P=GER%20200>). See [GER 200](<https://catalog.illinois.edu/search/?P=GER%20200>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
+Cultural Studies - Non-West",,,
+CWL 224,CWL,224,German Literature in Trans,3 Hours,Same as GER 200. See GER 200.,,,,,,
 CWL 225,CWL,225,Constr Afr and Carib Identity,3 Hours,"Same as AFST 209, FR 240, and LAST 240. See FR 240.",,,"Humanities - Lit & Arts
-Cultural Studies - Non-West",,,,"[CWL 225 Constr Afr and Carib Identity credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/225>)
-
-Same as [AFST 209](<https://catalog.illinois.edu/search/?P=AFST%20209>), [FR 240](<https://catalog.illinois.edu/search/?P=FR%20240>), and [LAST 240](<https://catalog.illinois.edu/search/?P=LAST%20240>). See [FR 240](<https://catalog.illinois.edu/search/?P=FR%20240>).
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts
-Cultural Studies - Non-West",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
+Cultural Studies - Non-West",,,
 CWL 226,CWL,226,Humanist Persp of Afro-Am Exp,3 Hours,Same as AFRO 224. See AFRO 224.,,,"Humanities - Lit & Arts
-Cultural Studies - US Minority",,,,"[CWL 226 Humanist Persp of Afro-Am Exp credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/226>)
-
-Same as [AFRO 224](<https://catalog.illinois.edu/search/?P=AFRO%20224>). See [AFRO 224](<https://catalog.illinois.edu/search/?P=AFRO%20224>).
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts
-Cultural Studies - US Minority",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
+Cultural Studies - US Minority",,,
 CWL 227,CWL,227,Golden Age of Russian Literature,3 Hours,Same as RUSS 220. See RUSS 220.,,,"Advanced Composition
-Humanities - Lit & Arts",,,,"[CWL 227 Golden Age of Russian Literature credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/227>)
-
-Same as [RUSS 220](<https://catalog.illinois.edu/search/?P=RUSS%20220>). See [RUSS 220](<https://catalog.illinois.edu/search/?P=RUSS%20220>).
-This course satisfies the General Education Criteria for:
-Advanced Composition
-Humanities - Lit & Arts",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
+Humanities - Lit & Arts",,,
 CWL 230,CWL,230,Popular Cultures of Contemporary East Asia,3 Hours,Same as EALC 230. See EALC 230.,,,"Humanities - Lit & Arts
-Cultural Studies - Non-West",,,,"[CWL 230 Popular Cultures of Contemporary East Asia credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/230>)
-
-Same as [EALC 230](<https://catalog.illinois.edu/search/?P=EALC%20230>). See [EALC 230](<https://catalog.illinois.edu/search/?P=EALC%20230>).
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts
-Cultural Studies - Non-West",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 240,CWL,240,Italy Middle Ages & Renaiss,3 Hours,Same as ITAL 240 and MDVL 240. See ITAL 240.,,,Humanities - Lit & Arts,,,,"[CWL 240 Italy Middle Ages & Renaiss credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/240>)
-
-Same as [ITAL 240](<https://catalog.illinois.edu/search/?P=ITAL%20240>) and [MDVL 240](<https://catalog.illinois.edu/search/?P=MDVL%20240>). See [ITAL 240](<https://catalog.illinois.edu/search/?P=ITAL%20240>).
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
+Cultural Studies - Non-West",,,
+CWL 240,CWL,240,Italy Middle Ages & Renaiss,3 Hours,Same as ITAL 240 and MDVL 240. See ITAL 240.,,,Humanities - Lit & Arts,,,
 CWL 241,CWL,241,Early Masterpieces of Western Culture,3 Hours,"[IAI Code: H3906] Comparative study of major works of literature, philosophy and culture in the Western tradition from the ancient world to the Renaissance, from Homer and the Bible to Shakespeare and Cervantes. Emphasis on the works as representative of their historical and cultural period, as well as how these works create the cultural world we live in today. Prerequisite: Completion of campus Composition I general education requirement.",Prerequisite: Completion of campus Composition I general education requirement.,,"Advanced Composition
 Humanities - Lit & Arts
-Cultural Studies - Western",,,,"[CWL 241 Early Masterpieces of Western Culture credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/241>)
-
-[IAI Code: H3906] Comparative study of major works of literature, philosophy and culture in the Western tradition from the ancient world to the Renaissance, from Homer and the Bible to Shakespeare and Cervantes. Emphasis on the works as representative of their historical and cultural period, as well as how these works create the cultural world we live in today. Prerequisite: Completion of campus Composition I general education requirement.
-This course satisfies the General Education Criteria for:
-Advanced Composition
-Humanities - Lit & Arts
-Cultural Studies - Western",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
+Cultural Studies - Western",,,
 CWL 242,CWL,242,Modern Masterpieces of Western Culture,3 Hours,"[IAI Code: H3907] Comparative study of major works of literature, philosophy and culture in the Western tradition from the Enlightenment to today, from Descartes and Voltaire to Dickinson and Calvino. Emphasis on the works as representative of their historical and cultural period, as well as how these works create the cultural world we live in today.",,,"Advanced Composition
 Humanities - Lit & Arts
-Cultural Studies - Western",,,,"[CWL 242 Modern Masterpieces of Western Culture credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/242>)
-
-[IAI Code: H3907] Comparative study of major works of literature, philosophy and culture in the Western tradition from the Enlightenment to today, from Descartes and Voltaire to Dickinson and Calvino. Emphasis on the works as representative of their historical and cultural period, as well as how these works create the cultural world we live in today.
-This course satisfies the General Education Criteria for:
-Advanced Composition
-Humanities - Lit & Arts
-Cultural Studies - Western",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 245,CWL,245,Survey of Polish Literature,3 Hours,Same as POL 245. See POL 245.,,,,,,,"[CWL 245 Survey of Polish Literature credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/245>)
-
-Same as [POL 245](<https://catalog.illinois.edu/search/?P=POL%20245>). See [POL 245](<https://catalog.illinois.edu/search/?P=POL%20245>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 249,CWL,249,Soviet and Post-Soviet Lit,3 Hours,Same as RUSS 225. See RUSS 225.,,,Humanities - Lit & Arts,,,,"[CWL 249 Soviet and Post-Soviet Lit credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/249>)
-
-Same as [RUSS 225](<https://catalog.illinois.edu/search/?P=RUSS%20225>). See [RUSS 225](<https://catalog.illinois.edu/search/?P=RUSS%20225>).
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 250,CWL,250,Grimms' Fairy Tales - ACP,3 Hours,Same as ENGL 267 and GER 250. See GER 250.,,,,,,,"[CWL 250 Grimms' Fairy Tales - ACP credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/250>)
-
-Same as [ENGL 267](<https://catalog.illinois.edu/search/?P=ENGL%20267>) and [GER 250](<https://catalog.illinois.edu/search/?P=GER%20250>). See [GER 250](<https://catalog.illinois.edu/search/?P=GER%20250>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
+Cultural Studies - Western",,,
+CWL 245,CWL,245,Survey of Polish Literature,3 Hours,Same as POL 245. See POL 245.,,,,,,
+CWL 249,CWL,249,Soviet and Post-Soviet Lit,3 Hours,Same as RUSS 225. See RUSS 225.,,,Humanities - Lit & Arts,,,
+CWL 250,CWL,250,Grimms' Fairy Tales - ACP,3 Hours,Same as ENGL 267 and GER 250. See GER 250.,,,,,,
 CWL 251,CWL,251,Viking Mythology,3 Hours,"Same as MDVL 251, REL 251, and SCAN 251. See SCAN 251.",,,"Humanities - Hist & Phil
-Cultural Studies - Western",,,,"[CWL 251 Viking Mythology credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/251>)
-
-Same as [MDVL 251](<https://catalog.illinois.edu/search/?P=MDVL%20251>), [REL 251](<https://catalog.illinois.edu/search/?P=REL%20251>), and [SCAN 251](<https://catalog.illinois.edu/search/?P=SCAN%20251>). See [SCAN 251](<https://catalog.illinois.edu/search/?P=SCAN%20251>).
-This course satisfies the General Education Criteria for:
-Humanities - Hist & Phil
-Cultural Studies - Western",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
+Cultural Studies - Western",,,
 CWL 252,CWL,252,Viking Sagas in Translation,3 Hours,Same as MDVL 252 and SCAN 252. See SCAN 252.,,,"Humanities - Lit & Arts
-Cultural Studies - Western",,,,"[CWL 252 Viking Sagas in Translation credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/252>)
-
-Same as [MDVL 252](<https://catalog.illinois.edu/search/?P=MDVL%20252>) and [SCAN 252](<https://catalog.illinois.edu/search/?P=SCAN%20252>). See [SCAN 252](<https://catalog.illinois.edu/search/?P=SCAN%20252>).
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts
-Cultural Studies - Western",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
+Cultural Studies - Western",,,
 CWL 253,CWL,253,Medieval Literature and Culture,3 Hours,Same as ENGL 202 and MDVL 201. See ENGL 202.,,,"Humanities - Lit & Arts
-Cultural Studies - Western",,,,"[CWL 253 Medieval Literature and Culture credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/253>)
-
-Same as [ENGL 202](<https://catalog.illinois.edu/search/?P=ENGL%20202>) and [MDVL 201](<https://catalog.illinois.edu/search/?P=MDVL%20201>). See [ENGL 202](<https://catalog.illinois.edu/search/?P=ENGL%20202>).
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts
-Cultural Studies - Western",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
+Cultural Studies - Western",,,
 CWL 254,CWL,254,Grimm's Fairy Tales in Context,3 Hours,Same as ENGL 266 and GER 251. See GER 251.,,,"Humanities - Lit & Arts
-Cultural Studies - Western",,,,"[CWL 254 Grimm's Fairy Tales in Context credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/254>)
-
-Same as [ENGL 266](<https://catalog.illinois.edu/search/?P=ENGL%20266>) and [GER 251](<https://catalog.illinois.edu/search/?P=GER%20251>). See [GER 251](<https://catalog.illinois.edu/search/?P=GER%20251>).
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts
-Cultural Studies - Western",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
+Cultural Studies - Western",,,
 CWL 255,CWL,255,Renaissance Literature and Culture,3 Hours,Same as ENGL 204. See ENGL 204.,,,"Humanities - Lit & Arts
-Cultural Studies - Western",,,,"[CWL 255 Renaissance Literature and Culture credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/255>)
-
-Same as [ENGL 204](<https://catalog.illinois.edu/search/?P=ENGL%20204>). See [ENGL 204](<https://catalog.illinois.edu/search/?P=ENGL%20204>).
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts
-Cultural Studies - Western",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
+Cultural Studies - Western",,,
 CWL 257,CWL,257,Enlightenment Literature and Culture,3 Hours,Same as ENGL 206. See ENGL 206.,,,"Humanities - Lit & Arts
-Cultural Studies - Western",,,,"[CWL 257 Enlightenment Literature and Culture credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/257>)
-
-Same as [ENGL 206](<https://catalog.illinois.edu/search/?P=ENGL%20206>). See [ENGL 206](<https://catalog.illinois.edu/search/?P=ENGL%20206>).
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts
-Cultural Studies - Western",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 259,CWL,259,Early African American Literature and Culture,3 Hours,Same as AFRO 259 and ENGL 259. See ENGL 259.,,,Cultural Studies - US Minority,,,,"[CWL 259 Early African American Literature and Culture credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/259>)
-
-Same as [AFRO 259](<https://catalog.illinois.edu/search/?P=AFRO%20259>) and [ENGL 259](<https://catalog.illinois.edu/search/?P=ENGL%20259>). See [ENGL 259](<https://catalog.illinois.edu/search/?P=ENGL%20259>).
-This course satisfies the General Education Criteria for:
-Cultural Studies - US Minority",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 260,CWL,260,Modern African American Literature and Culture,3 Hours,Same as AFRO 260 and ENGL 260. See ENGL 260.,,,Cultural Studies - US Minority,,,,"[CWL 260 Modern African American Literature and Culture credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/260>)
-
-Same as [AFRO 260](<https://catalog.illinois.edu/search/?P=AFRO%20260>) and [ENGL 260](<https://catalog.illinois.edu/search/?P=ENGL%20260>). See [ENGL 260](<https://catalog.illinois.edu/search/?P=ENGL%20260>).
-This course satisfies the General Education Criteria for:
-Cultural Studies - US Minority",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
+Cultural Studies - Western",,,
+CWL 259,CWL,259,Early African American Literature and Culture,3 Hours,Same as AFRO 259 and ENGL 259. See ENGL 259.,,,Cultural Studies - US Minority,,,
+CWL 260,CWL,260,Modern African American Literature and Culture,3 Hours,Same as AFRO 260 and ENGL 260. See ENGL 260.,,,Cultural Studies - US Minority,,,
 CWL 262,CWL,262,Gender & Sexuality in Greco-Roman Antiquity,3 Hours,Same as CLCV 240 and GWS 240. See CLCV 240.,,,"Humanities - Lit & Arts
-Cultural Studies - Western",,,,"[CWL 262 Gender & Sexuality in Greco-Roman Antiquity credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/262>)
-
-Same as [CLCV 240](<https://catalog.illinois.edu/search/?P=CLCV%20240>) and [GWS 240](<https://catalog.illinois.edu/search/?P=GWS%20240>). See [CLCV 240](<https://catalog.illinois.edu/search/?P=CLCV%20240>).
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts
-Cultural Studies - Western",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
+Cultural Studies - Western",,,
 CWL 263,CWL,263,Odysseus and Other Heroes,3 Hours,Same as CLCV 221. See CLCV 221.,,,"Humanities - Lit & Arts
-Cultural Studies - Western",,,,"[CWL 263 Odysseus and Other Heroes credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/263>)
-
-Same as [CLCV 221](<https://catalog.illinois.edu/search/?P=CLCV%20221>). See [CLCV 221](<https://catalog.illinois.edu/search/?P=CLCV%20221>).
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts
-Cultural Studies - Western",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 267,CWL,267,The Short Story,3 Hours,Same as ENGL 245. See ENGL 245.,,,Humanities - Lit & Arts,,,,"[CWL 267 The Short Story credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/267>)
-
-Same as [ENGL 245](<https://catalog.illinois.edu/search/?P=ENGL%20245>). See [ENGL 245](<https://catalog.illinois.edu/search/?P=ENGL%20245>).
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 271,CWL,271,The Holocaust in Context - ACP,3 Hours,Same as ENGL 268 and GER 260. See GER 260.,,,,,,,"[CWL 271 The Holocaust in Context - ACP credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/271>)
-
-Same as [ENGL 268](<https://catalog.illinois.edu/search/?P=ENGL%20268>) and [GER 260](<https://catalog.illinois.edu/search/?P=GER%20260>). See [GER 260](<https://catalog.illinois.edu/search/?P=GER%20260>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 272,CWL,272,Sexuality and Literature,3 Hours,Same as GER 270 and GWS 270. See GER 270.,,,Humanities - Lit & Arts,,,,"[CWL 272 Sexuality and Literature credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/272>)
-
-Same as [GER 270](<https://catalog.illinois.edu/search/?P=GER%20270>) and [GWS 270](<https://catalog.illinois.edu/search/?P=GWS%20270>). See [GER 270](<https://catalog.illinois.edu/search/?P=GER%20270>).
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
+Cultural Studies - Western",,,
+CWL 267,CWL,267,The Short Story,3 Hours,Same as ENGL 245. See ENGL 245.,,,Humanities - Lit & Arts,,,
+CWL 271,CWL,271,The Holocaust in Context - ACP,3 Hours,Same as ENGL 268 and GER 260. See GER 260.,,,,,,
+CWL 272,CWL,272,Sexuality and Literature,3 Hours,Same as GER 270 and GWS 270. See GER 270.,,,Humanities - Lit & Arts,,,
 CWL 273,CWL,273,The Holocaust in Context,3 Hours,"Same as ENGL 269, GER 261, and JS 261. See GER 261.",,,"Humanities - Lit & Arts
-Cultural Studies - Western",,,,"[CWL 273 The Holocaust in Context credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/273>)
-
-Same as [ENGL 269](<https://catalog.illinois.edu/search/?P=ENGL%20269>), [GER 261](<https://catalog.illinois.edu/search/?P=GER%20261>), and [JS 261](<https://catalog.illinois.edu/search/?P=JS%20261>). See [GER 261](<https://catalog.illinois.edu/search/?P=GER%20261>).
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts
-Cultural Studies - Western",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
+Cultural Studies - Western",,,
 CWL 275,CWL,275,Masterpieces of East Asian Lit,3 Hours,"[IAI Code: H3908N] A wide-ranging introduction to the literatures of traditional China, Korea, and Japan. Selections from novels, plays, and poems are studied to gain insight into the cultures that produced them and to hone skills in textual analyses. Explores how influential texts have been repackaged and reinterpreted for modern audiences in media such as film and manga. No knowledge of Chinese or Japanese language required. Same as CWL 275.",,,"Humanities - Lit & Arts
-Cultural Studies - Non-West",,,,"[CWL 275 Masterpieces of East Asian Lit credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/275>)
-
-[IAI Code: H3908N] A wide-ranging introduction to the literatures of traditional China, Korea, and Japan. Selections from novels, plays, and poems are studied to gain insight into the cultures that produced them and to hone skills in textual analyses. Explores how influential texts have been repackaged and reinterpreted for modern audiences in media such as film and manga. No knowledge of Chinese or Japanese language required. Same as [CWL 275](<https://catalog.illinois.edu/search/?P=CWL%20275>).
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts
-Cultural Studies - Non-West",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
+Cultural Studies - Non-West",,,
 CWL 276,CWL,276,Asian Film Genres,3 Hours,Same as EALC 276 and ENGL 276. See ENGL 276.,,,"Humanities - Lit & Arts
-Cultural Studies - Non-West",,,,"[CWL 276 Asian Film Genres credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/276>)
-
-Same as [EALC 276](<https://catalog.illinois.edu/search/?P=EALC%20276>) and [ENGL 276](<https://catalog.illinois.edu/search/?P=ENGL%20276>). See [ENGL 276](<https://catalog.illinois.edu/search/?P=ENGL%20276>).
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts
-Cultural Studies - Non-West",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 283,CWL,283,Jewish Sacred Literature,3 Hours,Same as REL 283. See REL 283.,,,Humanities - Lit & Arts,,,,"[CWL 283 Jewish Sacred Literature credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/283>)
-
-Same as [REL 283](<https://catalog.illinois.edu/search/?P=REL%20283>). See [REL 283](<https://catalog.illinois.edu/search/?P=REL%20283>).
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 284,CWL,284,Modern Jewish Literature,3 Hours,"Same as ENGL 284, JS 284, and REL 284. See JS 284.",,,,,,,"[CWL 284 Modern Jewish Literature credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/284>)
-
-Same as [ENGL 284](<https://catalog.illinois.edu/search/?P=ENGL%20284>), [JS 284](<https://catalog.illinois.edu/search/?P=JS%20284>), and [REL 284](<https://catalog.illinois.edu/search/?P=REL%20284>). See [JS 284](<https://catalog.illinois.edu/search/?P=JS%20284>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 308,CWL,308,Chinese Popular Literature,3 Hours,Same as EALC 308. See EALC 308.,,,,,,,"[CWL 308 Chinese Popular Literature credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/308>)
-
-Same as [EALC 308](<https://catalog.illinois.edu/search/?P=EALC%20308>). See [EALC 308](<https://catalog.illinois.edu/search/?P=EALC%20308>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 311,CWL,311,Japan Lit in Translation I,3 Hours,Same as EALC 305. See EALC 305.,,,,,,,"[CWL 311 Japan Lit in Translation I credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/311>)
-
-Same as [EALC 305](<https://catalog.illinois.edu/search/?P=EALC%20305>). See [EALC 305](<https://catalog.illinois.edu/search/?P=EALC%20305>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
+Cultural Studies - Non-West",,,
+CWL 283,CWL,283,Jewish Sacred Literature,3 Hours,Same as REL 283. See REL 283.,,,Humanities - Lit & Arts,,,
+CWL 284,CWL,284,Modern Jewish Literature,3 Hours,"Same as ENGL 284, JS 284, and REL 284. See JS 284.",,,,,,
+CWL 308,CWL,308,Chinese Popular Literature,3 Hours,Same as EALC 308. See EALC 308.,,,,,,
+CWL 311,CWL,311,Japan Lit in Translation I,3 Hours,Same as EALC 305. See EALC 305.,,,,,,
 CWL 312,CWL,312,Japan Lit in Translation II,3 Hours,Same as EALC 306. See EALC 306.,,,"Humanities - Lit & Arts
-Cultural Studies - Non-West",,,,"[CWL 312 Japan Lit in Translation II credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/312>)
-
-Same as [EALC 306](<https://catalog.illinois.edu/search/?P=EALC%20306>). See [EALC 306](<https://catalog.illinois.edu/search/?P=EALC%20306>).
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts
-Cultural Studies - Non-West",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 317,CWL,317,Francophone Worlds,3 Hours,Same as FR 319. See FR 319.,,,,,,,"[CWL 317 Francophone Worlds credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/317>)
-
-Same as [FR 319](<https://catalog.illinois.edu/search/?P=FR%20319>). See [FR 319](<https://catalog.illinois.edu/search/?P=FR%20319>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 320,CWL,320,Responses to the Holocaust,3 Hours,"Course introduces a variety of Jewish and non-Jewish responses to the Holocaust created during and after the Second World War (from 1939). The discussion of Holocaust films, miniseries, memoirs, diaries, novels, short stories, poems, and other texts will focus on the unique contribution of those works to our understanding of the Holocaust. In addition, the works and their authors will be situated in their cultural and historical context. Taught in English translation. Same as ENGL 359, JS 320, REL 320, and YDSH 320.",,,,,,,"[CWL 320 Responses to the Holocaust credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/320>)
-
-Course introduces a variety of Jewish and non-Jewish responses to the Holocaust created during and after the Second World War (from 1939). The discussion of Holocaust films, miniseries, memoirs, diaries, novels, short stories, poems, and other texts will focus on the unique contribution of those works to our understanding of the Holocaust. In addition, the works and their authors will be situated in their cultural and historical context. Taught in English translation. Same as [ENGL 359](<https://catalog.illinois.edu/search/?P=ENGL%20359>), [JS 320](<https://catalog.illinois.edu/search/?P=JS%20320>), [REL 320](<https://catalog.illinois.edu/search/?P=REL%20320>), and [YDSH 320](<https://catalog.illinois.edu/search/?P=YDSH%20320>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 321,CWL,321,Major Writers,3 Hours,Same as RUSS 320. See RUSS 320.,,,,,,,"[CWL 321 Major Writers credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/321>)
-
-Same as [RUSS 320](<https://catalog.illinois.edu/search/?P=RUSS%20320>). See [RUSS 320](<https://catalog.illinois.edu/search/?P=RUSS%20320>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
+Cultural Studies - Non-West",,,
+CWL 317,CWL,317,Francophone Worlds,3 Hours,Same as FR 319. See FR 319.,,,,,,
+CWL 320,CWL,320,Responses to the Holocaust,3 Hours,"Course introduces a variety of Jewish and non-Jewish responses to the Holocaust created during and after the Second World War (from 1939). The discussion of Holocaust films, miniseries, memoirs, diaries, novels, short stories, poems, and other texts will focus on the unique contribution of those works to our understanding of the Holocaust. In addition, the works and their authors will be situated in their cultural and historical context. Taught in English translation. Same as ENGL 359, JS 320, REL 320, and YDSH 320.",,,,,,
+CWL 321,CWL,321,Major Writers,3 Hours,Same as RUSS 320. See RUSS 320.,,,,,,
 CWL 322,CWL,322,The Comic Imagination,3 Hours,Same as CLCV 323 and THEA 323. See CLCV 323.,,,"Advanced Composition
 Humanities - Lit & Arts
-Cultural Studies - Western",,,,"[CWL 322 The Comic Imagination credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/322>)
-
-Same as [CLCV 323](<https://catalog.illinois.edu/search/?P=CLCV%20323>) and [THEA 323](<https://catalog.illinois.edu/search/?P=THEA%20323>). See [CLCV 323](<https://catalog.illinois.edu/search/?P=CLCV%20323>).
-This course satisfies the General Education Criteria for:
-Advanced Composition
-Humanities - Lit & Arts
-Cultural Studies - Western",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 323,CWL,323,Tolstoy,3 Hours,Same as ENGL 323 and RUSS 323. See RUSS 323.,,,,,,,"[CWL 323 Tolstoy credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/323>)
-
-Same as [ENGL 323](<https://catalog.illinois.edu/search/?P=ENGL%20323>) and [RUSS 323](<https://catalog.illinois.edu/search/?P=RUSS%20323>). See [RUSS 323](<https://catalog.illinois.edu/search/?P=RUSS%20323>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 324,CWL,324,Dostoevsky,3 Hours,Same as ENGL 322 and RUSS 322. See RUSS 322.,,,,,,,"[CWL 324 Dostoevsky credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/324>)
-
-Same as [ENGL 322](<https://catalog.illinois.edu/search/?P=ENGL%20322>) and [RUSS 322](<https://catalog.illinois.edu/search/?P=RUSS%20322>). See [RUSS 322](<https://catalog.illinois.edu/search/?P=RUSS%20322>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 328,CWL,328,Special Topics German Studies,3 Hours,Same as GER 396. See GER 396.,,,,,,,"[CWL 328 Special Topics German Studies credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/328>)
-
-Same as [GER 396](<https://catalog.illinois.edu/search/?P=GER%20396>). See [GER 396](<https://catalog.illinois.edu/search/?P=GER%20396>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 335,CWL,335,Nabokov,3 Hours,Same as RUSS 335. See RUSS 335.,,,,,,,"[CWL 335 Nabokov credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/335>)
-
-Same as [RUSS 335](<https://catalog.illinois.edu/search/?P=RUSS%20335>). See [RUSS 335](<https://catalog.illinois.edu/search/?P=RUSS%20335>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 350,CWL,350,South Asian Goddesses,3 Hours,Same as REL 350 and SAME 350. See REL 350.,,,,,,,"[CWL 350 South Asian Goddesses credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/350>)
-
-Same as [REL 350](<https://catalog.illinois.edu/search/?P=REL%20350>) and [SAME 350](<https://catalog.illinois.edu/search/?P=SAME%20350>). See [REL 350](<https://catalog.illinois.edu/search/?P=REL%20350>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 376,CWL,376,Children and Youth Literature,3 Hours,"Same as EURO 376, GWS 376, and SCAN 376. See SCAN 376.",,,,,,,"[CWL 376 Children and Youth Literature credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/376>)
-
-Same as [EURO 376](<https://catalog.illinois.edu/search/?P=EURO%20376>), [GWS 376](<https://catalog.illinois.edu/search/?P=GWS%20376>), and [SCAN 376](<https://catalog.illinois.edu/search/?P=SCAN%20376>). See [SCAN 376](<https://catalog.illinois.edu/search/?P=SCAN%20376>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 387,CWL,387,Media and Cinema in French,3 Hours,Same as FR 387 and MACS 382. See FR 387.,,,,,,,"[CWL 387 Media and Cinema in French credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/387>)
-
-Same as [FR 387](<https://catalog.illinois.edu/search/?P=FR%20387>) and [MACS 382](<https://catalog.illinois.edu/search/?P=MACS%20382>). See [FR 387](<https://catalog.illinois.edu/search/?P=FR%20387>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 389,CWL,389,French & Comparative Cinema II,3 Hours,Same as FR 389 and MACS 383. See FR 389.,,,,,,,"[CWL 389 French & Comparative Cinema II credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/389>)
-
-Same as [FR 389](<https://catalog.illinois.edu/search/?P=FR%20389>) and [MACS 383](<https://catalog.illinois.edu/search/?P=MACS%20383>). See [FR 389](<https://catalog.illinois.edu/search/?P=FR%20389>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 395,CWL,395,Special Topics Comp Lit I,3 Hours,Presentation and discussion of subjects relating literature to other disciplines; topic varies. May be repeated to a maximum of 6 hours.,,,,,,,"[CWL 395 Special Topics Comp Lit I credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/395>)
-
-Presentation and discussion of subjects relating literature to other disciplines; topic varies. May be repeated to a maximum of 6 hours.",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 400,CWL,400,African Diasporic Thought in the Caribbean,3 or 4 Hours,Same as AFRO 400. See AFRO 400.,,,Cultural Studies - Non-West,,,,"[CWL 400 African Diasporic Thought in the Caribbean credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/400>)
-
-Same as [AFRO 400](<https://catalog.illinois.edu/search/?P=AFRO%20400>). See [AFRO 400](<https://catalog.illinois.edu/search/?P=AFRO%20400>).
-This course satisfies the General Education Criteria for:
-Cultural Studies - Non-West",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 410,CWL,410,Modern African Fiction,3 or 4 Hours,"Same as AFST 410, and ENGL 470. See AFST 410.",,,,,,,"[CWL 410 Modern African Fiction credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/410>)
-
-Same as [AFST 410](<https://catalog.illinois.edu/search/?P=AFST%20410>), and [ENGL 470](<https://catalog.illinois.edu/search/?P=ENGL%20470>). See [AFST 410](<https://catalog.illinois.edu/search/?P=AFST%20410>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 411,CWL,411,The Chinese Novel,3 or 4 Hours,Same as EALC 411. See EALC 411.,,,,,,,"[CWL 411 The Chinese Novel credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/411>)
-
-Same as [EALC 411](<https://catalog.illinois.edu/search/?P=EALC%20411>). See [EALC 411](<https://catalog.illinois.edu/search/?P=EALC%20411>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 412,CWL,412,Mod Chinese Lit in Translation,3 or 4 Hours,Same as EALC 412. See EALC 412.,,,,,,,"[CWL 412 Mod Chinese Lit in Translation credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/412>)
-
-Same as [EALC 412](<https://catalog.illinois.edu/search/?P=EALC%20412>). See [EALC 412](<https://catalog.illinois.edu/search/?P=EALC%20412>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 413,CWL,413,Dante,3 or 4 Hours,Same as ITAL 413 and MDVL 413. See ITAL 413.,,,,,,,"[CWL 413 Dante credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/413>)
-
-Same as [ITAL 413](<https://catalog.illinois.edu/search/?P=ITAL%20413>) and [MDVL 413](<https://catalog.illinois.edu/search/?P=MDVL%20413>). See [ITAL 413](<https://catalog.illinois.edu/search/?P=ITAL%20413>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 414,CWL,414,Petrarch & Boccaccio,3 or 4 Hours,Same as ITAL 414 and MDVL 414. See ITAL 414.,,,,,,,"[CWL 414 Petrarch & Boccaccio credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/414>)
-
-Same as [ITAL 414](<https://catalog.illinois.edu/search/?P=ITAL%20414>) and [MDVL 414](<https://catalog.illinois.edu/search/?P=MDVL%20414>). See [ITAL 414](<https://catalog.illinois.edu/search/?P=ITAL%20414>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 415,CWL,415,Mod Japan Lit in Translation,2 to 4 Hours,Same as EALC 415. See EALC 415.,,,,,,,"[CWL 415 Mod Japan Lit in Translation credit: 2 to 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/415>)
-
-Same as [EALC 415](<https://catalog.illinois.edu/search/?P=EALC%20415>). See [EALC 415](<https://catalog.illinois.edu/search/?P=EALC%20415>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 417,CWL,417,Topics in Medieval British and Irish Literature,3 or 4 Hours,Same as ENGL 412 and MDVL 410. See ENGL 412.,,,,,,,"[CWL 417 Topics in Medieval British and Irish Literature credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/417>)
-
-Same as [ENGL 412](<https://catalog.illinois.edu/search/?P=ENGL%20412>) and [MDVL 410](<https://catalog.illinois.edu/search/?P=MDVL%20410>). See [ENGL 412](<https://catalog.illinois.edu/search/?P=ENGL%20412>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 420,CWL,420,Masterpieces Renaiss Lit,3 or 4 Hours,Same as ITAL 420 and MDVL 420. See ITAL 420.,,,,,,,"[CWL 420 Masterpieces Renaiss Lit credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/420>)
-
-Same as [ITAL 420](<https://catalog.illinois.edu/search/?P=ITAL%20420>) and [MDVL 420](<https://catalog.illinois.edu/search/?P=MDVL%20420>). See [ITAL 420](<https://catalog.illinois.edu/search/?P=ITAL%20420>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 421,CWL,421,Jewish Life-Writing,3 or 4 Hours,"Same as HIST 436, REL 420, SLAV 420, and YDSH 420. See YDSH 420.",,,,,,,"[CWL 421 Jewish Life-Writing credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/421>)
-
-Same as [HIST 436](<https://catalog.illinois.edu/search/?P=HIST%20436>), [REL 420](<https://catalog.illinois.edu/search/?P=REL%20420>), [SLAV 420](<https://catalog.illinois.edu/search/?P=SLAV%20420>), and [YDSH 420](<https://catalog.illinois.edu/search/?P=YDSH%20420>). See [YDSH 420](<https://catalog.illinois.edu/search/?P=YDSH%20420>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 430,CWL,430,History of Translation,3 or 4 Hours,"Same as CLCV 430, ENGL 486, GER 405, SLAV 430, SPAN 436, and TRST 431. See SLAV 430.",,,,,,,"[CWL 430 History of Translation credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/430>)
-
-Same as [CLCV 430](<https://catalog.illinois.edu/search/?P=CLCV%20430>), [ENGL 486](<https://catalog.illinois.edu/search/?P=ENGL%20486>), [GER 405](<https://catalog.illinois.edu/search/?P=GER%20405>), [SLAV 430](<https://catalog.illinois.edu/search/?P=SLAV%20430>), [SPAN 436](<https://catalog.illinois.edu/search/?P=SPAN%20436>), and [TRST 431](<https://catalog.illinois.edu/search/?P=TRST%20431>). See [SLAV 430](<https://catalog.illinois.edu/search/?P=SLAV%20430>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 434,CWL,434,Studies in Francophonie,3 or 4 Hours,Same as FR 479. See FR 479.,,,,,,,"[CWL 434 Studies in Francophonie credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/434>)
-
-Same as [FR 479](<https://catalog.illinois.edu/search/?P=FR%20479>). See [FR 479](<https://catalog.illinois.edu/search/?P=FR%20479>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 436,CWL,436,Problems of Polish Literature,3 or 4 Hours,Same as POL 446. See POL 446.,,,,,,,"[CWL 436 Problems of Polish Literature credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/436>)
-
-Same as [POL 446](<https://catalog.illinois.edu/search/?P=POL%20446>). See [POL 446](<https://catalog.illinois.edu/search/?P=POL%20446>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 440,CWL,440,Russian Culture Studies,3 or 4 Hours,Same as RUSS 460. See RUSS 460.,,,,,,,"[CWL 440 Russian Culture Studies credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/440>)
-
-Same as [RUSS 460](<https://catalog.illinois.edu/search/?P=RUSS%20460>). See [RUSS 460](<https://catalog.illinois.edu/search/?P=RUSS%20460>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
+Cultural Studies - Western",,,
+CWL 323,CWL,323,Tolstoy,3 Hours,Same as ENGL 323 and RUSS 323. See RUSS 323.,,,,,,
+CWL 324,CWL,324,Dostoevsky,3 Hours,Same as ENGL 322 and RUSS 322. See RUSS 322.,,,,,,
+CWL 328,CWL,328,Special Topics German Studies,3 Hours,Same as GER 396. See GER 396.,,,,,,
+CWL 335,CWL,335,Nabokov,3 Hours,Same as RUSS 335. See RUSS 335.,,,,,,
+CWL 350,CWL,350,South Asian Goddesses,3 Hours,Same as REL 350 and SAME 350. See REL 350.,,,,,,
+CWL 376,CWL,376,Children and Youth Literature,3 Hours,"Same as EURO 376, GWS 376, and SCAN 376. See SCAN 376.",,,,,,
+CWL 387,CWL,387,Media and Cinema in French,3 Hours,Same as FR 387 and MACS 382. See FR 387.,,,,,,
+CWL 389,CWL,389,French & Comparative Cinema II,3 Hours,Same as FR 389 and MACS 383. See FR 389.,,,,,,
+CWL 395,CWL,395,Special Topics Comp Lit I,3 Hours,Presentation and discussion of subjects relating literature to other disciplines; topic varies. May be repeated to a maximum of 6 hours.,,,,,,
+CWL 400,CWL,400,African Diasporic Thought in the Caribbean,3 or 4 Hours,Same as AFRO 400. See AFRO 400.,,,Cultural Studies - Non-West,,,
+CWL 410,CWL,410,Modern African Fiction,3 or 4 Hours,"Same as AFST 410, and ENGL 470. See AFST 410.",,,,,,
+CWL 411,CWL,411,The Chinese Novel,3 or 4 Hours,Same as EALC 411. See EALC 411.,,,,,,
+CWL 412,CWL,412,Mod Chinese Lit in Translation,3 or 4 Hours,Same as EALC 412. See EALC 412.,,,,,,
+CWL 413,CWL,413,Dante,3 or 4 Hours,Same as ITAL 413 and MDVL 413. See ITAL 413.,,,,,,
+CWL 414,CWL,414,Petrarch & Boccaccio,3 or 4 Hours,Same as ITAL 414 and MDVL 414. See ITAL 414.,,,,,,
+CWL 415,CWL,415,Mod Japan Lit in Translation,2 to 4 Hours,Same as EALC 415. See EALC 415.,,,,,,
+CWL 417,CWL,417,Topics in Medieval British and Irish Literature,3 or 4 Hours,Same as ENGL 412 and MDVL 410. See ENGL 412.,,,,,,
+CWL 420,CWL,420,Masterpieces Renaiss Lit,3 or 4 Hours,Same as ITAL 420 and MDVL 420. See ITAL 420.,,,,,,
+CWL 421,CWL,421,Jewish Life-Writing,3 or 4 Hours,"Same as HIST 436, REL 420, SLAV 420, and YDSH 420. See YDSH 420.",,,,,,
+CWL 430,CWL,430,History of Translation,3 or 4 Hours,"Same as CLCV 430, ENGL 486, GER 405, SLAV 430, SPAN 436, and TRST 431. See SLAV 430.",,,,,,
+CWL 434,CWL,434,Studies in Francophonie,3 or 4 Hours,Same as FR 479. See FR 479.,,,,,,
+CWL 436,CWL,436,Problems of Polish Literature,3 or 4 Hours,Same as POL 446. See POL 446.,,,,,,
+CWL 440,CWL,440,Russian Culture Studies,3 or 4 Hours,Same as RUSS 460. See RUSS 460.,,,,,,
 CWL 441,CWL,441,Themes in Narrative,"3 or 4 Hours
-3 undergraduate hours. 3 or 4 graduate hours.","Analysis of literary themes and types in narratives of Western and non-Western literature (e.g., the hero, east and west, dream visions), emphasizing comparative perspectives. 3 undergraduate hours. 3 or 4 graduate hours. May be repeated to a maximum of 9 undergraduate hours or 12 graduate hours. Prerequisite: One year of college literature or consent of instructor.",Prerequisite: One year of college literature or consent of instructor.,,,,,,"[CWL 441 Themes in Narrative credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/441>)
-
-Analysis of literary themes and types in narratives of Western and non-Western literature (e.g., the hero, east and west, dream visions), emphasizing comparative perspectives. 3 undergraduate hours. 3 or 4 graduate hours. May be repeated to a maximum of 9 undergraduate hours or 12 graduate hours. Prerequisite: One year of college literature or consent of instructor.",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 453,CWL,453,Slavic Cultural Studies,3 or 4 Hours,Same as SLAV 452. See SLAV 452.,,,,,,,"[CWL 453 Slavic Cultural Studies credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/453>)
-
-Same as [SLAV 452](<https://catalog.illinois.edu/search/?P=SLAV%20452>). See [SLAV 452](<https://catalog.illinois.edu/search/?P=SLAV%20452>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 457,CWL,457,Modernism,3 or 4 Hours,Same as RUSS 424. See RUSS 424.,,,,,,,"[CWL 457 Modernism credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/457>)
-
-Same as [RUSS 424](<https://catalog.illinois.edu/search/?P=RUSS%20424>). See [RUSS 424](<https://catalog.illinois.edu/search/?P=RUSS%20424>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
+3 undergraduate hours. 3 or 4 graduate hours.","Analysis of literary themes and types in narratives of Western and non-Western literature (e.g., the hero, east and west, dream visions), emphasizing comparative perspectives. 3 undergraduate hours. 3 or 4 graduate hours. May be repeated to a maximum of 9 undergraduate hours or 12 graduate hours. Prerequisite: One year of college literature or consent of instructor.",Prerequisite: One year of college literature or consent of instructor.,,,,,
+CWL 453,CWL,453,Slavic Cultural Studies,3 or 4 Hours,Same as SLAV 452. See SLAV 452.,,,,,,
+CWL 457,CWL,457,Modernism,3 or 4 Hours,Same as RUSS 424. See RUSS 424.,,,,,,
 CWL 461,CWL,461,Lit Genres and Forms,"3 or 4 Hours
-3 undergraduate hours. 3 or 4 graduate hours.","Structure and development of literary genres and forms in historical perspective (for instance, drama, parody and the grotesque, poetry, fables and fabulists, and modern fiction); essential international components and significant national variations of such genres and forms. Emphasis changes from term to term. 3 undergraduate hours. 3 or 4 graduate hours. May be repeated to a maximum of 9 undergraduate hours or 12 graduate hours. Prerequisite: One year of college literature or consent of instructor.",Prerequisite: One year of college literature or consent of instructor.,,,,,,"[CWL 461 Lit Genres and Forms credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/461>)
-
-Structure and development of literary genres and forms in historical perspective (for instance, drama, parody and the grotesque, poetry, fables and fabulists, and modern fiction); essential international components and significant national variations of such genres and forms. Emphasis changes from term to term. 3 undergraduate hours. 3 or 4 graduate hours. May be repeated to a maximum of 9 undergraduate hours or 12 graduate hours. Prerequisite: One year of college literature or consent of instructor.",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 463,CWL,463,Modern Scandinavian Drama,3 or 4 Hours,Same as SCAN 463 and THEA 483. See SCAN 463.,,,,,,,"[CWL 463 Modern Scandinavian Drama credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/463>)
-
-Same as [SCAN 463](<https://catalog.illinois.edu/search/?P=SCAN%20463>) and [THEA 483](<https://catalog.illinois.edu/search/?P=THEA%20483>). See [SCAN 463](<https://catalog.illinois.edu/search/?P=SCAN%20463>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 466,CWL,466,Russia and the Other,3 or 4 Hours,Same as RUSS 461. See RUSS 461.,,,,,,,"[CWL 466 Russia and the Other credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/466>)
-
-Same as [RUSS 461](<https://catalog.illinois.edu/search/?P=RUSS%20461>). See [RUSS 461](<https://catalog.illinois.edu/search/?P=RUSS%20461>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 467,CWL,467,Japanese Cinema,3 or 4 Hours,Same as EALC 466 and MACS 466. See MACS 466.,,,,,,,"[CWL 467 Japanese Cinema credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/467>)
-
-Same as [EALC 466](<https://catalog.illinois.edu/search/?P=EALC%20466>) and [MACS 466](<https://catalog.illinois.edu/search/?P=MACS%20466>). See [MACS 466](<https://catalog.illinois.edu/search/?P=MACS%20466>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 470,CWL,470,Scandinavian Politics and Society,3 or 4 Hours,Same as EURO 470 and SCAN 470. See SCAN 470.,,,,,,,"[CWL 470 Scandinavian Politics and Society credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/470>)
-
-Same as [EURO 470](<https://catalog.illinois.edu/search/?P=EURO%20470>) and [SCAN 470](<https://catalog.illinois.edu/search/?P=SCAN%20470>). See [SCAN 470](<https://catalog.illinois.edu/search/?P=SCAN%20470>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
+3 undergraduate hours. 3 or 4 graduate hours.","Structure and development of literary genres and forms in historical perspective (for instance, drama, parody and the grotesque, poetry, fables and fabulists, and modern fiction); essential international components and significant national variations of such genres and forms. Emphasis changes from term to term. 3 undergraduate hours. 3 or 4 graduate hours. May be repeated to a maximum of 9 undergraduate hours or 12 graduate hours. Prerequisite: One year of college literature or consent of instructor.",Prerequisite: One year of college literature or consent of instructor.,,,,,
+CWL 463,CWL,463,Modern Scandinavian Drama,3 or 4 Hours,Same as SCAN 463 and THEA 483. See SCAN 463.,,,,,,
+CWL 466,CWL,466,Russia and the Other,3 or 4 Hours,Same as RUSS 461. See RUSS 461.,,,,,,
+CWL 467,CWL,467,Japanese Cinema,3 or 4 Hours,Same as EALC 466 and MACS 466. See MACS 466.,,,,,,
+CWL 470,CWL,470,Scandinavian Politics and Society,3 or 4 Hours,Same as EURO 470 and SCAN 470. See SCAN 470.,,,,,,
 CWL 471,CWL,471,International Lit Relations,"3 or 4 Hours
-3 undergraduate hours. 3 or 4 graduate hours.","Study of specific relations between authors of different countries; influences of certain works, concepts, or tastes on another work, author, or country; and literary interaction between Eastern and Western cultures. Emphasis changes from term to term. 3 undergraduate hours. 3 or 4 graduate hours. May be repeated to a maximum of 9 undergraduate hours or 12 graduate hours. Prerequisite: One year of college literature or consent of instructor.",Prerequisite: One year of college literature or consent of instructor.,,,,,,"[CWL 471 International Lit Relations credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/471>)
-
-Study of specific relations between authors of different countries; influences of certain works, concepts, or tastes on another work, author, or country; and literary interaction between Eastern and Western cultures. Emphasis changes from term to term. 3 undergraduate hours. 3 or 4 graduate hours. May be repeated to a maximum of 9 undergraduate hours or 12 graduate hours. Prerequisite: One year of college literature or consent of instructor.",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 472,CWL,472,Kierkegaard and the Self,3 or 4 Hours,"Same as PHIL 472, REL 472, and SCAN 472. See SCAN 472.",,,,,,,"[CWL 472 Kierkegaard and the Self credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/472>)
-
-Same as [PHIL 472](<https://catalog.illinois.edu/search/?P=PHIL%20472>), [REL 472](<https://catalog.illinois.edu/search/?P=REL%20472>), and [SCAN 472](<https://catalog.illinois.edu/search/?P=SCAN%20472>). See [SCAN 472](<https://catalog.illinois.edu/search/?P=SCAN%20472>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 477,CWL,477,Post-Communist Fiction,3 or 4 Hours,Same as SLAV 477 and REES 477. See SLAV 477.,,,,,,,"[CWL 477 Post-Communist Fiction credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/477>)
-
-Same as [SLAV 477](<https://catalog.illinois.edu/search/?P=SLAV%20477>) and [REES 477](<https://catalog.illinois.edu/search/?P=REES%20477>). See [SLAV 477](<https://catalog.illinois.edu/search/?P=SLAV%20477>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 478,CWL,478,Classical Chinese Thought,3 or 4 Hours,Same as EALC 476 and HIST 425. See EALC 476.,,,,,,,"[CWL 478 Classical Chinese Thought credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/478>)
-
-Same as [EALC 476](<https://catalog.illinois.edu/search/?P=EALC%20476>) and [HIST 425](<https://catalog.illinois.edu/search/?P=HIST%20425>). See [EALC 476](<https://catalog.illinois.edu/search/?P=EALC%20476>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
+3 undergraduate hours. 3 or 4 graduate hours.","Study of specific relations between authors of different countries; influences of certain works, concepts, or tastes on another work, author, or country; and literary interaction between Eastern and Western cultures. Emphasis changes from term to term. 3 undergraduate hours. 3 or 4 graduate hours. May be repeated to a maximum of 9 undergraduate hours or 12 graduate hours. Prerequisite: One year of college literature or consent of instructor.",Prerequisite: One year of college literature or consent of instructor.,,,,,
+CWL 472,CWL,472,Kierkegaard and the Self,3 or 4 Hours,"Same as PHIL 472, REL 472, and SCAN 472. See SCAN 472.",,,,,,
+CWL 477,CWL,477,Post-Communist Fiction,3 or 4 Hours,Same as SLAV 477 and REES 477. See SLAV 477.,,,,,,
+CWL 478,CWL,478,Classical Chinese Thought,3 or 4 Hours,Same as EALC 476 and HIST 425. See EALC 476.,,,,,,
 CWL 481,CWL,481,Topics in Arabic Literature & Culture,"3 or 4 Hours
-3 undergraduate hours. 4 graduate hours.","Studies in Arabic literature and culture of various genres, periods, and regions. Graduate students are encouraged to read the texts in the original language. 3 undergraduate hours. 4 graduate hours. May be repeated in the same semester to a maximum of 6 undergraduate hours or 8 graduate hours if topics vary; May be repeated in separate semesters to a maximum of 12 undergraduate hours or 16 graduate hours if topics vary. Prerequisite: One year of college literature or consent of instructor.",Prerequisite: One year of college literature or consent of instructor.,,,,,,"[CWL 481 Topics in Arabic Literature & Culture credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/481>)
-
-Studies in Arabic literature and culture of various genres, periods, and regions. Graduate students are encouraged to read the texts in the original language. 3 undergraduate hours. 4 graduate hours. May be repeated in the same semester to a maximum of 6 undergraduate hours or 8 graduate hours if topics vary; May be repeated in separate semesters to a maximum of 12 undergraduate hours or 16 graduate hours if topics vary. Prerequisite: One year of college literature or consent of instructor.",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 490,CWL,490,Topics in Classical Literature,3 or 4 Hours,Same as CLCV 490. See CLCV 490.,,,,,,,"[CWL 490 Topics in Classical Literature credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/490>)
-
-Same as [CLCV 490](<https://catalog.illinois.edu/search/?P=CLCV%20490>). See [CLCV 490](<https://catalog.illinois.edu/search/?P=CLCV%20490>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
+3 undergraduate hours. 4 graduate hours.","Studies in Arabic literature and culture of various genres, periods, and regions. Graduate students are encouraged to read the texts in the original language. 3 undergraduate hours. 4 graduate hours. May be repeated in the same semester to a maximum of 6 undergraduate hours or 8 graduate hours if topics vary; May be repeated in separate semesters to a maximum of 12 undergraduate hours or 16 graduate hours if topics vary. Prerequisite: One year of college literature or consent of instructor.",Prerequisite: One year of college literature or consent of instructor.,,,,,
+CWL 490,CWL,490,Topics in Classical Literature,3 or 4 Hours,Same as CLCV 490. See CLCV 490.,,,,,,
 CWL 493,CWL,493,Senior Thesis and Honors,"3 to 6 Hours
-3 to 6 undergraduate hours. No graduate credit.","Independent research guided by tutor(s), leading to the writing of a comparative thesis. Intended primarily for candidates for honors in comparative literature, but open to other seniors. 3 to 6 undergraduate hours. No graduate credit. May be repeated to a maximum of 12 hours.",,No graduate credit.,,,,,"[CWL 493 Senior Thesis and Honors credit: 3 to 6 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/493>)
-
-Independent research guided by tutor(s), leading to the writing of a comparative thesis. Intended primarily for candidates for honors in comparative literature, but open to other seniors. 3 to 6 undergraduate hours. No graduate credit. May be repeated to a maximum of 12 hours.",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
+3 to 6 undergraduate hours. No graduate credit.","Independent research guided by tutor(s), leading to the writing of a comparative thesis. Intended primarily for candidates for honors in comparative literature, but open to other seniors. 3 to 6 undergraduate hours. No graduate credit. May be repeated to a maximum of 12 hours.",,No graduate credit.,,,,
 CWL 496,CWL,496,Special Topics in Comp Lit II,"3 to 4 Hours
-3 undergraduate hours. 3 or 4 graduate hours.",Selected literary topics of international significance in relation to other cultural expressions. 3 undergraduate hours. 3 or 4 graduate hours. May be repeated to a maximum of 9 undergraduate or 12 graduate hours. Prerequisite: Consent of instructor.,Prerequisite: Consent of instructor.,,,,,,"[CWL 496 Special Topics in Comp Lit II credit: 3 to 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/496>)
-
-Selected literary topics of international significance in relation to other cultural expressions. 3 undergraduate hours. 3 or 4 graduate hours. May be repeated to a maximum of 9 undergraduate or 12 graduate hours. Prerequisite: Consent of instructor.",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 501,CWL,501,Theory of Literature,4 Hours,"Major issues of literary theory, critical approaches, and comparative research.",,,,,,,"[CWL 501 Theory of Literature credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/501>)
-
-Major issues of literary theory, critical approaches, and comparative research.",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 502,CWL,502,Methods of Comparative Lit,4 Hours,"Problems and methods of cross-cultural literary studies, concentrating on the effects of historical encounters between different civilizations and on theoretical issues in comparing literatures across cultures.",,,,,,,"[CWL 502 Methods of Comparative Lit credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/502>)
-
-Problems and methods of cross-cultural literary studies, concentrating on the effects of historical encounters between different civilizations and on theoretical issues in comparing literatures across cultures.",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 503,CWL,503,Historiography of Cinema,4 Hours,Same as ENGL 503 and MACS 503. See MACS 503.,,,,,,,"[CWL 503 Historiography of Cinema credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/503>)
-
-Same as [ENGL 503](<https://catalog.illinois.edu/search/?P=ENGL%20503>) and [MACS 503](<https://catalog.illinois.edu/search/?P=MACS%20503>). See [MACS 503](<https://catalog.illinois.edu/search/?P=MACS%20503>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 504,CWL,504,Theories of Cinema,4 Hours,Same as ENGL 504 and MACS 504. See MACS 504.,,,,,,,"[CWL 504 Theories of Cinema credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/504>)
-
-Same as [ENGL 504](<https://catalog.illinois.edu/search/?P=ENGL%20504>) and [MACS 504](<https://catalog.illinois.edu/search/?P=MACS%20504>). See [MACS 504](<https://catalog.illinois.edu/search/?P=MACS%20504>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 511,CWL,511,Applied Literary Translation I,4 Hours,"Same as EALC 511, GER 511, SLAV 501, and TRST 501. See TRST 501.",,,,,,,"[CWL 511 Applied Literary Translation I credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/511>)
-
-Same as [EALC 511](<https://catalog.illinois.edu/search/?P=EALC%20511>), [GER 511](<https://catalog.illinois.edu/search/?P=GER%20511>), [SLAV 501](<https://catalog.illinois.edu/search/?P=SLAV%20501>), and [TRST 501](<https://catalog.illinois.edu/search/?P=TRST%20501>). See [TRST 501](<https://catalog.illinois.edu/search/?P=TRST%20501>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 512,CWL,512,Applied LiteraryTranslation II,4 Hours,"Same as EALC 512, GER 512, SLAV 502, and TRST 502. See TRST 502.",,,,,,,"[CWL 512 Applied LiteraryTranslation II credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/512>)
-
-Same as [EALC 512](<https://catalog.illinois.edu/search/?P=EALC%20512>), [GER 512](<https://catalog.illinois.edu/search/?P=GER%20512>), [SLAV 502](<https://catalog.illinois.edu/search/?P=SLAV%20502>), and [TRST 502](<https://catalog.illinois.edu/search/?P=TRST%20502>). See [TRST 502](<https://catalog.illinois.edu/search/?P=TRST%20502>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 535,CWL,535,Nabokov,4 Hours,Same as RUSS 535. See RUSS 535.,,,,,,,"[CWL 535 Nabokov credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/535>)
-
-Same as [RUSS 535](<https://catalog.illinois.edu/search/?P=RUSS%20535>). See [RUSS 535](<https://catalog.illinois.edu/search/?P=RUSS%20535>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 551,CWL,551,Seminar Lit Movements,4 Hours,"Investigation of the development and mutation of literary movements (classicism, romanticism, symbolism, etc.) through a study of critical texts and their reception in various countries. May be repeated to a maximum of 12 hours if topics vary.",,,,,,,"[CWL 551 Seminar Lit Movements credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/551>)
-
-Investigation of the development and mutation of literary movements (classicism, romanticism, symbolism, etc.) through a study of critical texts and their reception in various countries. May be repeated to a maximum of 12 hours if topics vary.",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 552,CWL,552,Studies French & Comp Cinema,4 Hours,Same as FR 552. See FR 552.,,,,,,,"[CWL 552 Studies French & Comp Cinema credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/552>)
-
-Same as [FR 552](<https://catalog.illinois.edu/search/?P=FR%20552>). See [FR 552](<https://catalog.illinois.edu/search/?P=FR%20552>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 561,CWL,561,Seminar Genres - Forms,4 Hours,"Study of a form (the lyric, the novel, the drama, etc.) to discover its essential components in all the literatures studied and the significance of national variations. May be repeated to a maximum of 12 hours if topics vary.",,,,,,,"[CWL 561 Seminar Genres - Forms credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/561>)
-
-Study of a form (the lyric, the novel, the drama, etc.) to discover its essential components in all the literatures studied and the significance of national variations. May be repeated to a maximum of 12 hours if topics vary.",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 562,CWL,562,Sem Spanish-American Lit,4 Hours,Same as SPAN 535. See SPAN 535.,,,,,,,"[CWL 562 Sem Spanish-American Lit credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/562>)
-
-Same as [SPAN 535](<https://catalog.illinois.edu/search/?P=SPAN%20535>). See [SPAN 535](<https://catalog.illinois.edu/search/?P=SPAN%20535>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 571,CWL,571,Seminar in Literary Relations,4 Hours,"Investigation of the impact of one literature upon another, or of some specific works upon others (the role of English literature in continental Europe, the influence of Russian novelists on French and German writers, etc.). May be repeated to a maximum of 12 hours if topics vary.",,,,,,,"[CWL 571 Seminar in Literary Relations credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/571>)
-
-Investigation of the impact of one literature upon another, or of some specific works upon others (the role of English literature in continental Europe, the influence of Russian novelists on French and German writers, etc.). May be repeated to a maximum of 12 hours if topics vary.",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 576,CWL,576,Methods in Slavic Grad Study,4 Hours,Same as SLAV 576. See SLAV 576.,,,,,,,"[CWL 576 Methods in Slavic Grad Study credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/576>)
-
-Same as [SLAV 576](<https://catalog.illinois.edu/search/?P=SLAV%20576>). See [SLAV 576](<https://catalog.illinois.edu/search/?P=SLAV%20576>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 578,CWL,578,Seminar 20thC French Lit,4 Hours,Same as FR 578. See FR 578.,,,,,,,"[CWL 578 Seminar 20thC French Lit credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/578>)
-
-Same as [FR 578](<https://catalog.illinois.edu/search/?P=FR%20578>). See [FR 578](<https://catalog.illinois.edu/search/?P=FR%20578>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 581,CWL,581,Seminar Lit Themes,4 Hours,"Study of a theme or type (the Faust myth, the romantic hero, etc.) to discover its essential components in all the literatures studied and the significance of national variations. The subject of the seminar varies each term. May be repeated to a maximum of 12 hours if topics vary.",,,,,,,"[CWL 581 Seminar Lit Themes credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/581>)
-
-Study of a theme or type (the Faust myth, the romantic hero, etc.) to discover its essential components in all the literatures studied and the significance of national variations. The subject of the seminar varies each term. May be repeated to a maximum of 12 hours if topics vary.",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 582,CWL,582,Proseminar,4 Hours,"Introduction to comparative literature as a discipline, history and philosophy of comparative literature, and training in practical professional skills, including conference presentations, grant writing, and course development. Prerequisite: Graduate standing.",Prerequisite: Graduate standing.,,,,,,"[CWL 582 Proseminar credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/582>)
-
-Introduction to comparative literature as a discipline, history and philosophy of comparative literature, and training in practical professional skills, including conference presentations, grant writing, and course development. Prerequisite: Graduate standing.",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 586,CWL,586,Children and Youth Literature,4 Hours,"Same as EURO 576, GWS 576, and SCAN 576. See SCAN 576.",,,,,,,"[CWL 586 Children and Youth Literature credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/586>)
-
-Same as [EURO 576](<https://catalog.illinois.edu/search/?P=EURO%20576>), [GWS 576](<https://catalog.illinois.edu/search/?P=GWS%20576>), and [SCAN 576](<https://catalog.illinois.edu/search/?P=SCAN%20576>). See [SCAN 576](<https://catalog.illinois.edu/search/?P=SCAN%20576>).",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 593,CWL,593,Special Studies,1 to 4 Hours,,,,,,,,[CWL 593 Special Studies credit: 1 to 4 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/593>),https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
-CWL 599,CWL,599,Thesis Research,0 to 16 Hours,Intended for students engaged in writing a thesis as a partial requirement for the M.A. or Ph.D. degree in comparative literature. Approved for S/U grading only. May be repeated in the same term or in separate terms up to a maximum of 8 hours.,,,,,,,"[CWL 599 Thesis Research credit: 0 to 16 Hours.](<https://courses.illinois.edu/schedule/terms/CWL/599>)
-
-Intended for students engaged in writing a thesis as a partial requirement for the M.A. or Ph.D. degree in comparative literature. Approved for S/U grading only. May be repeated in the same term or in separate terms up to a maximum of 8 hours.",https://catalog.illinois.edu/courses-of-instruction/cwl/,2026–2027
+3 undergraduate hours. 3 or 4 graduate hours.",Selected literary topics of international significance in relation to other cultural expressions. 3 undergraduate hours. 3 or 4 graduate hours. May be repeated to a maximum of 9 undergraduate or 12 graduate hours. Prerequisite: Consent of instructor.,Prerequisite: Consent of instructor.,,,,,
+CWL 501,CWL,501,Theory of Literature,4 Hours,"Major issues of literary theory, critical approaches, and comparative research.",,,,,,
+CWL 502,CWL,502,Methods of Comparative Lit,4 Hours,"Problems and methods of cross-cultural literary studies, concentrating on the effects of historical encounters between different civilizations and on theoretical issues in comparing literatures across cultures.",,,,,,
+CWL 503,CWL,503,Historiography of Cinema,4 Hours,Same as ENGL 503 and MACS 503. See MACS 503.,,,,,,
+CWL 504,CWL,504,Theories of Cinema,4 Hours,Same as ENGL 504 and MACS 504. See MACS 504.,,,,,,
+CWL 511,CWL,511,Applied Literary Translation I,4 Hours,"Same as EALC 511, GER 511, SLAV 501, and TRST 501. See TRST 501.",,,,,,
+CWL 512,CWL,512,Applied LiteraryTranslation II,4 Hours,"Same as EALC 512, GER 512, SLAV 502, and TRST 502. See TRST 502.",,,,,,
+CWL 535,CWL,535,Nabokov,4 Hours,Same as RUSS 535. See RUSS 535.,,,,,,
+CWL 551,CWL,551,Seminar Lit Movements,4 Hours,"Investigation of the development and mutation of literary movements (classicism, romanticism, symbolism, etc.) through a study of critical texts and their reception in various countries. May be repeated to a maximum of 12 hours if topics vary.",,,,,,
+CWL 552,CWL,552,Studies French & Comp Cinema,4 Hours,Same as FR 552. See FR 552.,,,,,,
+CWL 561,CWL,561,Seminar Genres - Forms,4 Hours,"Study of a form (the lyric, the novel, the drama, etc.) to discover its essential components in all the literatures studied and the significance of national variations. May be repeated to a maximum of 12 hours if topics vary.",,,,,,
+CWL 562,CWL,562,Sem Spanish-American Lit,4 Hours,Same as SPAN 535. See SPAN 535.,,,,,,
+CWL 571,CWL,571,Seminar in Literary Relations,4 Hours,"Investigation of the impact of one literature upon another, or of some specific works upon others (the role of English literature in continental Europe, the influence of Russian novelists on French and German writers, etc.). May be repeated to a maximum of 12 hours if topics vary.",,,,,,
+CWL 576,CWL,576,Methods in Slavic Grad Study,4 Hours,Same as SLAV 576. See SLAV 576.,,,,,,
+CWL 578,CWL,578,Seminar 20thC French Lit,4 Hours,Same as FR 578. See FR 578.,,,,,,
+CWL 581,CWL,581,Seminar Lit Themes,4 Hours,"Study of a theme or type (the Faust myth, the romantic hero, etc.) to discover its essential components in all the literatures studied and the significance of national variations. The subject of the seminar varies each term. May be repeated to a maximum of 12 hours if topics vary.",,,,,,
+CWL 582,CWL,582,Proseminar,4 Hours,"Introduction to comparative literature as a discipline, history and philosophy of comparative literature, and training in practical professional skills, including conference presentations, grant writing, and course development. Prerequisite: Graduate standing.",Prerequisite: Graduate standing.,,,,,
+CWL 586,CWL,586,Children and Youth Literature,4 Hours,"Same as EURO 576, GWS 576, and SCAN 576. See SCAN 576.",,,,,,
+CWL 593,CWL,593,Special Studies,1 to 4 Hours,,,,,,,
+CWL 599,CWL,599,Thesis Research,0 to 16 Hours,Intended for students engaged in writing a thesis as a partial requirement for the M.A. or Ph.D. degree in comparative literature. Approved for S/U grading only. May be repeated in the same term or in separate terms up to a maximum of 8 hours.,,,,,,

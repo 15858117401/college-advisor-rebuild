@@ -1,330 +1,106 @@
-course_code,subject,course_number,course_name,credits,description,prerequisites,credit_restrictions,gen_ed,total_students,total_sections,overall_gpa,catalog_text,source_url,catalog_year
+course_code,subject,course_number,course_name,credits,description,prerequisites,credit_restrictions,gen_ed,total_students,total_sections,overall_gpa
 EALC 120,EALC,120,East Asian Civilizations,3 Hours,Same as HIST 120. See HIST 120.,,,"Humanities - Hist & Phil
-Cultural Studies - Non-West",,,,"[EALC 120 East Asian Civilizations credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/120>)
-
-Same as [HIST 120](<https://catalog.illinois.edu/search/?P=HIST%20120>). See [HIST 120](<https://catalog.illinois.edu/search/?P=HIST%20120>).
-This course satisfies the General Education Criteria for:
-Humanities - Hist & Phil
-Cultural Studies - Non-West",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
+Cultural Studies - Non-West",,,
 EALC 122,EALC,122,History East Asian Religions,3 Hours,"Introduction to East Asian religious traditions; emphasizes the ideas of Confucianism, Taoism, and Buddhism in China and their historical interactions. Same as REL 122.",,,"Humanities - Hist & Phil
-Cultural Studies - Non-West",,,,"[EALC 122 History East Asian Religions credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/122>)
-
-Introduction to East Asian religious traditions; emphasizes the ideas of Confucianism, Taoism, and Buddhism in China and their historical interactions. Same as [REL 122](<https://catalog.illinois.edu/search/?P=REL%20122>).
-This course satisfies the General Education Criteria for:
-Humanities - Hist & Phil
-Cultural Studies - Non-West",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
+Cultural Studies - Non-West",,,
 EALC 130,EALC,130,The Chinese Language,3 Hours,"An introduction to the scientific study of the Chinese language. We will explore where the Chinese language came from, its similarities to and differences from Japanese and Korean, and how the Chinese character writing system was invented, plus what is it like now. We will explore differences among Chinese dialects (e.g., Cantonese, Mandarin, Taiwanese and Shanghai) and learn where in China these are spoken, and also explore how the Chinese language operates in the brain. Finally, we will investigate how children in China learn to speak, read, and write, how adults learn to speak Chinese as a foreign language, and how Chinese can be used by different social groups in different settings in order to influence social power and distance. Approved for Letter and S/U grading. This course does not fulfill the campus foreign language requirement.",,,"Cultural Studies - Non-West
-Social & Beh Sci - Soc Sci",,,,"[EALC 130 The Chinese Language credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/130>)
-
-An introduction to the scientific study of the Chinese language. We will explore where the Chinese language came from, its similarities to and differences from Japanese and Korean, and how the Chinese character writing system was invented, plus what is it like now. We will explore differences among Chinese dialects (e.g., Cantonese, Mandarin, Taiwanese and Shanghai) and learn where in China these are spoken, and also explore how the Chinese language operates in the brain. Finally, we will investigate how children in China learn to speak, read, and write, how adults learn to speak Chinese as a foreign language, and how Chinese can be used by different social groups in different settings in order to influence social power and distance. Approved for Letter and S/U grading. This course does not fulfill the campus foreign language requirement.
-This course satisfies the General Education Criteria for:
-Cultural Studies - Non-West
-Social & Beh Sci - Soc Sci",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
+Social & Beh Sci - Soc Sci",,,
 EALC 132,EALC,132,Zen,3 Hours,Same as REL 132. See REL 132.,,,"Humanities - Hist & Phil
-Cultural Studies - Non-West",,,,"[EALC 132 Zen credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/132>)
-
-Same as [REL 132](<https://catalog.illinois.edu/search/?P=REL%20132>). See [REL 132](<https://catalog.illinois.edu/search/?P=REL%20132>).
-This course satisfies the General Education Criteria for:
-Humanities - Hist & Phil
-Cultural Studies - Non-West",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 199,EALC,199,Undergraduate Open Seminar,1 to 5 Hours,May be repeated.,,,,,,,"[EALC 199 Undergraduate Open Seminar credit: 1 to 5 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/199>)
-
-May be repeated.",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
+Cultural Studies - Non-West",,,
+EALC 199,EALC,199,Undergraduate Open Seminar,1 to 5 Hours,May be repeated.,,,,,,
 EALC 207,EALC,207,Classical Chinese Lit,3 Hours,"Surveys Chinese literary works from the classical tradition (history, philosophy, poetry, literary criticism) with attention to intellectual and artistic values. Same as CWL 217. No knowledge of Chinese is required.",,,"Humanities - Lit & Arts
-Cultural Studies - Non-West",,,,"[EALC 207 Classical Chinese Lit credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/207>)
-
-Surveys Chinese literary works from the classical tradition (history, philosophy, poetry, literary criticism) with attention to intellectual and artistic values. Same as [CWL 217](<https://catalog.illinois.edu/search/?P=CWL%20217>). No knowledge of Chinese is required.
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts
-Cultural Studies - Non-West",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
+Cultural Studies - Non-West",,,
 EALC 208,EALC,208,Chinese Cinema,3 Hours,"Explores the cinematic conventions and experiments employed by Chinese filmmakers over the past one hundred years. Unique Chinese film genres such as left-wing melodrama and martial arts, as well as three ""new waves"" in China’s recent avant-garde cinema, will be examined.",,,"Humanities - Lit & Arts
-Cultural Studies - Non-West",,,,"[EALC 208 Chinese Cinema credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/208>)
-
-Explores the cinematic conventions and experiments employed by Chinese filmmakers over the past one hundred years. Unique Chinese film genres such as left-wing melodrama and martial arts, as well as three ""new waves"" in China’s recent avant-garde cinema, will be examined.
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts
-Cultural Studies - Non-West",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
+Cultural Studies - Non-West",,,
 EALC 212,EALC,212,East Asian Art History,3 Hours,"Introduction to East Asian art and architecture from prehistory to today. The major artistic and architectural traditions of China, Korea, and Japan are examined as are the basic tools of analysis with which one may learn why objects look the way they do. Attention will be given to placing the arts within their historical and cultural contexts and the interaction among arts, religions and other belief systems, and sociopolitical structures. Same as ARTH 212.",,,"Humanities - Lit & Arts
-Cultural Studies - Non-West",,,,"[EALC 212 East Asian Art History credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/212>)
-
-Introduction to East Asian art and architecture from prehistory to today. The major artistic and architectural traditions of China, Korea, and Japan are examined as are the basic tools of analysis with which one may learn why objects look the way they do. Attention will be given to placing the arts within their historical and cultural contexts and the interaction among arts, religions and other belief systems, and sociopolitical structures. Same as [ARTH 212](<https://catalog.illinois.edu/search/?P=ARTH%20212>).
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts
-Cultural Studies - Non-West",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 214,EALC,214,Art in China,3 Hours,Same as ARTH 214. See ARTH 214.,,,Cultural Studies - Non-West,,,,"[EALC 214 Art in China credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/214>)
-
-Same as [ARTH 214](<https://catalog.illinois.edu/search/?P=ARTH%20214>). See [ARTH 214](<https://catalog.illinois.edu/search/?P=ARTH%20214>).
-This course satisfies the General Education Criteria for:
-Cultural Studies - Non-West",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
+Cultural Studies - Non-West",,,
+EALC 214,EALC,214,Art in China,3 Hours,Same as ARTH 214. See ARTH 214.,,,Cultural Studies - Non-West,,,
 EALC 220,EALC,220,Traditional China,3 Hours,Same as HIST 220. See HIST 220.,,,"Humanities - Hist & Phil
-Cultural Studies - Non-West",,,,"[EALC 220 Traditional China credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/220>)
-
-Same as [HIST 220](<https://catalog.illinois.edu/search/?P=HIST%20220>). See [HIST 220](<https://catalog.illinois.edu/search/?P=HIST%20220>).
-This course satisfies the General Education Criteria for:
-Humanities - Hist & Phil
-Cultural Studies - Non-West",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 221,EALC,221,Modern China,3 Hours,Same as HIST 221. See HIST 221.,,,Cultural Studies - Non-West,,,,"[EALC 221 Modern China credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/221>)
-
-Same as [HIST 221](<https://catalog.illinois.edu/search/?P=HIST%20221>). See [HIST 221](<https://catalog.illinois.edu/search/?P=HIST%20221>).
-This course satisfies the General Education Criteria for:
-Cultural Studies - Non-West",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
+Cultural Studies - Non-West",,,
+EALC 221,EALC,221,Modern China,3 Hours,Same as HIST 221. See HIST 221.,,,Cultural Studies - Non-West,,,
 EALC 222,EALC,222,Chinese Thought and Culture,3 Hours,"Examination of China's principal philosophical, religious, and political schools of thought - such as Confucianism, Taoism, Zen Buddhism, and Maoism - as ways of understanding one of the world's major civilizations; the period of the classical philosophers, the glory years of empire, and the troubled era of Western contact receive approximately equal attention. Same as HIST 222 and REL 224.",,,"Humanities - Hist & Phil
-Cultural Studies - Non-West",,,,"[EALC 222 Chinese Thought and Culture credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/222>)
-
-Examination of China's principal philosophical, religious, and political schools of thought - such as Confucianism, Taoism, Zen Buddhism, and Maoism - as ways of understanding one of the world's major civilizations; the period of the classical philosophers, the glory years of empire, and the troubled era of Western contact receive approximately equal attention. Same as [HIST 222](<https://catalog.illinois.edu/search/?P=HIST%20222>) and [REL 224](<https://catalog.illinois.edu/search/?P=REL%20224>).
-This course satisfies the General Education Criteria for:
-Humanities - Hist & Phil
-Cultural Studies - Non-West",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
+Cultural Studies - Non-West",,,
 EALC 225,EALC,225,Japanese Religions: Thought and Practice,3 Hours,"Introduces the history and development of the varieties of Japanese religious thought, practice and cultural expression. Focus is primarily on the major traditions of Japan: Shinto and Buddhism, with some attention to Confucianism, Christianity and New Religions. Read alongside secondary literature for context and interpretation, a number of primary materials in translation, such as historical documents, Shinto mythical narratives, Buddhist philosophical treatises, ritual manuals, Nō dramas, folk tales, a novel, political tracts, and several films will be examined. Same as REL 225.",,,"Humanities - Hist & Phil
-Cultural Studies - Non-West",,,,"[EALC 225 Japanese Religions: Thought and Practice credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/225>)
-
-Introduces the history and development of the varieties of Japanese religious thought, practice and cultural expression. Focus is primarily on the major traditions of Japan: Shinto and Buddhism, with some attention to Confucianism, Christianity and New Religions. Read alongside secondary literature for context and interpretation, a number of primary materials in translation, such as historical documents, Shinto mythical narratives, Buddhist philosophical treatises, ritual manuals, Nō dramas, folk tales, a novel, political tracts, and several films will be examined. Same as [REL 225](<https://catalog.illinois.edu/search/?P=REL%20225>).
-This course satisfies the General Education Criteria for:
-Humanities - Hist & Phil
-Cultural Studies - Non-West",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
+Cultural Studies - Non-West",,,
 EALC 227,EALC,227,Modern Japanese History,3 Hours,Same as HIST 227. See HIST 227.,,,"Humanities - Hist & Phil
-Cultural Studies - Non-West",,,,"[EALC 227 Modern Japanese History credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/227>)
-
-Same as [HIST 227](<https://catalog.illinois.edu/search/?P=HIST%20227>). See [HIST 227](<https://catalog.illinois.edu/search/?P=HIST%20227>).
-This course satisfies the General Education Criteria for:
-Humanities - Hist & Phil
-Cultural Studies - Non-West",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
+Cultural Studies - Non-West",,,
 EALC 230,EALC,230,Popular Cultures of Contemporary East Asia,3 Hours,"An introduction to the popular cultures and subcultures of China, Korea, and Japan through exposure to popular films, music, anime, games, and everyday practices. Already hugely popular in its home countries, East Asian popular culture has become familiar to American audiences through films, video games, food, toys, and comic books. The course explores the historical, social, cultural, and economic roots of this global appeal, while gauging popular culture's impact on national identity, gender, and lifestyle. No knowledge of East Asian languages is required. Same as CWL 230.",,,"Humanities - Lit & Arts
-Cultural Studies - Non-West",,,,"[EALC 230 Popular Cultures of Contemporary East Asia credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/230>)
-
-An introduction to the popular cultures and subcultures of China, Korea, and Japan through exposure to popular films, music, anime, games, and everyday practices. Already hugely popular in its home countries, East Asian popular culture has become familiar to American audiences through films, video games, food, toys, and comic books. The course explores the historical, social, cultural, and economic roots of this global appeal, while gauging popular culture's impact on national identity, gender, and lifestyle. No knowledge of East Asian languages is required. Same as [CWL 230](<https://catalog.illinois.edu/search/?P=CWL%20230>).
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts
-Cultural Studies - Non-West",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
+Cultural Studies - Non-West",,,
 EALC 231,EALC,231,Across Borders: Language and Identity in Greater China and the Chinese Diaspora,3 Hours,"“Language and Identity in Chinese” explores the relationship between language and identity in Greater China and Chinese diasporic communities globally. Topics include linguistic diversity, bilingualism, heritage language maintenance, digital communication, and the role of language in multicultural environments. Students will analyze linguistic landscapes in media and public spaces, examining language shift, intergenerational transmission, and sociopolitical implications. Coursework includes readings, online discussion posts, in-class discussions, and a final project in which students will document and interpret a linguistic landscape.",,,"Cultural Studies - Non-West
-Social & Beh Sci - Soc Sci",,,,"[EALC 231 Across Borders: Language and Identity in Greater China and the Chinese Diaspora credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/231>)
-
-“Language and Identity in Chinese” explores the relationship between language and identity in Greater China and Chinese diasporic communities globally. Topics include linguistic diversity, bilingualism, heritage language maintenance, digital communication, and the role of language in multicultural environments. Students will analyze linguistic landscapes in media and public spaces, examining language shift, intergenerational transmission, and sociopolitical implications. Coursework includes readings, online discussion posts, in-class discussions, and a final project in which students will document and interpret a linguistic landscape.
-This course satisfies the General Education Criteria for:
-Cultural Studies - Non-West
-Social & Beh Sci - Soc Sci",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 240,EALC,240,Chinese Civilization,3 Hours,"Introduction to the historical development of Chinese civilization. Emphasis will be on broad themes and the connections among cultural values, women and gender, social institutions, political structures, and contacts with outsiders. Visual and literary evidence will be stressed.",,,Cultural Studies - Non-West,,,,"[EALC 240 Chinese Civilization credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/240>)
-
-Introduction to the historical development of Chinese civilization. Emphasis will be on broad themes and the connections among cultural values, women and gender, social institutions, political structures, and contacts with outsiders. Visual and literary evidence will be stressed.
-This course satisfies the General Education Criteria for:
-Cultural Studies - Non-West",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
+Social & Beh Sci - Soc Sci",,,
+EALC 240,EALC,240,Chinese Civilization,3 Hours,"Introduction to the historical development of Chinese civilization. Emphasis will be on broad themes and the connections among cultural values, women and gender, social institutions, political structures, and contacts with outsiders. Visual and literary evidence will be stressed.",,,Cultural Studies - Non-West,,,
 EALC 250,EALC,250,Intro to Japanese Culture,3 Hours,"Topical introduction to Japanese cultural and aesthetic life with attention to cultural and aesthetic patterns as they are reflected in literature, language, and the arts.",,,"Cultural Studies - Non-West
-Social & Beh Sci - Soc Sci",,,,"[EALC 250 Intro to Japanese Culture credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/250>)
-
-Topical introduction to Japanese cultural and aesthetic life with attention to cultural and aesthetic patterns as they are reflected in literature, language, and the arts.
-This course satisfies the General Education Criteria for:
-Cultural Studies - Non-West
-Social & Beh Sci - Soc Sci",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 260,EALC,260,Topics in Korean Studies,3 Hours,"Topical introduction to Korean history, philosophy, religion, economy, art, literature, and culture across pre-modern, modern and contemporary periods. May be repeated in the same or separate terms to a maximum of 12 hours if topics vary.",,,,,,,"[EALC 260 Topics in Korean Studies credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/260>)
-
-Topical introduction to Korean history, philosophy, religion, economy, art, literature, and culture across pre-modern, modern and contemporary periods. May be repeated in the same or separate terms to a maximum of 12 hours if topics vary.",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
+Social & Beh Sci - Soc Sci",,,
+EALC 260,EALC,260,Topics in Korean Studies,3 Hours,"Topical introduction to Korean history, philosophy, religion, economy, art, literature, and culture across pre-modern, modern and contemporary periods. May be repeated in the same or separate terms to a maximum of 12 hours if topics vary.",,,,,,
 EALC 275,EALC,275,Masterpieces of East Asian Lit,3 Hours,"[IAI Code: H3908N] A wide-ranging introduction to the literatures of traditional China, Korea, and Japan. Selections from novels, plays, and poems are studied to gain insight into the cultures that produced them and to hone skills in textual analyses. Explores how influential texts have been repackaged and reinterpreted for modern audiences in media such as film and manga. No knowledge of Chinese or Japanese language required. Same as CWL 275.",,,"Humanities - Lit & Arts
-Cultural Studies - Non-West",,,,"[EALC 275 Masterpieces of East Asian Lit credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/275>)
-
-[IAI Code: H3908N] A wide-ranging introduction to the literatures of traditional China, Korea, and Japan. Selections from novels, plays, and poems are studied to gain insight into the cultures that produced them and to hone skills in textual analyses. Explores how influential texts have been repackaged and reinterpreted for modern audiences in media such as film and manga. No knowledge of Chinese or Japanese language required. Same as [CWL 275](<https://catalog.illinois.edu/search/?P=CWL%20275>).
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts
-Cultural Studies - Non-West",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
+Cultural Studies - Non-West",,,
 EALC 276,EALC,276,Asian Film Genres,3 Hours,Same as CWL 276 and ENGL 276. See ENGL 276.,,,"Humanities - Lit & Arts
-Cultural Studies - Non-West",,,,"[EALC 276 Asian Film Genres credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/276>)
-
-Same as [CWL 276](<https://catalog.illinois.edu/search/?P=CWL%20276>) and [ENGL 276](<https://catalog.illinois.edu/search/?P=ENGL%20276>). See [ENGL 276](<https://catalog.illinois.edu/search/?P=ENGL%20276>).
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts
-Cultural Studies - Non-West",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
+Cultural Studies - Non-West",,,
 EALC 280,EALC,280,Anthropology of Martial Arts,3 Hours,"Cultural anthropology can be used to make sense of martial arts. We will consider versions of martial arts presented in books and movies, forms of sport and athletic performance, and a range of practices oriented by ideals of self-defense or spiritual cultivation. We will examine case studies from the US and around the world, paying particular attention to the association of martial arts with East Asian traditions. Same as ANTH 280.",,,"Cultural Studies - Non-West
-Social & Beh Sci - Soc Sci",,,,"[EALC 280 Anthropology of Martial Arts credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/280>)
-
-Cultural anthropology can be used to make sense of martial arts. We will consider versions of martial arts presented in books and movies, forms of sport and athletic performance, and a range of practices oriented by ideals of self-defense or spiritual cultivation. We will examine case studies from the US and around the world, paying particular attention to the association of martial arts with East Asian traditions. Same as [ANTH 280](<https://catalog.illinois.edu/search/?P=ANTH%20280>).
-This course satisfies the General Education Criteria for:
-Cultural Studies - Non-West
-Social & Beh Sci - Soc Sci",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 285,EALC,285,Intro to Korea Through Film,3 Hours,"Course uses film, literary, and ethnographic works to explore the impact of Post-Colonial (1945-present) socioeconomic and cultural transformation on the personal and collective South Korean experience. Same as ANTH 285.",,,Cultural Studies - Non-West,,,,"[EALC 285 Intro to Korea Through Film credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/285>)
-
-Course uses film, literary, and ethnographic works to explore the impact of Post-Colonial (1945-present) socioeconomic and cultural transformation on the personal and collective South Korean experience. Same as [ANTH 285](<https://catalog.illinois.edu/search/?P=ANTH%20285>).
-This course satisfies the General Education Criteria for:
-Cultural Studies - Non-West",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
+Social & Beh Sci - Soc Sci",,,
+EALC 285,EALC,285,Intro to Korea Through Film,3 Hours,"Course uses film, literary, and ethnographic works to explore the impact of Post-Colonial (1945-present) socioeconomic and cultural transformation on the personal and collective South Korean experience. Same as ANTH 285.",,,Cultural Studies - Non-West,,,
 EALC 287,EALC,287,Introduction to Buddhism,3 Hours,Same as REL 287. See REL 287.,,,"Humanities - Hist & Phil
-Cultural Studies - Non-West",,,,"[EALC 287 Introduction to Buddhism credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/287>)
-
-Same as [REL 287](<https://catalog.illinois.edu/search/?P=REL%20287>). See [REL 287](<https://catalog.illinois.edu/search/?P=REL%20287>).
-This course satisfies the General Education Criteria for:
-Humanities - Hist & Phil
-Cultural Studies - Non-West",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 288,EALC,288,Contemporary East Asia,3 Hours,Introduction to aspects of daily life in East Asia in relation to local and extra-local political and economic structures and transformations. Same as ANTH 287.,,,,,,,"[EALC 288 Contemporary East Asia credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/288>)
-
-Introduction to aspects of daily life in East Asia in relation to local and extra-local political and economic structures and transformations. Same as [ANTH 287](<https://catalog.illinois.edu/search/?P=ANTH%20287>).",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 305,EALC,305,Japan Lit in Translation I,3 Hours,"Survey of Japanese literature from earliest times to 1600; readings in prose, poetry, and drama in English translation. Same as CWL 311.",,,,,,,"[EALC 305 Japan Lit in Translation I credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/305>)
-
-Survey of Japanese literature from earliest times to 1600; readings in prose, poetry, and drama in English translation. Same as [CWL 311](<https://catalog.illinois.edu/search/?P=CWL%20311>).",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
+Cultural Studies - Non-West",,,
+EALC 288,EALC,288,Contemporary East Asia,3 Hours,Introduction to aspects of daily life in East Asia in relation to local and extra-local political and economic structures and transformations. Same as ANTH 287.,,,,,,
+EALC 305,EALC,305,Japan Lit in Translation I,3 Hours,"Survey of Japanese literature from earliest times to 1600; readings in prose, poetry, and drama in English translation. Same as CWL 311.",,,,,,
 EALC 306,EALC,306,Japan Lit in Translation II,3 Hours,"[IAI Code: H3909] Survey of Japanese literature from 1600 to recent times; readings in prose, poetry, and drama in English translation; and lectures and papers. Same as CWL 312.",,,"Humanities - Lit & Arts
-Cultural Studies - Non-West",,,,"[EALC 306 Japan Lit in Translation II credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/306>)
-
-[IAI Code: H3909] Survey of Japanese literature from 1600 to recent times; readings in prose, poetry, and drama in English translation; and lectures and papers. Same as [CWL 312](<https://catalog.illinois.edu/search/?P=CWL%20312>).
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts
-Cultural Studies - Non-West",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 308,EALC,308,Chinese Popular Literature,3 Hours,"[IAI Code: H3909] Surveys Chinese popular literary works written in the vernacular language (short story, novel, and drama), with attention to cultural and artistic values. No knowledge of Chinese is required. Same as CWL 308.",,,,,,,"[EALC 308 Chinese Popular Literature credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/308>)
-
-[IAI Code: H3909] Surveys Chinese popular literary works written in the vernacular language (short story, novel, and drama), with attention to cultural and artistic values. No knowledge of Chinese is required. Same as [CWL 308](<https://catalog.illinois.edu/search/?P=CWL%20308>).",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 320,EALC,320,Sacred Sites in Japan,3 Hours,"An interdisciplinary study of major sites in Japan that are deemed sacred, and of their visual culture. The art and architecture of sacred sites are examined and positioned within a variety of contexts, such as their cultural, religious, and socio-political significance. It will be explored how these art and architecture have been received and used, and how they and perceptions of the sites have shaped each other. Same as ARTH 320.",,,,,,,"[EALC 320 Sacred Sites in Japan credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/320>)
-
-An interdisciplinary study of major sites in Japan that are deemed sacred, and of their visual culture. The art and architecture of sacred sites are examined and positioned within a variety of contexts, such as their cultural, religious, and socio-political significance. It will be explored how these art and architecture have been received and used, and how they and perceptions of the sites have shaped each other. Same as [ARTH 320](<https://catalog.illinois.edu/search/?P=ARTH%20320>).",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
+Cultural Studies - Non-West",,,
+EALC 308,EALC,308,Chinese Popular Literature,3 Hours,"[IAI Code: H3909] Surveys Chinese popular literary works written in the vernacular language (short story, novel, and drama), with attention to cultural and artistic values. No knowledge of Chinese is required. Same as CWL 308.",,,,,,
+EALC 320,EALC,320,Sacred Sites in Japan,3 Hours,"An interdisciplinary study of major sites in Japan that are deemed sacred, and of their visual culture. The art and architecture of sacred sites are examined and positioned within a variety of contexts, such as their cultural, religious, and socio-political significance. It will be explored how these art and architecture have been received and used, and how they and perceptions of the sites have shaped each other. Same as ARTH 320.",,,,,,
 EALC 327,EALC,327,Tokyo: Then and Now,3 Hours,"Tokyo has been one of the world's largest and most dynamic cities for much of its history. In this course, you will learn about the city through maps and artwork, its literary and culinary creativity, its markets and marketplaces, its quaint neighborhoods and bustling city centers, and its place in film, manga, and anime. You will deepen your knowledge about specific issues through short individual assignments and explore with a small team of your classmates a topic of your choosing that is related to the fascinating history and culture of Edo-Tokyo. Same as HIST 327.",,,"Advanced Composition
-Cultural Studies - Non-West",,,,"[EALC 327 Tokyo: Then and Now credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/327>)
-
-Tokyo has been one of the world's largest and most dynamic cities for much of its history. In this course, you will learn about the city through maps and artwork, its literary and culinary creativity, its markets and marketplaces, its quaint neighborhoods and bustling city centers, and its place in film, manga, and anime. You will deepen your knowledge about specific issues through short individual assignments and explore with a small team of your classmates a topic of your choosing that is related to the fascinating history and culture of Edo-Tokyo. Same as [HIST 327](<https://catalog.illinois.edu/search/?P=HIST%20327>).
-This course satisfies the General Education Criteria for:
-Advanced Composition
-Cultural Studies - Non-West",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 343,EALC,343,Gov & Pol of China,3 Hours,Same as PS 343. See PS 343.,,,,,,,"[EALC 343 Gov & Pol of China credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/343>)
-
-Same as [PS 343](<https://catalog.illinois.edu/search/?P=PS%20343>). See [PS 343](<https://catalog.illinois.edu/search/?P=PS%20343>).",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 344,EALC,344,Government and Politics of Japan,3 Hours,Same as PS 344. See PS 344.,,,,,,,"[EALC 344 Government and Politics of Japan credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/344>)
-
-Same as [PS 344](<https://catalog.illinois.edu/search/?P=PS%20344>). See [PS 344](<https://catalog.illinois.edu/search/?P=PS%20344>).",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 359,EALC,359,Government and Politics of East Asia,3 Hours,Same as PS 359. See PS 359.,,,,,,,"[EALC 359 Government and Politics of East Asia credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/359>)
-
-Same as [PS 359](<https://catalog.illinois.edu/search/?P=PS%20359>). See [PS 359](<https://catalog.illinois.edu/search/?P=PS%20359>).",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 360,EALC,360,Seminar in Korean Studies,3 Hours,"Survey of Korean history, philosophy, religion, economy, art, literature, and culture across per-modern, modern and contemporary periods. May be repeated in the same or separate terms to a maximum of 12 hours if topics vary. Prerequisite: Restricted to junior or senior standing.",Prerequisite: Restricted to junior or senior standing.,,,,,,"[EALC 360 Seminar in Korean Studies credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/360>)
-
-Survey of Korean history, philosophy, religion, economy, art, literature, and culture across per-modern, modern and contemporary periods. May be repeated in the same or separate terms to a maximum of 12 hours if topics vary. Prerequisite: Restricted to junior or senior standing.",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 361,EALC,361,Gender and Women in East Asia,3 Hours,"Interdisciplinary inquiry into the cultural and social patterns that have shaped women's lives in China, Japan, and Korea. Same as GWS 361.",,,Advanced Composition,,,,"[EALC 361 Gender and Women in East Asia credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/361>)
-
-Interdisciplinary inquiry into the cultural and social patterns that have shaped women's lives in China, Japan, and Korea. Same as [GWS 361](<https://catalog.illinois.edu/search/?P=GWS%20361>).
-This course satisfies the General Education Criteria for:
-Advanced Composition",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
+Cultural Studies - Non-West",,,
+EALC 343,EALC,343,Gov & Pol of China,3 Hours,Same as PS 343. See PS 343.,,,,,,
+EALC 344,EALC,344,Government and Politics of Japan,3 Hours,Same as PS 344. See PS 344.,,,,,,
+EALC 359,EALC,359,Government and Politics of East Asia,3 Hours,Same as PS 359. See PS 359.,,,,,,
+EALC 360,EALC,360,Seminar in Korean Studies,3 Hours,"Survey of Korean history, philosophy, religion, economy, art, literature, and culture across per-modern, modern and contemporary periods. May be repeated in the same or separate terms to a maximum of 12 hours if topics vary. Prerequisite: Restricted to junior or senior standing.",Prerequisite: Restricted to junior or senior standing.,,,,,
+EALC 361,EALC,361,Gender and Women in East Asia,3 Hours,"Interdisciplinary inquiry into the cultural and social patterns that have shaped women's lives in China, Japan, and Korea. Same as GWS 361.",,,Advanced Composition,,,
 EALC 365,EALC,365,Contemporary Korean Society,3 Hours,"Explores contemporary Korean society through popular culture, including but not limited to advertisements, sports, tourism, film, television, music, internet & new media, fashion, and food.",,,"Cultural Studies - Non-West
-Social & Beh Sci - Soc Sci",,,,"[EALC 365 Contemporary Korean Society credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/365>)
-
-Explores contemporary Korean society through popular culture, including but not limited to advertisements, sports, tourism, film, television, music, internet & new media, fashion, and food.
-This course satisfies the General Education Criteria for:
-Cultural Studies - Non-West
-Social & Beh Sci - Soc Sci",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
+Social & Beh Sci - Soc Sci",,,
 EALC 367,EALC,367,History of Korea,3 Hours,"Historical examination of the Korean experience, with introduction from the earliest times to the present day with a focus on modern Korea: basic political, social, economic patterns; examination of the cultural and intellectual tradition; Korea's historical role in Asia; the Korean colonial experience; Korea in the modern world. Same as HIST 325.",,,"Humanities - Hist & Phil
-Cultural Studies - Non-West",,,,"[EALC 367 History of Korea credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/367>)
-
-Historical examination of the Korean experience, with introduction from the earliest times to the present day with a focus on modern Korea: basic political, social, economic patterns; examination of the cultural and intellectual tradition; Korea's historical role in Asia; the Korean colonial experience; Korea in the modern world. Same as [HIST 325](<https://catalog.illinois.edu/search/?P=HIST%20325>).
-This course satisfies the General Education Criteria for:
-Humanities - Hist & Phil
-Cultural Studies - Non-West",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 369,EALC,369,Hanguk Hip Hop,3 Hours,"A study of Hanguk hip hop (Korean hip hop) from the 1990s to the present. Starting with the travel of hip hop from the United States to South Korea, this course examines the sociocultural, economic, and historical conditions that gave rise to the birth and growth of Hanguk hip hop as culture and commodity. Important themes that guide this course include but are not limited to youth subcultures, community, technology, globalization, authenticity, and national identity. Prerequisite: Restricted to junior or senior standing.",Prerequisite: Restricted to junior or senior standing.,,,,,,"[EALC 369 Hanguk Hip Hop credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/369>)
-
-A study of Hanguk hip hop (Korean hip hop) from the 1990s to the present. Starting with the travel of hip hop from the United States to South Korea, this course examines the sociocultural, economic, and historical conditions that gave rise to the birth and growth of Hanguk hip hop as culture and commodity. Important themes that guide this course include but are not limited to youth subcultures, community, technology, globalization, authenticity, and national identity. Prerequisite: Restricted to junior or senior standing.",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 390,EALC,390,Individual Study,2 to 4 Hours,Directed readings in the languages and literatures of East Asia. The area selected depends on the student's interest. May be repeated to a maximum of 8 hours. Prerequisite: Consent of instructor.,Prerequisite: Consent of instructor.,,,,,,"[EALC 390 Individual Study credit: 2 to 4 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/390>)
-
-Directed readings in the languages and literatures of East Asia. The area selected depends on the student's interest. May be repeated to a maximum of 8 hours. Prerequisite: Consent of instructor.",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 398,EALC,398,Colloquium in EALC,3 Hours,See online schedule for current topics. May be repeated in the same or separate terms to a maximum of 12 hours if topics vary. Prerequisite: Junior standing.,Prerequisite: Junior standing.,,,,,,"[EALC 398 Colloquium in EALC credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/398>)
-
-See online schedule for current topics. May be repeated in the same or separate terms to a maximum of 12 hours if topics vary. Prerequisite: Junior standing.",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 402,EALC,402,Ways of Seeing in Edo Japan,3 or 4 Hours,Same as ARTH 402. See ARTH 402.,,,,,,,"[EALC 402 Ways of Seeing in Edo Japan credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/402>)
-
-Same as [ARTH 402](<https://catalog.illinois.edu/search/?P=ARTH%20402>). See [ARTH 402](<https://catalog.illinois.edu/search/?P=ARTH%20402>).",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 403,EALC,403,Word and Image in Chinese Art,3 or 4 Hours,Same as ARTH 403. See ARTH 403.,,,,,,,"[EALC 403 Word and Image in Chinese Art credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/403>)
-
-Same as [ARTH 403](<https://catalog.illinois.edu/search/?P=ARTH%20403>). See [ARTH 403](<https://catalog.illinois.edu/search/?P=ARTH%20403>).",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 404,EALC,404,China through Film,3 Hours,Same as ARTH 404. See ARTH 404.,,,,,,,"[EALC 404 China through Film credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/404>)
-
-Same as [ARTH 404](<https://catalog.illinois.edu/search/?P=ARTH%20404>). See [ARTH 404](<https://catalog.illinois.edu/search/?P=ARTH%20404>).",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
+Cultural Studies - Non-West",,,
+EALC 369,EALC,369,Hanguk Hip Hop,3 Hours,"A study of Hanguk hip hop (Korean hip hop) from the 1990s to the present. Starting with the travel of hip hop from the United States to South Korea, this course examines the sociocultural, economic, and historical conditions that gave rise to the birth and growth of Hanguk hip hop as culture and commodity. Important themes that guide this course include but are not limited to youth subcultures, community, technology, globalization, authenticity, and national identity. Prerequisite: Restricted to junior or senior standing.",Prerequisite: Restricted to junior or senior standing.,,,,,
+EALC 390,EALC,390,Individual Study,2 to 4 Hours,Directed readings in the languages and literatures of East Asia. The area selected depends on the student's interest. May be repeated to a maximum of 8 hours. Prerequisite: Consent of instructor.,Prerequisite: Consent of instructor.,,,,,
+EALC 398,EALC,398,Colloquium in EALC,3 Hours,See online schedule for current topics. May be repeated in the same or separate terms to a maximum of 12 hours if topics vary. Prerequisite: Junior standing.,Prerequisite: Junior standing.,,,,,
+EALC 402,EALC,402,Ways of Seeing in Edo Japan,3 or 4 Hours,Same as ARTH 402. See ARTH 402.,,,,,,
+EALC 403,EALC,403,Word and Image in Chinese Art,3 or 4 Hours,Same as ARTH 403. See ARTH 403.,,,,,,
+EALC 404,EALC,404,China through Film,3 Hours,Same as ARTH 404. See ARTH 404.,,,,,,
 EALC 411,EALC,411,The Chinese Novel,"3 or 4 Hours
-3 undergraduate hours. 4 graduate hours.","Reading and analysis of representative pieces of Chinese fiction from the fourth century B.C. to 1900 with emphasis on the development of Chinese fiction, its place in the literary tradition, and its role in society. Same as CWL 411. 3 undergraduate hours. 4 graduate hours. No knowledge of Chinese is required.",,,,,,,"[EALC 411 The Chinese Novel credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/411>)
-
-Reading and analysis of representative pieces of Chinese fiction from the fourth century B.C. to 1900 with emphasis on the development of Chinese fiction, its place in the literary tradition, and its role in society. Same as [CWL 411](<https://catalog.illinois.edu/search/?P=CWL%20411>). 3 undergraduate hours. 4 graduate hours. No knowledge of Chinese is required.",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
+3 undergraduate hours. 4 graduate hours.","Reading and analysis of representative pieces of Chinese fiction from the fourth century B.C. to 1900 with emphasis on the development of Chinese fiction, its place in the literary tradition, and its role in society. Same as CWL 411. 3 undergraduate hours. 4 graduate hours. No knowledge of Chinese is required.",,,,,,
 EALC 412,EALC,412,Mod Chinese Lit in Translation,"3 or 4 Hours
-3 undergraduate hours. 4 graduate hours.","Reading and analysis of representative selections from Chinese literature since the May 4 Movement (early 20th century), with special attention to the relationship between literature and ideology in twentieth-century China. Same as CWL 412. 3 undergraduate hours. 4 graduate hours. No knowledge of Chinese is required.",,,,,,,"[EALC 412 Mod Chinese Lit in Translation credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/412>)
-
-Reading and analysis of representative selections from Chinese literature since the May 4 Movement (early 20th century), with special attention to the relationship between literature and ideology in twentieth-century China. Same as [CWL 412](<https://catalog.illinois.edu/search/?P=CWL%20412>). 3 undergraduate hours. 4 graduate hours. No knowledge of Chinese is required.",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
+3 undergraduate hours. 4 graduate hours.","Reading and analysis of representative selections from Chinese literature since the May 4 Movement (early 20th century), with special attention to the relationship between literature and ideology in twentieth-century China. Same as CWL 412. 3 undergraduate hours. 4 graduate hours. No knowledge of Chinese is required.",,,,,,
 EALC 415,EALC,415,Mod Japan Lit in Translation,"2 to 4 Hours
-3 undergraduate hours. 2 or 4 graduate hours.","Critical study of selected 20th century writers with an emphasis on cultural background, world view, human relationships, aesthetic theories, Japanese and Western traditions, and universal literary issues. Same as CWL 415. 3 undergraduate hours. 2 or 4 graduate hours. Requires no knowledge of Japanese; readings and films. Prerequisite: Junior standing or consent of instructor.",Prerequisite: Junior standing or consent of instructor.,,,,,,"[EALC 415 Mod Japan Lit in Translation credit: 2 to 4 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/415>)
-
-Critical study of selected 20th century writers with an emphasis on cultural background, world view, human relationships, aesthetic theories, Japanese and Western traditions, and universal literary issues. Same as [CWL 415](<https://catalog.illinois.edu/search/?P=CWL%20415>). 3 undergraduate hours. 2 or 4 graduate hours. Requires no knowledge of Japanese; readings and films. Prerequisite: Junior standing or consent of instructor.",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 420,EALC,420,China Under the Qing Dynasty,2 to 4 Hours,Same as HIST 420. See HIST 420.,,,,,,,"[EALC 420 China Under the Qing Dynasty credit: 2 to 4 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/420>)
-
-Same as [HIST 420](<https://catalog.illinois.edu/search/?P=HIST%20420>). See [HIST 420](<https://catalog.illinois.edu/search/?P=HIST%20420>).",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 421,EALC,421,Soc-Econ Hist Modern China,2 to 4 Hours,Same as HIST 422. See HIST 422.,,,,,,,"[EALC 421 Soc-Econ Hist Modern China credit: 2 to 4 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/421>)
-
-Same as [HIST 422](<https://catalog.illinois.edu/search/?P=HIST%20422>). See [HIST 422](<https://catalog.illinois.edu/search/?P=HIST%20422>).",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
+3 undergraduate hours. 2 or 4 graduate hours.","Critical study of selected 20th century writers with an emphasis on cultural background, world view, human relationships, aesthetic theories, Japanese and Western traditions, and universal literary issues. Same as CWL 415. 3 undergraduate hours. 2 or 4 graduate hours. Requires no knowledge of Japanese; readings and films. Prerequisite: Junior standing or consent of instructor.",Prerequisite: Junior standing or consent of instructor.,,,,,
+EALC 420,EALC,420,China Under the Qing Dynasty,2 to 4 Hours,Same as HIST 420. See HIST 420.,,,,,,
+EALC 421,EALC,421,Soc-Econ Hist Modern China,2 to 4 Hours,Same as HIST 422. See HIST 422.,,,,,,
 EALC 425,EALC,425,Chinese Poetry and Translation,"3 Hours
-3 undergraduate hours. 3 graduate hours.",A critical introduction to major Chinese poetic genres and an in depth examination of various translation strategies used in the translation of Chinese poetry. The poetry component acquaints students with essential aspects of Chinese language and poetry and thus enables them to evaluate the translated texts from the perspectives of both an insider and outsider. The translation component entails both the evaluation of existing translations and practice by the students. Same as TRST 430. 3 undergraduate hours. 3 graduate hours.,,,,,,,"[EALC 425 Chinese Poetry and Translation credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/425>)
-
-A critical introduction to major Chinese poetic genres and an in depth examination of various translation strategies used in the translation of Chinese poetry. The poetry component acquaints students with essential aspects of Chinese language and poetry and thus enables them to evaluate the translated texts from the perspectives of both an insider and outsider. The translation component entails both the evaluation of existing translations and practice by the students. Same as [TRST 430](<https://catalog.illinois.edu/search/?P=TRST%20430>). 3 undergraduate hours. 3 graduate hours.",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 427,EALC,427,Twentieth-Century Japan,3 or 4 Hours,Same as HIST 427. See HIST 427.,,,,,,,"[EALC 427 Twentieth-Century Japan credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/427>)
-
-Same as [HIST 427](<https://catalog.illinois.edu/search/?P=HIST%20427>). See [HIST 427](<https://catalog.illinois.edu/search/?P=HIST%20427>).",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 430,EALC,430,Intro to East Asian Ling,3 or 4 Hours,Same as LING 430. See LING 430.,,,,,,,"[EALC 430 Intro to East Asian Ling credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/430>)
-
-Same as [LING 430](<https://catalog.illinois.edu/search/?P=LING%20430>). See [LING 430](<https://catalog.illinois.edu/search/?P=LING%20430>).",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 466,EALC,466,Japanese Cinema,3 or 4 Hours,Same as CWL 467 and MACS 466. See MACS 466.,,,,,,,"[EALC 466 Japanese Cinema credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/466>)
-
-Same as [CWL 467](<https://catalog.illinois.edu/search/?P=CWL%20467>) and [MACS 466](<https://catalog.illinois.edu/search/?P=MACS%20466>). See [MACS 466](<https://catalog.illinois.edu/search/?P=MACS%20466>).",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
+3 undergraduate hours. 3 graduate hours.",A critical introduction to major Chinese poetic genres and an in depth examination of various translation strategies used in the translation of Chinese poetry. The poetry component acquaints students with essential aspects of Chinese language and poetry and thus enables them to evaluate the translated texts from the perspectives of both an insider and outsider. The translation component entails both the evaluation of existing translations and practice by the students. Same as TRST 430. 3 undergraduate hours. 3 graduate hours.,,,,,,
+EALC 427,EALC,427,Twentieth-Century Japan,3 or 4 Hours,Same as HIST 427. See HIST 427.,,,,,,
+EALC 430,EALC,430,Intro to East Asian Ling,3 or 4 Hours,Same as LING 430. See LING 430.,,,,,,
+EALC 466,EALC,466,Japanese Cinema,3 or 4 Hours,Same as CWL 467 and MACS 466. See MACS 466.,,,,,,
 EALC 470,EALC,470,Anthropology of Modern China,"3 or 4 Hours
-3 undergraduate hours. 4 graduate hours.","Advanced introduction to society and culture in modern China, reading canonical and contemporary anthropology on a range of topics, including: kinship, political economy, education, gender, and governance. Students completing the course will gain a deeper understanding of modern China and anthropological methods. Same as ANTH 470. 3 undergraduate hours. 4 graduate hours. Prerequisite: Restricted to junior, senior or graduate standing.","Prerequisite: Restricted to junior, senior or graduate standing.",,,,,,"[EALC 470 Anthropology of Modern China credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/470>)
-
-Advanced introduction to society and culture in modern China, reading canonical and contemporary anthropology on a range of topics, including: kinship, political economy, education, gender, and governance. Students completing the course will gain a deeper understanding of modern China and anthropological methods. Same as [ANTH 470](<https://catalog.illinois.edu/search/?P=ANTH%20470>). 3 undergraduate hours. 4 graduate hours. Prerequisite: Restricted to junior, senior or graduate standing.",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
+3 undergraduate hours. 4 graduate hours.","Advanced introduction to society and culture in modern China, reading canonical and contemporary anthropology on a range of topics, including: kinship, political economy, education, gender, and governance. Students completing the course will gain a deeper understanding of modern China and anthropological methods. Same as ANTH 470. 3 undergraduate hours. 4 graduate hours. Prerequisite: Restricted to junior, senior or graduate standing.","Prerequisite: Restricted to junior, senior or graduate standing.",,,,,
 EALC 476,EALC,476,Classical Chinese Thought,"3 or 4 Hours
-3 undergraduate hours. 4 graduate hours.","Inquiry into the major schools of Chinese thought in the Classical Period through the Han (206 B.C. - A.D. 220): Confucianism, Taoism and Legalism. Topics such as the concept of history, military thought and logic will be covered. Readings are in English. Same as CWL 478 and HIST 425. 3 undergraduate hours. 4 graduate hours. Prerequisite: One 200 or 300-level course on Chinese culture or consent of instructor.",Prerequisite: One 200 or 300-level course on Chinese culture or consent of instructor.,,,,,,"[EALC 476 Classical Chinese Thought credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/476>)
-
-Inquiry into the major schools of Chinese thought in the Classical Period through the Han (206 B.C. - A.D. 220): Confucianism, Taoism and Legalism. Topics such as the concept of history, military thought and logic will be covered. Readings are in English. Same as [CWL 478](<https://catalog.illinois.edu/search/?P=CWL%20478>) and [HIST 425](<https://catalog.illinois.edu/search/?P=HIST%20425>). 3 undergraduate hours. 4 graduate hours. Prerequisite: One 200 or 300-level course on Chinese culture or consent of instructor.",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
+3 undergraduate hours. 4 graduate hours.","Inquiry into the major schools of Chinese thought in the Classical Period through the Han (206 B.C. - A.D. 220): Confucianism, Taoism and Legalism. Topics such as the concept of history, military thought and logic will be covered. Readings are in English. Same as CWL 478 and HIST 425. 3 undergraduate hours. 4 graduate hours. Prerequisite: One 200 or 300-level course on Chinese culture or consent of instructor.",Prerequisite: One 200 or 300-level course on Chinese culture or consent of instructor.,,,,,
 EALC 485,EALC,485,"Karma of Words: Buddhism, Language and the Literary Arts of Japan","3 or 4 Hours
-3 undergraduate hours. 4 graduate hours.","The relation between Buddhism, Language and the Literary Arts of Japan will be explored. After introducing the ideas, motifs, paradigms and images of the Buddhist tradition and reading Buddhist scriptural texts from a literary perspective, we will then analyze how Buddhism was re-expressed and reshaped in Japanese literature with additional focus on Buddhist theories of language and literature. Same as REL 485. 3 undergraduate hours. 4 graduate hours. Prerequisite: Previous coursework in either Buddhism or East Asian Literature is preferred but not required.",Prerequisite: Previous coursework in either Buddhism or East Asian Literature is preferred but not required.,,,,,,"[EALC 485 Karma of Words: Buddhism, Language and the Literary Arts of Japan credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/485>)
-
-The relation between Buddhism, Language and the Literary Arts of Japan will be explored. After introducing the ideas, motifs, paradigms and images of the Buddhist tradition and reading Buddhist scriptural texts from a literary perspective, we will then analyze how Buddhism was re-expressed and reshaped in Japanese literature with additional focus on Buddhist theories of language and literature. Same as [REL 485](<https://catalog.illinois.edu/search/?P=REL%20485>). 3 undergraduate hours. 4 graduate hours. Prerequisite: Previous coursework in either Buddhism or East Asian Literature is preferred but not required.",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
+3 undergraduate hours. 4 graduate hours.","The relation between Buddhism, Language and the Literary Arts of Japan will be explored. After introducing the ideas, motifs, paradigms and images of the Buddhist tradition and reading Buddhist scriptural texts from a literary perspective, we will then analyze how Buddhism was re-expressed and reshaped in Japanese literature with additional focus on Buddhist theories of language and literature. Same as REL 485. 3 undergraduate hours. 4 graduate hours. Prerequisite: Previous coursework in either Buddhism or East Asian Literature is preferred but not required.",Prerequisite: Previous coursework in either Buddhism or East Asian Literature is preferred but not required.,,,,,
 EALC 488,EALC,488,History of Chinese Buddhism,"3 or 4 Hours
-3 undergraduate hours. 3 or 4 graduate hours.",Survey of the history of Chinese Buddhism since its introduction; analysis of Buddhological trends and styles; and the sociocultural milieu of Chinese Buddhism and its place in the total history of ideas and lifestyles. Same as REL 488. 3 undergraduate hours. 3 or 4 graduate hours. Prerequisite: REL 287 or consent of instructor.,Prerequisite: REL 287 or consent of instructor.,,,,,,"[EALC 488 History of Chinese Buddhism credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/488>)
-
-Survey of the history of Chinese Buddhism since its introduction; analysis of Buddhological trends and styles; and the sociocultural milieu of Chinese Buddhism and its place in the total history of ideas and lifestyles. Same as [REL 488](<https://catalog.illinois.edu/search/?P=REL%20488>). 3 undergraduate hours. 3 or 4 graduate hours. Prerequisite: [REL 287](<https://catalog.illinois.edu/search/?P=REL%20287>) or consent of instructor.",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
+3 undergraduate hours. 3 or 4 graduate hours.",Survey of the history of Chinese Buddhism since its introduction; analysis of Buddhological trends and styles; and the sociocultural milieu of Chinese Buddhism and its place in the total history of ideas and lifestyles. Same as REL 488. 3 undergraduate hours. 3 or 4 graduate hours. Prerequisite: REL 287 or consent of instructor.,Prerequisite: REL 287 or consent of instructor.,,,,,
 EALC 490,EALC,490,Individual Study,"2 to 12 Hours
-3 to 12 undergraduate hours. 2 to 12 graduate hours.",Supervised individualized study of a topic not covered by regular course offerings. The topic must be approved by the instructor. 3 to 12 undergraduate hours. 2 to 12 graduate hours. May be repeated to a maximum of 16 hours. Prerequisite: Consent of instructor.,Prerequisite: Consent of instructor.,,,,,,"[EALC 490 Individual Study credit: 2 to 12 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/490>)
-
-Supervised individualized study of a topic not covered by regular course offerings. The topic must be approved by the instructor. 3 to 12 undergraduate hours. 2 to 12 graduate hours. May be repeated to a maximum of 16 hours. Prerequisite: Consent of instructor.",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 495,EALC,495,Topics in Asian Religions,3 or 4 Hours,Same as REL 495. See REL 495.,,,,,,,"[EALC 495 Topics in Asian Religions credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/495>)
-
-Same as [REL 495](<https://catalog.illinois.edu/search/?P=REL%20495>). See [REL 495](<https://catalog.illinois.edu/search/?P=REL%20495>).",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 500,EALC,500,Proseminar in EALC,4 Hours,"Interdisciplinary introduction for first-term East Asian Languages and Cultures graduate students to western-language writings on East Asia that have been important to modern scholarship on the region. The proseminar will cover the three cultures of the region in an interdisciplinary fashion, focusing on the methods of various disciplines in their treatment of East Asia. Method refers both to the kinds of materials studies, and the theory and tools used in research.",,,,,,,"[EALC 500 Proseminar in EALC credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/500>)
-
-Interdisciplinary introduction for first-term East Asian Languages and Cultures graduate students to western-language writings on East Asia that have been important to modern scholarship on the region. The proseminar will cover the three cultures of the region in an interdisciplinary fashion, focusing on the methods of various disciplines in their treatment of East Asia. Method refers both to the kinds of materials studies, and the theory and tools used in research.",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 501,EALC,501,Seminar in Chinese Art,4 Hours,Same as ARTH 501. See ARTH 501.,,,,,,,"[EALC 501 Seminar in Chinese Art credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/501>)
-
-Same as [ARTH 501](<https://catalog.illinois.edu/search/?P=ARTH%20501>). See [ARTH 501](<https://catalog.illinois.edu/search/?P=ARTH%20501>).",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 511,EALC,511,Applied Literary Translation I,4 Hours,"Same as CWL 511, GER 511, SLAV 501, and TRST 501. See TRST 501.",,,,,,,"[EALC 511 Applied Literary Translation I credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/511>)
-
-Same as [CWL 511](<https://catalog.illinois.edu/search/?P=CWL%20511>), [GER 511](<https://catalog.illinois.edu/search/?P=GER%20511>), [SLAV 501](<https://catalog.illinois.edu/search/?P=SLAV%20501>), and [TRST 501](<https://catalog.illinois.edu/search/?P=TRST%20501>). See [TRST 501](<https://catalog.illinois.edu/search/?P=TRST%20501>).",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 512,EALC,512,Applied LiteraryTranslation II,4 Hours,"Same as CWL 512, GER 512, SLAV 502, and TRST 502. See TRST 502.",,,,,,,"[EALC 512 Applied LiteraryTranslation II credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/512>)
-
-Same as [CWL 512](<https://catalog.illinois.edu/search/?P=CWL%20512>), [GER 512](<https://catalog.illinois.edu/search/?P=GER%20512>), [SLAV 502](<https://catalog.illinois.edu/search/?P=SLAV%20502>), and [TRST 502](<https://catalog.illinois.edu/search/?P=TRST%20502>). See [TRST 502](<https://catalog.illinois.edu/search/?P=TRST%20502>).",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 520,EALC,520,Problems in Chinese History,4 Hours,Same as HIST 520. See HIST 520.,,,,,,,"[EALC 520 Problems in Chinese History credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/520>)
-
-Same as [HIST 520](<https://catalog.illinois.edu/search/?P=HIST%20520>). See [HIST 520](<https://catalog.illinois.edu/search/?P=HIST%20520>).",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 521,EALC,521,Seminar in Chinese Literature,4 Hours,Examination of Chinese literature from a variety of genres and historical periods intended to prepare students for independent work in literary criticism and analysis. Readings include both primary texts and important works of secondary scholarship. Students will produce a term paper based on independent research. May be repeated to a maximum of 8 hours with approval.,,,,,,,"[EALC 521 Seminar in Chinese Literature credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/521>)
-
-Examination of Chinese literature from a variety of genres and historical periods intended to prepare students for independent work in literary criticism and analysis. Readings include both primary texts and important works of secondary scholarship. Students will produce a term paper based on independent research. May be repeated to a maximum of 8 hours with approval.",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 522,EALC,522,Research Seminar: China,4 Hours,Same as HIST 521. See HIST 521.,,,,,,,"[EALC 522 Research Seminar: China credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/522>)
-
-Same as [HIST 521](<https://catalog.illinois.edu/search/?P=HIST%20521>). See [HIST 521](<https://catalog.illinois.edu/search/?P=HIST%20521>).",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 526,EALC,526,Problems in Japanese History,4 Hours,Same as HIST 526. See HIST 526.,,,,,,,"[EALC 526 Problems in Japanese History credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/526>)
-
-Same as [HIST 526](<https://catalog.illinois.edu/search/?P=HIST%20526>). See [HIST 526](<https://catalog.illinois.edu/search/?P=HIST%20526>).",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 527,EALC,527,Research Seminar: Japan,4 Hours,Same as HIST 527. See HIST 527.,,,,,,,"[EALC 527 Research Seminar: Japan credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/527>)
-
-Same as [HIST 527](<https://catalog.illinois.edu/search/?P=HIST%20527>). See [HIST 527](<https://catalog.illinois.edu/search/?P=HIST%20527>).",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 550,EALC,550,Seminar in EALC,4 Hours,Seminar on selected topics. Topic varies with instructor. May be repeated to a maximum of 12 hours. Prerequisite: Consent of instructor.,Prerequisite: Consent of instructor.,,,,,,"[EALC 550 Seminar in EALC credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/550>)
-
-Seminar on selected topics. Topic varies with instructor. May be repeated to a maximum of 12 hours. Prerequisite: Consent of instructor.",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 560,EALC,560,East Asian Language Pedagogy,4 Hours,"Course is for teachers of Japan, Chinese, or Korean language who wish to improve their teaching skills and learn more about second and foreign language acquisition specific to the East Asian Language context. Besides reviewing research on language teaching methodology and curriculum development, students will observe each other conduct practice classes and analyze videotapes of class sessions. Undergraduates may enroll with consent of instructor and the Graduate College. Prerequisite: Native or near-native fluency in Japan, Chinese, or Korean.","Prerequisite: Native or near-native fluency in Japan, Chinese, or Korean.",,,,,,"[EALC 560 East Asian Language Pedagogy credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/560>)
-
-Course is for teachers of Japan, Chinese, or Korean language who wish to improve their teaching skills and learn more about second and foreign language acquisition specific to the East Asian Language context. Besides reviewing research on language teaching methodology and curriculum development, students will observe each other conduct practice classes and analyze videotapes of class sessions. Undergraduates may enroll with consent of instructor and the Graduate College. Prerequisite: Native or near-native fluency in Japan, Chinese, or Korean.",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 567,EALC,567,Popular Religion in East Asia,4 Hours,Same as REL 568. See REL 568.,,,,,,,"[EALC 567 Popular Religion in East Asia credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/567>)
-
-Same as [REL 568](<https://catalog.illinois.edu/search/?P=REL%20568>). See [REL 568](<https://catalog.illinois.edu/search/?P=REL%20568>).",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 584,EALC,584,Theories in Second Language Acquisition,4 Hours,"Same as CI 584, EPSY 563, FR 584, GER 584, ITAL 584, LING 584, PORT 584, and SPAN 584. See SPAN 584.",,,,,,,"[EALC 584 Theories in Second Language Acquisition credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/584>)
-
-Same as [CI 584](<https://catalog.illinois.edu/search/?P=CI%20584>), [EPSY 563](<https://catalog.illinois.edu/search/?P=EPSY%20563>), [FR 584](<https://catalog.illinois.edu/search/?P=FR%20584>), [GER 584](<https://catalog.illinois.edu/search/?P=GER%20584>), [ITAL 584](<https://catalog.illinois.edu/search/?P=ITAL%20584>), [LING 584](<https://catalog.illinois.edu/search/?P=LING%20584>), [PORT 584](<https://catalog.illinois.edu/search/?P=PORT%20584>), and [SPAN 584](<https://catalog.illinois.edu/search/?P=SPAN%20584>). See [SPAN 584](<https://catalog.illinois.edu/search/?P=SPAN%20584>).",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 588,EALC,588,Sem Second Lang Learn,4 Hours,"Same as FR 588, GER 588, ITAL 588, LING 588, PORT 588, and SPAN 588. See SPAN 588.",,,,,,,"[EALC 588 Sem Second Lang Learn credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/588>)
-
-Same as [FR 588](<https://catalog.illinois.edu/search/?P=FR%20588>), [GER 588](<https://catalog.illinois.edu/search/?P=GER%20588>), [ITAL 588](<https://catalog.illinois.edu/search/?P=ITAL%20588>), [LING 588](<https://catalog.illinois.edu/search/?P=LING%20588>), [PORT 588](<https://catalog.illinois.edu/search/?P=PORT%20588>), and [SPAN 588](<https://catalog.illinois.edu/search/?P=SPAN%20588>). See [SPAN 588](<https://catalog.illinois.edu/search/?P=SPAN%20588>).",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 590,EALC,590,Individual Study and Research,2 to 12 Hours,Supervised individual investigation or study of a topic not covered by regular course offerings. The topic selected by the student and the proposed plan of study must be approved by the adviser and the instructor. May be repeated. Prerequisite: Consent of instructor.,Prerequisite: Consent of instructor.,,,,,,"[EALC 590 Individual Study and Research credit: 2 to 12 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/590>)
-
-Supervised individual investigation or study of a topic not covered by regular course offerings. The topic selected by the student and the proposed plan of study must be approved by the adviser and the instructor. May be repeated. Prerequisite: Consent of instructor.",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
-EALC 599,EALC,599,Thesis Research,0 to 16 Hours,Research and guidance in writing theses for advanced degrees. Approved for S/U grading only. May be repeated in the same term or in separate terms up to a maximum of 16 hours. Prerequisite: Satisfactory completion of the preliminary examinations.,Prerequisite: Satisfactory completion of the preliminary examinations.,,,,,,"[EALC 599 Thesis Research credit: 0 to 16 Hours.](<https://courses.illinois.edu/schedule/terms/EALC/599>)
-
-Research and guidance in writing theses for advanced degrees. Approved for S/U grading only. May be repeated in the same term or in separate terms up to a maximum of 16 hours. Prerequisite: Satisfactory completion of the preliminary examinations.",https://catalog.illinois.edu/courses-of-instruction/ealc/,2026–2027
+3 to 12 undergraduate hours. 2 to 12 graduate hours.",Supervised individualized study of a topic not covered by regular course offerings. The topic must be approved by the instructor. 3 to 12 undergraduate hours. 2 to 12 graduate hours. May be repeated to a maximum of 16 hours. Prerequisite: Consent of instructor.,Prerequisite: Consent of instructor.,,,,,
+EALC 495,EALC,495,Topics in Asian Religions,3 or 4 Hours,Same as REL 495. See REL 495.,,,,,,
+EALC 500,EALC,500,Proseminar in EALC,4 Hours,"Interdisciplinary introduction for first-term East Asian Languages and Cultures graduate students to western-language writings on East Asia that have been important to modern scholarship on the region. The proseminar will cover the three cultures of the region in an interdisciplinary fashion, focusing on the methods of various disciplines in their treatment of East Asia. Method refers both to the kinds of materials studies, and the theory and tools used in research.",,,,,,
+EALC 501,EALC,501,Seminar in Chinese Art,4 Hours,Same as ARTH 501. See ARTH 501.,,,,,,
+EALC 511,EALC,511,Applied Literary Translation I,4 Hours,"Same as CWL 511, GER 511, SLAV 501, and TRST 501. See TRST 501.",,,,,,
+EALC 512,EALC,512,Applied LiteraryTranslation II,4 Hours,"Same as CWL 512, GER 512, SLAV 502, and TRST 502. See TRST 502.",,,,,,
+EALC 520,EALC,520,Problems in Chinese History,4 Hours,Same as HIST 520. See HIST 520.,,,,,,
+EALC 521,EALC,521,Seminar in Chinese Literature,4 Hours,Examination of Chinese literature from a variety of genres and historical periods intended to prepare students for independent work in literary criticism and analysis. Readings include both primary texts and important works of secondary scholarship. Students will produce a term paper based on independent research. May be repeated to a maximum of 8 hours with approval.,,,,,,
+EALC 522,EALC,522,Research Seminar: China,4 Hours,Same as HIST 521. See HIST 521.,,,,,,
+EALC 526,EALC,526,Problems in Japanese History,4 Hours,Same as HIST 526. See HIST 526.,,,,,,
+EALC 527,EALC,527,Research Seminar: Japan,4 Hours,Same as HIST 527. See HIST 527.,,,,,,
+EALC 550,EALC,550,Seminar in EALC,4 Hours,Seminar on selected topics. Topic varies with instructor. May be repeated to a maximum of 12 hours. Prerequisite: Consent of instructor.,Prerequisite: Consent of instructor.,,,,,
+EALC 560,EALC,560,East Asian Language Pedagogy,4 Hours,"Course is for teachers of Japan, Chinese, or Korean language who wish to improve their teaching skills and learn more about second and foreign language acquisition specific to the East Asian Language context. Besides reviewing research on language teaching methodology and curriculum development, students will observe each other conduct practice classes and analyze videotapes of class sessions. Undergraduates may enroll with consent of instructor and the Graduate College. Prerequisite: Native or near-native fluency in Japan, Chinese, or Korean.","Prerequisite: Native or near-native fluency in Japan, Chinese, or Korean.",,,,,
+EALC 567,EALC,567,Popular Religion in East Asia,4 Hours,Same as REL 568. See REL 568.,,,,,,
+EALC 584,EALC,584,Theories in Second Language Acquisition,4 Hours,"Same as CI 584, EPSY 563, FR 584, GER 584, ITAL 584, LING 584, PORT 584, and SPAN 584. See SPAN 584.",,,,,,
+EALC 588,EALC,588,Sem Second Lang Learn,4 Hours,"Same as FR 588, GER 588, ITAL 588, LING 588, PORT 588, and SPAN 588. See SPAN 588.",,,,,,
+EALC 590,EALC,590,Individual Study and Research,2 to 12 Hours,Supervised individual investigation or study of a topic not covered by regular course offerings. The topic selected by the student and the proposed plan of study must be approved by the adviser and the instructor. May be repeated. Prerequisite: Consent of instructor.,Prerequisite: Consent of instructor.,,,,,
+EALC 599,EALC,599,Thesis Research,0 to 16 Hours,Research and guidance in writing theses for advanced degrees. Approved for S/U grading only. May be repeated in the same term or in separate terms up to a maximum of 16 hours. Prerequisite: Satisfactory completion of the preliminary examinations.,Prerequisite: Satisfactory completion of the preliminary examinations.,,,,,

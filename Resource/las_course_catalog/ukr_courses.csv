@@ -1,30 +1,11 @@
-course_code,subject,course_number,course_name,credits,description,prerequisites,credit_restrictions,gen_ed,total_students,total_sections,overall_gpa,catalog_text,source_url,catalog_year
-UKR 101,UKR,101,Basic Ukrainian I,4 Hours,"Oral and written work on basic pronunciation, grammar, and vocabulary. For students with no previous study of Ukrainian.",,,,,,,"[UKR 101 Basic Ukrainian I credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/UKR/101>)
-
-Oral and written work on basic pronunciation, grammar, and vocabulary. For students with no previous study of Ukrainian.",https://catalog.illinois.edu/courses-of-instruction/ukr/,2026–2027
-UKR 102,UKR,102,Basic Ukrainian II,4 Hours,Continuation of UKR 101. Prerequisite: UKR 101 or equivalent proficiency.,Prerequisite: UKR 101 or equivalent proficiency.,,,,,,"[UKR 102 Basic Ukrainian II credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/UKR/102>)
-
-Continuation of [UKR 101](<https://catalog.illinois.edu/search/?P=UKR%20101>). Prerequisite: [UKR 101](<https://catalog.illinois.edu/search/?P=UKR%20101>) or equivalent proficiency.",https://catalog.illinois.edu/courses-of-instruction/ukr/,2026–2027
+course_code,subject,course_number,course_name,credits,description,prerequisites,credit_restrictions,gen_ed,total_students,total_sections,overall_gpa
+UKR 101,UKR,101,Basic Ukrainian I,4 Hours,"Oral and written work on basic pronunciation, grammar, and vocabulary. For students with no previous study of Ukrainian.",,,,,,
+UKR 102,UKR,102,Basic Ukrainian II,4 Hours,Continuation of UKR 101. Prerequisite: UKR 101 or equivalent proficiency.,Prerequisite: UKR 101 or equivalent proficiency.,,,,,
 UKR 113,UKR,113,Ukrainian Culture,3 Hours,"Course situates Ukrainian culture in the broad context of Slavic nations. Acquaints students with Ukrainian culture from the origins of Kievan Rus' in the Middle Ages to the present. Includes highlights of historical-cultural events, an overview of literature and of the arts, as well as an outline of Ukrainian folklore. No knowledge of Ukrainian required.",,,"Humanities - Lit & Arts
-Cultural Studies - Western",,,,"[UKR 113 Ukrainian Culture credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/UKR/113>)
-
-Course situates Ukrainian culture in the broad context of Slavic nations. Acquaints students with Ukrainian culture from the origins of Kievan Rus' in the Middle Ages to the present. Includes highlights of historical-cultural events, an overview of literature and of the arts, as well as an outline of Ukrainian folklore. No knowledge of Ukrainian required.
-This course satisfies the General Education Criteria for:
-Humanities - Lit & Arts
-Cultural Studies - Western",https://catalog.illinois.edu/courses-of-instruction/ukr/,2026–2027
-UKR 199,UKR,199,Undergraduate Open Seminar,1 to 5 Hours,May be repeated.,,,,,,,"[UKR 199 Undergraduate Open Seminar credit: 1 to 5 Hours.](<https://courses.illinois.edu/schedule/terms/UKR/199>)
-
-May be repeated.",https://catalog.illinois.edu/courses-of-instruction/ukr/,2026–2027
-UKR 201,UKR,201,Second-Year Ukrainan I,4 Hours,"Completion of grammar, oral drills, and written exercises. Prerequisite: UKR 102 or equivalent.",Prerequisite: UKR 102 or equivalent.,,,,,,"[UKR 201 Second-Year Ukrainan I credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/UKR/201>)
-
-Completion of grammar, oral drills, and written exercises. Prerequisite: [UKR 102](<https://catalog.illinois.edu/search/?P=UKR%20102>) or equivalent.",https://catalog.illinois.edu/courses-of-instruction/ukr/,2026–2027
-UKR 202,UKR,202,Second-Year Ukrainian II,4 Hours,Selected readings in contemporary Ukrainian literature. Prerequisite: UKR 201 or equivalent.,Prerequisite: UKR 201 or equivalent.,,,,,,"[UKR 202 Second-Year Ukrainian II credit: 4 Hours.](<https://courses.illinois.edu/schedule/terms/UKR/202>)
-
-Selected readings in contemporary Ukrainian literature. Prerequisite: [UKR 201](<https://catalog.illinois.edu/search/?P=UKR%20201>) or equivalent.",https://catalog.illinois.edu/courses-of-instruction/ukr/,2026–2027
-UKR 218,UKR,218,Survey of Ukrainian Literature,3 Hours,Critical survey of major works in Ukrainian literature from the beginnings to the modern period in light of their historical and cultural background; lectures and readings in English. Same as CWL 218.,,,,,,,"[UKR 218 Survey of Ukrainian Literature credit: 3 Hours.](<https://courses.illinois.edu/schedule/terms/UKR/218>)
-
-Critical survey of major works in Ukrainian literature from the beginnings to the modern period in light of their historical and cultural background; lectures and readings in English. Same as [CWL 218](<https://catalog.illinois.edu/search/?P=CWL%20218>).",https://catalog.illinois.edu/courses-of-instruction/ukr/,2026–2027
+Cultural Studies - Western",,,
+UKR 199,UKR,199,Undergraduate Open Seminar,1 to 5 Hours,May be repeated.,,,,,,
+UKR 201,UKR,201,Second-Year Ukrainan I,4 Hours,"Completion of grammar, oral drills, and written exercises. Prerequisite: UKR 102 or equivalent.",Prerequisite: UKR 102 or equivalent.,,,,,
+UKR 202,UKR,202,Second-Year Ukrainian II,4 Hours,Selected readings in contemporary Ukrainian literature. Prerequisite: UKR 201 or equivalent.,Prerequisite: UKR 201 or equivalent.,,,,,
+UKR 218,UKR,218,Survey of Ukrainian Literature,3 Hours,Critical survey of major works in Ukrainian literature from the beginnings to the modern period in light of their historical and cultural background; lectures and readings in English. Same as CWL 218.,,,,,,
 UKR 498,UKR,498,Problems in Ukrainian Lit,"3 or 4 Hours
-3 undergraduate hours. 3 or 4 graduate hours.",Critical survey of major works in Ukrainian literature from the beginnings to the modern period in light of their historical and cultural background; lectures and readings in English. 3 undergraduate hours. 3 or 4 graduate hours.,,,,,,,"[UKR 498 Problems in Ukrainian Lit credit: 3 or 4 Hours.](<https://courses.illinois.edu/schedule/terms/UKR/498>)
-
-Critical survey of major works in Ukrainian literature from the beginnings to the modern period in light of their historical and cultural background; lectures and readings in English. 3 undergraduate hours. 3 or 4 graduate hours.",https://catalog.illinois.edu/courses-of-instruction/ukr/,2026–2027
+3 undergraduate hours. 3 or 4 graduate hours.",Critical survey of major works in Ukrainian literature from the beginnings to the modern period in light of their historical and cultural background; lectures and readings in English. 3 undergraduate hours. 3 or 4 graduate hours.,,,,,,
