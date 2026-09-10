@@ -1,0 +1,25 @@
+course_code,subject,course_number,instructor_name,instructor_avg_gpa,gpa_delta_from_course
+AFRO 100,AFRO,100,"Adams, Y.",3.55,0.29
+AFRO 100,AFRO,100,"McMillion, D.",3.26,0.01
+AFRO 100,AFRO,100,"Bailey, R.",3.14,-0.10
+AFRO 101,AFRO,101,"McDuffie, E.",3.35,0.31
+AFRO 101,AFRO,101,"Thomas, A.",3.00,-0.01
+AFRO 101,AFRO,101,"Lawton, B.",2.59,-0.39
+AFRO 101,AFRO,101,"Cha-Jua, S.",2.52,-0.46
+AFRO 103,AFRO,103,"McDuffie, E.",3.49,0.47
+AFRO 103,AFRO,103,"Flynn, K.",2.35,-0.47
+AFRO 105,AFRO,105,"Hunt, I.",3.42,
+AFRO 132,AFRO,132,"Meyers, J.",3.22,
+AFRO 224,AFRO,224,"O'Byrn, E.",3.68,
+AFRO 224,AFRO,224,"Smith, B.",3.93,0.03
+AFRO 224,AFRO,224,"Ngumbi, E.",3.92,-0.03
+AFRO 226,AFRO,226,"McMillion, D.",3.61,
+AFRO 228,AFRO,228,"Meyers, J.",3.72,
+AFRO 243,AFRO,243,"Moore, E.",3.68,0.10
+AFRO 243,AFRO,243,"Bowen, M.",3.53,-0.12
+AFRO 250,AFRO,250,"Sullers, A.",3.50,
+AFRO 261,AFRO,261,"McDuffie, E.",3.11,
+AFRO 378,AFRO,378,"O'Byrn, E.",3.62,
+AFRO 383,AFRO,383,"McDuffie, E.",3.49,
+AFRO 411,AFRO,411,"Waight, C.",3.81,0.37
+AFRO 411,AFRO,411,"Neville, H.",3.36,-0.24

@@ -1,0 +1,11 @@
+course_code,subject,course_number,instructor_name,instructor_avg_gpa,gpa_delta_from_course
+BCOG 100,BCOG,100,"Zhang, J.",3.62,0.14
+BCOG 100,BCOG,100,"Willits, J.",3.60,0.12
+BCOG 100,BCOG,100,"Lai, M.",3.42,-0.09
+BCOG 100,BCOG,100,"Federmeier, K.",3.27,-0.26
+BCOG 100,BCOG,100,"Yang, R.",3.07,-0.50
+BCOG 200,BCOG,200,"Willits, J.",3.43,0.05
+BCOG 200,BCOG,200,"Derringer, J.",3.42,0.04
+BCOG 200,BCOG,200,"Uddenberg, S.",3.36,-0.02
+BCOG 200,BCOG,200,"Adhimoolam, B.",3.26,-0.11
+BCOG 458,BCOG,458,"Hummel, J.",3.05,

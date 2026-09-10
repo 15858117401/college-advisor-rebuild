@@ -1,0 +1,23 @@
+course_code,subject,course_number,instructor_name,instructor_avg_gpa,gpa_delta_from_course
+ARTH 211,ARTH,211,"Weissman, T.",3.65,
+ARTH 214,ARTH,214,"Burkus-Chasson, A.",3.44,
+ARTH 230,ARTH,230,"Pilgrim, J.",2.62,
+ARTH 235,ARTH,235,"Pilgrim, J.",3.25,0.05
+ARTH 235,ARTH,235,"Rosenthal, L.",3.18,-0.03
+ARTH 240,ARTH,240,"O'Brien, D.",3.26,
+ARTH 241,ARTH,241,"Romberg, K.",3.28,
+ARTH 242,ARTH,242,"Romberg, K.",3.26,
+ARTH 250,ARTH,250,"Chuong, J.",3.55,0.45
+ARTH 250,ARTH,250,"Reitz, E.",2.82,-0.38
+ARTH 257,ARTH,257,"Weissman, T.",3.44,
+ARTH 260,ARTH,260,"Vazquez, O.",2.91,
+ARTH 299,ARTH,299,"Burge, K.",2.88,
+ARTH 299,ARTH,299,"Burge, K.",2.82,
+ARTH 299,ARTH,299,"Smith, C.",3.38,
+ARTH 342,ARTH,342,"Vazquez, O.",2.98,
+ARTH 343,ARTH,343,"Vazquez, O.",3.09,
+ARTH 345,ARTH,345,"O'Brien, D.",3.26,
+ARTH 361,ARTH,361,"Smith, C.",3.49,0.16
+ARTH 361,ARTH,361,"Reitz, E.",3.33,-0.11
+ARTH 403,ARTH,403,"Burkus-Chasson, A.",3.22,
+ARTH 440,ARTH,440,"O'Brien, D.",3.33,

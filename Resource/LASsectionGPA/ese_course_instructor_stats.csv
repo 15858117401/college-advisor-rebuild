@@ -1,0 +1,16 @@
+course_code,subject,course_number,instructor_name,instructor_avg_gpa,gpa_delta_from_course
+ESE 100,ESE,100,"Tomkin, J.",2.53,
+ESE 200,ESE,200,"Meghani, N.",3.52,0.28
+ESE 200,ESE,200,"Brown, C.",3.14,-0.11
+ESE 200,ESE,200,"Tomkin, J.",3.11,-0.15
+ESE 311,ESE,311,"Meghani, N.",3.78,0.27
+ESE 311,ESE,311,"Kanter, R.",3.57,-0.07
+ESE 320,ESE,320,"Cole, T.",3.51,0.13
+ESE 320,ESE,320,"Sivapalan, M.",3.21,-0.23
+ESE 360,ESE,360,"Cole, L.",3.60,0.50
+ESE 360,ESE,360,"Barnard, J.",3.46,0.40
+ESE 360,ESE,360,"Kanter, R.",3.41,0.36
+ESE 360,ESE,360,"Tomkin, J.",2.61,-0.25
+ESE 445,ESE,445,"Cole, T.",3.50,
+ESE 467,ESE,467,"Cupps-Miller, H.",3.59,
+ESE 497,ESE,497,"Tomkin, J.",3.18,

@@ -1,0 +1,34 @@
+course_code,subject,course_number,instructor_name,instructor_avg_gpa,gpa_delta_from_course
+SPAN 101,SPAN,101,"Saez Fajardo, S.",2.35,0.03
+SPAN 101,SPAN,101,"Waters, M.",2.25,-0.03
+SPAN 102,SPAN,102,"Clemente, M.",2.97,0.10
+SPAN 102,SPAN,102,"Waters, M.",2.78,-0.05
+SPAN 228,SPAN,228,"Henshaw, F.",3.24,0.01
+SPAN 228,SPAN,228,"Beristain Muril, A.",3.22,-0.01
+SPAN 232,SPAN,232,"Abbott, A.",3.84,0.11
+SPAN 232,SPAN,232,"Trybulec, E.",3.83,0.10
+SPAN 246,SPAN,246,"Torres-Cacoullo, A.",3.64,
+SPAN 246,SPAN,246,"Cervantes-Gomez, X.",3.77,
+SPAN 246,SPAN,246,"Cervantes-Gomez, X.",3.69,
+SPAN 248,SPAN,248,"Ledesma, E.",3.68,
+SPAN 252,SPAN,252,"Dutton, M.",3.65,
+SPAN 303,SPAN,303,"Saez Fajardo, S.",3.69,0.11
+SPAN 303,SPAN,303,"Cummings, L.",3.56,-0.12
+SPAN 307,SPAN,307,"Delgado, R.",3.96,0.43
+SPAN 307,SPAN,307,"Henshaw, F.",3.63,0.07
+SPAN 307,SPAN,307,"Callesano, S.",3.62,0.05
+SPAN 307,SPAN,307,"Bandin, Y.",2.85,-0.80
+SPAN 308,SPAN,308,"Delgado, R.",3.88,0.24
+SPAN 308,SPAN,308,"Jegerski, J.",3.87,0.23
+SPAN 308,SPAN,308,"Henshaw, F.",3.80,0.12
+SPAN 308,SPAN,308,"Bedialauneta Tx, I.",3.67,-0.08
+SPAN 308,SPAN,308,"Callesano, S.",3.65,-0.10
+SPAN 308,SPAN,308,"Bandin, Y.",3.35,-0.57
+SPAN 312,SPAN,312,"Martinez-Quirog, P.",3.63,
+SPAN 312,SPAN,312,"Martinez-Quirog, P.",3.53,
+SPAN 320,SPAN,320,"Martinez-Quirog, P.",3.56,0.01
+SPAN 320,SPAN,320,"Torres-Cacoullo, A.",3.54,-0.01
+SPAN 326,SPAN,326,"Anton Lobato, M.",3.34,
+SPAN 326,SPAN,326,"Fornoff, C.",3.75,
+SPAN 332,SPAN,332,"Abbott, A.",3.97,
+SPAN 395,SPAN,395,"Abbott, A.",3.63,

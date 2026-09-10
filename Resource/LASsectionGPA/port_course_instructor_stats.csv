@@ -1,0 +1,3 @@
+course_code,subject,course_number,instructor_name,instructor_avg_gpa,gpa_delta_from_course
+PORT 150,PORT,150,"Karam, J.",3.90,0.08
+PORT 150,PORT,150,"Martins Freitas, C.",3.79,-0.13

@@ -1,0 +1,59 @@
+course_code,subject,course_number,instructor_name,instructor_avg_gpa,gpa_delta_from_course
+GWS 100,GWS,100,"Wilson, M.",3.83,0.37
+GWS 100,GWS,100,"Turner, R.",3.75,0.28
+GWS 100,GWS,100,"Cano, A.",3.72,0.24
+GWS 100,GWS,100,"Malo, G.",3.59,0.09
+GWS 100,GWS,100,"Millen, V.",3.59,0.09
+GWS 100,GWS,100,"Rijo Sanchez, A.",3.49,-0.03
+GWS 100,GWS,100,"Hernandez, J.",3.49,-0.03
+GWS 100,GWS,100,"Gonzalez, A.",3.37,-0.17
+GWS 100,GWS,100,"Grogan, E.",3.34,-0.20
+GWS 201,GWS,201,"Moussawi, G.",3.79,0.32
+GWS 201,GWS,201,"Smith, B.",3.71,0.24
+GWS 201,GWS,201,"Vergara Bracamo, D.",3.52,0.04
+GWS 201,GWS,201,"Khan, M.",3.33,-0.16
+GWS 202,GWS,202,"Pehl, E.",3.71,0.28
+GWS 202,GWS,202,"Delanthamajalu, S.",3.59,0.17
+GWS 202,GWS,202,"Gargiulo, M.",3.50,0.07
+GWS 202,GWS,202,"Rijo Sanchez, A.",3.40,-0.03
+GWS 202,GWS,202,"Moussawi, G.",3.35,-0.07
+GWS 202,GWS,202,"Hernandez, J.",3.33,-0.09
+GWS 202,GWS,202,"McCarthy, D.",3.29,-0.14
+GWS 202,GWS,202,"Malo, G.",3.24,-0.19
+GWS 204,GWS,204,"Byrd, J.",3.75,
+GWS 250,GWS,250,"Turner, R.",3.73,
+GWS 255,GWS,255,"Vergara Bracamo, D.",3.42,0.04
+GWS 255,GWS,255,"McCarthy, D.",3.30,-0.06
+GWS 275,GWS,275,"McKeegan, S.",3.97,0.35
+GWS 275,GWS,275,"Malo, G.",3.88,0.25
+GWS 275,GWS,275,"Turner, R.",3.79,0.16
+GWS 275,GWS,275,"Henningsen, K.",3.78,0.14
+GWS 275,GWS,275,"Rijo Sanchez, A.",3.72,0.07
+GWS 275,GWS,275,"Wilson, M.",3.50,-0.16
+GWS 275,GWS,275,"McCarthy, D.",3.44,-0.23
+GWS 275,GWS,275,"Hernandez, J.",3.22,-0.48
+GWS 282,GWS,282,"Nguyen, M.",3.86,0.05
+GWS 282,GWS,282,"McCarthy, D.",3.83,-0.01
+GWS 282,GWS,282,"Cate, S.",3.82,-0.04
+GWS 288,GWS,288,"Khan, M.",3.26,
+GWS 333,GWS,333,"Barnes, T.",3.92,
+GWS 335,GWS,335,"Nadeau, C.",3.64,
+GWS 345,GWS,345,"Cole, C.",3.70,
+GWS 350,GWS,350,"Smith, B.",3.98,0.56
+GWS 350,GWS,350,"Kashani, M.",3.70,-0.20
+GWS 355,GWS,355,"Ibaorimi, Z.",3.63,
+GWS 366,GWS,366,"Beauchamp, T.",3.77,
+GWS 370,GWS,370,"Frerichs, E.",3.95,0.49
+GWS 370,GWS,370,"Henningsen, K.",3.53,0.08
+GWS 370,GWS,370,"McCarthy, D.",3.13,-0.31
+GWS 370,GWS,370,"Tarjanyi, P.",3.08,-0.35
+GWS 378,GWS,378,"Turner, R.",3.78,0.25
+GWS 378,GWS,378,"Mahaffey, V.",3.59,0.06
+GWS 378,GWS,378,"Millen, V.",2.33,-1.23
+GWS 380,GWS,380,"Smith, B.",3.78,
+GWS 382,GWS,382,"King, A.",3.83,0.55
+GWS 382,GWS,382,"Flynn, K.",2.36,-0.57
+GWS 385,GWS,385,"Asaka, I.",3.52,
+GWS 387,GWS,387,"Somerville, S.",3.49,0.02
+GWS 387,GWS,387,"Vergara Bracamo, D.",3.44,-0.04
+GWS 395,GWS,395,"Khan, M.",3.32,

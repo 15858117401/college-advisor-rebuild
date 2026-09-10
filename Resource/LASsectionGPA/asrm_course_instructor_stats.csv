@@ -1,0 +1,46 @@
+course_code,subject,course_number,instructor_name,instructor_avg_gpa,gpa_delta_from_course
+ASRM 101,ASRM,101,"Serafini, P.",3.64,
+ASRM 195,ASRM,195,"Icaza, E.",3.18,
+ASRM 210,ASRM,210,"Liu, P.",3.81,0.53
+ASRM 210,ASRM,210,"Cardinal, T.",3.49,0.21
+ASRM 210,ASRM,210,"Cole, P.",3.30,0.00
+ASRM 210,ASRM,210,"Icaza, E.",3.10,-0.21
+ASRM 210,ASRM,210,"Mohamed Khalid, Y.",2.90,-0.42
+ASRM 401,ASRM,401,"Wei, W.",2.19,
+ASRM 406,ASRM,406,"Rosenblatt, J.",3.48,0.22
+ASRM 406,ASRM,406,"Icaza, E.",3.31,0.04
+ASRM 406,ASRM,406,"Caithamer, P.",2.88,-0.42
+ASRM 409,ASRM,409,"Cole, P.",3.69,0.49
+ASRM 409,ASRM,409,"Liu, P.",3.57,0.36
+ASRM 409,ASRM,409,"Freiji, C.",3.35,0.14
+ASRM 409,ASRM,409,"Mohamed Khalid, Y.",3.15,-0.06
+ASRM 409,ASRM,409,"Fadina, T.",2.72,-0.50
+ASRM 409,ASRM,409,"Caithamer, P.",2.22,-1.00
+ASRM 410,ASRM,410,"Hinkkanen, A.",3.64,0.39
+ASRM 410,ASRM,410,"Chong, W.",3.56,0.31
+ASRM 410,ASRM,410,"Cardinal, T.",3.39,0.15
+ASRM 410,ASRM,410,"Icaza, E.",3.23,0.00
+ASRM 410,ASRM,410,"Caithamer, P.",2.67,-0.55
+ASRM 410,ASRM,410,"Wei, W.",2.62,-0.59
+ASRM 441,ASRM,441,"Icaza, E.",3.38,0.05
+ASRM 441,ASRM,441,"Medina Landeros, A.",3.26,-0.09
+ASRM 442,ASRM,442,"Freiji, C.",2.44,
+ASRM 454,ASRM,454,"Jia, W.",3.25,
+ASRM 455,ASRM,455,"Quan, Z.",3.65,0.10
+ASRM 455,ASRM,455,"Jing, X.",3.57,-0.03
+ASRM 461,ASRM,461,"Cole, P.",3.62,0.62
+ASRM 461,ASRM,461,"Icaza, E.",3.23,0.28
+ASRM 461,ASRM,461,"Freiji, C.",2.58,-0.28
+ASRM 461,ASRM,461,"Wei, W.",2.36,-0.48
+ASRM 469,ASRM,469,"Liu, P.",3.78,0.47
+ASRM 469,ASRM,469,"Cole, P.",3.75,0.44
+ASRM 469,ASRM,469,"Freiji, C.",2.59,-0.63
+ASRM 471,ASRM,471,"Cardinal, T.",3.71,0.51
+ASRM 471,ASRM,471,"Cole, P.",3.63,0.45
+ASRM 471,ASRM,471,"Mohamed Khalid, Y.",3.06,-0.03
+ASRM 471,ASRM,471,"Wei, W.",2.09,-0.83
+ASRM 472,ASRM,472,"Cardinal, T.",3.87,0.48
+ASRM 472,ASRM,472,"Cole, P.",3.36,-0.29
+ASRM 533,ASRM,533,"Icaza, E.",3.59,
+ASRM 539,ASRM,539,"Quan, Z.",3.87,0.47
+ASRM 539,ASRM,539,"Jing, X.",3.45,-0.43

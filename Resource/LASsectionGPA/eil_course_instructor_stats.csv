@@ -1,0 +1,11 @@
+course_code,subject,course_number,instructor_name,instructor_avg_gpa,gpa_delta_from_course
+EIL 411,EIL,411,"Bishop, H.",3.91,0.34
+EIL 411,EIL,411,"Franks, S.",3.78,0.19
+EIL 411,EIL,411,"Pierce, L.",3.13,-0.51
+EIL 422,EIL,422,"Atiles, A.",3.59,0.16
+EIL 422,EIL,422,"Ionin, T.",3.52,0.08
+EIL 422,EIL,422,"Pierce, L.",3.09,-0.38
+EIL 445,EIL,445,"Sadler, R.",3.87,
+EIL 460,EIL,460,"Tywoniw, R.",3.95,0.48
+EIL 460,EIL,460,"Yan, X.",3.22,-0.39
+EIL 488,EIL,488,"Franks, S.",3.61,

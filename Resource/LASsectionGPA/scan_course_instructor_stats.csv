@@ -1,0 +1,11 @@
+course_code,subject,course_number,instructor_name,instructor_avg_gpa,gpa_delta_from_course
+SCAN 215,SCAN,215,"Malekin, B.",3.39,
+SCAN 225,SCAN,225,"Malekin, B.",3.33,
+SCAN 251,SCAN,251,"Horn, R.",3.87,0.20
+SCAN 251,SCAN,251,"Hoefig, V.",3.79,0.08
+SCAN 251,SCAN,251,"Ayanbode, F.",3.76,0.02
+SCAN 251,SCAN,251,"Fam, M.",3.76,0.01
+SCAN 251,SCAN,251,"Ting, S.",3.73,-0.03
+SCAN 251,SCAN,251,"Horsfall, W.",3.68,-0.12
+SCAN 251,SCAN,251,"Schatte, I.",3.66,-0.15
+SCAN 252,SCAN,252,"Horsfall, W.",3.77,

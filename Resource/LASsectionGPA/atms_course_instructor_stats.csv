@@ -1,0 +1,25 @@
+course_code,subject,course_number,instructor_name,instructor_avg_gpa,gpa_delta_from_course
+ATMS 100,ATMS,100,"Frame, J.",3.14,
+ATMS 120,ATMS,120,"Choate, J.",3.29,
+ATMS 140,ATMS,140,"Proistosescu, C.",3.84,0.29
+ATMS 140,ATMS,140,"Raghuraman, S.",3.57,-0.03
+ATMS 140,ATMS,140,"Hence, D.",3.13,-0.54
+ATMS 140,ATMS,140,"Sriver, R.",3.01,-0.68
+ATMS 201,ATMS,201,"Droegemeier, K.",3.46,0.37
+ATMS 201,ATMS,201,"Choate, J.",3.19,0.08
+ATMS 201,ATMS,201,"Rauber, R.",2.71,-0.45
+ATMS 207,ATMS,207,"Jewett, B.",3.95,
+ATMS 301,ATMS,301,"Riemer, N.",2.68,
+ATMS 302,ATMS,302,"Sriver, R.",3.36,
+ATMS 303,ATMS,303,"Frame, J.",2.89,
+ATMS 304,ATMS,304,"Riemer, N.",3.09,
+ATMS 305,ATMS,305,"Jewett, B.",3.91,
+ATMS 306,ATMS,306,"Lasher-Trapp, S.",2.89,
+ATMS 307,ATMS,307,"Jain, A.",2.87,
+ATMS 313,ATMS,313,"Frame, J.",2.88,
+ATMS 420,ATMS,420,"Horowitz, H.",3.64,
+ATMS 510,ATMS,510,"Lasher-Trapp, S.",3.08,
+ATMS 511,ATMS,511,"Di Girolamo, L.",3.49,
+ATMS 517,ATMS,517,"Klees, A.",3.62,
+ATMS 520,ATMS,520,"Klees, A.",3.71,
+ATMS 523,ATMS,523,"Nesbitt, S.",3.72,

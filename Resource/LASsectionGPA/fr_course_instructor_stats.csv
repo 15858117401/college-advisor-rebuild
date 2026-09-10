@@ -1,0 +1,6 @@
+course_code,subject,course_number,instructor_name,instructor_avg_gpa,gpa_delta_from_course
+FR 101,FR,101,"Clay, A.",3.22,
+FR 156,FR,156,"Reynolds, F.",3.81,0.05
+FR 156,FR,156,"Maroun, D.",3.74,-0.05
+FR 418,FR,418,"Fagyal, Z.",3.76,0.13
+FR 418,FR,418,"Derhemi, E.",3.52,-0.25

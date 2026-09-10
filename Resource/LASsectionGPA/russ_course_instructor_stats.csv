@@ -1,0 +1,9 @@
+course_code,subject,course_number,instructor_name,instructor_avg_gpa,gpa_delta_from_course
+RUSS 115,RUSS,115,"Dzyadevych, T.",3.68,
+RUSS 122,RUSS,122,"Fedjanina, M.",3.69,0.24
+RUSS 122,RUSS,122,"Tempest, R.",3.37,-0.07
+RUSS 201,RUSS,201,"Kustova, M.",3.36,
+RUSS 220,RUSS,220,"Cooper, D.",3.59,
+RUSS 322,RUSS,322,"Murav, H.",3.83,0.16
+RUSS 322,RUSS,322,"Cooper, D.",3.69,-0.17
+RUSS 323,RUSS,323,"Sobol, V.",3.61,
