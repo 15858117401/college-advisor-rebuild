@@ -7,7 +7,7 @@
 - Put evaluation assets in `Eval/`. This directory contains evaluation cases, manually labeled evaluation data, and the code used to run evaluation cases. Keep benchmark and prompt-evaluation work in `Eval/`, separate from the small implementation-verification tests in `tests/`.
 - Put only agent-callable runtime tools in the lowercase `tools/` package, with their unit tests in `tests/` (for example, `tools/course_sections_tool.py` is tested by `tests/test_course_sections_tool.py`).
 - Put all current and future Supabase-related code in `Supabase/`, including SQL schemas, migrations, database clients/helpers, validation scripts, and import/upload scripts. Never place this code in `tools/`; `tools/` is reserved exclusively for tools the advising agent can call at runtime.
-- The current database scope is limited to the Mathematics and Statistics majors. Do not expand it to other majors until the end-to-end workflow for both Mathematics and Statistics is fully working; broader major support will be considered only after that milestone.
+- Advising supports all stored programs and course subjects (currently 61 program documents and 58 course subjects). Resolve programs from stored metadata; the major determines degree requirements, while relevant courses may come from any department. Do not add new resource imports, migrations, or embeddings without an explicit request.
 - Section information is available only for the currently loaded semester, Spring 2026. Future-semester section data is unknown; do not infer or claim future course availability, CRNs, meeting times, locations, or instructors.
 - Keep `graph.py` focused on graph assembly: node registration, edges, compilation, and exports. Do not place node business logic or LLM calls in it.
 - Put each graph node implementation in its own module under the lowercase `nodes/` package.
@@ -21,11 +21,12 @@
 
 The advising agents can call these tools from the lowercase `tools/` package:
 
-- `get_course_details`: Retrieves catalog details for specific STAT courses.
-- `find_courses`: Finds STAT courses with structured filters and optional semantic description matching.
+- `get_course_details`: Retrieves catalog details for explicit UIUC course codes across stored subjects.
+- `find_courses`: Finds courses across stored subjects with structured filters and optional semantic description matching. Optional `subjects` restricts departments; omission searches all stored subjects.
 - `get_course_sections`: Retrieves Spring 2026 UIUC sections, CRNs, meeting times, locations, and instructors.
-- `get_course_instructor_gpas`: Retrieves historical instructor average GPA statistics for STAT courses.
-- `get_graduation_requirements`: Retrieves the stored 2026–2027 Mathematics or Statistics BSLAS requirement Markdown.
+- `get_course_instructor_gpas`: Retrieves historical instructor average GPA statistics across stored subjects.
+- `find_degree_programs`: Discovers stored program names, codes, document keys, types, and catalog years.
+- `get_graduation_requirements`: Retrieves unchanged stored 2026–2027 requirement Markdown by exact program name, program code, or document key; `math` and `stats` remain aliases. Ambiguous requests return candidates. General-major documents do not replace missing concentration requirements, and Biology retains its redirect document.
 - `search_rate_my_professor` and `search_reddit`: Search public professor ratings and student discussions through Tavily.
 
 `nodes/catalog_lookup.py` owns the canonical `CATALOG_TOOLS` registration. Advising currently reuses that same list; adding a tool module alone does not make it agent-callable, so register new tools explicitly and add focused tests under `tests/`.
@@ -41,10 +42,10 @@ Run Python commands from the repository root with `.venv/bin/python`. The graph 
 
 # Live evaluations
 .venv/bin/python Eval/router_eval/run_router_eval.py
-.venv/bin/python Eval/run_full_eval.py --workers 10
+.venv/bin/python Eval/run_full_eval.py --workers 5
 ```
 
-The router runner overwrites `Eval/router_eval/router_cases_with_predictions.csv`. The full runner overwrites `Eval/full_eval_results.csv` and records `predicted_route` plus the final `response`; it does not generate a Markdown report. Live evaluations use external services, so failures must distinguish code errors from credentials, rate limits, and transient network errors.
+The router runner overwrites `Eval/router_eval/router_cases_with_predictions.csv`. The full runner overwrites `Eval/full_eval_results.csv` and records `predicted_route` plus the final `response`; it does not generate a Markdown report. Both evaluation runners default to five concurrent cases and explicitly use `profile=None` for self-contained cases. Live evaluations use external services, so failures must distinguish code errors from credentials, rate limits, and transient network errors.
 
 
 ## Uploading Resources to Supabase
@@ -66,7 +67,7 @@ Before the first upload, or after a schema change, apply the corresponding SQL f
 .venv/bin/python -m Supabase.import_graduation_requirements upload
 ```
 
-Apply `Supabase/stat_resource_schema.sql` for statistics resources and `Supabase/graduation_requirements_schema.sql` for graduation-requirement documents. The graduation importer reads `Resource/graduation_requirements/manifest.json`, uploads the Mathematics and Statistics major documents, and verifies that the Markdown read back from Supabase exactly matches the local files.
+Apply `Supabase/stat_resource_schema.sql` for statistics resources and `Supabase/graduation_requirements_schema.sql` for graduation-requirement documents. The graduation importer reads `Resource/LASmajor_requirement/manifest.json` and verifies that the Markdown read back from Supabase exactly matches the local files. The broader course and instructor snapshot uses `Resource/las_course_catalog/` and `Resource/LASsectionGPA/`; preserve these resource paths. The current snapshot is already uploaded and embedded.
 
 
 ## Project Overview
@@ -74,6 +75,8 @@ Apply `Supabase/stat_resource_schema.sql` for statistics resources and `Supabase
 This project rebuilds the college-advising agent in Python as a LangGraph workflow. `graph.py` defines node registration and transitions, `state.py` defines shared graph state, and `nodes/` contains the node implementations. The intended top-level business routes are Catalog Lookup, Advising, and Out of Scope. Clarify is a shared fallback state rather than a separate user intent.
 
 Graph input must keep the current user input separate from prior conversation history. Store the current turn's raw user text in `current_input`; use the inherited `MessagesState.messages` container only for completed past messages. Nodes must not infer the current input from `messages[-1]`. The Router LLM call must send one structured user payload with separate `conversation_context` and `current_input` fields so the model never has to infer which message is current. ReAct nodes must use the shared `messages_with_current_input(...)` helper from `state.py` to assemble the temporary native chat history.
+
+The saved profile is read-only. An explicit request or stated scenario takes precedence over conflicting profile facts for that answer. Never fill a different hypothetical student’s missing coursework or grades from the saved record. An explicit runtime context `{"profile": None}` disables the local-profile fallback; omitting `profile` preserves it. Retrieve the applicable stored requirements before building a degree plan, then check relevant courses across departments. Expected tool validation and unsupported-resource errors are recoverable tool messages; unexpected programming and service failures remain errors.
 
 The currently wired flow is:
 

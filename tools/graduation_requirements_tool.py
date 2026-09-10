@@ -1,54 +1,67 @@
-from typing import Literal
+import json
 
-from langchain_core.tools import tool
-from pydantic import BaseModel, ConfigDict, Field
+from langchain_core.tools import ToolException, tool
+from pydantic import BaseModel, ConfigDict, Field, field_validator
 
+from Supabase.degree_programs import (
+    LEGACY_KEYS, TABLE_NAME, exact_program_matches, load_programs, program_candidates,
+)
 from Supabase.import_stat_resources import create_supabase_client
 
 
-Major = Literal["math", "stats"]
-
-MAJOR_DOCUMENT_KEYS: dict[Major, str] = {
-    "math": "UIUC-MATH-BSLAS-2026-2027",
-    "stats": "UIUC-STAT-BSLAS-2026-2027",
-}
-TABLE_NAME = "graduation_requirement_documents"
+MAJOR_DOCUMENT_KEYS = LEGACY_KEYS
 
 
 class GetGraduationRequirementsInput(BaseModel):
     model_config = ConfigDict(extra="forbid")
-
-    major: Major = Field(
+    major: str = Field(
+        min_length=1,
         description=(
-            "The UIUC BSLAS major whose 2026-2027 graduation requirements "
-            "should be retrieved: 'math' or 'stats'."
-        )
+            "Exact stored program name, program code, or document_key from "
+            "find_degree_programs. Legacy aliases 'math' and 'stats' also work."
+        ),
     )
+
+    @field_validator("major")
+    @classmethod
+    def nonblank_major(cls, value: str) -> str:
+        if not value.strip():
+            raise ValueError("major cannot be blank")
+        return value.strip()
 
 
 @tool("get_graduation_requirements", args_schema=GetGraduationRequirementsInput)
-def get_graduation_requirements(major: Major) -> str:
-    """Get the major graduation requirements for Math or Statistics.
+def get_graduation_requirements(major: str) -> str:
+    """Get the exact stored 2026-2027 UIUC program requirement Markdown.
 
-    Returns the stored 2026-2027 Catalog Markdown without interpreting it as
-    degree-audit rules or creating a personalized degree plan.
+    Supports all stored programs; use find_degree_programs to discover names
+    and keys. Ambiguous or unavailable names require a more specific choice.
+    A general-major document does not verify a concentration's requirements.
+    Biology returns its stored redirect, not another program's requirements.
     """
-    major_document_key = MAJOR_DOCUMENT_KEYS[major]
-    response = (
-        create_supabase_client()
-        .table(TABLE_NAME)
-        .select("content_markdown")
-        .eq("document_key", major_document_key)
-        .execute()
-    )
-
-    rows = response.data or []
+    client = create_supabase_client()
+    programs = load_programs(client)
+    matches = exact_program_matches(major, programs)
+    if len(matches) != 1:
+        candidates = matches or program_candidates(major, programs)
+        raise ToolException(json.dumps({
+            "error": "ambiguous_program" if len(matches) > 1 or len(candidates) > 1 else "program_not_found",
+            "message": (
+                "No unique exact stored program matches the request. Choose the intended "
+                "program by document_key from these candidates or use find_degree_programs. "
+                "Do not substitute a different major or general-major rules for missing "
+                "concentration requirements. Ask for clarification if the choice is unclear."
+            ),
+            "requested_program": major,
+            "candidates": candidates,
+        }, ensure_ascii=False))
+    document_key = matches[0]["document_key"]
+    rows = client.table(TABLE_NAME).select("content_markdown").eq(
+        "document_key", document_key
+    ).execute().data or []
     content = rows[0].get("content_markdown") if len(rows) == 1 else None
     if not isinstance(content, str) or not content.strip():
-        raise RuntimeError(
-            f"missing graduation requirement Markdown for {major_document_key}"
-        )
-
+        raise ToolException(f"No stored requirement Markdown is available for {document_key}.")
     return content
 
 

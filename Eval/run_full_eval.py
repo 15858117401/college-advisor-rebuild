@@ -15,7 +15,7 @@ from graph import graph
 
 DEFAULT_INPUT = EVAL_DIR / "router_eval" / "router_cases_with_responses.csv"
 DEFAULT_OUTPUT = EVAL_DIR / "full_eval_results.csv"
-DEFAULT_MAX_WORKERS = 10
+DEFAULT_MAX_WORKERS = 5
 MAX_ATTEMPTS_PER_CASE = 2
 
 
@@ -27,7 +27,8 @@ def run_case(user_query: str) -> tuple[str, str]:
                 {
                     "current_input": user_query,
                     "messages": [],
-                }
+                },
+                context={"profile": None},
             )
             return str(result.get("route", "")), str(result.get("response", ""))
         except Exception:

@@ -1,9 +1,25 @@
 from collections.abc import Sequence
 
 from langchain.agents import create_agent
-from langchain_core.tools import BaseTool
+from langchain.agents.middleware import wrap_tool_call
+from langchain_core.messages import ToolMessage
+from langchain_core.tools import BaseTool, ToolException
+from pydantic import ValidationError
 
 from client.llm_client import llm_client
+
+
+@wrap_tool_call
+def handle_expected_tool_errors(request, handler):
+    """Let the agent repair expected input/resource errors; propagate other failures."""
+    try:
+        return handler(request)
+    except (ValidationError, ToolException) as exc:
+        return ToolMessage(
+            content=f"Tool request could not be completed: {exc}",
+            tool_call_id=request.tool_call["id"],
+            status="error",
+        )
 
 
 def _with_skills(system_prompt: str, skills: Sequence[str]) -> str:
@@ -26,6 +42,7 @@ def build_react_agent(
     return create_agent(
         model=llm_client,
         tools=list(tools),
+        middleware=[handle_expected_tool_errors],
         system_prompt=_with_skills(system_prompt, skills),
     )
 

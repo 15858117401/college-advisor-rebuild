@@ -28,7 +28,7 @@ ROUTER_SYSTEM_PROMPT = (
 ).read_text(encoding="utf-8")
 
 
-def _router_input(state: AdvisorState, profile: StudentProfile) -> str:
+def _router_input(state: AdvisorState, profile: StudentProfile | None) -> str:
     return json.dumps(
         {
             "conversation_context": convert_to_openai_messages(

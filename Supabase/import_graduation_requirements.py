@@ -1,14 +1,13 @@
 import argparse
 import json
+import re
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Sequence
 
-from Supabase.import_stat_resources import create_supabase_client
-
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-RESOURCE_DIR = PROJECT_ROOT / "Resource" / "graduation_requirements"
+RESOURCE_DIR = PROJECT_ROOT / "Resource" / "LASmajor_requirement"
 MANIFEST_PATH = RESOURCE_DIR / "manifest.json"
 TABLE_NAME = "graduation_requirement_documents"
 EXPECTED_DOCUMENT_KEYS = {
@@ -34,7 +33,7 @@ class GraduationRequirementDocument:
     document_key: str
     document_type: str
     institution_code: str
-    degree_code: str
+    degree_code: str | None
     program_code: str | None
     program_name: str | None
     catalog_year: str
@@ -110,7 +109,7 @@ def load_requirement_documents(
         document_type = _required_string(
             raw["document_type"], field="document_type", row_number=row_number
         )
-        if document_type != "program":
+        if document_type not in {"program", "program_redirect"}:
             raise ValueError(
                 f"manifest document {row_number} has invalid document_type: "
                 f"{document_type!r}"
@@ -126,7 +125,7 @@ def load_requirement_documents(
             )
         markdown_path = resource_dir / file_name
         try:
-            content_markdown = markdown_path.read_text(encoding="utf-8")
+            content_markdown = markdown_path.read_bytes().decode("utf-8")
         except FileNotFoundError as exc:
             raise ValueError(f"Markdown file does not exist: {markdown_path}") from exc
         if not content_markdown.strip():
@@ -138,7 +137,7 @@ def load_requirement_documents(
             raw["catalog_year"], field="catalog_year", row_number=row_number
         )
         display_year = catalog_year.replace("-", "–")
-        if f"**Catalog year:** {display_year}" not in content_markdown:
+        if not re.search(r"Catalog year(?:\*\*)?:\s*(?:\*\*)?" + re.escape(display_year), content_markdown):
             raise ValueError(
                 f"{file_name} does not declare Catalog year {display_year}"
             )
@@ -152,6 +151,11 @@ def load_requirement_documents(
                 "catalog URL"
             )
 
+        source_line = next((line for line in content_markdown.splitlines()
+                            if "Official source" in line), "")
+        urls = re.findall(r"https?://[^\s)>]+", source_line)
+        if not urls or source_url != urls[0]:
+            raise ValueError(f"{file_name} source_url must match first Official source URL")
         document = GraduationRequirementDocument(
             document_key=_required_string(
                 raw["document_key"], field="document_key", row_number=row_number
@@ -162,7 +166,7 @@ def load_requirement_documents(
                 field="institution_code",
                 row_number=row_number,
             ),
-            degree_code=_required_string(
+            degree_code=_optional_string(
                 raw["degree_code"], field="degree_code", row_number=row_number
             ),
             program_code=_optional_string(
@@ -184,6 +188,8 @@ def load_requirement_documents(
         documents.append(document)
 
     _validate_documents(documents)
+    if {d.file_name for d in documents} != {p.name for p in resource_dir.glob("*.md")}:
+        raise ValueError("manifest must include every Markdown file exactly once")
     return documents
 
 
@@ -191,7 +197,7 @@ def _validate_documents(documents: list[GraduationRequirementDocument]) -> None:
     document_keys = [document.document_key for document in documents]
     if len(document_keys) != len(set(document_keys)):
         raise ValueError("manifest contains duplicate document_key values")
-    if set(document_keys) != EXPECTED_DOCUMENT_KEYS:
+    if len(documents) != 61 or not EXPECTED_DOCUMENT_KEYS <= set(document_keys):
         raise ValueError(
             "manifest document keys do not match the expected snapshot: "
             f"{sorted(document_keys)}"
@@ -210,11 +216,20 @@ def _validate_documents(documents: list[GraduationRequirementDocument]) -> None:
             raise ValueError(
                 f"program document {document.document_key} must not have a parent"
             )
-        if "General Education" in document.content_markdown:
-            raise ValueError(
-                f"program document {document.document_key} contains "
-                "General Education content"
-            )
+        if document.institution_code != "UIUC" or document.catalog_year != "2026-2027":
+            raise ValueError("unexpected institution or catalog year")
+        if document.file_name == "biology_2026_2027.md" and (
+            document.document_key != "UIUC-BIOLOGY-REDIRECT-2026-2027"
+            or document.document_type != "program_redirect" or document.degree_code is not None
+        ):
+            raise ValueError("invalid Biology redirect metadata")
+        if document.document_type == "program_redirect":
+            if document.document_key != "UIUC-BIOLOGY-REDIRECT-2026-2027" or document.degree_code is not None:
+                raise ValueError("invalid Biology redirect metadata")
+        elif document.degree_code not in {"BALAS", "BSLAS", "BS", "BALAS_OR_BSLAS"}:
+            raise ValueError("invalid degree_code")
+        if (document.degree_code == "BALAS_OR_BSLAS") != (document.file_name == "individual_plans_of_study_balas_or_bslas_2026_2027.md"):
+            raise ValueError("invalid Individual Plans degree_code")
 
 
 def validation_summary(
@@ -232,53 +247,10 @@ def validation_summary(
     }
 
 
-def upload_documents(
-    documents: list[GraduationRequirementDocument],
-    *,
-    supabase_client: Any,
-) -> dict[str, Any]:
-    program_rows = [document.database_row() for document in documents]
-    supabase_client.table(TABLE_NAME).upsert(
-        program_rows, on_conflict="document_key"
-    ).execute()
-
-    document_keys = [document.document_key for document in documents]
-    stored_rows = (
-        supabase_client.table(TABLE_NAME)
-        .select("document_key,content_markdown")
-        .in_("document_key", document_keys)
-        .execute()
-        .data
-        or []
-    )
-    if len(stored_rows) != len(documents):
-        raise RuntimeError(
-            f"expected {len(documents)} stored documents, found {len(stored_rows)}"
-        )
-    stored_by_key = {row["document_key"]: row for row in stored_rows}
-    if set(stored_by_key) != set(document_keys):
-        raise RuntimeError("Supabase returned unexpected graduation requirement keys")
-    for document in documents:
-        stored_content = stored_by_key[document.document_key].get("content_markdown")
-        if stored_content != document.content_markdown:
-            raise RuntimeError(
-                f"stored Markdown does not match {document.document_key}"
-            )
-
-    return {
-        "documents": len(stored_rows),
-        "document_keys": sorted(stored_by_key),
-        "content_verified": True,
-    }
-
-
-def run_upload(
-    documents: list[GraduationRequirementDocument],
-) -> dict[str, Any]:
-    return upload_documents(
-        documents,
-        supabase_client=create_supabase_client(),
-    )
+def run_upload(documents: list[GraduationRequirementDocument]) -> dict[str, Any]:
+    # Requirements must commit with courses and instructor statistics.
+    from Supabase.import_las_resources import run_upload as upload_las
+    return upload_las(documents=documents)
 
 
 def build_parser() -> argparse.ArgumentParser:

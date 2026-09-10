@@ -24,8 +24,8 @@ class GetCourseSectionsInput(BaseModel):
         min_length=1,
         max_length=3,
         description=(
-            "One to three course codes, such as ['STAT 107'] or "
-            "['STAT 107', 'STAT 200', 'STAT 400']."
+            "One to three course codes, such as ['MATH 416'] or "
+            "['ECON 302', 'MATH 416', 'STAT 400']."
         ),
     )
 

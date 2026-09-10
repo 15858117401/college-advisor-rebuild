@@ -50,7 +50,12 @@ current_input contains the user's exact raw input for the current turn.
 
 ## profile
 
-profile is trusted, read-only application context for the current student.
+profile is trusted, read-only application context for the current student, or null
+when no profile is supplied. An explicit current request or stated scenario takes
+precedence over conflicting profile context for this answer. For a different
+hypothetical student, do not import missing grades or courses from the profile.
+Do not modify the saved profile or ask to resolve a profile discrepancy before
+answering an explicitly stated scenario. Major coverage does not change intent routing.
 
 - Use it only when the meaning of current_input depends on the student's
   academic history.

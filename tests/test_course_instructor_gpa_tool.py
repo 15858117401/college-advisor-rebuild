@@ -36,11 +36,18 @@ class _FakeQuery:
         self.filter_values = values
         return self
 
+    def order(self, column):
+        return self
+
+    def range(self, start, end):
+        self.page = self.rows[start:end + 1]
+        return self
+
     def execute(self):
         self.execute_calls += 1
         if self.error is not None:
             raise self.error
-        return SimpleNamespace(data=self.rows)
+        return SimpleNamespace(data=self.page)
 
 
 class _FakeSupabase:
@@ -80,9 +87,9 @@ class GetCourseInstructorGpasInputTest(unittest.TestCase):
                 {"course_codes": ["STAT 100", "STAT 420", "STAT 425"]}
             )
 
-    def test_rejects_non_stat_course_code(self) -> None:
-        with self.assertRaisesRegex(ValueError, "expected a value like 'STAT 420'"):
-            get_course_instructor_gpas.invoke({"course_codes": ["CS 225"]})
+    def test_rejects_malformed_course_code(self) -> None:
+        with self.assertRaisesRegex(ValueError, "expected a value like 'MATH 416'"):
+            get_course_instructor_gpas.invoke({"course_codes": ["MATH-416"]})
 
     def test_normalizes_course_codes(self) -> None:
         result, _, query = _invoke_with_fake(
@@ -268,6 +275,24 @@ class CatalogRegistrationTest(unittest.TestCase):
             {catalog_tool.name for catalog_tool in CATALOG_TOOLS},
         )
         self.assertIn("historical instructor GPA", CATALOG_SYSTEM_PROMPT)
+
+
+
+
+def test_math416_and_economics_gpa_queries():
+    result, _, query = _invoke_with_fake(['math416', 'econ302'], [
+        {'course_code': 'MATH 416', 'instructor_name': 'Teacher', 'instructor_avg_gpa': 3.2}
+    ])
+    assert query.filter_values == ['MATH 416', 'ECON 302']
+    assert result[0]['instructors'] == [{'name': 'Teacher', 'average_gpa': 3.2}]
+    assert result[1]['message'] == 'no instructor GPA information'
+
+
+def test_instructor_rows_beyond_1000_are_not_lost():
+    rows = [{'course_code': 'MATH 416', 'instructor_name': str(n), 'instructor_avg_gpa': 3.0} for n in range(1100)]
+    result, _, query = _invoke_with_fake(['MATH 416'], rows)
+    assert len(result[0]['instructors']) == 1100
+    assert query.execute_calls == 3
 
 
 if __name__ == "__main__":

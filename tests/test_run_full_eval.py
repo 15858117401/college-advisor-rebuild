@@ -113,5 +113,27 @@ class FullEvalTest(unittest.TestCase):
             )
 
 
+
+
+def test_full_runner_disables_local_profile():
+    with patch.object(run_full_eval.graph, 'invoke', return_value={'route': 'advising', 'response': 'plan'}) as invoke:
+        assert run_full_eval.run_case('Self-contained case') == ('advising', 'plan')
+    assert invoke.call_args.kwargs['context'] == {'profile': None}
+
+
+def test_router_runner_disables_local_profile():
+    from Eval.router_eval import run_router_eval
+    with patch.object(run_router_eval, 'router', return_value={'route': 'advising'}) as router:
+        assert run_router_eval.predict_route('Self-contained case') == 'advising'
+    assert router.call_args.kwargs['runtime'].context == {'profile': None}
+
+
+def test_both_evaluation_runners_default_to_five_workers():
+    from Eval.router_eval import run_router_eval
+    with patch.object(sys, "argv", ["run_full_eval.py"]):
+        assert run_full_eval.parse_args().workers == 5
+    assert run_router_eval.MAX_WORKERS == 5
+
+
 if __name__ == "__main__":
     unittest.main()

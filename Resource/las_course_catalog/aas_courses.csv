@@ -1,24 +1,24 @@
 course_code,subject,course_number,course_name,credits,description,prerequisites,credit_restrictions,gen_ed,total_students,total_sections,overall_gpa
 AAS 100,AAS,100,Intro Asian American Studies,3 Hours,"Interdisciplinary introduction to the basic concepts and approaches in Asian American Studies. Surveys the various dimensions of Asian American experiences including history, social organization, literature, arts, and politics.",,,"Social & Beh Sci - Soc Sci
-Cultural Studies - US Minority",,,
+Cultural Studies - US Minority",,,3.53
 AAS 105,AAS,105,Introduction to Arab American Studies,3 Hours,"Interdisciplinary introduction to the basic concepts and approaches in Arab American Studies. Addresses the issues of history, race, social organization, politics, literature, and art related to Arab American experiences.",,,,,,
-AAS 120,AAS,120,Intro to Asian Am Pop Culture,3 Hours,Introductory understanding of the way U.S. popular culture has affected Asian Americans and the contributions Asian Americans have made to U.S. media and popular culture since the mid 1880's.,,,Cultural Studies - US Minority,,,
+AAS 120,AAS,120,Intro to Asian Am Pop Culture,3 Hours,Introductory understanding of the way U.S. popular culture has affected Asian Americans and the contributions Asian Americans have made to U.S. media and popular culture since the mid 1880's.,,,Cultural Studies - US Minority,,,3.57
 AAS 199,AAS,199,Undergraduate Open Seminar,1 to 5 Hours,May be repeated to a maximum of 6 hours.,,,,,,
 AAS 200,AAS,200,U.S. Race and Empire,3 Hours,"Invites students to examine histories and narratives of U.S. race and empire, drawing upon multiple theoretical and methodological works in Asian American studies and related fields. Same as LLS 200.",,,"Humanities - Hist & Phil
-Cultural Studies - US Minority",,,
+Cultural Studies - US Minority",,,3.53
 AAS 201,AAS,201,US Racial & Ethnic Politics,3 Hours,"Same as AFRO 201, LLS 201, and PS 201. See PS 201.",,,"Social & Beh Sci - Soc Sci
 Cultural Studies - US Minority",,,
 AAS 203,AAS,203,"Race, Science, and Technology",3 Hours,"Examines the intersection of racism with science and technology in the United States. The class investigates how racism has persisted across fields of scientific knowledge production and how technology has been used to advance systems of discrimination and inequality. It studies how science has been shaped by historical and contemporary structures of racism, including slavery, settler colonialism, immigration, and policing. It also explores justice-oriented approaches to science and technology.",,,"Social & Beh Sci - Soc Sci
-Cultural Studies - US Minority",,,
+Cultural Studies - US Minority",,,3.70
 AAS 211,AAS,211,Asian Americans and the Arts,3 Hours,"Examination of Asian American artistic expressions in the visual and the performing arts providing historical, theoretical, and conceptual foundations of understanding the history of various art genres in Asian American communities. Prerequisite: AAS 100 or AAS 120, or consent of instructor.","Prerequisite: AAS 100 or AAS 120, or consent of instructor.",,"Humanities - Lit & Arts
-Cultural Studies - US Minority",,,
+Cultural Studies - US Minority",,,3.95
 AAS 215,AAS,215,US Citizenship Comparatively,3 Hours,"Examines the racial, gendered, and sexualized aspects of US citizenship historically and comparatively. Interdisciplinary course taught from a humanities perspective. Readings draw from critical legal studies, history, literature, literary criticism, and ethnography. Same as AFRO 215, AIS 295, GWS 215, and LLS 215.",,,"Humanities - Hist & Phil
-Cultural Studies - US Minority",,,
+Cultural Studies - US Minority",,,3.61
 AAS 232,AAS,232,Asian American Ethnography,3 Hours,"Introduction to the methodologies of Asian American ethnography. Students will become familiar with the literature of the field and perform ethnographic research. The field itself has sensitively explored the experiences of Asian American communities and generated new theories of how to study them, which are always in flux and heterogeneous. The course will consider the long history and contemporary methods in researching race, gender, ethnicity, sexuality, migration, law, and cultural expression.",,,,,,
 AAS 246,AAS,246,Asian American Youth in Film,3 Hours,Examines both mainstream and independent films and documentaries representing and/or produced by Asian American youth. Explores the role of multiculturalism and diversity issues in informing young people's experiences.,,,"Social & Beh Sci - Soc Sci
-Cultural Studies - US Minority",,,
+Cultural Studies - US Minority",,,3.88
 AAS 258,AAS,258,Muslims in America,3 Hours,"Introduction to the study of Muslims in the United States and broadly the history of Islam in the Americas. Using a comparative approach, we study how the historical narrative of African American and Latino Muslims relates to newer immigrant populations, primarily Arab American and South Asian American Muslim communities. Same as LLS 258 and REL 258.",,,"Social & Beh Sci - Soc Sci
-Cultural Studies - US Minority",,,
+Cultural Studies - US Minority",,,3.67
 AAS 260,AAS,260,Intro Asian American Theatre,3 Hours,Same as THEA 260. See THEA 260.,,,Cultural Studies - US Minority,,,
 AAS 275,AAS,275,The Politics of Fashion,3 Hours,Same as GWS 275. See GWS 275.,,,Cultural Studies - US Minority,,,
 AAS 281,AAS,281,Constructing Race in America,3 Hours,"Same as AFRO 281, HIST 281, and LLS 281. See HIST 281.",,,"Humanities - Hist & Phil
@@ -29,7 +29,7 @@ Cultural Studies - US Minority",,,
 AAS 286,AAS,286,Asian American Literature,3 Hours,Same as ENGL 286. See ENGL 286.,,,"Humanities - Lit & Arts
 Cultural Studies - US Minority",,,
 AAS 287,AAS,287,Food and Asian Americans,3 Hours,"Introduction to the interdisciplinary study of food to better understand the historical, social, and cultural aspects of Asian American food preparation, distribution and consumption. Students will investigate the politics and poetics of Asian American foodways by examining social habits, and rituals around food in restaurants, ethnic cookbooks, fictional works, memoirs, magazines, and television shows. Prerequisite: AAS 100 or AAS 120, or consent of instructor.","Prerequisite: AAS 100 or AAS 120, or consent of instructor.",,"Social & Beh Sci - Soc Sci
-Cultural Studies - US Minority",,,
+Cultural Studies - US Minority",,,3.81
 AAS 288,AAS,288,Global Islam and Feminisms,3 Hours,Same as GWS 288. See GWS 288.,,,Cultural Studies - Non-West,,,
 AAS 290,AAS,290,Individual Study,2 to 3 Hours,Supervised reading and research in Asian American Studies chosen by the student with instructor approval. May be repeated to a maximum of 6 hours. Prerequisite: AAS 100.,Prerequisite: AAS 100.,,,,,
 AAS 291,AAS,291,Hinduism in the United States,3 Hours,Same as REL 291. See REL 291.,,,,,,

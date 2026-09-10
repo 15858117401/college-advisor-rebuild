@@ -7,7 +7,7 @@ from pydantic import BaseModel, Field, field_validator
 from Supabase.import_stat_resources import create_supabase_client
 
 
-COURSE_CODE_PATTERN = re.compile(r"^STAT\s*(\d{3})$", re.IGNORECASE)
+COURSE_CODE_PATTERN = re.compile(r"^([A-Za-z]{2,4})\s*(\d{3}[A-Za-z]?)$", re.IGNORECASE)
 COURSE_SELECT_FIELDS = (
     "course_code,subject,course_number,course_name,credits,description,"
     "prerequisites,credit_restrictions,gen_ed,total_students,total_sections,"
@@ -20,8 +20,8 @@ class GetCourseDetailsInput(BaseModel):
         min_length=1,
         max_length=5,
         description=(
-            "One to five explicit STAT course codes, such as "
-            "['STAT 107'] or ['STAT 400', 'STAT 432']."
+            "One to five explicit UIUC course codes, such as "
+            "['MATH 416'] or ['ECON 302', 'STAT 400']."
         ),
     )
 
@@ -34,15 +34,15 @@ class GetCourseDetailsInput(BaseModel):
             if match is None:
                 raise ValueError(
                     f"invalid course code {course_code!r}; "
-                    "expected a value like 'STAT 107'"
+                    "expected a value like 'MATH 416'"
                 )
-            normalized.append(f"STAT {match.group(1)}")
+            normalized.append(f"{match.group(1).upper()} {match.group(2).upper()}")
         return normalized
 
 
 @tool("get_course_details", args_schema=GetCourseDetailsInput)
 def get_course_details(course_codes: list[str]) -> list[dict[str, Any]]:
-    """Get catalog details for one to five specific STAT courses.
+    """Get catalog details for one to five specific stored UIUC courses.
 
     Use this when explicit course codes are known. Do not use this to
     discover courses from natural-language topics or conditions.

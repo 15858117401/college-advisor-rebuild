@@ -5,6 +5,7 @@ from pathlib import Path
 from types import SimpleNamespace
 from unittest.mock import patch
 
+import pytest
 from pydantic import ValidationError
 
 
@@ -48,10 +49,22 @@ class _Query:
     def eq(self, column: str, value):
         return self
 
+    def in_(self, column, values):
+        self.rows = [row for row in self.rows if row['course_code'].split()[0] in values]
+        return self
+
+    def order(self, column):
+        self.rows = sorted(self.rows, key=lambda row: row[column])
+        return self
+
+    def range(self, start, end):
+        self.page = self.rows[start:end + 1]
+        return self
+
     def execute(self):
         if self.error:
             raise self.error
-        return SimpleNamespace(data=self.rows)
+        return SimpleNamespace(data=self.page)
 
 
 def _invoke(
@@ -133,12 +146,12 @@ class FindCoursesTest(unittest.TestCase):
         self.assertEqual([item["course_code"] for item in result], ["STAT 410"])
         embed_mock.assert_not_called()
 
-    def test_missing_gpa_passes_gpa_filter(self) -> None:
+    def test_missing_gpa_does_not_satisfy_gpa_filter(self) -> None:
         result, _ = _invoke(
             {"min_overall_gpa": 3.5},
             [_row("STAT 408", gpa=3.09), _row("STAT 429", gpa=None)],
         )
-        self.assertEqual(result, [{"course_code": "STAT 429", "credits": "3 Hours"}])
+        self.assertEqual(result, [])
 
     def test_credit_filter_supports_fixed_optional_and_range_values(self) -> None:
         rows = [
@@ -214,6 +227,53 @@ class FindCoursesTest(unittest.TestCase):
                 [_row("STAT 432", embedding=[1.0, 0.0])],
                 embedding_error=RuntimeError("embedding unavailable"),
             )
+
+
+
+
+def test_cross_subject_search_and_normalized_filter():
+    rows = [_row('MATH 416'), _row('ECON 302'), _row('STAT 400')]
+    result, _ = _invoke({'min_course_number': 100}, rows)
+    assert len(result) == 3
+    result, _ = _invoke({'subjects': [' econ ', 'MATH', 'ECON']}, rows)
+    assert {r['course_code'] for r in result} == {'ECON 302', 'MATH 416'}
+
+
+def test_reads_past_1000_rows():
+    rows = [_row(f'{subject} {n}') for subject in ['MATH', 'ECON'] for n in range(100, 700)]
+    result, _ = _invoke({'min_course_number': 100}, rows)
+    assert len(result) == 1200
+    assert len({r['course_code'] for r in result}) == 1200
+
+
+def test_null_embedding_is_factual_only():
+    rows = [_row('CWL 593', embedding=None), _row('CWL 590', embedding=[1.0, 0.0])]
+    result, _ = _invoke({'min_course_number': 500}, rows)
+    assert len(result) == 2
+    result, _ = _invoke({'description_query': 'literature'}, rows)
+    assert [r['course_code'] for r in result] == ['CWL 590']
+    result, embed = _invoke({'description_query': 'literature'}, rows[:1])
+    assert result == []
+    embed.assert_not_called()
+
+
+def test_general_education_matches_one_of_multiple_labels():
+    rows = [_row('HIST 100', gen_ed='Humanities - Hist & Phil\nCultural Studies - Western'),
+            _row('ECON 102', gen_ed='Social & Beh Sci - Soc Sci')]
+    result, _ = _invoke({'gen_ed': 'cultural studies - western'}, rows)
+    assert [r['course_code'] for r in result] == ['HIST 100']
+
+
+def test_unknown_gpa_neither_minimum_nor_maximum():
+    for criteria in [{'min_overall_gpa': 2}, {'max_overall_gpa': 4}]:
+        result, _ = _invoke(criteria, [_row('ECON 302', gpa=None)])
+        assert result == []
+
+
+def test_invalid_subject_filters():
+    for subjects in [[], ['Math major'], ['ECON;DELETE']]:
+        with pytest.raises(ValidationError):
+            find_courses.invoke({'subjects': subjects})
 
 
 if __name__ == "__main__":

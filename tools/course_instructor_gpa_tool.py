@@ -1,53 +1,54 @@
 import re
 from collections import defaultdict
-from typing import Annotated
 
 from langchain_core.tools import tool
-from pydantic import Field
+from pydantic import BaseModel, Field, field_validator
 
 from Supabase.import_stat_resources import create_supabase_client
+from Supabase.resource_queries import fetch_all_rows
 
 
-COURSE_CODE_PATTERN = re.compile(r"^STAT\s*(\d{3})$", re.IGNORECASE)
+COURSE_CODE_PATTERN = re.compile(r"^([A-Za-z]{2,4})\s*(\d{3}[A-Za-z]?)$")
 
 
-@tool("get_course_instructor_gpas")
-def get_course_instructor_gpas(
-    course_codes: Annotated[
-        list[str],
-        Field(
-            min_length=1,
-            max_length=2,
-            description="One or two explicit STAT course codes.",
-        ),
-    ],
-) -> list[dict]:
-    """Get historical average GPA by instructor for one or two STAT courses.
+class GetCourseInstructorGpasInput(BaseModel):
+    course_codes: list[str] = Field(
+        min_length=1,
+        max_length=2,
+        description="One or two UIUC course codes, such as MATH 416 or ECON 302.",
+    )
+
+    @field_validator("course_codes")
+    @classmethod
+    def normalize_course_codes(cls, values: list[str]) -> list[str]:
+        codes = []
+        for value in values:
+            match = COURSE_CODE_PATTERN.fullmatch(value.strip())
+            if match is None:
+                raise ValueError(f"invalid course code {value!r}; expected a value like 'MATH 416'")
+            codes.append(f"{match.group(1).upper()} {match.group(2).upper()}")
+        return codes
+
+
+@tool("get_course_instructor_gpas", args_schema=GetCourseInstructorGpasInput)
+def get_course_instructor_gpas(course_codes: list[str]) -> list[dict]:
+    """Get historical average GPA by instructor for one or two UIUC courses.
 
     Multiple database rows for the same course and instructor are averaged.
     The statistics do not identify specific sections or academic terms.
+    Valid course codes without stored statistics return no GPA information.
     """
-    normalized_codes = []
-    for course_code in course_codes:
-        match = COURSE_CODE_PATTERN.fullmatch(course_code.strip())
-        if match is None:
-            raise ValueError(
-                f"invalid course code {course_code!r}; expected a value like 'STAT 420'"
-            )
-        normalized_codes.append(f"STAT {match.group(1)}")
-    course_codes = normalized_codes
-
     unique_course_codes = list(dict.fromkeys(course_codes))
-    response = (
-        create_supabase_client()
-        .table("course_instructor_stats")
+    client = create_supabase_client()
+    rows = fetch_all_rows(lambda: (
+        client.table("course_instructor_stats")
         .select("course_code,instructor_name,instructor_avg_gpa")
         .in_("course_code", unique_course_codes)
-        .execute()
-    )
+        .order("id")
+    ))
 
     grouped = defaultdict(lambda: defaultdict(list))
-    for row in response.data or []:
+    for row in rows:
         gpa = row.get("instructor_avg_gpa")
         if gpa is None:
             continue

@@ -1,10 +1,12 @@
 import json
+from copy import deepcopy
 import sys
 import unittest
 from pathlib import Path
 from unittest.mock import patch
 
 from langchain_core.messages import AIMessage
+from langgraph.runtime import Runtime
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -14,7 +16,7 @@ if str(PROJECT_ROOT) not in sys.path:
 from graph import graph
 from nodes.out_of_scope import OUT_OF_SCOPE_RESPONSE, out_of_scope
 from nodes.planner import PLANNER_SYSTEM_PROMPT, planner
-from state import load_local_profile, profile_reference_message
+from state import load_local_profile, profile_from_runtime, profile_reference_message
 
 
 class RouterTest(unittest.TestCase):
@@ -190,6 +192,64 @@ class RouterTest(unittest.TestCase):
             ],
         )
         planner_llm.invoke.assert_called_once()
+
+
+
+
+
+
+def test_explicit_profile_none_disables_fallback_but_omission_preserves_it():
+    profile = {'major': 'Statistics', 'completed_courses': ['STAT 400'], 'cumulative_gpa': 2.71, 'major_gpa': 2.8}
+    with patch('state.load_local_profile', return_value=profile) as load:
+        assert profile_from_runtime(Runtime(context={'profile': None})) is None
+        load.assert_not_called()
+        assert profile_from_runtime(Runtime(context={})) == profile
+        assert profile_from_runtime() == profile
+        assert load.call_count == 2
+
+
+def test_profile_suppression_reaches_router_and_advising():
+    with (
+        patch('state.load_local_profile', side_effect=AssertionError('must not load local profile')),
+        patch('nodes.router.llm_client') as router_llm,
+        patch('nodes.planner.llm_client'),
+        patch('nodes.advising.advising_agent.invoke') as advise,
+        patch('nodes.compose_response.llm_client') as compose,
+    ):
+        router_llm.invoke.return_value = AIMessage(content='{"route":"advising"}')
+        advise.return_value = {'messages': [AIMessage(content='Economics plan')]}
+        compose.invoke.return_value = AIMessage(content='Economics plan')
+        query = 'For a hypothetical Economics student, plan next semester.'
+        graph.invoke({'current_input': query, 'messages': []}, context={'profile': None})
+    assert json.loads(router_llm.invoke.call_args.args[0][-1].content)['profile'] is None
+    assert [m.content for m in advise.call_args.args[0]['messages']] == [query]
+
+
+def test_conflicting_scenario_is_preserved_and_profile_stays_read_only():
+    from nodes.advising import ADVISING_SYSTEM_PROMPT
+    from nodes.router import ROUTER_SYSTEM_PROMPT
+
+    profile = {'major': 'Statistics', 'completed_courses': ['STAT 400'], 'cumulative_gpa': 2.71, 'major_gpa': 2.8}
+    original = deepcopy(profile)
+    query = 'For another student majoring in Economics, recommend courses. Their GPA is unknown.'
+    with (
+        patch('nodes.router.llm_client') as router_llm,
+        patch('nodes.planner.llm_client'),
+        patch('nodes.advising.advising_agent.invoke') as advise,
+        patch('nodes.compose_response.llm_client') as compose,
+    ):
+        router_llm.invoke.return_value = AIMessage(content='{"route":"advising"}')
+        advise.return_value = {'messages': [AIMessage(content='Economics plan')]}
+        compose.invoke.return_value = AIMessage(content='Economics plan')
+        graph.invoke({'current_input': query, 'messages': []}, context={'profile': profile})
+    assert profile == original
+    assert json.loads(router_llm.invoke.call_args.args[0][-1].content)['current_input'] == query
+    sent = advise.call_args.args[0]['messages']
+    assert sent[-1].content == query
+    assert 'takes precedence' in sent[0].content
+    assert 'do not fill' in sent[0].content
+    assert 'precedence' in ADVISING_SYSTEM_PROMPT
+    assert 'precedence' in ROUTER_SYSTEM_PROMPT
 
 
 if __name__ == "__main__":

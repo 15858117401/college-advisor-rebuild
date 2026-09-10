@@ -160,10 +160,9 @@ class ProfessorResearchIntegrationTest(unittest.TestCase):
         self.assertTrue(expected.issubset(catalog_tool_names))
         self.assertEqual(advising_tool_names, catalog_tool_names)
 
-    def test_skill_is_registered_for_catalog_and_advising(self) -> None:
-        self.assertEqual(len(CATALOG_SKILLS), 1)
+    def test_skills_remain_disabled_for_catalog_and_advising(self) -> None:
+        self.assertEqual(CATALOG_SKILLS, [])
         self.assertEqual(CATALOG_SKILLS, ADVISING_SKILLS)
-        self.assertIn("Never substitute a same-name professor", CATALOG_SKILLS[0])
 
     def test_compose_prompt_preserves_research_evidence(self) -> None:
         self.assertIn("Preserve source URLs", COMPOSE_SYSTEM_PROMPT)

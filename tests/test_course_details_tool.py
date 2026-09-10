@@ -101,9 +101,9 @@ class GetCourseDetailsInputTest(unittest.TestCase):
                 }
             )
 
-    def test_rejects_non_stat_course_code(self) -> None:
-        with self.assertRaisesRegex(ValidationError, "expected a value like 'STAT 107'"):
-            get_course_details.invoke({"course_codes": ["CS 225"]})
+    def test_rejects_malformed_course_code(self) -> None:
+        with self.assertRaisesRegex(ValidationError, "expected a value like 'MATH 416'"):
+            get_course_details.invoke({"course_codes": ["MATH-416"]})
 
     def test_tool_metadata_describes_exact_lookup_and_five_course_limit(self) -> None:
         self.assertIn("explicit course codes", get_course_details.description)
@@ -113,7 +113,7 @@ class GetCourseDetailsInputTest(unittest.TestCase):
         ]
         self.assertEqual(course_codes["minItems"], 1)
         self.assertEqual(course_codes["maxItems"], 5)
-        self.assertIn("STAT 432", course_codes["description"])
+        self.assertIn("ECON 302", course_codes["description"])
 
 
 class GetCourseDetailsQueryTest(unittest.TestCase):
@@ -178,6 +178,16 @@ class GetCourseDetailsQueryTest(unittest.TestCase):
                 [],
                 error=RuntimeError("database unavailable"),
             )
+
+
+
+
+def test_mixed_subject_codes_and_missing_course():
+    math = {**COURSE_ROW, 'course_code': 'MATH 416', 'subject': 'MATH', 'course_number': 416}
+    econ = {**COURSE_ROW, 'course_code': 'ECON 302', 'subject': 'ECON', 'course_number': 302}
+    result, _, query = _invoke_with_fake(['math416', 'econ302', 'STAT400'], [math, econ])
+    assert query.filter_values == ['MATH 416', 'ECON 302', 'STAT 400']
+    assert result == [math, econ, {'course_code': 'STAT 400', 'message': 'no such course'}]
 
 
 if __name__ == "__main__":

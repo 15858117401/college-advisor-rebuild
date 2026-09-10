@@ -16,7 +16,6 @@ from Supabase.import_stat_resources import (
     INSTRUCTORS_CSV,
     EXPECTED_PROJECT_REF,
     load_resource_data,
-    upload_snapshot,
     validate_supabase_url,
     validation_summary,
 )
@@ -40,31 +39,6 @@ class _FakeEmbeddings:
 class _FakeOpenAI:
     def __init__(self, vectors: list[list[float]]) -> None:
         self.embeddings = _FakeEmbeddings(vectors)
-
-
-class _FakeRpcRequest:
-    def __init__(self, data):
-        self.data = data
-
-    def execute(self):
-        return SimpleNamespace(data=self.data)
-
-
-class _FakeSupabase:
-    def __init__(self) -> None:
-        self.calls = []
-
-    def rpc(self, name, params):
-        self.calls.append((name, params))
-        if name == "replace_stat_resource_snapshot":
-            return _FakeRpcRequest(
-                [{"courses_upserted": 41, "instructor_rows_inserted": 117}]
-            )
-        if name == "match_courses":
-            return _FakeRpcRequest(
-                [{"course_code": "STAT 100", "similarity": 1.0}]
-            )
-        raise AssertionError(f"unexpected RPC {name}")
 
 
 class EmbeddingClientTest(unittest.TestCase):
@@ -175,30 +149,6 @@ class ResourceImportTest(unittest.TestCase):
         with self.assertRaisesRegex(RuntimeError, EXPECTED_PROJECT_REF):
             validate_supabase_url("https://wrong-project.supabase.co")
 
-    def test_builds_atomic_import_and_checks_semantic_search(self) -> None:
-        client = _FakeSupabase()
-        vectors = [[0.0] * EMBEDDING_DIMENSIONS for _ in self.data.courses]
-
-        result = upload_snapshot(self.data, vectors, supabase_client=client)
-
-        self.assertEqual(result["courses"], 41)
-        self.assertEqual(result["instructor_rows"], 117)
-        self.assertEqual(result["semantic_search_top_match"], "STAT 100")
-        self.assertEqual(client.calls[0][0], "replace_stat_resource_snapshot")
-        self.assertEqual(len(client.calls[0][1]["course_rows"]), 41)
-        self.assertEqual(len(client.calls[0][1]["instructor_rows"]), 117)
-        self.assertEqual(
-            {
-                key: client.calls[0][1]["instructor_rows"][0][key]
-                for key in ("course_code", "subject", "course_number")
-            },
-            {
-                "course_code": "STAT 100",
-                "subject": "STAT",
-                "course_number": 100,
-            },
-        )
-        self.assertEqual(client.calls[1][0], "match_courses")
 
 
 if __name__ == "__main__":

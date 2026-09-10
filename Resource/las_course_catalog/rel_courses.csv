@@ -1,26 +1,26 @@
 course_code,subject,course_number,course_name,credits,description,prerequisites,credit_restrictions,gen_ed,total_students,total_sections,overall_gpa
-REL 101,REL,101,Bible as Literature,3 Hours,"[IAI Code: H5901] Themes and literary genres in the Bible, emphasizing content important in Western culture. Same as CWL 111 and ENGL 114.",,,Humanities - Lit & Arts,,,
+REL 101,REL,101,Bible as Literature,3 Hours,"[IAI Code: H5901] Themes and literary genres in the Bible, emphasizing content important in Western culture. Same as CWL 111 and ENGL 114.",,,Humanities - Lit & Arts,,,3.58
 REL 104,REL,104,Asian Mythology,3 Hours,"Introductory survey of the mythologies of India, China, and Japan. Same as ASST 104.",,,"Humanities - Hist & Phil
-Cultural Studies - Non-West",,,
+Cultural Studies - Non-West",,,3.23
 REL 106,REL,106,Archaeology and the Bible,3 Hours,"Examination of archaeological evidence, especially from Syria-Palestine, and discussion of its use in the interpretation of Biblical literature.",,,,,,
 REL 108,REL,108,Religion & Society in West I,3 Hours,"Introduction to classic writers and texts in Western religious and social thought from antiquity to the Enlightenment, with emphasis on their social and historical contexts. Same as JS 108, ANTH 108, and PHIL 108.",,,"Humanities - Hist & Phil
-Cultural Studies - Western",,,
+Cultural Studies - Western",,,3.66
 REL 109,REL,109,Religion & Society in West II,3 Hours,"Introduction to classic writers and texts in Western religious and social thought from the Enlightenment to the present, with emphasis on their social and historical contexts. Same as ANTH 109 and PHIL 109..",,,"Humanities - Hist & Phil
-Cultural Studies - Western",,,
+Cultural Studies - Western",,,3.76
 REL 110,REL,110,World Religions,3 Hours,"[IAI Code: H5904N] Survey of the leading living religions, including Hinduism, Buddhism, Confucianism, Taoism, Judaism, Christianity, and Islam; examination of basic texts and of philosophic theological elaborations of each religion. Same as PHIL 110.",,,"Humanities - Hist & Phil
-Cultural Studies - Non-West",,,
+Cultural Studies - Non-West",,,3.66
 REL 111,REL,111,Elementary Greek I,4 Hours,Same as GRK 101. See GRK 101.,,,,,,
 REL 112,REL,112,Elementary Greek II,4 Hours,Same as GRK 102. See GRK 102.,,,,,,
 REL 115,REL,115,Language and Culture in India,3 Hours,Same as HNDI 115 and LING 115. See LING 115.,,,Cultural Studies - Non-West,,,
 REL 116,REL,116,Faith & Self in Global Context,3 Hours,"Whether in fourth-century North African, tenth-century Japan, fourteenth-century Spain, or twentieth-century America, men and women have wrestled with the question of who they are and how they are to relate to the world. Through autobiographic writings, by reading the words of women and men attempting to make sense of the world and their place in it, we hope to focus attention on the personal dimensions of faith and of cross cultural contact at the same time that we provide an introduction to the worlds' major religions.",,,,,,
 REL 120,REL,120,A History of Judaism,3 Hours,"Examines the social, political, economic, and intellectual history of the Jews from Abraham to the present-day, with particular attention to Jewish thought and society. Same as HIST 168 and JS 120.",,,"Advanced Composition
-Humanities - Hist & Phil",,,
+Humanities - Hist & Phil",,,3.23
 REL 121,REL,121,Introduction to Christianity,3 Hours,"Typological and historical approaches to major forms of Christianity: Eastern Orthodoxy, Catholicism, and Protestantism.",,,,,,
 REL 122,REL,122,History East Asian Religions,3 Hours,Same as EALC 122. See EALC 122.,,,"Humanities - Hist & Phil
 Cultural Studies - Non-West",,,
 REL 132,REL,132,Zen,3 Hours,"Introduces the history, teachings, and practice of Zen Buddhism in China and Japan. Same as EALC 132.",,,"Humanities - Hist & Phil
-Cultural Studies - Non-West",,,
-REL 134,REL,134,"Religion, Race, and Resistance",3 Hours,"Examination of religiously-informed responses to and rejections of racialized oppression in the history of North America, focusing on Native American, African American, and Muslim American experiences. Same as AFRO 134.",,,Cultural Studies - US Minority,,,
+Cultural Studies - Non-West",,,3.62
+REL 134,REL,134,"Religion, Race, and Resistance",3 Hours,"Examination of religiously-informed responses to and rejections of racialized oppression in the history of North America, focusing on Native American, African American, and Muslim American experiences. Same as AFRO 134.",,,Cultural Studies - US Minority,,,3.26
 REL 160,REL,160,Ancient Greek & Roman Religion,3 Hours,Same as CLCV 160. See CLCV 160.,,,"Humanities - Hist & Phil
 Cultural Studies - Western",,,
 REL 170,REL,170,Nature Religion,3 Hours,"Introductory survey of religious traditions that locate sacred realities in the natural world, and of ecological traditions that attribute spiritual significance to nature. Same as ESE 170.",,,,,,
@@ -31,16 +31,16 @@ REL 202,REL,202,New Testament in English,3 Hours,"[IAI Code: H5901] Analyzes the
 REL 204,REL,204,Classical & Koine Greek II,4 Hours,Same as GRK 202. See GRK 202.,,,,,,
 REL 205,REL,205,Intensive Biblical Hebrew,5 Hours,Acquisition of reading knowledge of biblical Hebrew and a familiarity with all major aspects of biblical Hebrew grammar. Same as HEBR 205.,,,,,,
 REL 208,REL,208,Cultures & Literatures of South Asia,3 Hours,"Introduction to the literary traditions of South Asia from the beginnings to the end of the Mughal era. Students will read - in translation - selections from a wide range of texts beginning with the earliest Vedic Hymns to the seventeenth and eighteenth century Sufi poetry and songs. Provides students an understanding of the heterogeneous and rich literary and cultural past of the region. Same as ASST 208, CWL 208, and SAME 208.",,,"Humanities - Lit & Arts
-Cultural Studies - Non-West",,,
+Cultural Studies - Non-West",,,3.94
 REL 212,REL,212,History of Antisemitism,3 Hours,Same as JS 201. See JS 201.,,,"Humanities - Hist & Phil
 Cultural Studies - Western",,,
 REL 214,REL,214,Introduction to Islam,3 Hours,"History of Islamic thought from the time of Muhammad to the present, including the prophethood of Muhammad, the Qur'an, theology and law, mysticism and philosophy, sectarian movements, modernism and legal reform, and contemporary resurgence. Same as SAME 214.",,,"Humanities - Hist & Phil
-Cultural Studies - Non-West",,,
+Cultural Studies - Non-West",,,3.73
 REL 215,REL,215,African Muslim Societies,3 Hours,Same as AFST 213 and HIST 213. See HIST 213.,,,"Humanities - Hist & Phil
 Cultural Studies - Non-West",,,
 REL 220,REL,220,Jewish Storytelling,3 Hours,"Same as CWL 221, ENGL 223, JS 220, and YDSH 220. See YDSH 220.",,,,,,
 REL 223,REL,223,The Qur'an (Koran),3 Hours,"Introduction to the Qur'an (Koran), the holy scripture of Islam, examining its major doctrines, thematic development, literary style, and its relationship to pre-Qur'anic, especially Biblical, traditions. Special attention is given to various methods Muslims have used to interpret the Qur'an. Same as CWL 223 and SAME 223. Prerequisite: REL 214.",Prerequisite: REL 214.,,"Humanities - Lit & Arts
-Cultural Studies - Non-West",,,
+Cultural Studies - Non-West",,,3.61
 REL 224,REL,224,Chinese Thought and Culture,3 Hours,Same as EALC 222 and HIST 222. See EALC 222.,,,"Humanities - Hist & Phil
 Cultural Studies - Non-West",,,
 REL 225,REL,225,Japanese Religions: Thought and Practice,3 Hours,Same as EALC 225. See EALC 225.,,,"Humanities - Hist & Phil
@@ -50,22 +50,22 @@ REL 231,REL,231,Happiness and the Good Life,3 Hours,"Explores the foundational q
 REL 232,REL,232,Ancient Greek Sanctuaries,3 Hours,"Same as ARTH 218, and CLCV 232. See CLCV 232.",,,,,,
 REL 234,REL,234,Black Religious Imaginations,3 Hours,"Considers Black religious groups whose origins are linked to an attempt to jettison racial categories, such as ""negro,"" that were constructed as cultural productions aimed at undermining the dignity of Black people. Examines Black religious movements like the Nation of Islam, Black Spiritual Movements, Hebrew-Israelite organizations, and the Black Coptic Church, that respond to the problem of race via a performance of imaginations that point to the possibility of other worlds and other futures. Same as AFRO 234.",,,Cultural Studies - US Minority,,,
 REL 235,REL,235,History of Religion in America,3 Hours,"Examines the religious history of the lands that have become the United States and the people who have become known as Americans through texts written by and about people of all races and creeds. From the precontact era through the twentieth century, this course emphasizes the diversity of American religion, the discord caused by and present in American religion, and the many instances of dialogue that have been a part of America's religious history. Same as HIST 289.",,,Humanities - Hist & Phil,,,
-REL 236,REL,236,"Religion, Violence & America",3 Hours,"Examination of the interactions among religion, violence, and American culture from the colonial period to the twenty-first century. Using a wide range of primary and secondary texts, students will study the perspectives of the perpetrators and victims of religiously motivated and/or religiously justified violence, both in domestic and international affairs. Same as HIST 290.",,,Cultural Studies - Western,,,
+REL 236,REL,236,"Religion, Violence & America",3 Hours,"Examination of the interactions among religion, violence, and American culture from the colonial period to the twenty-first century. Using a wide range of primary and secondary texts, students will study the perspectives of the perpetrators and victims of religiously motivated and/or religiously justified violence, both in domestic and international affairs. Same as HIST 290.",,,Cultural Studies - Western,,,3.66
 REL 251,REL,251,Viking Mythology,3 Hours,"Same as CWL 251, MDVL 251, and SCAN 251. See SCAN 251.",,,"Humanities - Hist & Phil
 Cultural Studies - Western",,,
 REL 258,REL,258,Muslims in America,3 Hours,Same as AAS 258 and LLS 258. See AAS 258.,,,"Social & Beh Sci - Soc Sci
 Cultural Studies - US Minority",,,
 REL 260,REL,260,Mystics and Saints in Islam,3 Hours,"Examines mystical concepts and practices in Islam through the ages, through the lives and writings of important mystics and Sufi holy men and women, as well as the integration of mysticism and the Sufi Orders into Muslim society and Islamic orthodoxy. Same as SAME 260. No knowledge of Islam or foreign language is required.",,,"Humanities - Lit & Arts
-Cultural Studies - Non-West",,,
+Cultural Studies - Non-West",,,3.83
 REL 269,REL,269,Jewish History Since 1700,3 Hours,Same as HIST 269 and JS 269. See HIST 269.,,,"Humanities - Hist & Phil
 Cultural Studies - Western",,,
 REL 270,REL,270,"Religion, Ethics, Environment",3 Hours,"Introduction to various religious and philosophical perspectives on environmental ethics. Asks whether the religious traditions can provide us with any resources that can help us to deal with contemporary environmental problems. Religious and philosophical perspectives on these topics will be central to the course: attitudes to individual animals, to other species, and in general to non-human nature; the place of human beings in nature; the relative importance of human development and environmental protection; relations between rich and poor; whether we might need to change our conception of what it is to live successfully; and the concepts of stewardship and sustainability.",,,,,,
 REL 283,REL,283,Jewish Sacred Literature,3 Hours,"Literary study of the major post-biblical sacred texts of Judaism; includes readings in translation from Mishnah, Tosefta, Talmudim, midrashim, piyyutim, and mystical treatises. Emphasizes nature, history, function, and development of literary patterns and forms and the relationships between form and content in these texts. Same as CWL 283.",,,Humanities - Lit & Arts,,,
 REL 284,REL,284,Modern Jewish Literature,3 Hours,"Same as CWL 284, ENGL 284, and JS 284. See JS 284.",,,,,,
 REL 286,REL,286,Introduction to Hinduism,3 Hours,Elements of Hindu thought and practice; selected topics presented in historical order and in the context of Indian cultural history (including the present).,,,"Humanities - Hist & Phil
-Cultural Studies - Non-West",,,
+Cultural Studies - Non-West",,,3.57
 REL 287,REL,287,Introduction to Buddhism,3 Hours,Thematic approach to the history of Buddhism from its origin in India to its spread throughout China and Japan; explores how the doctrinal and social development of Buddhism in East Asia is related to the process of cultural adaptation. Same as EALC 287.,,,"Humanities - Hist & Phil
-Cultural Studies - Non-West",,,
+Cultural Studies - Non-West",,,3.06
 REL 291,REL,291,Hinduism in the United States,3 Hours,"Introduction to the historical, religious, and socio-cultural aspects of Hinduism in the US. The role of Hinduism in the maintenance of the ethnic identity of Indians in the US will be examined in the context of the rituals, languages, temples, family, and other social organizations. The maintenance and/or shift of the features of traditional (Indian) Hinduism in the transplanted counterpart in the US will be examined. Same as AAS 291. Prerequisite: REL 104 or REL 286 or consent of instructor.",Prerequisite: REL 104 or REL 286 or consent of instructor.,,,,,
 REL 308,REL,308,Psychology of Religion and Spirituality,3 Hours,Same as PSYC 308. See PSYC 308.,,,,,,
 REL 320,REL,320,Responses to the Holocaust,3 Hours,"Same as CWL 320, ENGL 359, JS 320, and YDSH 320. See CWL 320.",,,,,,
@@ -79,13 +79,13 @@ REL 344,REL,344,Jewish Intellectual History: Encounters with Islam and Christian
 REL 345,REL,345,Medieval Civilization,3 Hours,Same as HIST 345 and MDVL 345. See HIST 345.,,,,,,
 REL 346,REL,346,The Age of the Renaissance,3 Hours,Same as HIST 346 and MDVL 346. See HIST 346.,,,,,,
 REL 347,REL,347,Protestant & Catholic Refs,3 Hours,Same as HIST 347. See HIST 347.,,,,,,
-REL 350,REL,350,South Asian Goddesses,3 Hours,"Introduction to the most well-known Hindu goddesses, at both the pan-Hindu and local level, and explores their mythical narratives, associated powers, iconography, and rituals of worship. Presents different methodological approaches scholars employ in the interpretation of goddess worship in South Asia and abroad. Materials are drawn from textual, historical sources as well as contemporary ethnographic research, and seek to include representative figures from different regions throughout India and the Himalayan region. Same as CWL 350 and SAME 350.",,,,,,
+REL 350,REL,350,South Asian Goddesses,3 Hours,"Introduction to the most well-known Hindu goddesses, at both the pan-Hindu and local level, and explores their mythical narratives, associated powers, iconography, and rituals of worship. Presents different methodological approaches scholars employ in the interpretation of goddess worship in South Asia and abroad. Materials are drawn from textual, historical sources as well as contemporary ethnographic research, and seek to include representative figures from different regions throughout India and the Himalayan region. Same as CWL 350 and SAME 350.",,,,,,3.00
 REL 360,REL,360,Sacred Spaces of India,3 Hours,"Introduction to sacred spaces through a study abroad experience in India. Students explore the holy sites of Hinduism, Jainism, Islam, and Buddhism and experience how the blend of geography, architecture, and art shapes the belief systems of South Asia, both past and present. Study abroad trip to India will take place between Fall and Spring semesters. Prerequisite: Instructor approval is required.",Prerequisite: Instructor approval is required.,,,,,
 REL 380,REL,380,Medicine and the Sacred: Healing Traditions Across Cultures,3 Hours,"Explores the intersections of medicine, religion, and healing traditions across cultures. It examines Chinese, Indian, Greco-Islamic, and Western systems of medicine, highlighting their philosophical foundations, therapeutic practices, and ethical dimensions. Topics include etiology and pathology, humoral and energetic theories, divine healers and authority, pharmacology, mental health, and spirituality. Students engage in comparative analysis and conduct research on a chosen healing modality in conversation with modern biomedicine. Credit is not given toward graduation for: REL 494: Medicine and the Sacred and REL 380.",,Credit is not given toward graduation for: REL 494: Medicine and the Sacred and REL 380.,,,,
 REL 390,REL,390,Independent Study,1 to 6 Hours,Special topics not treated in regularly scheduled courses; designed primarily for upperclassmen. May be repeated. Prerequisite: Evidence of adequate preparation for such study; consent of staff member supervising the work.,Prerequisite: Evidence of adequate preparation for such study; consent of staff member supervising the work.,,,,,
 REL 402,REL,402,Gods Demons and Heroes in Hindu Literature,3 or 4 Hours,"An exploration of Hindu literature with a focus on representations of gods and goddesses, demons, and heroes in foundational texts such as the Ramayana, Mahabharata, and Puranas. Through close textual analysis, students will examine the philosophical, theological, and sociocultural dimensions of these narratives. Emphasis will be placed on the interplay between myth and history and the influence of these texts on South Asian literary and religious traditions through the modern period.",,,,,,
 REL 403,REL,403,Women in Muslim Societies,"3 or 4 Hours
-3 undergraduate hours. 4 graduate hours.","Examination of gender ideologies and social realities affecting the lives of women in various Muslim countries. Same as ANTH 403, GLBL 403, GWS 403, HIST 434, and SAME 403. 3 undergraduate hours. 4 graduate hours. Prerequisite: A course in Islam or the Middle East, or consent of instructor.","Prerequisite: A course in Islam or the Middle East, or consent of instructor.",,,,,
+3 undergraduate hours. 4 graduate hours.","Examination of gender ideologies and social realities affecting the lives of women in various Muslim countries. Same as ANTH 403, GLBL 403, GWS 403, HIST 434, and SAME 403. 3 undergraduate hours. 4 graduate hours. Prerequisite: A course in Islam or the Middle East, or consent of instructor.","Prerequisite: A course in Islam or the Middle East, or consent of instructor.",,,,,3.81
 REL 408,REL,408,Islam & Politics in Mid. East,"3 or 4 Hours
 3 undergraduate hours. 4 graduate hours.","Examines the role of Islam in contemporary politics, the contemporary resurgence of Islam, and the articulation of Islamic approaches to the new economic order, nationalism, and the changing role of women. Same as PS 408 and SAME 408. 3 undergraduate hours. 4 graduate hours. Prerequisite: Junior standing or consent of instructor.",Prerequisite: Junior standing or consent of instructor.,,,,,
 REL 412,REL,412,Readings in Sanskrit I,3 or 4 Hours,Same as SNSK 403. See SNSK 403.,,,,,,
@@ -130,7 +130,7 @@ REL 493,REL,493,Honors Senior Thesis,"3 Hours
 REL 494,REL,494,Topics in Religious Thought,"3 or 4 Hours
 3 undergraduate hours. 4 graduate hours.",Various topics in religious thought. 3 undergraduate hours. 4 graduate hours. May be repeated as topics vary.,,,,,,
 REL 495,REL,495,Topics in Asian Religions,"3 or 4 Hours
-3 undergraduate hours. 4 graduate hours.","Topics in Hinduism, Buddhism, Taoism, and other Asian religious traditions. Same as EALC 495. 3 undergraduate hours. 4 graduate hours. May be repeated to a maximum of 6 undergraduate hours or 8 graduate hours as topics vary. Prerequisite: Sophomore standing or consent of instructor.",Prerequisite: Sophomore standing or consent of instructor.,,,,,
+3 undergraduate hours. 4 graduate hours.","Topics in Hinduism, Buddhism, Taoism, and other Asian religious traditions. Same as EALC 495. 3 undergraduate hours. 4 graduate hours. May be repeated to a maximum of 6 undergraduate hours or 8 graduate hours as topics vary. Prerequisite: Sophomore standing or consent of instructor.",Prerequisite: Sophomore standing or consent of instructor.,,,,,3.31
 REL 496,REL,496,Topics in History of Judaism,"3 or 4 Hours
 3 undergraduate hours. 4 graduate hours.","Examination of two or three of the most important practices, beliefs, icons, texts, myths, and spiritual encounters that have and continue to shape Judaism as a religion. Same as JS 496. 3 undergraduate hours. 4 graduate hours. May be repeated to a maximum of 6 undergraduate hours or 8 graduate hours.",,,,,,
 REL 498,REL,498,Topics in Biblical Studies,"3 or 4 Hours

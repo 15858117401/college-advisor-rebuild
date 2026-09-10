@@ -21,7 +21,7 @@ class ProfessorSearchInput(BaseModel):
     course_code: str | None = Field(
         default=None,
         description=(
-            "Optional UIUC course code used to narrow reviews, such as 'STAT 400'."
+            "Optional UIUC course code used to narrow reviews, such as 'MATH 416' or 'ECON 302'."
         ),
     )
 

@@ -2,7 +2,7 @@ course_code,subject,course_number,course_name,credits,description,prerequisites,
 POL 101,POL,101,Elementary Polish I,4 Hours,"Oral and written work on basic pronunciation, grammar, and vocabulary. For students with no prior work in Polish.",,,,,,
 POL 102,POL,102,Elementary Polish II,4 Hours,Continuation of POL 101 Prerequisite: POL 101.,Continuation of POL 101 Prerequisite: POL 101.,,,,,
 POL 115,POL,115,Intro to Polish Culture,3 Hours,"Introduction to Polish culture and literature from a broad historical perspective. Drawing on novels and plays, film, the visual arts, and works of historical research, the course provides students with the basic concepts, methodologies and theories of literary and cultural interpretation, with an emphasis on modern Polish culture (1800-2010) within a broader European context. Same as REES 115.",,,"Humanities - Lit & Arts
-Cultural Studies - Western",,,
+Cultural Studies - Western",,,3.79
 POL 199,POL,199,Undergraduate Open Seminar,1 to 5 Hours,May be repeated.,,,,,,
 POL 201,POL,201,Second Yr Polish I,4 Hours,"Grammar review, conversation practice, written exercises, and selected readings. Prerequisite: POL 102 or equivalent.",Prerequisite: POL 102 or equivalent.,,,,,
 POL 202,POL,202,Second Yr Polish II,4 Hours,Continuation of POL 201. Prerequisite: POL 201.,Prerequisite: POL 201.,,,,,

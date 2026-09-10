@@ -8,12 +8,14 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
+from langgraph.runtime import Runtime
+
 from nodes.router import router
 
 
 INPUT_CSV = Path(__file__).with_name("router_cases_with_responses.csv")
 OUTPUT_CSV = Path(__file__).with_name("router_cases_with_predictions.csv")
-MAX_WORKERS = 10
+MAX_WORKERS = 5
 
 
 
@@ -22,7 +24,8 @@ def predict_route(user_query: str) -> str:
         {
             "current_input": user_query,
             "messages": [],
-        }
+        },
+        runtime=Runtime(context={"profile": None}),
     )
     return str(result["route"])
 
