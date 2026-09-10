@@ -16,10 +16,19 @@ if str(PROJECT_ROOT) not in sys.path:
 from graph import graph
 from nodes.out_of_scope import OUT_OF_SCOPE_RESPONSE, out_of_scope
 from nodes.planner import PLANNER_SYSTEM_PROMPT, planner
-from state import load_local_profile, profile_from_runtime, profile_reference_message
+from state import profile_from_runtime, profile_reference_message
 
 
 class RouterTest(unittest.TestCase):
+    def setUp(self) -> None:
+        self.profile = {
+            "major": "Mathematics", "completed_courses": ["STAT 400"],
+            "cumulative_gpa": 3.0, "major_gpa": 3.0,
+        }
+        profile_patch = patch("state.load_local_profile", return_value=self.profile)
+        profile_patch.start()
+        self.addCleanup(profile_patch.stop)
+
     def test_graph_contains_expected_nodes(self) -> None:
         self.assertEqual(
             set(graph.get_graph().nodes),
@@ -81,7 +90,7 @@ class RouterTest(unittest.TestCase):
         self.assertEqual(result["route"], "out_of_scope")
         self.assertEqual(result["response"], OUT_OF_SCOPE_RESPONSE)
         compose_prompt = compose_llm.invoke.call_args.args[0]
-        self.assertEqual(compose_prompt[-1][1], OUT_OF_SCOPE_RESPONSE)
+        self.assertEqual(json.loads(compose_prompt[-1][1])["draft"], OUT_OF_SCOPE_RESPONSE)
         planner_llm.invoke.assert_called_once()
 
     @patch("nodes.compose_response.llm_client")
@@ -119,7 +128,7 @@ class RouterTest(unittest.TestCase):
 
         self.assertEqual(result["route"], "advising")
         self.assertEqual(result["response"], "Take STAT 410 next.")
-        profile = load_local_profile()
+        profile = self.profile
         agent_messages = invoke_agent.call_args.args[0]["messages"]
         self.assertEqual(
             [message.content for message in agent_messages],
@@ -140,7 +149,13 @@ class RouterTest(unittest.TestCase):
             },
         )
         compose_prompt = compose_llm.invoke.call_args.args[0]
-        self.assertEqual(compose_prompt[-1][1], "Take STAT 410 next.")
+        compose_input = json.loads(compose_prompt[-1][1])
+        self.assertEqual(compose_input["draft"], "Take STAT 410 next.")
+        self.assertEqual(compose_input["current_input"], current_input)
+        self.assertEqual(
+            [m["content"] for m in compose_input["conversation_context"]],
+            [m["content"] for m in past_messages],
+        )
         planner_llm.invoke.assert_called_once()
 
     @patch("nodes.compose_response.llm_client")
@@ -181,7 +196,7 @@ class RouterTest(unittest.TestCase):
             result["response"],
             "STAT 400 is Statistics and Probability I.",
         )
-        profile = load_local_profile()
+        profile = self.profile
         agent_messages = invoke_agent.call_args.args[0]["messages"]
         self.assertEqual(
             [message.content for message in agent_messages],
@@ -250,6 +265,30 @@ def test_conflicting_scenario_is_preserved_and_profile_stays_read_only():
     assert 'do not fill' in sent[0].content
     assert 'precedence' in ADVISING_SYSTEM_PROMPT
     assert 'precedence' in ROUTER_SYSTEM_PROMPT
+
+
+def test_compose_separates_request_history_and_draft_and_only_updates_response():
+    from nodes.compose_response import compose_response
+
+    state = {
+        "current_input": "And how many credits is it?",
+        "messages": [
+            {"role": "user", "content": "Tell me about MATH 416."},
+            AIMessage(content="It is Abstract Linear Algebra."),
+        ],
+        "response": "Three or four credits with approval for four. Extra course descriptions and offers.",
+        "route": "catalog_lookup",
+    }
+    with patch("nodes.compose_response.llm_client") as llm:
+        llm.invoke.return_value = AIMessage(content="3 credits, or 4 with approval.")
+        result = compose_response(state)
+    payload = json.loads(llm.invoke.call_args.args[0][-1][1])
+    assert payload["current_input"] == state["current_input"]
+    assert payload["draft"] == state["response"]
+    assert [m["role"] for m in payload["conversation_context"]] == ["human", "ai"]
+    assert len(payload["conversation_context"]) == 2
+    assert result == {"response": "3 credits, or 4 with approval."}
+    assert state["route"] == "catalog_lookup"
 
 
 if __name__ == "__main__":

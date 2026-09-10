@@ -24,7 +24,7 @@ class RouteDecision(BaseModel):
 ROUTER_SYSTEM_PROMPT = (
     Path(__file__).resolve().parents[1]
     / "prompt"
-    / "system_prompt.txt"
+    / "router_prompt.txt"
 ).read_text(encoding="utf-8")
 
 

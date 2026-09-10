@@ -81,8 +81,8 @@ Example: "I prefer clear lectures and a lighter workload; which professor
 should I choose?"
 
 out_of_scope:
-A request unrelated to course information, graduation requirements, or
-personalized academic advising.
+A request unrelated to course information, major or general education graduation
+requirements, or personalized academic advising.
 
 clarify:
 The meaning of current_input remains too ambiguous, even after considering

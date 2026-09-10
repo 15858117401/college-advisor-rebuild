@@ -12,7 +12,7 @@ from Supabase.import_stat_resources import create_supabase_client
 MAJOR_DOCUMENT_KEYS = LEGACY_KEYS
 
 
-class GetGraduationRequirementsInput(BaseModel):
+class MajorGraduationRequirementInput(BaseModel):
     model_config = ConfigDict(extra="forbid")
     major: str = Field(
         min_length=1,
@@ -30,14 +30,15 @@ class GetGraduationRequirementsInput(BaseModel):
         return value.strip()
 
 
-@tool("get_graduation_requirements", args_schema=GetGraduationRequirementsInput)
-def get_graduation_requirements(major: str) -> str:
-    """Get the exact stored 2026-2027 UIUC program requirement Markdown.
+@tool("major_graduation_requirement", args_schema=MajorGraduationRequirementInput)
+def major_graduation_requirement(major: str) -> str:
+    """Get the exact stored 2026-2027 UIUC major requirement Markdown.
 
     Supports all stored programs; use find_degree_programs to discover names
     and keys. Ambiguous or unavailable names require a more specific choice.
     A general-major document does not verify a concentration's requirements.
     Biology returns its stored redirect, not another program's requirements.
+    This tool does not return LAS general education requirements.
     """
     client = create_supabase_client()
     programs = load_programs(client)
@@ -65,4 +66,4 @@ def get_graduation_requirements(major: str) -> str:
     return content
 
 
-__all__ = ["GetGraduationRequirementsInput", "get_graduation_requirements"]
+__all__ = ["MajorGraduationRequirementInput", "major_graduation_requirement"]
