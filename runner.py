@@ -4,7 +4,7 @@ from time import perf_counter
 from graph import graph
 
 
-USER_INPUT = "给我推几门gpa很高的gen ed，我要us minority 的"
+USER_INPUT = "帮我找 3 门三学分课程：其中 2 门属于 Cultural Studies - Non-West，1 门属于 Humanities - Lit & Arts；课程编号必须在 200–399 之间，历史课程 GPA 至少 3.5。比较它们的先修要求，并检查 Spring 2026 是否有班次。"
 
 
 if __name__ == "__main__":
