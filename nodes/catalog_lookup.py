@@ -1,4 +1,6 @@
+import logging
 from pathlib import Path
+from time import perf_counter
 
 from langgraph.runtime import Runtime
 
@@ -23,6 +25,8 @@ from tools.professor_research_tools import (
     search_reddit,
 )
 
+
+logger = logging.getLogger(f"college_advisor.{__name__}")
 
 CATALOG_SYSTEM_PROMPT = (
     Path(__file__).resolve().parents[1]
@@ -53,12 +57,16 @@ def catalog_lookup(
     runtime: Runtime[AdvisorContext] | None = None,
 ) -> dict:
     """Run the catalog ReAct agent with past messages and current input."""
+    started = perf_counter()
+    logger.info("Catalog Lookup 开始")
     profile = profile_from_runtime(runtime)
     result = catalog_agent.invoke(
         {"messages": messages_with_current_input(state, profile=profile)},
         config={"recursion_limit": 12},
     )
-    return {"response": result["messages"][-1].content}
+    response = result["messages"][-1].content
+    logger.info("Catalog Lookup 完成，耗时 %.2fs", perf_counter() - started)
+    return {"response": response}
 
 
 __all__ = [

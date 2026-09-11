@@ -1,4 +1,6 @@
+import logging
 from pathlib import Path
+from time import perf_counter
 
 from langgraph.runtime import Runtime
 
@@ -12,6 +14,8 @@ from state import (
 )
 from tools.skill_loader_tool import SKILL_DESCRIPTIONS, load_skill
 
+
+logger = logging.getLogger(f"college_advisor.{__name__}")
 
 _ADVISING_BASE_PROMPT = (
     Path(__file__).resolve().parents[1]
@@ -43,12 +47,16 @@ def advising(
     runtime: Runtime[AdvisorContext] | None = None,
 ) -> dict:
     """Run the advising ReAct agent with past messages and current input."""
+    started = perf_counter()
+    logger.info("Advising 开始")
     profile = profile_from_runtime(runtime)
     result = advising_agent.invoke(
         {"messages": messages_with_current_input(state, profile=profile)},
         config={"recursion_limit": ADVISING_RECURSION_LIMIT},
     )
-    return {"response": result["messages"][-1].content}
+    response = result["messages"][-1].content
+    logger.info("Advising 完成，耗时 %.2fs", perf_counter() - started)
+    return {"response": response}
 
 
 __all__ = [

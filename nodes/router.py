@@ -1,5 +1,7 @@
 import json
+import logging
 from pathlib import Path
+from time import perf_counter
 
 from langchain_core.messages import HumanMessage, convert_to_openai_messages
 from langgraph.runtime import Runtime
@@ -13,6 +15,9 @@ from state import (
     StudentProfile,
     profile_from_runtime,
 )
+
+
+logger = logging.getLogger(f"college_advisor.{__name__}")
 
 
 class RouteDecision(BaseModel):
@@ -46,6 +51,8 @@ def router(
     runtime: Runtime[AdvisorContext] | None = None,
 ) -> dict[str, Route]:
     """Classify the request before routing it to the next node."""
+    started = perf_counter()
+    logger.info("Router 开始")
     profile = profile_from_runtime(runtime)
     response = llm_client.invoke(
         [
@@ -55,6 +62,9 @@ def router(
         response_format={"type": "json_object"},
     )
     decision = RouteDecision.model_validate_json(response.content)
+    logger.info(
+        "Router 完成，路由：%s，耗时 %.2fs", decision.route, perf_counter() - started
+    )
     return {"route": decision.route}
 
 

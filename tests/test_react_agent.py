@@ -1,3 +1,4 @@
+import logging
 import sys
 import unittest
 from pathlib import Path
@@ -58,7 +59,8 @@ class ScriptedToolModel(FakeMessagesListChatModel):
 
 
 @pytest.mark.parametrize('invalid_code', ['MATH-416', 'MATH 999'])
-def test_agent_recovers_from_validation_and_unsupported_resource(invalid_code):
+def test_agent_recovers_from_validation_and_unsupported_resource(invalid_code, caplog):
+    caplog.set_level(logging.INFO, logger="college_advisor")
     calls = []
 
     @tool(args_schema=GetCourseDetailsInput)
@@ -83,10 +85,48 @@ def test_agent_recovers_from_validation_and_unsupported_resource(invalid_code):
     assert messages[1].status == 'success'
     assert calls[-1] == ['MATH 416']
     assert result['messages'][-1].content == 'Abstract Linear Algebra'
+    records = [r for r in caplog.records if r.name == 'college_advisor.react_agent']
+    assert [r.levelno for r in records] == [
+        logging.INFO, logging.WARNING, logging.INFO, logging.INFO,
+    ]
+    assert 'lookup 失败' in records[1].getMessage()
+    assert 'lookup 完成' in records[-1].getMessage()
+    assert 'Abstract Linear Algebra' not in caplog.text
+    assert invalid_code not in caplog.text
+
+
+def test_returned_tool_error_is_logged_as_failure(caplog):
+    caplog.set_level(logging.INFO, logger="college_advisor")
+
+    @tool
+    def report_error() -> ToolMessage:
+        """Return a recoverable tool error."""
+        return ToolMessage(
+            content="Private error details",
+            tool_call_id="reported-error",
+            status="error",
+        )
+
+    model = ScriptedToolModel(responses=[
+        AIMessage(content='', tool_calls=[
+            {'name': 'report_error', 'args': {}, 'id': 'reported-error'},
+        ]),
+        AIMessage(content='The resource is unavailable.'),
+    ])
+    with patch('react_agent.llm_client', model):
+        agent = build_react_agent('Call the tool.', tools=[report_error])
+    result = agent.invoke({'messages': [('human', 'Call the tool.')]})
+
+    assert result['messages'][-1].content == 'The resource is unavailable.'
+    records = [r for r in caplog.records if r.name == 'college_advisor.react_agent']
+    assert [r.levelno for r in records] == [logging.INFO, logging.WARNING]
+    assert 'report_error 失败' in records[-1].getMessage()
+    assert 'Private error details' not in caplog.text
 
 
 @pytest.mark.parametrize('error', [RuntimeError('service unavailable'), ValueError('programming failure')])
-def test_unexpected_tool_failures_propagate(error):
+def test_unexpected_tool_failures_propagate(error, caplog):
+    caplog.set_level(logging.INFO, logger="college_advisor")
     @tool
     def broken() -> str:
         """Exercise an unexpected failure."""
@@ -95,8 +135,13 @@ def test_unexpected_tool_failures_propagate(error):
     model = ScriptedToolModel(responses=[AIMessage(content='', tool_calls=[{'name': 'broken', 'args': {}, 'id': 'broken'}])])
     with patch('react_agent.llm_client', model):
         agent = build_react_agent('Call the tool.', tools=[broken])
-    with pytest.raises(type(error), match=str(error)):
+    with pytest.raises(type(error), match=str(error)) as raised:
         agent.invoke({'messages': [('human', 'Call the tool.')]})
+    assert raised.value is error
+    records = [r for r in caplog.records if r.name == 'college_advisor.react_agent']
+    assert [r.levelno for r in records] == [logging.INFO, logging.ERROR]
+    assert 'broken 异常' in records[-1].getMessage()
+    assert not any(r.exc_info for r in records)
 
 
 if __name__ == "__main__":
