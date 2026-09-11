@@ -1,19 +1,13 @@
-import json
-import math
 import re
-from typing import Any, Self
+from typing import Self
 
 from langchain_core.tools import tool
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 from client.embedding_client import embed_texts
 from Supabase.import_stat_resources import create_supabase_client
-from Supabase.resource_queries import fetch_all_rows
 
 
-COURSE_FIELDS = (
-    "course_code,course_number,credits,prerequisites,gen_ed,overall_gpa"
-)
 COURSE_CODE_PATTERN = re.compile(r"\b([A-Za-z]{2,4})\s*(\d{3}[A-Za-z]?)\b")
 
 
@@ -35,8 +29,6 @@ class FindCoursesInput(BaseModel):
     prerequisite_course: str | None = None
     min_overall_gpa: float | None = Field(default=None, ge=0.0, le=4.0)
     max_overall_gpa: float | None = Field(default=None, ge=0.0, le=4.0)
-    semantic_limit: int = Field(default=5, ge=1, le=20)
-
     @model_validator(mode="after")
     def validate_conditions(self) -> Self:
         if self.subjects is not None:
@@ -48,8 +40,10 @@ class FindCoursesInput(BaseModel):
             self.gen_ed = self.gen_ed.strip()
             if not self.gen_ed:
                 raise ValueError("gen_ed cannot be blank")
-        if self.description_query is not None and not self.description_query.strip():
-            raise ValueError("description_query cannot be blank")
+        if self.description_query is not None:
+            self.description_query = self.description_query.strip()
+            if not self.description_query:
+                raise ValueError("description_query cannot be blank")
         if self.prerequisite_course is not None:
             match = COURSE_CODE_PATTERN.fullmatch(self.prerequisite_course.strip())
             if match is None:
@@ -71,77 +65,15 @@ class FindCoursesInput(BaseModel):
             and self.min_overall_gpa > self.max_overall_gpa
         ):
             raise ValueError("min_overall_gpa cannot exceed max_overall_gpa")
-        conditions = self.model_dump(exclude={"semantic_limit"})
+        conditions = self.model_dump()
         if all(value is None for value in conditions.values()):
             raise ValueError("at least one course search condition is required")
         return self
 
 
-def _matches_credit_hours(credits: str, requested: int) -> bool:
-    values = [int(value) for value in re.findall(r"\d+", credits)]
-    if " to " in credits.casefold():
-        return values[0] <= requested <= values[1]
-    return requested in values
-
-
-def _matches_rules(row: dict[str, Any], criteria: dict[str, Any]) -> bool:
-    number = row["course_number"]
-    gpa = row["overall_gpa"]
-    prerequisite_codes = COURSE_CODE_PATTERN.findall(row["prerequisites"] or "")
-    listed_prerequisites = {
-        f"{subject.upper()} {course_number.upper()}"
-        for subject, course_number in prerequisite_codes
-    }
-    return (
-        (
-            criteria["min_course_number"] is None
-            or number >= criteria["min_course_number"]
-        )
-        and (
-            criteria["max_course_number"] is None
-            or number <= criteria["max_course_number"]
-        )
-        and (
-            criteria["credit_hours"] is None
-            or _matches_credit_hours(row["credits"], criteria["credit_hours"])
-        )
-        and (
-            criteria["gen_ed"] is None
-            or criteria["gen_ed"].casefold() in {
-                label.strip().casefold() for label in (row["gen_ed"] or "").splitlines()
-            }
-        )
-        and (
-            criteria["prerequisite_course"] is None
-            or criteria["prerequisite_course"] in listed_prerequisites
-        )
-        and (
-            criteria["min_overall_gpa"] is None
-            or (gpa is not None and gpa >= criteria["min_overall_gpa"])
-        )
-        and (
-            criteria["max_overall_gpa"] is None
-            or (gpa is not None and gpa <= criteria["max_overall_gpa"])
-        )
-    )
-
-
-def _vector(value: str | list[float]) -> list[float]:
-    return json.loads(value) if isinstance(value, str) else value
-
-
-def _cosine_similarity(left: list[float], right: list[float]) -> float:
-    dot_product = sum(a * b for a, b in zip(left, right))
-    magnitude = math.sqrt(
-        sum(value * value for value in left)
-        * sum(value * value for value in right)
-    )
-    return dot_product / magnitude
-
-
-def _format_results(rows: list[dict[str, Any]]) -> list[dict[str, str]]:
+def _format_results(rows: list[dict[str, object]]) -> list[dict[str, str]]:
     return [
-        {"course_code": row["course_code"], "credits": row["credits"]}
+        {"course_code": str(row["course_code"]), "credits": str(row["credits"])}
         for row in rows
     ]
 
@@ -156,47 +88,42 @@ def find_courses(
     prerequisite_course: str | None = None,
     min_overall_gpa: float | None = None,
     max_overall_gpa: float | None = None,
-    semantic_limit: int = 5,
     subjects: list[str] | None = None,
 ) -> list[dict[str, str]]:
-    """Find stored UIUC courses across subjects using AND rules, then optional semantic Top-K.
+    """Return up to five stored UIUC courses matching all supplied conditions.
+
+    Each `find_courses` call handles exactly one cohesive course group. All supplied
+    conditions apply to every course in that group and are combined with AND. If the
+    user requests separate groups with different conditions or quantities, call
+    `find_courses` separately once for each group. For example, "two
+    programming-focused STAT courses" is one call; "one STAT course and one US
+    Minority course" requires two calls. Never merge distinct groups into one call.
 
     prerequisite_course accepts formats such as MATH241 or MATH 241 and matches
     a code listed in the catalog text; it does not determine student eligibility.
     Omitted subjects searches all stored subjects; use subjects to narrow by department.
     A major can require courses from multiple departments.
-    The description_query is already rewritten. Returns only course_code and
-    the catalog's original credits string.
+    The description_query is already rewritten and enables semantic matching.
+    Supabase performs filtering and semantic retrieval; results are always returned
+    by descending historical course GPA. Returns only course_code and the catalog's
+    original credits string.
     """
-    criteria = locals()
-    fields = COURSE_FIELDS + (",embedding" if description_query is not None else "")
-    client = create_supabase_client()
-
-    def query():
-        request = client.table("courses").select(fields)
-        if subjects is not None:
-            request = request.in_("subject", subjects)
-        return request.order("course_code")
-
-    rows = fetch_all_rows(query, page_size=100 if description_query is not None else 500)
-    candidates = [row for row in rows if _matches_rules(row, criteria)]
-    if description_query is not None:
-        candidates = [row for row in candidates if row.get("embedding") is not None]
-
-    if not candidates:
-        return []
-    if description_query is None:
-        candidates.sort(key=lambda row: (row["course_number"], row["course_code"]))
-        return _format_results(candidates)
-
-    query_vector = embed_texts([description_query])[0]
-    candidates.sort(
-        key=lambda row: (
-            -_cosine_similarity(query_vector, _vector(row["embedding"])),
-            row["course_code"],
-        )
-    )
-    return _format_results(candidates[:semantic_limit])
+    query_vector = embed_texts([description_query])[0] if description_query else None
+    response = create_supabase_client().rpc(
+        "search_courses",
+        {
+            "p_query_embedding": query_vector,
+            "p_subjects": subjects,
+            "p_min_course_number": min_course_number,
+            "p_max_course_number": max_course_number,
+            "p_credit_hours": credit_hours,
+            "p_gen_ed": gen_ed,
+            "p_prerequisite_course": prerequisite_course,
+            "p_min_overall_gpa": min_overall_gpa,
+            "p_max_overall_gpa": max_overall_gpa,
+        },
+    ).execute()
+    return _format_results(response.data or [])
 
 
 __all__ = ["FindCoursesInput", "find_courses"]
