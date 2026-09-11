@@ -14,7 +14,7 @@
 - Centralize LLM initialization in `client/llm_client.py`. Nodes that need an LLM must import and reuse the shared `llm_client` instead of creating their own model client.
 - `Resource/` stores course catalog, offering availability, and course/instructor GPA statistics used as reference data by the advising agent.
 - Treat `graph.py` and the command-line evaluation runners as the current runtime surface. Do not expand the placeholder FastAPI app in `main.py` unless the user explicitly asks for API work.
-- Skill loading uses progressive disclosure only in Advising. Package each skill as `skills/<name>/SKILL.md`; startup indexes its frontmatter name and description, and the Advising agent loads the full body on demand with `load_skill`. Catalog Lookup must not scan, advertise, or load skills. Skill file changes take effect after process restart.
+- `skills/` stores reusable Advising instructions. Follow the storage and loading contract in **Runtime Skills** below. Catalog Lookup must not scan, advertise, or load skills.
 
 
 ## Runtime Tools
@@ -32,6 +32,26 @@ The advising agents can call these tools from the lowercase `tools/` package:
 - `load_skill`: Advising-only tool that loads one packaged skill's instructions by exact canonical name into the current ReAct run.
 
 `nodes/catalog_lookup.py` owns the canonical business-tool registration. Advising reuses those tools and additionally registers `load_skill`. Adding a tool module alone does not make it agent-callable, so register new tools explicitly and add focused tests under `tests/`.
+
+
+## Runtime Skills
+
+- Store every Advising skill as one Markdown file directly under `skills/`, using a descriptive snake_case filename: `skills/<skill_name>.md`. The current professor-research skill is `skills/professor_research.md`; do not move its instructions into an agent prompt.
+- Each skill file starts with YAML frontmatter containing its canonical `name` and `description`, followed by the complete skill instructions. The frontmatter `name` is the exact value accepted by `load_skill`.
+- `tools/skill_loader_tool.py` must discover all `skills/*.md` files once at import/startup, retain each full file in memory, and expose the name-and-description index used by Advising. Adding or editing a skill takes effect after process restart and must not require hard-coding a particular skill filename.
+- Advising uses progressive disclosure: its initial system prompt contains only each skill's `name` and `description`, and `load_skill` returns only the selected skill's complete Markdown. The returned text enters the current ReAct history as a `ToolMessage`, so a skill loaded in model round N remains visible in later rounds of that same `advising_agent.invoke(...)`, beginning with round N+1. It is not persisted into a later graph invocation or user turn.
+- `nodes/advising.py` alone registers `load_skill`. Catalog Lookup must not import the skill loader, include a skill index in its prompt, or register `load_skill`.
+- Keep workflow-specific instructions in their skill file. Do not eagerly concatenate full skill bodies into `prompt/advising_prompt.txt`, add custom middleware or state for skills, or add a separate skill runtime abstraction.
+
+
+## Prompt Structure
+
+- `prompt/router_prompt.txt`, `prompt/catalog_lookup_prompt.txt`, and `prompt/advising_prompt.txt` are the file-backed base prompts for their corresponding nodes. Keep prompt ownership with the node that performs the work; do not move prompt or node business logic into `graph.py`.
+- The Router prompt is a routing contract. Keep its current structure: task and non-goals, the JSON input contract (`conversation_context`, `current_input`, and `profile`), route definitions, decision priority, and the exact JSON output contract. It must classify only; it must not answer or call business tools.
+- The Catalog Lookup prompt should contain only its factual role and scope, requirement-tool selection rules, tool-grounding and data-availability limits, profile/scenario precedence, and the prohibition on personalized plans. It must not contain a skill index or skill body.
+- The Advising base prompt should contain its personalized role and scope, profile/scenario precedence, requirement retrieval rules, cross-department course and prerequisite checks, student constraints, tool-error behavior, and known data limits. `nodes/advising.py` then appends the generated skill `name` + `description` index and the instruction to call `load_skill`; full skill instructions appear only after that tool is called.
+- Planner and Compose Response currently keep their prompts as node-local constants because Planner is a placeholder and Compose owns final-answer editing. Do not duplicate their responsibilities in the Router, Catalog Lookup, Advising prompts, or skills.
+- When changing a prompt, preserve the separation between completed `conversation_context` and raw `current_input`, state structured input/output contracts explicitly where applicable, and place each rule in the narrowest relevant base prompt or skill instead of repeating it across prompts.
 
 
 ## Running and Evaluation
