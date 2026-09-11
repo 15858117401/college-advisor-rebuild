@@ -11,7 +11,11 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-from tools.course_search_tool import find_courses
+from tools.course_search_tool import (
+    GEN_ED_CATEGORIES,
+    FindCoursesInput,
+    find_courses,
+)
 
 
 class _RpcRequest:
@@ -77,10 +81,44 @@ class FindCoursesTest(unittest.TestCase):
             {"prerequisite_course": "STAT-400"},
             {"subjects": []},
             {"subjects": ["Math major"]},
+            {"gen_ed": None},
         ]
         for payload in invalid:
             with self.subTest(payload=payload), self.assertRaises(ValidationError):
                 find_courses.invoke(payload)
+
+    def test_gen_ed_schema_advertises_every_category_and_null(self) -> None:
+        schema = FindCoursesInput.model_json_schema()["properties"]["gen_ed"]
+        enum_schema = next(option for option in schema["anyOf"] if "enum" in option)
+        null_schema = next(
+            option for option in schema["anyOf"] if option.get("type") == "null"
+        )
+
+        self.assertEqual(enum_schema["enum"], GEN_ED_CATEGORIES)
+        self.assertEqual(len(enum_schema["enum"]), 15)
+        self.assertEqual(null_schema, {"type": "null"})
+
+    def test_accepts_every_canonical_gen_ed_category(self) -> None:
+        for category in GEN_ED_CATEGORIES:
+            with self.subTest(category=category):
+                self.assertEqual(FindCoursesInput(gen_ed=category).gen_ed, category)
+        self.assertIsNone(
+            FindCoursesInput(description_query="models", gen_ed=None).gen_ed
+        )
+
+    @patch("tools.course_search_tool.create_supabase_client")
+    @patch("tools.course_search_tool.embed_texts")
+    def test_rejects_noncanonical_gen_ed_before_dependencies(
+        self,
+        embed_mock,
+        client_mock,
+    ) -> None:
+        for gen_ed in ["US Minority", "missing", "", "Unknown Category"]:
+            with self.subTest(gen_ed=gen_ed), self.assertRaises(ValidationError):
+                find_courses.invoke({"gen_ed": gen_ed})
+
+        embed_mock.assert_not_called()
+        client_mock.assert_not_called()
 
     def test_description_embeds_once_and_sends_every_filter_to_one_rpc(self) -> None:
         result, client, embed_mock = _invoke(
@@ -147,7 +185,10 @@ class FindCoursesTest(unittest.TestCase):
 
     def test_empty_result_is_a_normal_completed_query(self) -> None:
         result, client, embed_mock = _invoke(
-            {"description_query": "unavailable topic", "gen_ed": "missing"},
+            {
+                "description_query": "unavailable topic",
+                "gen_ed": "Cultural Studies - US Minority",
+            },
             [],
         )
         self.assertEqual(result, [])

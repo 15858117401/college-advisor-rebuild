@@ -1,0 +1,16 @@
+[
+  {
+    "run_label": "reproduction-1",
+    "elapsed_seconds": 74.59189487500407,
+    "route": "advising",
+    "request_brief": "推荐几门 US Minority 类别的 gen ed 课程，要求给分高（GPA 高）。",
+    "response": "US Minority 类别下，按历史 GPA 从高到低，draft 支持的选项如下；GPA 均为历史数据。\n\n1. **AAS 211 — Asian Americans and the Arts（3 学分）**\n- Gen ed 类别：Humanities - Lit & Arts；Cultural Studies - US Minority\n- 历史总体 GPA：约 **3.95**（本类别最高之一）\n- Spring 2026 section：**没有返回任何 section**\n- 先修/资格：AAS 100 或 AAS 120，或教师同意\n\n2. **AFRO 224 — Humanist Persp of Afro-Am Exp（3 学分）**\n- Gen ed 类别：Humanities - Lit & Arts；Cultural Studies - US Minority\n- Spring 2026 section：Section 1（Lecture-Discussion）| CRN 39646 | 周一/周三 14:00–15:50 | 1064 Lincoln Hall | 教师 Ngumbi, E\n- 历史课程-教师 GPA：**3.92**（Ngumbi, E.）\n- 先修/资格：Prerequisite: AFRO 100 或教师同意\n\n3. **PORT 150 — Writing Brazilians into the U.S.（3 学分）**\n- Gen ed 类别：Social & Beh Sci - Soc Sci；Cultural Studies - US Minority\n- Spring 2026 section：Section B（Lecture-Discussion）| CRN 71636 | 周一/周三 14:00–15:20 | 1030 Literatures, Cultures, & Ling | 教师 Karam, J\n- 历史课程-教师 GPA：**3.90**（Karam, J.）\n- 注意：该课另一位教师 Martins Freitas, C. 有历史记录（3.79），但不是这个 Spring 2026 section 的授课教师，不适用于本节\n\n4. **AAS 246 — Asian American Youth in Film（3 学分）**\n- Gen ed 类别：Social & Beh Sci - Soc Sci；Cultural Studies - US Minority\n- Spring 2026 section：Section B（Lecture-Discussion）| CRN 66231 | 周一 14:00–16:50 | 311 Gregory Hall | 教师 Kwon, S\n- 历史课程-教师 GPA：**3.88**（Kwon, S.）\n\n5. **GWS 282 — Feminist and Queer Activisms（3 学分）**\n- Gen ed 类别：Cultural Studies - US Minority\n- 历史总体 GPA：约 **3.84**\n- Spring 2026 section：**没有返回任何 section**\n\n说明：\n- 有 section 的课给的是该 section 授课教师的“课程 + 教师”历史平均 GPA；AAS 211、GWS 282 给的是历史总体 GPA，二者口径不同。\n- GPA 不是 Spring 2026 某个具体 section 的成绩，也不能预测你将拿到的分数；缺失 GPA 表示数据未知，不等于 0。\n- `gen_ed` 为目录原文标注，能否计入你的具体学位要求需另行核对，例如 AAS 211 与 AAS 246、AFRO 224 之间是否有重复计入限制。\n- draft 未提供各课的内容概览。"
+  },
+  {
+    "run_label": "reproduction-2",
+    "elapsed_seconds": 56.98885074999998,
+    "route": "advising",
+    "request_brief": "推荐几门给分高（GPA 高）的通识教育（gen ed）课程，要求属于 US Minority 类别。",
+    "response": "US Minority 类别下，本学期有教学班且历史课程–教师 GPA 较高的选项有这三门：AFRO 224、PORT 150、AAS 246。注意：下方 GPA 是该课–该教师的历史平均分，不是 Spring 2026 教学班成绩，也不代表你本人会拿到的分数；缺数据标为“未提供”，不等于 0 分。课程名称、内容概览、先修/资格未提供。\n\n1. **AFRO 224 — 3 学分**\n   - 通识类别：US Minority（Cultural Studies – US Minority）\n   - Section 1（Lecture-Discussion），CRN 39646\n   - 教师：Ngumbi, E\n   - 时间地点：周一/周三 14:00–15:50，1064 Lincoln Hall\n   - 历史课程–教师 GPA：**3.92**\n   - 其他历史记录：Smith, B. 3.93、O'Byrn, E. 3.68；本次 Spring 2026 无对应教学班\n   - 先修/资格：未提供，需确认\n   - 备注：按时间推断，与 PORT 150、AAS 246 在周一下午有重叠；选课前请确认\n\n2. **PORT 150 — 3 学分**\n   - 通识类别：US Minority\n   - Section B（Lecture-Discussion），CRN 71636\n   - 教师：Karam, J\n   - 时间地点：周一/周三 14:00–15:20，1030 Literatures, Cultures, & Ling\n   - 历史课程–教师 GPA：**3.90**\n   - 其他历史记录：Martins Freitas, C. 3.79；本次 Spring 2026 无对应教学班\n   - 先修/资格：未提供，需确认\n   - 备注：按时间推断，与 AFRO 224、AAS 246 在周一下午有重叠；选课前请确认\n\n3. **AAS 246 — 3 学分**\n   - 通识类别：US Minority\n   - Section B（Lecture-Discussion），CRN 66231\n   - 教师：Kwon, S\n   - 时间地点：周一 14:00–16:50，311 Gregory Hall\n   - 历史课程–教师 GPA：**3.88**\n   - 先修/资格：未提供，需确认\n   - 备注：按时间推断，与 AFRO 224、PORT 150 在周一下午有重叠；选课前请确认\n\n同类别另外两门 AAS 211、GWS 282 本学期无教学班，且无教师/GPA 信息，暂不作为高分推荐。"
+  }
+]

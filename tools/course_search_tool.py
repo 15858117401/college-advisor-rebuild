@@ -1,14 +1,32 @@
 import re
-from typing import Self
+from typing import Literal, Self
 
 from langchain_core.tools import tool
-from pydantic import BaseModel, ConfigDict, Field, model_validator
+from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
 
 from client.embedding_client import embed_texts
 from Supabase.import_stat_resources import create_supabase_client
 
 
 COURSE_CODE_PATTERN = re.compile(r"\b([A-Za-z]{2,4})\s*(\d{3}[A-Za-z]?)\b")
+GEN_ED_CATEGORIES = [
+    "Advanced Composition",
+    "Composition I",
+    "Cultural Studies - Non-West",
+    "Cultural Studies - US Minority",
+    "Cultural Studies - Western",
+    "Grand Challenge-Sustainability",
+    "Humanities - Hist & Phil",
+    "Humanities - Lit & Arts",
+    "Nat Sci & Tech - Life Sciences",
+    "Nat Sci & Tech - Phys Sciences",
+    "Quantitative Reasoning I",
+    "Quantitative Reasoning II",
+    "Social & Beh Sci - Beh Sci",
+    "Social & Beh Sci - Soc Sci",
+    "UIUC: Ugrad Zero Credit Intern",
+]
+GenEdCategory = Literal[*GEN_ED_CATEGORIES]
 
 
 class FindCoursesInput(BaseModel):
@@ -25,10 +43,16 @@ class FindCoursesInput(BaseModel):
     min_course_number: int | None = Field(default=None, ge=0, le=999)
     max_course_number: int | None = Field(default=None, ge=0, le=999)
     credit_hours: int | None = Field(default=None, ge=0, le=99)
-    gen_ed: str | None = None
+    gen_ed: GenEdCategory | None = None
     prerequisite_course: str | None = None
     min_overall_gpa: float | None = Field(default=None, ge=0.0, le=4.0)
     max_overall_gpa: float | None = Field(default=None, ge=0.0, le=4.0)
+
+    @field_validator("gen_ed", mode="before")
+    @classmethod
+    def normalize_gen_ed(cls, gen_ed: object) -> object:
+        return gen_ed.strip() if isinstance(gen_ed, str) else gen_ed
+
     @model_validator(mode="after")
     def validate_conditions(self) -> Self:
         if self.subjects is not None:
@@ -36,10 +60,6 @@ class FindCoursesInput(BaseModel):
             if any(re.fullmatch(r"[A-Z]{2,4}", subject) is None for subject in subjects):
                 raise ValueError("subjects must be course prefixes such as MATH or ECON")
             self.subjects = list(dict.fromkeys(subjects))
-        if self.gen_ed is not None:
-            self.gen_ed = self.gen_ed.strip()
-            if not self.gen_ed:
-                raise ValueError("gen_ed cannot be blank")
         if self.description_query is not None:
             self.description_query = self.description_query.strip()
             if not self.description_query:
@@ -84,7 +104,7 @@ def find_courses(
     min_course_number: int | None = None,
     max_course_number: int | None = None,
     credit_hours: int | None = None,
-    gen_ed: str | None = None,
+    gen_ed: GenEdCategory | None = None,
     prerequisite_course: str | None = None,
     min_overall_gpa: float | None = None,
     max_overall_gpa: float | None = None,
@@ -126,4 +146,9 @@ def find_courses(
     return _format_results(response.data or [])
 
 
-__all__ = ["FindCoursesInput", "find_courses"]
+__all__ = [
+    "FindCoursesInput",
+    "GEN_ED_CATEGORIES",
+    "GenEdCategory",
+    "find_courses",
+]

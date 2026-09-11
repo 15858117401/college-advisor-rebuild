@@ -1,0 +1,16 @@
+[
+  {
+    "run_label": "reproduction-1",
+    "elapsed_seconds": 45.929329708000296,
+    "route": "advising",
+    "request_brief": "推荐几门给分高（GPA高）的通识教育（gen ed）课程，要求类别为 US Minority。",
+    "response": "以下为草稿中 **US Minority（美国少数族裔）** 类别的通识课程推荐，按检索返回顺序列出。草稿未提供各课程的内容简介、先修与资格信息，选课时需另行确认。历史 GPA 是课程-教师组合的历年平均值，不代表 Spring 2026 具体 section 的给分，也不预测你的成绩；缺失数据表示未知，不是 0。\n\n1. **AAS 211（3 学时）**\n   - 类别：US Minority 通识\n   - Spring 2026 section：未返回，暂无法给出可注册班级。\n   - 历史 GPA：草稿列为 US Minority 中历史 GPA 最高的课程之一（具体数值未提供）。\n\n2. **AAS 246（3 学时）**\n   - 类别：US Minority 通识\n   - Section B｜Lecture-Discussion｜CRN 66231\n   - 教师：Kwon, S｜周一 14:00–16:50｜311 Gregory Hall\n   - 课程-教师历史平均 GPA：**3.88**\n\n3. **PORT 150（3 学时）**\n   - 类别：US Minority 通识\n   - Section B｜Lecture-Discussion｜CRN 71636\n   - 教师：Karam, J｜周一、周三 14:00–15:20｜1030 Literatures, Cultures, & Ling\n   - 课程-教师历史平均 GPA：**3.90**\n\n4. **AFRO 224（3 学时）**\n   - 类别：US Minority 通识\n   - Section 1｜Lecture-Discussion｜CRN 39646\n   - 教师：Ngumbi, E｜周一、周三 14:00–15:50｜1064 Lincoln Hall\n   - 课程-教师历史平均 GPA：**3.92**\n\n5. **GWS 282（3 学时）**\n   - 类别：US Minority 通识\n   - Spring 2026 section：未返回，暂无法给出可注册班级。\n   - 历史 GPA：草稿列为 US Minority 中历史 GPA 最高的课程之一（具体数值未提供）。\n\n补充：有 Spring 2026 section 的三门中，按草稿给出的课程-教师历史平均 GPA，AFRO 224 为 3.92、PORT 150 为 3.90、AAS 246 为 3.88；AAS 211 与 GWS 282 目前没有可注册 section。若只看能排进课表的选项，可重点关注前三门。"
+  },
+  {
+    "run_label": "reproduction-2",
+    "elapsed_seconds": 31.68342441698769,
+    "route": "advising",
+    "request_brief": "推荐几门高 GPA（给分好）的 Gen Ed 课程，类别要求为 US Minority。",
+    "response": "US Minority（Cultural Studies – US Minority）类别中历史平均 GPA 较高的 Gen Ed 课程如下。说明：`find_courses` 结果已按历史课程 GPA 从高到低排序；以下为**历史课程-教师平均 GPA**，不代表 Spring 2026 授课教师的具体评分，也不构成对你本人成绩的预测。仅 Spring 2026 的 section 信息可用。\n\n1. **AAS 246**（3 学分）— US Minority 类别\n   - Section B（Lecture-Discussion），CRN 66231\n   - 教师：Kwon, S\n   - 时间/地点：周一 14:00–16:50，311 Gregory Hall\n   - 历史课程-教师平均 GPA：**3.88**\n\n2. **PORT 150**（3 学分）— US Minority 类别\n   - Section B（Lecture-Discussion），CRN 71636\n   - 教师：Karam, J\n   - 时间/地点：周一、周三 14:00–15:20，1030 Literatures, Cultures, & Ling\n   - 历史课程-教师平均 GPA：**3.90**\n   - 备注：该课程另一位教师 Martins Freitas, C. 的历史平均 GPA 为 3.79，但未出现在本期已返回的 section 中。\n\n3. **AFRO 224**（3 学分）— US Minority 类别\n   - Section 1（Lecture-Discussion），CRN 39646\n   - 教师：Ngumbi, E\n   - 时间/地点：周一、周三 14:00–15:50，1064 Lincoln Hall\n   - 历史课程-教师平均 GPA：**3.92**\n\n另需说明：**AAS 211** 和 **GWS 282** 虽然进入了该类别的高 GPA 结果列表，但本期没有返回任何 Spring 2026 section，因此无法给出具体可选班次。上述三门课对应的教师历史 GPA 均已成功匹配。"
+  }
+]
