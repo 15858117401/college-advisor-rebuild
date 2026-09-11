@@ -8,7 +8,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-from react_agent import build_react_agent
+from react_agent import build_react_agent, handle_expected_tool_errors
 import pytest
 from langchain_core.language_models.fake_chat_models import FakeMessagesListChatModel
 from langchain_core.messages import AIMessage, ToolMessage
@@ -18,7 +18,7 @@ from tools.course_details_tool import GetCourseDetailsInput
 
 class BuildReactAgentTest(unittest.TestCase):
     @patch("react_agent.create_agent")
-    def test_registers_tools_and_appends_skills_to_prompt(
+    def test_registers_tools_without_changing_prompt(
         self,
         create_agent,
     ) -> None:
@@ -27,23 +27,23 @@ class BuildReactAgentTest(unittest.TestCase):
         build_react_agent(
             "Base instructions.",
             tools=tools,
-            skills=["First skill.", "  Second skill.  "],
         )
 
         call = create_agent.call_args.kwargs
         self.assertEqual(call["tools"], tools)
         self.assertEqual(
-            call["system_prompt"],
-            "Base instructions.\n\n# Skills\n\n"
-            "First skill.\n\n---\n\nSecond skill.",
+            call["middleware"],
+            [handle_expected_tool_errors],
         )
+        self.assertEqual(call["system_prompt"], "Base instructions.")
 
     @patch("react_agent.create_agent")
-    def test_skills_and_tools_are_optional(self, create_agent) -> None:
+    def test_tools_are_optional(self, create_agent) -> None:
         build_react_agent("Base instructions.")
 
         call = create_agent.call_args.kwargs
         self.assertEqual(call["tools"], [])
+        self.assertEqual(call["middleware"], [handle_expected_tool_errors])
         self.assertEqual(call["system_prompt"], "Base instructions.")
 
 

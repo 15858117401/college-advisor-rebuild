@@ -10,22 +10,31 @@ from state import (
     messages_with_current_input,
     profile_from_runtime,
 )
+from tools.skill_loader_tool import SKILL_DESCRIPTIONS, load_skill
 
 
-ADVISING_SYSTEM_PROMPT = (
+_ADVISING_BASE_PROMPT = (
     Path(__file__).resolve().parents[1]
     / "prompt"
     / "advising_prompt.txt"
 ).read_text(encoding="utf-8")
+_SKILL_INDEX = "\n".join(
+    f"- `{name}`: {description}"
+    for name, description in SKILL_DESCRIPTIONS.items()
+)
+ADVISING_SYSTEM_PROMPT = (
+    f"{_ADVISING_BASE_PROMPT.rstrip()}\n\n"
+    f"## Available Advising Skills\n\n{_SKILL_INDEX}\n\n"
+    "When a request matches a skill description, call `load_skill` with its "
+    "exact name before following that skill's instructions."
+)
 
-ADVISING_SKILLS: list[str] = []
-ADVISING_TOOLS = CATALOG_TOOLS
+ADVISING_TOOLS = [*CATALOG_TOOLS, load_skill]
 ADVISING_RECURSION_LIMIT = 24
 
 advising_agent = build_react_agent(
     ADVISING_SYSTEM_PROMPT,
     tools=ADVISING_TOOLS,
-    skills=ADVISING_SKILLS,
 )
 
 
@@ -43,7 +52,6 @@ def advising(
 
 
 __all__ = [
-    "ADVISING_SKILLS",
     "ADVISING_RECURSION_LIMIT",
     "ADVISING_SYSTEM_PROMPT",
     "ADVISING_TOOLS",

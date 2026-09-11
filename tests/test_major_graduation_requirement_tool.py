@@ -119,12 +119,13 @@ def test_service_failure_is_not_reported_as_missing_program():
 def test_catalog_and_advising_register_discovery():
     from nodes.catalog_lookup import CATALOG_TOOLS
     from nodes.advising import ADVISING_TOOLS
-    assert ADVISING_TOOLS is CATALOG_TOOLS
-    assert {
+    expected = {
         'major_graduation_requirement',
         'general_education_graduation_requirement',
         'find_degree_programs',
-    } <= {t.name for t in CATALOG_TOOLS}
+    }
+    assert expected <= {t.name for t in CATALOG_TOOLS}
+    assert expected <= {t.name for t in ADVISING_TOOLS}
 
 
 def test_prompts_distinguish_requirement_tool_scope():

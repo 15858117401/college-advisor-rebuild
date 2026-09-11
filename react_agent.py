@@ -22,28 +22,16 @@ def handle_expected_tool_errors(request, handler):
         )
 
 
-def _with_skills(system_prompt: str, skills: Sequence[str]) -> str:
-    """Append caller-provided skill instructions to an agent prompt."""
-    skill_sections = [skill.strip() for skill in skills if skill.strip()]
-    if not skill_sections:
-        return system_prompt
-    return f"{system_prompt.rstrip()}\n\n# Skills\n\n" + "\n\n---\n\n".join(
-        skill_sections
-    )
-
-
 def build_react_agent(
     system_prompt: str,
     tools: Sequence[BaseTool] = (),
-    *,
-    skills: Sequence[str] = (),
 ):
-    """Build a ReAct agent with independent skill instructions and tools."""
+    """Build a ReAct agent with shared tool-error handling."""
     return create_agent(
         model=llm_client,
         tools=list(tools),
         middleware=[handle_expected_tool_errors],
-        system_prompt=_with_skills(system_prompt, skills),
+        system_prompt=system_prompt,
     )
 
 

@@ -14,7 +14,7 @@
 - Centralize LLM initialization in `client/llm_client.py`. Nodes that need an LLM must import and reuse the shared `llm_client` instead of creating their own model client.
 - `Resource/` stores course catalog, offering availability, and course/instructor GPA statistics used as reference data by the advising agent.
 - Treat `graph.py` and the command-line evaluation runners as the current runtime surface. Do not expand the placeholder FastAPI app in `main.py` unless the user explicitly asks for API work.
-- Skill loading is currently disabled for Catalog Lookup and Advising. Keep `CATALOG_SKILLS` and `ADVISING_SKILLS` empty unless the user explicitly starts a skill-integration task.
+- Skill loading uses progressive disclosure only in Advising. Package each skill as `skills/<name>/SKILL.md`; startup indexes its frontmatter name and description, and the Advising agent loads the full body on demand with `load_skill`. Catalog Lookup must not scan, advertise, or load skills. Skill file changes take effect after process restart.
 
 
 ## Runtime Tools
@@ -29,8 +29,9 @@ The advising agents can call these tools from the lowercase `tools/` package:
 - `major_graduation_requirement`: Retrieves unchanged stored 2026–2027 major requirement Markdown by exact program name, program code, or document key; `math` and `stats` remain aliases. Ambiguous requests return candidates. General-major documents do not replace missing concentration requirements, and Biology retains its redirect document.
 - `general_education_graduation_requirement`: Returns the fixed LAS general education requirement Markdown without parameters.
 - `search_rate_my_professor` and `search_reddit`: Search public professor ratings and student discussions through Tavily.
+- `load_skill`: Advising-only tool that loads one packaged skill's instructions by exact canonical name into the current ReAct run.
 
-`nodes/catalog_lookup.py` owns the canonical `CATALOG_TOOLS` registration. Advising currently reuses that same list; adding a tool module alone does not make it agent-callable, so register new tools explicitly and add focused tests under `tests/`.
+`nodes/catalog_lookup.py` owns the canonical business-tool registration. Advising reuses those tools and additionally registers `load_skill`. Adding a tool module alone does not make it agent-callable, so register new tools explicitly and add focused tests under `tests/`.
 
 
 ## Running and Evaluation

@@ -30,7 +30,6 @@ CATALOG_SYSTEM_PROMPT = (
     / "catalog_lookup_prompt.txt"
 ).read_text(encoding="utf-8")
 
-CATALOG_SKILLS: list[str] = []
 CATALOG_TOOLS = [
     get_course_details,
     major_graduation_requirement,
@@ -46,7 +45,6 @@ CATALOG_TOOLS = [
 catalog_agent = build_react_agent(
     CATALOG_SYSTEM_PROMPT,
     tools=CATALOG_TOOLS,
-    skills=CATALOG_SKILLS,
 )
 
 
@@ -64,7 +62,6 @@ def catalog_lookup(
 
 
 __all__ = [
-    "CATALOG_SKILLS",
     "CATALOG_SYSTEM_PROMPT",
     "CATALOG_TOOLS",
     "catalog_agent",

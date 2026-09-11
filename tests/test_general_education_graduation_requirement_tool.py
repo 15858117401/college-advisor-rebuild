@@ -20,4 +20,4 @@ def test_general_education_graduation_requirement_returns_fixed_markdown() -> No
 def test_general_education_graduation_requirement_is_registered() -> None:
     tool_name = "general_education_graduation_requirement"
     assert tool_name in {catalog_tool.name for catalog_tool in CATALOG_TOOLS}
-    assert ADVISING_TOOLS is CATALOG_TOOLS
+    assert tool_name in {advising_tool.name for advising_tool in ADVISING_TOOLS}

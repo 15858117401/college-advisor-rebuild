@@ -10,8 +10,8 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-from nodes.advising import ADVISING_SKILLS, ADVISING_TOOLS
-from nodes.catalog_lookup import CATALOG_SKILLS, CATALOG_TOOLS
+from nodes.advising import ADVISING_SYSTEM_PROMPT, ADVISING_TOOLS
+from nodes.catalog_lookup import CATALOG_SYSTEM_PROMPT, CATALOG_TOOLS
 from nodes.compose_response import COMPOSE_SYSTEM_PROMPT
 from nodes.router import ROUTER_SYSTEM_PROMPT
 from tools.professor_research_tools import (
@@ -158,11 +158,12 @@ class ProfessorResearchIntegrationTest(unittest.TestCase):
         advising_tool_names = {tool.name for tool in ADVISING_TOOLS}
 
         self.assertTrue(expected.issubset(catalog_tool_names))
-        self.assertEqual(advising_tool_names, catalog_tool_names)
+        self.assertEqual(advising_tool_names - catalog_tool_names, {"load_skill"})
 
-    def test_skills_remain_disabled_for_catalog_and_advising(self) -> None:
-        self.assertEqual(CATALOG_SKILLS, [])
-        self.assertEqual(CATALOG_SKILLS, ADVISING_SKILLS)
+    def test_skill_loading_is_available_only_to_advising(self) -> None:
+        self.assertIn("Available Advising Skills", ADVISING_SYSTEM_PROMPT)
+        self.assertNotIn("load_skill", {tool.name for tool in CATALOG_TOOLS})
+        self.assertNotIn("Available Advising Skills", CATALOG_SYSTEM_PROMPT)
 
     def test_compose_prompt_preserves_research_evidence(self) -> None:
         self.assertIn("Preserve source URLs", COMPOSE_SYSTEM_PROMPT)
