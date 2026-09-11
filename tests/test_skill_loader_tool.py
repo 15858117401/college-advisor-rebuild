@@ -28,7 +28,7 @@ SKILL_CASES = [
     (
         "course_and_section_recommendation",
         PROJECT_ROOT / "skills" / "course_and_section_recommendation.md",
-        "Give the student meaningful choices rather than padding the list to six",
+        "Each group requires one separate",
     ),
     (
         "planner",
